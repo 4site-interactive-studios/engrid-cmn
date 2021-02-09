@@ -109,10 +109,10 @@
   }
 
   .page-backgroundImage {
-      background-color: #ccc;
-      background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2110/default-bg-8.jpg?v\=1578587000000');
-      background-repeat: no-repeat;
-      background-size: contain;
+    background-color: #ccc;
+    background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2110/default-bg-8.jpg?v\=1578587000000");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .content-header {
@@ -143,6 +143,7 @@
       flex: 1;
       align-content: flex-end;
       text-transform: uppercase;
+      font-family: "Amnesty Trade Gothic";
       ul {
         margin: 0;
       }
@@ -154,7 +155,7 @@
           padding: 0 10px;
         }
         ul {
-            padding: 10px;
+          padding: 10px;
           li a {
             text-align: left;
             padding: 10px 0;
@@ -170,6 +171,25 @@
       line-height: 56.68px;
       font-weight: 700;
       margin-bottom: 0;
+    }
+  }
+
+  label.en__field__label.en__field__label--item {
+    padding: 12px 25px;
+    border-radius: 2px !important;
+    border: 0px !important;
+    width: 100%;
+  }
+  .en__field__element.en__field__element--radio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .en__field__item {
+    margin: 0 10px 1.5% !important;
+    max-width: 30%;
+    &:last-child {
+        width: 60%;
     }
   }
 }
