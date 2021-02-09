@@ -1,70 +1,69 @@
 /* Add your custom theme styles here */
 
-[data-engrid-theme="aiusa"]{
-
-    /* All headlines in the body are always capitalized */
-    /* All label text in the body are capitalized */
-    /* All button text in the body are always capitalized */
-    [class*="body-"]{
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        label,
-        button,
-        .button{
-            text-transform: uppercase;
-        }
+[data-engrid-theme="aiusa"] {
+  /* All headlines in the body are always capitalized */
+  /* All label text in the body are capitalized */
+  /* All button text in the body are always capitalized */
+  [class*="body-"] {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    label,
+    button,
+    .button {
+      text-transform: uppercase;
     }
+  }
 
-    .en__component--advcolumn[class*="content"]{
-        background-color: lightblue;
+  .en__component--advcolumn[class*="content"] {
+    background-color: lightblue;
+  }
+
+  .en__component--advcolumn[class*="content"] > * {
+    background-color: lightyellow;
+  }
+
+  .en__component--advcolumn[class*="body"] {
+    background-color: lightgreen;
+  }
+
+  header,
+  footer {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  footer {
+    flex-wrap: wrap;
+
+    #designed-by-4site-wrapper {
+      flex-basis: 100%;
+      text-align: center;
     }
+  }
 
-    .en__component--advcolumn[class*="content"] > *{
-        background-color: lightyellow;
-    }
+  nav > ul li:hover ul {
+    position: absolute;
+    background-color: white;
+  }
 
-    .en__component--advcolumn[class*="body"]{
-        background-color: lightgreen;
-    }
+  nav a {
+    display: block;
+  }
 
-    header,
-    footer{
-        display: inline-flex;
-        width: 100%;
-    }
+  .body-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-    footer{
-        flex-wrap: wrap;
-
-        #designed-by-4site-wrapper{
-            flex-basis: 100%;
-            text-align: center;
-        }
-    }
-
-    nav > ul li:hover ul{
-        position: absolute;
-        background-color: white;
-    }
-
-    nav a{
-        display: block;
-    }
-
-    .body-header{
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    /* Sum of all MIN values of the Body Columns */
-    &[data-engrid-layout="centerleft1col"] {
-        @media screen and (min-width: 776px) {
-            /* prettier-ignore */
-            .en__component--advrow,
+  /* Sum of all MIN values of the Body Columns */
+  &[data-engrid-layout="centerleft1col"] {
+    @media screen and (min-width: 776px) {
+      /* prettier-ignore */
+      .en__component--advrow,
             .en__component--advrow .pseudo-subgrid {
                 /* autoprefixer grid: off */
                 grid-template-columns:
@@ -78,21 +77,22 @@
                 ];
             }
 
-            .content-header{
-                margin-bottom: 80px;
-            }
-    
-            .content-footer{
-                margin-top: 80px;
-            }    
-        }
-    }
+      .content-header {
+        margin-bottom: 80px;
+        background-color: #fff;
+      }
 
-    /* Sum of all MIN values of the Body Columns */
-    &[data-engrid-layout="centerleft1col"] {
-        @media screen and (max-width: 775px) {
-            /* prettier-ignore */
-            .en__component--advrow,
+      .content-footer {
+        margin-top: 80px;
+      }
+    }
+  }
+
+  /* Sum of all MIN values of the Body Columns */
+  &[data-engrid-layout="centerleft1col"] {
+    @media screen and (max-width: 775px) {
+      /* prettier-ignore */
+      .en__component--advrow,
             .en__component--advrow .pseudo-subgrid {
                 /* autoprefixer grid: off */
                 grid-template-columns:
@@ -105,7 +105,71 @@
                     rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
                 ];
             }
-        }
-    }    
+    }
+  }
 
+  .page-backgroundImage {
+      background-color: #ccc;
+      background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2110/default-bg-8.jpg?v\=1578587000000');
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+
+  .content-header {
+    .en__component--codeblock {
+      background-color: #fff;
+    }
+    header {
+      display: flex;
+      align-items: center;
+    }
+    #social-proof-wrapper {
+      flex: 4;
+      padding: 0 24px;
+
+      p {
+        margin: 0px;
+        line-height: 14px;
+        &:first-child {
+          margin-bottom: 5px;
+        }
+        strong {
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+    }
+    #menu-wrapper {
+      flex: 1;
+      align-content: flex-end;
+      text-transform: uppercase;
+      ul {
+        margin: 0;
+      }
+      li.has-submenu {
+        a {
+          text-align: right;
+          font-size: 12px;
+          font-weight: 700;
+          padding: 0 10px;
+        }
+        ul {
+            padding: 10px;
+          li a {
+            text-align: left;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .body-top {
+    h1 {
+      font-size: 47px;
+      line-height: 56.68px;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+  }
 }
