@@ -235,6 +235,27 @@
     padding-top: 40px;
   }
 
+  input.en__field__input {
+    background: rgba(228, 228, 228, 0.36);
+    box-shadow: none !important;
+    &:hover {
+      box-shadow: 0 2px 0 0 #b3b3b3 !important;
+    }
+    &:focus {
+      box-shadow: 0 2px 0 0 #000 !important;
+    }
+  }
+
+  .en__component--copyblock > p, .en__component--copyblock > p > a {
+    font-style: italic;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .en__component--formblock .en__field.en__field--checkbox > label {
+    display: none;
+  }
+
   label.en__field__label.en__field__label--item {
     padding: 12px 25px;
     border-radius: 2px !important;
@@ -243,10 +264,43 @@
     text-transform: uppercase !important;
     font-family: 'AmnestyTradeGothicCn';
   }
+  
+  label.en__field__label.en__field__label--item:hover {
+    background-color: white !important;
+    border-color: #000 !important;
+  }
   input:checked+label.en__field__label.en__field__label--item {
     background-color: yellow;
-    border: 0px !important;
+    border-color: yellow !important;
     color: black;
+    box-shadow: none !important;
+    &:hover {
+      background-color: yellow !important;
+      border-color: #000 !important;
+    }
+  }
+  input.en__field__input--checkbox:checked+label.en__field__label.en__field__label--item,
+  input.en__field__input--checkbox+label.en__field__label.en__field__label--item {
+    background-color: #fff !important;
+    font-weight: 500;
+    font-family: 'AmnestyTradeGothic';
+    text-transform: none !important;
+    border: 0px !important;
+    padding: 0 70px 0 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+
+  .en__field--donationAmt {
+    input:checked+label.en__field__label.en__field__label--item {
+      background-color: black;
+      border-color: black !important;
+      color: white;
+      &:hover {
+        background-color: #000 !important;
+      }
+    }
   }
 
   .en__field__element--radio {
@@ -258,6 +312,37 @@
     .en__field__item {
       max-width: 30%;
       margin-right: 0px !important;
+    }
+  }
+
+  .en__component--copyblock {
+    > h2.section-header {
+       width: 100%;
+      text-align: center;
+      font-family: 'AmnestyTradeGothicCn';
+      color: #000;
+      position: relative;
+      z-index: 1;
+      font-size: 16px;
+      overflow: hidden;
+      margin: 10px 0 20px;
+      &:before, &:after {
+        position: absolute;
+        top: 51%;
+        width: 45%;
+        overflow: hidden;
+        height: 1px;
+        content: '\a0';
+        background-color: #e4e4e4;
+      }
+      &:before {
+        margin-left: -50%;
+        text-align: right;
+      }
+      &:after {
+        width: 40%;
+        margin-left: 5%;
+      }
     }
   }
 
@@ -307,7 +392,19 @@
   .en__component--formblock {
     label {
       font-family: "AmnestyTradeGothicCn";
+      color: #525252;
+      font-size: 12px;
+      letter-spacing: 0.06em;
     }
+  }
+
+  .en__submit button {
+    font-family: "AmnestyTradeGothicCn";
+    font-weight: 700;
+  }
+
+  .en__component.en__component--codeblock > div > img {
+    display: inline-block;
   }
   
 }
