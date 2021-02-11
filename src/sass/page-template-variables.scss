@@ -92,12 +92,15 @@
     --theme-typography-input-border-color: var(--color-black);
     --theme-typography-input-border-radius: initial;
     --theme-typography-input-placeholder-color: var(--theme-light-gray);
+    --theme-typography-input-box-shadow: inset 0 1px 2px var(--theme-light-gray);
         
     // TYPOGRAPHY INPUT:FOCUS
     // TYPOGRAPHY INPUT:HOVER
     --theme-typography-input-focus-hover-color: var(--theme-typography-input-color);
     --theme-typography-input-focus-hover-background-color: var(--theme-typography-input-background-color);
     --theme-typography-input-focus-hover-border-color: var(--theme-cta);
+    --theme-typography-input-focus-hover-border-bottom-color: var(--theme-typography-input-focus-hover-border-color);
+    --theme-typography-input-focus-hover-box-shadow: 0 0 0.3125rem var(--theme-light-gray);
         
     // TYPOGRAPHY RADIO
     --theme-typography-radio-content: initial;
@@ -147,12 +150,14 @@
     --theme-typography-select-border-width: 0px;
     --theme-typography-select-border-color: var(--color-black);
     --theme-typography-select-border-radius: initial;
+    --theme-typography-select-box-shadow: var(--theme-typography-input-box-shadow);
 
     // TYPOGRAPHY SELECT:FOCUS
     // TYPOGRAPHY SELECT:HOVER
     --theme-typography-select-focus-hover-color: var(--theme-typography-select-color);
     --theme-typography-select-focus-hover-background-color: var(--theme-typography-select-background-color);
     --theme-typography-select-focus-hover-border-color: var(--theme-cta-hover);
+    --theme-typography-select-focus-hover-box-shadow: var(--theme-typography-input-focus-hover-box-shadow);
 
     // TYPOGRAPHY TEXTAREA
     --theme-typography-textarea-font-family: var(--theme-typography-default-font-family);
@@ -165,12 +170,14 @@
     --theme-typography-textarea-border-color: var(--color-black);
     --theme-typography-textarea-border-radius: initial;
     --theme-typography-textarea-placeholder-color: var(--theme-light-gray);
+    --theme-typography-textarea-box-shadow: var(--theme-typography-input-box-shadow);
         
     // TYPOGRAPHY TEXTAREA:FOCUS
     // TYPOGRAPHY TEXTAREA:HOVER
     --theme-typography-textarea-focus-hover-color: var(--theme-typography-textarea-color);
     --theme-typography-textarea-focus-hover-background-color: var(--theme-typography-textarea-background-color);
     --theme-typography-textarea-focus-hover-border-color: var(--theme-cta);
+    --theme-typography-textarea-focus-hover-box-shadow: var(--theme-typography-input-focus-hover-box-shadow);
 
     // TYPOGRAPHY BUTTON
     --theme-typography-button-font-family: var(--theme-typography-default-font-family);
@@ -234,6 +241,7 @@
     --theme-content-header-background-color: var(--theme-content-background-color);
     --theme-body-headerOutside-background-color: var(--color-transparent);
     --theme-body-header-background-color: var(--theme-body-background-color);
+    --theme-body-title-background-color: var(--theme-body-background-color);
     --theme-body-banner-background-color: var(--theme-body-background-color);
     --theme-body-bannerOverlay-background-color: var(--color-transparent);
     --theme-body-top-background-color: var(--theme-body-background-color);
