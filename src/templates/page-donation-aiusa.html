@@ -198,7 +198,7 @@
 <!-- Placeholder Generator: https://png-pixel.com/ -->
 <!-- Placeholder 142x60 rgba(255, 255, 0, 1) -->
 <a id="header-logo" href="https://www.amnestyusa.org/" target="_blank">
-  <img alt="Amnesty International USA" data-src="https://via.placeholder.com/142x60/FFFF00/000000.png?text=(142x60)" height="60px" width="142px">
+  <img alt="Amnesty International USA" src="../img/aiusalogo.png" height="60px" width="142px">
 </a>
 </div>
 
@@ -228,12 +228,16 @@
 <script>
 window.addEventListener('DOMContentLoaded', (event) => {
     var menuItems = document.querySelectorAll('li.has-submenu');
+	var menuBtn = document.querySelector(".menu-btn");
+	
 	Array.prototype.forEach.call(menuItems, function(el, i){
 		el.addEventListener("mouseover", function(event){
 			this.className = "has-submenu open";
+			menuBtn.classList.add('close');
 		});
 		el.addEventListener("mouseout", function(event){
 			document.querySelector(".has-submenu.open").className = "has-submenu";
+			menuBtn.classList.remove('close');
 		});
 	});
 });
@@ -245,6 +249,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 <nav aria-label="Main Navigation">
 	<ul>
 		<li class="has-submenu">
+			<div class="menu-btn"> 
+				<div class="btn-line"></div> 
+				<div class="btn-line"></div> 
+				<div class="btn-line"></div> 
+			</div>
 			<a href="…" aria-haspopup="true" aria-expanded="false">Other Ways to Give</a>
 			<ul>
         	    <li><a href="#">Renew</a></li>
@@ -269,7 +278,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 <!-- Light Grey Placeholder: /> -->
 <!-- Placeholder Generator: https://png-pixel.com/ -->
 <!-- Placeholder 520x31 rgba(223, 223, 223, 1) -->
-<img data-src="https://via.placeholder.com/520x31/FFFF00/000000.png?(520x31)"></div>
+<img src="../img/emergency.png" width="520" height="31"></div>
 </div>
 		<div class="en__component en__component en__component--column en__component--advcolumn body-banner">
 </div>
@@ -279,9 +288,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		<div class="en__component en__component--codeblock"><!--For user's navigating with a keyboard or screen reader the first option they will be presented with is to "Skip to main content". Doing this will jump them directly to wherever this code block is located.-->
 <span id="maincontent"></span></div>
 		<div class="en__component en__component--copyblock click-to-expand">
-	<h1>Lorem ipsum dolor</h1>
+	<h1>Join Our Movement</h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et dolor vitae ligula ornare commodo non in libero. Aenean est orci, viverra at est nec, congue ultricies nunc. Cras feugiat erat nec libero posuere iaculis. Duis ullamcorper nisl mauris, ut vulputate ante lacinia ac. Donec id dolor sem. Nullam eu leo nisi.</p>
+<p>When you donate to Amnesty International, you become a force for human rights. Your contribution will help end human rights abuses of asylum-seekers, refugees, peaceful protesters, and people on the frontlines of the world’s most pressing crises.</p>
+<p>Amnesty accepts NO funding from governments or corporations for our research and campaigns. At every step of the way, our wins are made possible because of people like you. Join us now!</p>
+<p>Lorem ipsum lit nam arcu, volutpat elit purus quisque eu. Arcu quam consequat praesent at posuere. Dignissim adipiscing diam. Orcu quam sequat rcu  Bam consequat. Tu lorem.</p>
 
 <p>Nunc ac urna viverra, fringilla justo finibus, laoreet tortor. Quisque blandit nulla quis ullamcorper porttitor. Duis urna enim, tincidunt vel ante vitae, egestas cursus diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ipsum mi, tincidunt auctor libero ut, mollis posuere ipsum. Praesent velit libero, tincidunt vel mollis eget, placerat eu lacus. Nullam at tortor vitae metus vulputate iaculis vitae ac libero. Praesent tempor, nunc ut posuere blandit, magna nulla laoreet ex, id scelerisque erat nisl a tellus. Nam ullamcorper molestie tortor et porta</p>
 

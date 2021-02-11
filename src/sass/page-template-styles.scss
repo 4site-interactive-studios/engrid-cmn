@@ -27,7 +27,15 @@
   }
 
   .en__component--advcolumn[class*="body"] {
-    background-color: lightgreen;
+    background-color: #fff;
+  }
+
+  /* hiding labels until label class */
+  .en__field--recurrfreq > label {
+    display: none;
+  }
+  .en__field--othamt2 {
+    display: none;
   }
 
   header,
@@ -48,6 +56,16 @@
   nav > ul li:hover ul {
     position: absolute;
     background-color: white;
+    right: 0;
+    padding: 0 20px 40px 50px !important;
+    a {
+      display: inline-block;
+      padding-bottom: 20px;
+      &:hover {
+        text-decoration: underline;
+        background-color: yellow;
+      }
+    }
   }
 
   nav a {
@@ -59,6 +77,8 @@
     padding-right: 0;
   }
 
+  
+
   /* Sum of all MIN values of the Body Columns */
   &[data-engrid-layout="centerleft1col"] {
     @media screen and (min-width: 776px) {
@@ -68,7 +88,7 @@
                 /* autoprefixer grid: off */
                 grid-template-columns:
                 [
-                pc-start lpc-start]  minmax(0px, 1fr)        [lpc-end
+                pc-start lpc-start]  minmax(0px, 0px)        [lpc-end
                 cc-start lcc-start]  minmax(0px, 128px)      [lcc-end
                 bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
                 rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
@@ -115,6 +135,39 @@
     background-size: contain;
   }
 
+  .menu-btn {
+    position: absolute;
+    z-index: 3;
+    left: 0px;
+    top: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+  }
+  .menu-btn .btn-line {
+    width: 20px;
+    height: 1.5px;
+    margin: 0 0 5px 0;
+    background: black;
+    transition: all 0.5s ease-out;
+  }
+
+  .menu-btn.close {
+    transform: rotate(180deg);
+    top: 0px;
+  }
+
+  .menu-btn.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 3px);
+  }
+
+  .menu-btn.close .btn-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-btn.close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -3px);
+  }
+
   .content-header {
     .en__component--codeblock {
       background-color: #fff;
@@ -130,6 +183,8 @@
       p {
         margin: 0px;
         line-height: 14px;
+        font-size: 12px;
+        font-weight: 400;
         &:first-child {
           margin-bottom: 5px;
         }
@@ -143,16 +198,17 @@
       flex: 1;
       align-content: flex-end;
       text-transform: uppercase;
-      font-family: "Amnesty Trade Gothic";
       ul {
         margin: 0;
       }
       li.has-submenu {
+        position: relative;
         a {
           text-align: right;
-          font-size: 12px;
+          font-size: 16px;
           font-weight: 700;
           padding: 0 10px;
+          font-family: "AmnestyTradeGothicCn";
         }
         ul {
           padding: 10px;
@@ -171,25 +227,87 @@
       line-height: 56.68px;
       font-weight: 700;
       margin-bottom: 0;
+      font-family: 'AmnestyTradeGothicCn';
     }
+  }
+
+  .body-main {
+    padding-top: 40px;
   }
 
   label.en__field__label.en__field__label--item {
     padding: 12px 25px;
     border-radius: 2px !important;
-    border: 0px !important;
+    border: 2px solid #E4E4E4 !important;
     width: 100%;
+    text-transform: uppercase !important;
+    font-family: 'AmnestyTradeGothicCn';
   }
-  .en__field__element.en__field__element--radio {
-    display: flex;
-    flex-wrap: wrap;
+  input:checked+label.en__field__label.en__field__label--item {
+    background-color: yellow;
+    border: 0px !important;
+    color: black;
+  }
+
+  .en__field__element--radio {
     justify-content: space-between;
   }
-  .en__field__item {
-    margin: 0 10px 1.5% !important;
-    max-width: 30%;
-    &:last-child {
-        width: 60%;
+
+  .en__field--recurrfreq {
+    padding-right: 0;
+    .en__field__item {
+      max-width: 30%;
+      margin-right: 0px !important;
     }
   }
+
+  .en__field--donationAmt {
+    > label {
+      width: 100%;
+      text-align: center;
+      font-family: 'AmnestyTradeGothicCn';
+      color: #000;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      margin: 10px 0 20px;
+      &:before, &:after {
+        position: absolute;
+        top: 51%;
+        width: 45%;
+        overflow: hidden;
+        height: 1px;
+        content: '\a0';
+        background-color: #e4e4e4;
+      }
+      &:before {
+        margin-left: -50%;
+        text-align: right;
+      }
+      &:after {
+        width: 40%;
+        margin-left: 5%;
+      }
+    }
+    .en__field__item {
+      min-width: 22%;
+      label {
+        text-align: center;
+      }
+    }
+    .en__field__item.en__field__item--other {
+      flex-grow: 2;
+      input.en__field__input.en__field__input--other {
+        background-color: #e4e4e4 !important;
+      }
+    }
+    
+  }
+
+  .en__component--formblock {
+    label {
+      font-family: "AmnestyTradeGothicCn";
+    }
+  }
+  
 }
