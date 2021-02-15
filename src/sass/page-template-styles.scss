@@ -26,18 +26,6 @@
     background-color: lightyellow;
   }
 
-  .en__component--advcolumn[class*="body"] {
-    background-color: #fff;
-  }
-
-  /* hiding labels until label class */
-  .en__field--recurrfreq > label {
-    display: none;
-  }
-  .en__field--othamt2 {
-    display: none;
-  }
-
   header,
   footer {
     display: inline-flex;
@@ -55,7 +43,7 @@
 
   nav > ul li:hover ul {
     position: absolute;
-    background-color: white;
+    background-color: var(--color-white);
     right: 0;
     padding: 0 20px 40px 50px !important;
     a {
@@ -63,7 +51,7 @@
       padding-bottom: 20px;
       &:hover {
         text-decoration: underline;
-        background-color: yellow;
+        background-color: var(--theme-cta);
       }
     }
   }
@@ -76,8 +64,6 @@
     padding-left: 0;
     padding-right: 0;
   }
-
-  
 
   /* Sum of all MIN values of the Body Columns */
   &[data-engrid-layout="centerleft1col"] {
@@ -92,14 +78,13 @@
                 cc-start lcc-start]  minmax(0px, 128px)      [lcc-end
                 bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
                 rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
-                rcc-start]           minmax(0px, 792px)      [rcc-end cc-end
-                rpc-start]           minmax(0px, 1fr)        [rpc-end pc-end               
+                rcc-start]           minmax(0px, 1fr)      [rcc-end cc-end
+                rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
                 ];
             }
 
       .content-header {
         margin-bottom: 80px;
-        background-color: #fff;
       }
 
       .content-footer {
@@ -129,8 +114,7 @@
   }
 
   .page-backgroundImage {
-    background-color: #ccc;
-    background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2110/default-bg-8.jpg?v\=1578587000000");
+    background-color: var(--theme-light-gray);
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -147,7 +131,7 @@
     width: 20px;
     height: 1.5px;
     margin: 0 0 5px 0;
-    background: black;
+    background: var(--color-black);
     transition: all 0.5s ease-out;
   }
 
@@ -169,9 +153,6 @@
   }
 
   .content-header {
-    .en__component--codeblock {
-      background-color: #fff;
-    }
     header {
       display: flex;
       align-items: center;
@@ -225,9 +206,7 @@
     h1 {
       font-size: 47px;
       line-height: 56.68px;
-      font-weight: 700;
       margin-bottom: 0;
-      font-family: 'AmnestyTradeGothicCn';
     }
   }
 
@@ -236,17 +215,13 @@
   }
 
   input.en__field__input {
-    background: rgba(228, 228, 228, 0.36);
-    box-shadow: none !important;
-    &:hover {
-      box-shadow: 0 2px 0 0 #b3b3b3 !important;
-    }
     &:focus {
-      box-shadow: 0 2px 0 0 #000 !important;
+      box-shadow: 0 2px 0 0 #000;
     }
   }
 
-  .en__component--copyblock > p, .en__component--copyblock > p > a {
+  .en__component--copyblock > p,
+  .en__component--copyblock > p > a {
     font-style: italic;
     font-size: 12px;
     line-height: 18px;
@@ -258,42 +233,43 @@
 
   label.en__field__label.en__field__label--item {
     padding: 12px 25px;
-    border-radius: 2px !important;
-    border: 2px solid #E4E4E4 !important;
+    border: 2px solid #e4e4e4 !important;
     width: 100%;
     text-transform: uppercase !important;
-    font-family: 'AmnestyTradeGothicCn';
+    font-family: "AmnestyTradeGothicCn";
+    justify-content: center;
   }
-  
+
   label.en__field__label.en__field__label--item:hover {
     background-color: white !important;
     border-color: #000 !important;
   }
-  input:checked+label.en__field__label.en__field__label--item {
-    background-color: yellow;
-    border-color: yellow !important;
+  input:checked + label.en__field__label.en__field__label--item {
+    background-color: var(--theme-cta);
+    border-color: var(--theme-cta) !important;
     color: black;
     box-shadow: none !important;
     &:hover {
-      background-color: yellow !important;
+      background-color: var(--theme-cta) !important;
       border-color: #000 !important;
     }
   }
-  input.en__field__input--checkbox:checked+label.en__field__label.en__field__label--item,
-  input.en__field__input--checkbox+label.en__field__label.en__field__label--item {
-    background-color: #fff !important;
+  input.en__field__input--checkbox:checked
+    + label.en__field__label.en__field__label--item,
+  input.en__field__input--checkbox
+    + label.en__field__label.en__field__label--item {
+    background-color: var(--color-white);
     font-weight: 500;
-    font-family: 'AmnestyTradeGothic';
+    font-family: var(--theme-typography-default-font-family);
     text-transform: none !important;
     border: 0px !important;
     padding: 0 70px 0 0;
     font-size: 12px;
     line-height: 18px;
   }
-  
 
   .en__field--donationAmt {
-    input:checked+label.en__field__label.en__field__label--item {
+    input:checked + label.en__field__label.en__field__label--item {
       background-color: black;
       border-color: black !important;
       color: white;
@@ -317,22 +293,22 @@
 
   .en__component--copyblock {
     > h2.section-header {
-       width: 100%;
+      width: 100%;
       text-align: center;
-      font-family: 'AmnestyTradeGothicCn';
-      color: #000;
+      font-family: "AmnestyTradeGothicCn";
       position: relative;
       z-index: 1;
       font-size: 16px;
       overflow: hidden;
       margin: 10px 0 20px;
-      &:before, &:after {
+      &:before,
+      &:after {
         position: absolute;
         top: 51%;
         width: 45%;
         overflow: hidden;
         height: 1px;
-        content: '\a0';
+        content: "\a0";
         background-color: #e4e4e4;
       }
       &:before {
@@ -350,19 +326,20 @@
     > label {
       width: 100%;
       text-align: center;
-      font-family: 'AmnestyTradeGothicCn';
+      font-family: "AmnestyTradeGothicCn";
       color: #000;
       position: relative;
       z-index: 1;
       overflow: hidden;
       margin: 10px 0 20px;
-      &:before, &:after {
+      &:before,
+      &:after {
         position: absolute;
         top: 51%;
         width: 45%;
         overflow: hidden;
         height: 1px;
-        content: '\a0';
+        content: "\a0";
         background-color: #e4e4e4;
       }
       &:before {
@@ -386,7 +363,6 @@
         background-color: #e4e4e4 !important;
       }
     }
-    
   }
 
   .en__component--formblock {
@@ -406,5 +382,4 @@
   .en__component.en__component--codeblock > div > img {
     display: inline-block;
   }
-  
 }

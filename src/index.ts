@@ -23,6 +23,6 @@ const options: Options = {
   ClickToExpand: true,
   onLoad: () => console.log("Starter Theme Loaded"),
   onResize: () => console.log("Starter Theme Window Resized"),
-  submitLabel: "Give"
+  submitLabel: "Give",
 };
 new App(options);

@@ -10,17 +10,29 @@ module.exports = merge(common, {
   mode: "production",
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
   },
   optimization: {
-    minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()]
+    minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()],
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].css" }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
   ],
   module: {
     rules: [
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+            },
+          },
+        ],
+      },
       {
         test: /\.scss$/,
         use: [
@@ -30,12 +42,12 @@ module.exports = merge(common, {
             loader: "postcss-loader", // 2. Add Autoprefixer to CSS
             options: {
               ident: "postcss",
-              plugins: [require("autoprefixer")]
-            }
+              plugins: [require("autoprefixer")],
+            },
           },
-          "sass-loader" // 1. From SASS to CSS
-        ]
-      }
-    ]
-  }
+          "sass-loader", // 1. From SASS to CSS
+        ],
+      },
+    ],
+  },
 });
