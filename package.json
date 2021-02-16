@@ -22,9 +22,9 @@
   "license": "Unlicense",
   "url": "https://github.com/4site-interactive-studios/engrid",
   "devDependencies": {
-    "@4site/engrid-common": "^0.1.9",
+    "@4site/engrid-common": "^0.1.15",
     "@4site/engrid-events": "^0.1.8",
-    "@4site/engrid-styles": "^0.1.11",
+    "@4site/engrid-styles": "^0.1.15",
     "@babel/core": "^7.12.16",
     "@babel/plugin-proposal-class-properties": "7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "7.6.2",
