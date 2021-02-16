@@ -254,12 +254,12 @@
     --theme-content-footerSpacer-background-color: var(--theme-content-background-color);
     --theme-content-preFooter-background-color: var(--theme-content-background-color);
     --theme-content-footer-background-color: var(--theme-content-background-color);
-    --theme-page-backgroundImage-background-color: var(--theme-page-background-color);
+    --theme-page-backgroundImage-background-color: --theme-light-gray;
     --theme-page-backgroundImageOverlay-background-color: var(--color-transparent);
     --theme-page-customCode-background-color: var(--theme-page-background-color);
 
     // LAZY LOADED BANNER IMAGE PLACEHOLDER COLOR
-    --theme-body-banner-image-background-color: var(--color-transparent);
+    --theme-body-banner-image-background-color: --theme-light-gray;
 
     // BODY BORDER RADIUS
     --theme-body-border-radius: 0px;
