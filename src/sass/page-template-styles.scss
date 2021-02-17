@@ -23,7 +23,7 @@
   }
 
   .en__component--advcolumn[class*="content"] > * {
-    background-color: lightyellow;
+    background-color: var(--color-white);
   }
 
   header,
