@@ -167,8 +167,6 @@
       }
     </script>
 
-    <!-- <link href="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/main.css?v=1613492481000" rel="stylesheet" type="text/css"> -->
-
     <link
       rel="preload"
       href="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/AmnestyTradeGothic-BdCn20.woff"
@@ -186,22 +184,24 @@
     <div id="engrid">
       <form
         method="post"
-        action="/page/74408/donate/2"
+        action="https://donate.amnestyusa.org/page/74408/donate/2"
         class="en__component en__component--page"
       >
         <input type="hidden" name="hidden" class="en__hiddenFields" value="" />
         <input
           type="hidden"
           name="sessionId"
-          value="77f91461bbb8459f8ebf6bc4d2ac01a2-server10008"
+          value="dc1c8e717ec24376bbeffdd507fd8ab6-server10150"
         />
         <ul class="en__errorList"></ul>
         <div class="en__component en__component--row en__component--advrow">
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-alert"
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-header pseudo-subgrid"
+            style=""
           >
             <div class="en__component en__component--codeblock">
               <header>
@@ -241,36 +241,6 @@
                       display: block;
                     }
                   </style>
-                  <script>
-                    document.onreadystatechange = function () {
-                      if (document.readyState === "complete") {
-						let timer;
-                        var menuItems = document.querySelectorAll(
-                          "li.has-submenu"
-                        );
-                        var menuBtn = document.querySelector(".menu-btn");
-
-                        Array.prototype.forEach.call(
-                          menuItems,
-                          function (el, i) {
-                            el.addEventListener("mouseover", function (event) {
-                              this.className = "has-submenu open";
-							  menuBtn.classList.add("close");
-                              clearTimeout(timer);
-                            });
-                            el.addEventListener("mouseout", function (event) {
-							  menuBtn.classList.remove("close");
-                              timer = setTimeout(function (event) {
-                                document.querySelector(
-                                  ".has-submenu.open"
-                                ).className = "has-submenu";
-                              }, 1000);
-                            });
-                          }
-                        );
-                      }
-                    };
-                  </script>
                   <nav aria-label="Main Navigation">
                     <ul>
                       <li class="has-submenu">
@@ -294,15 +264,37 @@
                       </li>
                     </ul>
                   </nav>
+                  <script>
+                    let timer;
+                    var menuItems = document.querySelectorAll("li.has-submenu");
+                    var menuBtn = document.querySelector(".menu-btn");
+                    Array.prototype.forEach.call(menuItems, function (el, i) {
+                      el.addEventListener("mouseover", function (event) {
+                        this.className = "has-submenu open";
+                        menuBtn.classList.add("close");
+                        clearTimeout(timer);
+                      });
+                      el.addEventListener("mouseout", function (event) {
+                        menuBtn.classList.remove("close");
+                        timer = setTimeout(function (event) {
+                          document.querySelector(
+                            ".has-submenu.open"
+                          ).className = "has-submenu";
+                        }, 1000);
+                      });
+                    });
+                  </script>
                 </div>
               </header>
             </div>
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-headerOutside"
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-header"
+            style=""
           >
             <div class="en__component en__component--codeblock">
               <img
@@ -315,6 +307,7 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-banner"
+            style=""
           >
             <div class="en__component en__component--codeblock">
               <img
@@ -327,14 +320,19 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-bannerOverlay"
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-top"
+            style=""
           >
             <div class="en__component en__component--codeblock">
               <span id="maincontent"></span>
             </div>
-            <div class="en__component en__component--copyblock click-to-expand">
+            <div
+              class="en__component en__component--copyblock click-to-expand"
+              style=""
+            >
               <h1>Lorem ipsum dolor</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -388,15 +386,18 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-side"
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-main"
+            style=""
           >
-            <div class="en__component en__component--copyblock">
+            <div class="en__component en__component--copyblock" style="">
               <h2 class="section-header">Gift Amount</h2>
             </div>
             <div
               class="en__component en__component--formblock radio-to-buttons i1-hide-label i2-hide-label i3-hide-label"
+              style=""
             >
               <div
                 class="en__field en__field--radio en__field--871587 en__field--recurrfreq"
@@ -404,6 +405,7 @@
                 <label
                   for="en__field_transaction_recurrfreq"
                   class="en__field__label"
+                  style=""
                   >Gift Frequency</label
                 >
                 <div class="en__field__element en__field__element--radio">
@@ -458,6 +460,7 @@
                 <label
                   for="en__field_transaction_recurrpay"
                   class="en__field__label"
+                  style=""
                   >Recurring Payment</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -473,7 +476,7 @@
               <div
                 class="en__field en__field--radio en__field--withOther en__field--871588 en__field--donationAmt en__mandatory"
               >
-                <label class="en__field__label">Donation Amount</label>
+                <label class="en__field__label" style="">Donation Amount</label>
                 <div class="en__field__element en__field__element--radio">
                   <div class="en__field__item">
                     <input
@@ -561,22 +564,27 @@
             </div>
             <div
               class="en__component en__component--copyblock recurring-frequency-n-show"
+              style=""
             >
               <p class="transactionRecurrpay-Not-Monthly">
                 Giving monthly is the most effective way to ... lorem ipsum
                 dolor setet
               </p>
             </div>
-            <div class="en__component en__component--copyblock">
+            <div class="en__component en__component--copyblock" style="">
               <h2 class="section-header">Your Info</h2>
             </div>
             <div
               class="en__component en__component--formblock i1-20 i1-start i2-40 i3-40 i3-end i4-100 i5-66 i5-start i6-33 i6-end i7-50 i7-start i8-50 i8-end i9-33 i9-start i10-66 i10-end i11-100"
+              style=""
             >
               <div
                 class="en__field en__field--select en__field--879079 en__field--title en__mandatory"
               >
-                <label for="en__field_supporter_title" class="en__field__label"
+                <label
+                  for="en__field_supporter_title"
+                  class="en__field__label"
+                  style=""
                   >Title</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -597,6 +605,7 @@
                 <label
                   for="en__field_supporter_firstName"
                   class="en__field__label"
+                  style=""
                   >First Name</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -615,6 +624,7 @@
                 <label
                   for="en__field_supporter_lastName"
                   class="en__field__label"
+                  style=""
                   >Last Name</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -633,6 +643,7 @@
                 <label
                   for="en__field_supporter_emailAddress"
                   class="en__field__label"
+                  style=""
                   >Email Address</label
                 >
                 <div class="en__field__element en__field__element--email">
@@ -652,6 +663,7 @@
                 <label
                   for="en__field_supporter_address1"
                   class="en__field__label"
+                  style=""
                   >Address</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -670,6 +682,7 @@
                 <label
                   for="en__field_supporter_address2"
                   class="en__field__label"
+                  style=""
                   >Apt., Ste., Bldg.</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -685,7 +698,10 @@
               <div
                 class="en__field en__field--text en__field--871595 en__field--city en__mandatory"
               >
-                <label for="en__field_supporter_city" class="en__field__label"
+                <label
+                  for="en__field_supporter_city"
+                  class="en__field__label"
+                  style=""
                   >City</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -701,7 +717,10 @@
               <div
                 class="en__field en__field--select en__field--871597 en__field--region en__mandatory"
               >
-                <label for="en__field_supporter_region" class="en__field__label"
+                <label
+                  for="en__field_supporter_region"
+                  class="en__field__label"
+                  style=""
                   >State</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -771,6 +790,7 @@
                 <label
                   for="en__field_supporter_postcode"
                   class="en__field__label"
+                  style=""
                   >Postcode</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -789,6 +809,7 @@
                 <label
                   for="en__field_supporter_country"
                   class="en__field__label"
+                  style=""
                   >Country</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1075,6 +1096,7 @@
                 <label
                   for="en__field_supporter_NOT_TAGGED_13"
                   class="en__field__label"
+                  style=""
                   >Mobile Phone</label
                 >
                 <div class="en__field__element en__field__element--telephone">
@@ -1089,7 +1111,7 @@
                 </div>
               </div>
             </div>
-            <div class="en__component en__component--copyblock">
+            <div class="en__component en__component--copyblock" style="">
               <p>
                 By providing your mobile number, you are signing up to recieve
                 recurring messages from Amnesty International USA at 213-33.
@@ -1107,11 +1129,13 @@
                 >.
               </p>
             </div>
-            <div class="en__component en__component--formblock">
+            <div class="en__component en__component--formblock" style="">
               <div
                 class="en__field en__field--checkbox en__field--871601 en__field--NOT_TAGGED_81"
               >
-                <label class="en__field__label">Postal Address Sharing</label>
+                <label class="en__field__label" style=""
+                  >Postal Address Sharing</label
+                >
                 <div class="en__field__element en__field__element--checkbox">
                   <div class="en__field__item">
                     <input
@@ -1133,7 +1157,7 @@
                 </div>
               </div>
             </div>
-            <div class="en__component en__component--copyblock">
+            <div class="en__component en__component--copyblock" style="">
               <h2 class="section-header">Payment Info</h2>
             </div>
             <div class="en__component en__component--codeblock">
@@ -1190,6 +1214,7 @@
             </div>
             <div
               class="en__component en__component--formblock giveBySelect-Card"
+              style=""
             >
               <div
                 class="en__field en__field--select en__field--871606 en__field--paymenttype en__mandatory"
@@ -1197,6 +1222,7 @@
                 <label
                   for="en__field_transaction_paymenttype"
                   class="en__field__label"
+                  style=""
                   >Payment Type</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1220,6 +1246,7 @@
                 <label
                   for="en__field_transaction_ccnumber"
                   class="en__field__label"
+                  style=""
                   >Credit Card Number</label
                 >
                 <div class="en__field__element en__field__element--number">
@@ -1238,6 +1265,7 @@
                 <label
                   for="en__field_transaction_ccexpire"
                   class="en__field__label"
+                  style=""
                   >Credit Card Expiration</label
                 >
                 <div class="en__field__element en__field__element--splitselect">
@@ -1290,7 +1318,10 @@
               <div
                 class="en__field en__field--number en__field--871605 en__field--ccvv"
               >
-                <label for="en__field_transaction_ccvv" class="en__field__label"
+                <label
+                  for="en__field_transaction_ccvv"
+                  class="en__field__label"
+                  style=""
                   >Credit Card CVV</label
                 >
                 <div class="en__field__element en__field__element--number">
@@ -1306,6 +1337,7 @@
             </div>
             <div
               class="en__component en__component--formblock giveBySelect-Paypal"
+              style=""
             >
               <div
                 class="en__field en__field--text en__field--871613 en__field--NOT_TAGGED_181"
@@ -1313,6 +1345,7 @@
                 <label
                   for="en__field_supporter_NOT_TAGGED_181"
                   class="en__field__label"
+                  style=""
                   >PayPal Billing Agreement</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1329,6 +1362,7 @@
             </div>
             <div
               class="en__component en__component--formblock giveBySelect-Check i2-50 i2-start i3-50 i3-end"
+              style=""
             >
               <div
                 class="en__field en__field--select en__field--871611 en__field--bankAccountType"
@@ -1336,6 +1370,7 @@
                 <label
                   for="en__field_supporter_bankAccountType"
                   class="en__field__label"
+                  style=""
                   >Bank Account Type</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1357,6 +1392,7 @@
                 <label
                   for="en__field_supporter_bankAccountNumber"
                   class="en__field__label"
+                  style=""
                   >Account Number</label
                 >
                 <div class="en__field__element en__field__element--number">
@@ -1375,6 +1411,7 @@
                 <label
                   for="en__field_supporter_bankRoutingNumber"
                   class="en__field__label"
+                  style=""
                   >Routing Number</label
                 >
                 <div class="en__field__element en__field__element--number">
@@ -1415,12 +1452,14 @@
             </div>
             <div
               class="en__component en__component--formblock dynamic-giving-button"
+              style=""
             >
-              <div class="en__submit"><button>Donate Now</button></div>
+              <div class="en__submit"><button style="">Donate Now</button></div>
             </div>
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-bottom"
+            style=""
           >
             <div class="en__component en__component--codeblock">
               <div style="text-align: center">
@@ -1450,18 +1489,23 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-footer"
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-footerOutside"
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-footerSpacer"
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-preFooter pseudo-subgrid"
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-footer pseudo-subgrid"
+            style=""
           >
             <div class="en__component en__component--codeblock">
               <footer>
@@ -1543,10 +1587,11 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-backgroundImage pseudo-subgrid"
+            style=""
           >
             <div class="en__component en__component--codeblock">
               <img
-                data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/example-background.jpeg"
+                data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/example-background.jpeg?v=1613334891000"
                 data-image-attribution-source="Credit Placeholder"
                 data-attribution-source-link="https%3A%2F%2Fwww.google.com%2F"
               />
@@ -1554,9 +1599,11 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-backgroundImageOverlay pseudo-subgrid"
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-customCode"
+            style=""
           ></div>
         </div>
       </form>
@@ -1575,24 +1622,13 @@
       property="description"
       content="Join Amnesty today to defend human rights and protect lives around the world."
     />
-    <!-- <script async src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/main.js?v=1613417307000"></script> -->
     <script>
-      function lazyLoadImgDataSrc() {
-        var imgDefer = document.getElementsByTagName("img");
-        for (var i = 0; i < imgDefer.length; i++) {
-          if (imgDefer[i].getAttribute("data-src")) {
-            imgDefer[i].setAttribute(
-              "src",
-              imgDefer[i].getAttribute("data-src")
-            );
-          }
+      var imgDefer = document.getElementsByTagName("img");
+      for (var i = 0; i < imgDefer.length; i++) {
+        if (imgDefer[i].getAttribute("data-src")) {
+          imgDefer[i].setAttribute("src", imgDefer[i].getAttribute("data-src"));
         }
       }
-
-      // Wait until the page has fully loaded before fetching images
-      window.addEventListener("load", function () {
-        lazyLoadImgDataSrc();
-      });
     </script>
 
     <script>
@@ -1616,7 +1652,7 @@
         position: absolute;
         top: -5000px;
       "
-      src="https://h.online-metrix.net/fp/tags.js?org_id=e0j3u9ji&session_id=e1839-77f91461bbb8459f8ebf6bc4d2ac01a2-server10008&page_id=1"
+      src="https://h.online-metrix.net/fp/tags.js?org_id=e0j3u9ji&session_id=e1839-dc1c8e717ec24376bbeffdd507fd8ab6-server10150&page_id=1"
     ></iframe>
   </body>
 </html>
