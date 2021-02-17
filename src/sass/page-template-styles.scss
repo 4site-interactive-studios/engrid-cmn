@@ -45,7 +45,11 @@
     position: absolute;
     background-color: var(--color-white);
     right: 0;
-    padding: 0 20px 40px 50px !important;
+    text-align: left;
+    padding: 80px 20px 40px 89px !important;
+    width: 220px;
+    top: -30px;
+    z-index: 1;
     a {
       display: inline-block;
       padding-bottom: 20px;
@@ -116,7 +120,7 @@
   .menu-btn {
     position: absolute;
     z-index: 3;
-    left: 0px;
+    right: 145px;
     top: 5px;
     cursor: pointer;
     transition: all 0.5s ease-out;
@@ -173,17 +177,21 @@
       flex: 1;
       align-content: flex-end;
       text-transform: uppercase;
+      text-align: right;
       ul {
         margin: 0;
       }
       li.has-submenu {
         position: relative;
+        display: inline-block;
         a {
           text-align: right;
           font-size: 16px;
           font-weight: 700;
           padding: 0 10px;
           font-family: "AmnestyTradeGothicCn";
+          position: relative;
+          z-index: 3;
         }
         ul {
           padding: 10px;
