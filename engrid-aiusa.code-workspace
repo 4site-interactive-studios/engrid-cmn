@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "engrid-scripts",
+			"path": "../engrid-scripts"
+		},
+		{
+			"name": "engrid-aiusa",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
