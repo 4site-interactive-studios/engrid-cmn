@@ -168,7 +168,6 @@
           margin-bottom: 5px;
         }
         strong {
-          font-size: 14px;
           font-weight: 700;
         }
       }
@@ -186,10 +185,7 @@
         display: inline-block;
         a {
           text-align: right;
-          font-size: 16px;
-          font-weight: 700;
           padding: 0 10px;
-          font-family: "AmnestyTradeGothicCn";
           position: relative;
           z-index: 3;
         }
@@ -216,6 +212,12 @@
     padding-top: 40px;
   }
 
+  .en__field__item {
+    label {
+      font-size: 20px;
+    }
+  }
+
   input.en__field__input {
     &:focus {
       box-shadow: 0 2px 0 0 #000;
@@ -229,33 +231,59 @@
     line-height: 18px;
   }
 
-  .en__component--formblock .en__field.en__field--checkbox > label {
+  .en__component--formblock .en__field.en__field--checkbox > label,
+  #en__field_transaction_recurrpay {
     display: none;
   }
 
   label.en__field__label.en__field__label--item {
-    padding: 12px 25px;
+    padding: 12px 5px;
     border: 2px solid #e4e4e4 !important;
     width: 100%;
     text-transform: uppercase !important;
     font-family: "AmnestyTradeGothicCn";
     justify-content: center;
+    display: inline-block;
+    text-align: center;
   }
 
   label.en__field__label.en__field__label--item:hover {
     background-color: white !important;
     border-color: #000 !important;
   }
+  
   input:checked + label.en__field__label.en__field__label--item {
     background-color: var(--theme-cta);
     border-color: var(--theme-cta) !important;
     color: black;
     box-shadow: none !important;
+   
     &:hover {
       background-color: var(--theme-cta) !important;
       border-color: #000 !important;
     }
   }
+
+  .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
+    flex: 1;
+    justify-content: center;
+    .en__field__label--item {
+      &::after {
+        text-transform: uppercase;
+        font-size: 100%;
+        opacity: 1;
+        line-height: inherit;
+      }
+    }
+  }
+
+  .en__field--donationAmt div.en__field__item.en__field__item--other {
+    flex: 2;
+    input {
+      text-align: center;
+    }
+  } 
+
   input.en__field__input--checkbox:checked
     + label.en__field__label.en__field__label--item,
   input.en__field__input--checkbox
@@ -381,9 +409,40 @@
   .en__component.en__component--codeblock > div > img {
     display: inline-block;
   }
+
+  footer {
+    display: flex;
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+    #footer-menu {
+      margin-left: 50px;
+      li {
+        padding-right: 15px;
+        margin-right: 15px;
+        border-right: 1px solid black;
+        a {
+          font-weight: 400;
+          font-family: var(--theme-typography-default-font-family);
+        }
+      }
+    }
+    #footer-social-wrapper {
+      flex: 1;
+      ul {
+        justify-content: flex-end;
+        li {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
 }
 
-body:not(#en__pagebuilder)[data-engrid-layout="centerleft1col"] .page-backgroundImage{
+body:not(#en__pagebuilder)[data-engrid-layout="centerleft1col"]
+  .page-backgroundImage {
   // background-color: var(--theme-light-gray);
   // background-repeat: no-repeat;
   // background-size: contain;
