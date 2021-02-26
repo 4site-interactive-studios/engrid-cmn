@@ -299,6 +299,21 @@
     }
   }
 
+  .en__field--donationAmt .en__field__element--radio {
+    width: 100%;
+  }
+
+  .en__component.en__component--copyblock.recurring-frequency-y-hide.inline-monthly-upsell {
+    position: relative;
+    top: -220px;
+    background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/Giving+monthly+is+the+most+effective+way+to+...+Lorem+ipsum+dolor+setet.png?v=1614309067000");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: transparent;
+    margin-bottom: -60px;
+  }
+
   .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
     flex-grow: 1;
     flex-basis: 30%;
@@ -490,7 +505,7 @@
     img {
       margin: 0;
     }
-    *:nth-child(3){
+    *:nth-child(3) {
       margin-left: auto;
     }
   }
