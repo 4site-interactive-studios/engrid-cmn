@@ -120,7 +120,7 @@
   .menu-btn {
     position: absolute;
     z-index: 3;
-    right: 145px;
+    left: -25px;
     top: 5px;
     cursor: pointer;
     transition: all 0.5s ease-out;
@@ -230,11 +230,25 @@
     font-style: italic;
     font-size: 12px;
     line-height: 18px;
+    font-family: var(--theme-font-stack-browser-fonts);
   }
 
   .en__component--formblock .en__field.en__field--checkbox > label,
   #en__field_transaction_recurrpay {
     display: none;
+  }
+
+  .en__field__input--checkbox:checked + .en__field__label:before {
+    box-shadow: none;
+  }
+
+  .en__field__input--checkbox + .en__field__label:before {
+    height: 2rem;
+    width: 2rem;
+  }
+  .en__field__input--checkbox:checked + .en__field__label::after {
+    left: -1.5rem;
+    top: 0.75rem;
   }
 
   label.en__field__label.en__field__label--item {
@@ -252,16 +266,36 @@
     background-color: white !important;
     border-color: #000 !important;
   }
-  
+
   input:checked + label.en__field__label.en__field__label--item {
     background-color: var(--theme-cta);
     border-color: var(--theme-cta) !important;
     color: black;
     box-shadow: none !important;
-   
+
     &:hover {
       background-color: var(--theme-cta) !important;
       border-color: #000 !important;
+    }
+  }
+
+  .has-value input:checked + label.en__field__label.en__field__label--item {
+    outline: none !important;
+    &:hover {
+      background-color: #fff !important;
+    }
+  }
+
+  .card,
+  .check,
+  .paypal {
+    input:checked + label.en__field__label.en__field__label--item {
+      background-color: var(--theme-typography-button-color);
+      color: var(--theme-typography-button-background-color);
+      border-color: var(--theme-typography-button-color) !important;
+      &:hover {
+        color: var(--theme-typography-button-color);
+      }
     }
   }
 
@@ -289,7 +323,7 @@
     input {
       text-align: center;
     }
-  } 
+  }
 
   input.en__field__input--checkbox:checked
     + label.en__field__label.en__field__label--item,
@@ -300,9 +334,10 @@
     font-family: var(--theme-typography-default-font-family);
     text-transform: none !important;
     border: 0px !important;
-    padding: 0 70px 0 0;
+    padding: 0 10px;
     font-size: 12px;
     line-height: 18px;
+    text-align: left;
   }
 
   .en__field--donationAmt {
@@ -449,8 +484,15 @@
     }
   }
 
-  #designed-by-4site-wrapper {
-    display: none;
+  .body-bottom > div > div {
+    display: flex;
+    justify-content: flex-start;
+    img {
+      margin: 0;
+    }
+    *:nth-child(3){
+      margin-left: auto;
+    }
   }
 }
 
