@@ -22,13 +22,13 @@
   "license": "Unlicense",
   "url": "https://github.com/4site-interactive-studios/engrid",
   "devDependencies": {
-    "@4site/engrid-common": "*",
-    "@4site/engrid-styles": "*",
-    "@babel/core": "^7.12.16",
+    "@4site/engrid-common": "^0.2.1",
+    "@4site/engrid-styles": "^0.2.1",
+    "@babel/core": "^7.13.8",
     "@babel/plugin-proposal-class-properties": "7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "7.6.2",
-    "@babel/plugin-transform-runtime": "^7.12.15",
-    "@babel/preset-env": "^7.12.16",
+    "@babel/plugin-transform-runtime": "^7.13.8",
+    "@babel/preset-env": "^7.13.8",
     "@babel/preset-typescript": "7.6.0",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.2.2",
@@ -53,7 +53,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "@babel/runtime": "^7.12.13",
+    "@babel/runtime": "^7.13.8",
     "clean-webpack-plugin": "^3.0.0",
     "sanitize.css": "^11.0.1",
     "strongly-typed-events": "^1.7.3"
