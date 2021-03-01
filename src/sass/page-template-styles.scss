@@ -38,6 +38,7 @@
     #designed-by-4site-wrapper {
       flex-basis: 100%;
       text-align: center;
+      display: none;
     }
   }
 
@@ -591,25 +592,32 @@
     }
   }
 
+  input::placeholder, select {
+    color: var(--theme-typography-input-placeholder-color);
+  }
+
   footer {
     display: flex;
+    align-items: center;
     ul {
       list-style: none;
       padding: 0;
       display: flex;
     }
     #footer-menu {
-      margin-left: 50px;
+      margin: 0 0 0 50px;
       li {
         padding-right: 15px;
         margin-right: 15px;
         border-right: 1px solid black;
+        font-size: 14px;
         &:nth-child(3) {
           border-right: 0px;
         }
         a {
           font-weight: 400;
           font-family: var(--theme-typography-default-font-family);
+          font-size: 14px;
         }
       }
     }
@@ -617,6 +625,7 @@
       flex: 1;
       ul {
         justify-content: flex-end;
+        margin: 0px;
         li {
           margin: 0 5px;
         }
