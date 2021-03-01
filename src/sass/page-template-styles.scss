@@ -154,13 +154,22 @@
       .content-header #menu-wrapper li.has-submenu {
         position: unset;
       }
+      .menu-btn {
+        left: unset;
+        right: 160px;
+        top: 32px;
+      }
+      .menu-btn.close {
+        top: 27px;
+      }
       div#header-logo-wrapper {
         z-index: 9;
       }
       nav > ul li:hover ul {
         left: 0;
-        padding: 140px 0 40px 15% !important;
+        padding: 140px 30px 40px 15% !important;
         width: 100%;
+        text-align: right;
       }
       .content-header #menu-wrapper li.has-submenu ul li a {
         font-size: 20px;
