@@ -555,6 +555,15 @@
     }
   }
 
+  select {
+    background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/caret.png?v=1614604340000');
+    background-size: 10px 7px;
+  }
+
+  .en__field__input--splitselect {
+    min-height: 41.78px;
+  }
+
   .en__component--formblock {
     label {
       letter-spacing: 0.06em;
