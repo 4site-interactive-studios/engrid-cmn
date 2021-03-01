@@ -88,8 +88,8 @@
     --theme-typography-input-font-weight: initial;
     --theme-typography-input-line-height: initial;
     --theme-typography-input-background-color: rgba(228, 228, 228, 0.36);
-    --theme-typography-input-border-width: 0px;
-    --theme-typography-input-border-color: var(--color-black);
+    --theme-typography-input-border-width: 2px;
+    --theme-typography-input-border-color: transparent;
     --theme-typography-input-border-radius: initial;
     --theme-typography-input-placeholder-color: #767676;
     --theme-typography-input-box-shadow: none;
@@ -99,9 +99,9 @@
     // TYPOGRAPHY INPUT:HOVER
     --theme-typography-input-focus-hover-color: var(--theme-typography-input-color);
     --theme-typography-input-focus-hover-background-color: var(--theme-typography-input-background-color);
-    --theme-typography-input-focus-hover-border-color: var(--theme-cta);
-    --theme-typography-input-focus-hover-border-bottom-color: var(--theme-typography-input-focus-hover-border-color);
-    --theme-typography-input-focus-hover-box-shadow: 0 2px 0 0 var(--theme-gray);
+    --theme-typography-input-focus-hover-border-color: var(--theme-typography-input-border-color);
+    --theme-typography-input-focus-hover-border-bottom-color: #000000;
+    --theme-typography-input-focus-hover-box-shadow: none;
         
     // TYPOGRAPHY RADIO
     --theme-typography-radio-content: initial;
@@ -148,8 +148,8 @@
     --theme-typography-select-font-weight: initial;
     --theme-typography-select-line-height: initial;
     --theme-typography-select-background-color: #f5f5f5;
-    --theme-typography-select-border-width: 0px;
-    --theme-typography-select-border-color: var(--color-black);
+    --theme-typography-select-border-width: 2px;
+    --theme-typography-select-border-color: #f5f5f5;
     --theme-typography-select-border-radius: initial;
     --theme-typography-select-box-shadow: var(--theme-typography-input-box-shadow);
 
@@ -157,7 +157,8 @@
     // TYPOGRAPHY SELECT:HOVER
     --theme-typography-select-focus-hover-color: var(--theme-typography-select-color);
     --theme-typography-select-focus-hover-background-color: var(--theme-typography-select-background-color);
-    --theme-typography-select-focus-hover-border-color: var(--theme-cta-hover);
+    --theme-typography-select-focus-hover-border-color: var(--theme-typography-select-border-color);
+    --theme-typography-select-focus-hover-border-bottom-color: #000000;
     --theme-typography-select-focus-hover-box-shadow: var(--theme-typography-input-focus-hover-box-shadow);
 
     // TYPOGRAPHY TEXTAREA
@@ -182,24 +183,24 @@
 
     // TYPOGRAPHY BUTTON
     --theme-typography-button-font-family: var(--theme-typography-default-font-family);
-    --theme-typography-button-color: var(--color-black);
+    --theme-typography-button-color: #252525;
     --theme-typography-button-font-size: var(--theme-root-font-size);
-    --theme-typography-button-font-weight: initial;
+    --theme-typography-button-font-weight: bold;
     --theme-typography-button-line-height: initial;
     --theme-typography-button-background-color: var(--color-white);
-    --theme-typography-button-border-width: 1px;
-    --theme-typography-button-border-color: #f5f5f5;
+    --theme-typography-button-border-width: 2px;
+    --theme-typography-button-border-color: #e4e4e4;
     --theme-typography-button-border-radius: initial;
     
     // TYPOGRAPHY BUTTON:FOCUS
     // TYPOGRAPHY BUTTON:HOVER
     --theme-typography-button-focus-hover-color: var(--theme-white);
-    --theme-typography-button-focus-hover-background-color: var(--color-black);
-    --theme-typography-button-focus-hover-border-color: var(--color-black);
+    --theme-typography-button-focus-hover-background-color: #252525;
+    --theme-typography-button-focus-hover-border-color: #252525;
 
     // TYPOGRAPHY PRIMARY BUTTON
     --theme-typography-primary-button-font-family: var(--theme-typography-button-font-family);
-    --theme-typography-primary-button-color: var(--color-black);
+    --theme-typography-primary-button-color: #252525;
     --theme-typography-primary-button-font-size: var(--theme-typography-button-font-size);
     --theme-typography-primary-button-font-weight: var(--theme-typography-button-font-weight);
     --theme-typography-primary-button-line-height: var(--theme-typography-button-line-height);
@@ -306,16 +307,18 @@
 
     // IMAGE ATTRIBUTION OVERLAY
     --theme-image-attribution-overlay-font-family: var(--theme-typography-default-font-family);
-    --theme-image-attribution-overlay-color: rgba(182, 182, 182, 0.9);
+    --theme-image-attribution-overlay-color: #b4b4b4;
     --theme-image-attribution-overlay-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
     --theme-image-attribution-overlay-font-size: 95%; 
+    --theme-image-attribution-overlay-font-style: italic; 
+    --theme-image-attribution-overlay-font-weight: 700;
     --theme-image-attribution-overlay-margin: 1.25ch 1.5ch;
-    --theme-image-attribution-overlay-padding: 1ch 1.5ch;
-    --theme-image-attribution-overlay-background-color: rgba(0, 0, 0, 0.8);    
+    --theme-image-attribution-overlay-padding: 0.5ch 1.25ch 0.5ch 1ch;
+    --theme-image-attribution-overlay-background-color: rgba(0, 0, 0, 0.95);    
 
     // ADD THEME CUSTOM CSS PROPERTIES HERE
     // TYPOGRAPHY HEADLINE
-    --theme-font-stack-browser-fonts-cn: "AmnestyTradeGothicCn", var(--theme-font-stack-browser-fonts);
+    --theme-font-stack-browser-fonts-cn: "AmnestyTradeGothic", var(--theme-font-stack-browser-fonts);
     --theme-typography-headline-font-family: var(--theme-font-stack-browser-fonts-cn);
     --theme-typography-headline-font-weight: 700;
 }

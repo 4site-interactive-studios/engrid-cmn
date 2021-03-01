@@ -133,7 +133,7 @@
     <script src="https://donate.amnestyusa.org/page/74408/productvariants.js"></script>
     <script src="https://donate.amnestyusa.org/ea-demo/frontend/pbAssets/build/js/enPage.js?v=3.60.1"></script>
   </head>
-  <body data-engrid-layout="centerleft1col" data-engrid-theme="aiusa">
+  <body data-engrid-layout="centerleft1col" data-engrid-theme="aiusa" data-engrid-add-input-placeholders>
 
     <script>
       if (window.self !== window.top) {
@@ -369,7 +369,7 @@
               <h2 class="section-header gift-amount">Gift Amount</h2>
             </div>
             <div
-              class="en__component en__component--formblock radio-to-buttons i1-hide-label i2-hide-label i3-hide-label"
+              class="en__component en__component--formblock primary i1-hide-label i2-hide-label i3-hide-label"
              
             >
               <div
@@ -1131,7 +1131,7 @@
             </div>
             <div class="en__component en__component--codeblock">
               <div
-                class="en__component en__component--formblock give-by-select"
+                class="en__component en__component--formblock give-by-select primary"
               >
                 <div
                   class="en__field en__field--radio en__field--000000 en__field--giveBySelect en__mandatory pseudo-en-field"
@@ -1562,8 +1562,17 @@
               <img
                 data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/example-background.jpeg?v=1613334891000"
                 data-attribution-source="© Credit Placeholder"
-                data-attribution-source-link="https%3A%2F%2Fwww.google.com%2F"
+                data-attribution-source-link="https://www.google.com/"
               />
+              <!-- <video
+                poster=""
+                data-attribution-source="© Credit Placeholder"
+                data-attribution-source-link="https://www.google.com/">
+
+                <source 
+                  data-src="https://player.vimeo.com/external/435826731.hd.mp4?s=877cdb0c8dfa0f453a8c8c824c66ee6fc8364379&amp;profile_id=174" type="video/mp4">
+              </video> -->
+
             </div>
           </div>
           <div
@@ -1591,14 +1600,22 @@
       property="description"
       content="Join Amnesty today to defend human rights and protect lives around the world."
     />
-    <script>
-      var imgDefer = document.getElementsByTagName("img");
-      for (var i = 0; i < imgDefer.length; i++) {
-        if (imgDefer[i].getAttribute("data-src")) {
-          imgDefer[i].setAttribute("src", imgDefer[i].getAttribute("data-src"));
+    <!-- <script>
+      // 4Site's simplified image lazy loader
+      var srcDefer = document.querySelectorAll("img[data-src]");
+      window.addEventListener('DOMContentLoaded', (event) => {
+        for (var i = 0; i < srcDefer.length; i++) {
+          let dataSrc = srcDefer[i].getAttribute("data-src");
+          if (dataSrc) {
+            srcDefer[i].setAttribute("defer", "async"); // Gets image processing off the main working thread
+            srcDefer[i].setAttribute("loading", "lazy"); // Lets the browser determine when the asset should be downloaded
+            srcDefer[i].setAttribute("src", dataSrc); // Sets the src which will cause the browser to retrieve the asset
+            srcDefer[i].setAttribute("data-engrid-data-src-processed", "true"); // Sets an attribute to mark that it has been processed by ENGrid
+            srcDefer[i].removeAttribute("data-src"); // Removes the data-source
+          }
         }
-      }
-    </script>
+      });
+    </script> -->
 
     <script>
       (function (w, d, s, l, i) {
