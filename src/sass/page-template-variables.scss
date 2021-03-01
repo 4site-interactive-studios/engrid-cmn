@@ -11,7 +11,7 @@
     // GRAYSCALE COLOR PALETTE
     --theme-off-white: #DFDFDF;
     --theme-light-gray: #BFBFBF;
-    --theme-gray: #9F9F9F;
+    --theme-gray: #b3b3b3;
     --theme-dark-gray: #808080;
     --theme-off-black: #404040;
 
@@ -40,10 +40,10 @@
     --theme-typography-default-line-height: initial;
         
     // TYPOGRAPHY H1
-    --theme-typography-h1-font-family: var(--theme-font-stack-browser-fonts);
+    --theme-typography-h1-font-family: var(--theme-font-stack-browser-fonts-cn);
     --theme-typography-h1-color: initial;
     --theme-typography-h1-font-size: calc(var(--theme-root-font-size) * var(--scale-up-160pct));
-    --theme-typography-h1-font-weight: initial;
+    --theme-typography-h1-font-weight: var(--theme-typography-headline-font-weight);
     --theme-typography-h1-line-height: initial;
         
     // TYPOGRAPHY H2
@@ -70,14 +70,14 @@
     // TYPOGRAPHY STRONG
     --theme-typography-strong-font-family: var(--theme-typography-default-font-family);
     --theme-typography-strong-color: initial;
-    --theme-typography-strong-font-size: var(--theme-root-font-size);
+    --theme-typography-strong-font-size: 14px;
     --theme-typography-strong-font-weight: bold;
     --theme-typography-strong-line-height: initial;
         
     // TYPOGRAPHY LABEL
-    --theme-typography-label-font-family: var(--theme-typography-default-font-family);
+    --theme-typography-label-font-family: var(--theme-font-stack-browser-fonts-cn);
     --theme-typography-label-color: #525252;
-    --theme-typography-label-font-size: var(--theme-root-font-size);
+    --theme-typography-label-font-size: 12px;
     --theme-typography-label-font-weight: initial;
     --theme-typography-label-line-height: initial;
         
@@ -87,20 +87,21 @@
     --theme-typography-input-font-size: var(--theme-root-font-size);
     --theme-typography-input-font-weight: initial;
     --theme-typography-input-line-height: initial;
-    --theme-typography-input-background-color: #f5f5f5;
-    --theme-typography-input-border-width: 0px;
-    --theme-typography-input-border-color: var(--color-black);
+    --theme-typography-input-background-color: rgba(228, 228, 228, 0.36);
+    --theme-typography-input-border-width: 2px;
+    --theme-typography-input-border-color: transparent;
     --theme-typography-input-border-radius: initial;
-    --theme-typography-input-placeholder-color: var(--theme-light-gray);
-    --theme-typography-input-box-shadow: inset 0 1px 2px var(--theme-light-gray);
+    --theme-typography-input-placeholder-color: #767676;
+    --theme-typography-input-box-shadow: none;
+    
         
     // TYPOGRAPHY INPUT:FOCUS
     // TYPOGRAPHY INPUT:HOVER
     --theme-typography-input-focus-hover-color: var(--theme-typography-input-color);
     --theme-typography-input-focus-hover-background-color: var(--theme-typography-input-background-color);
-    --theme-typography-input-focus-hover-border-color: var(--theme-cta);
-    --theme-typography-input-focus-hover-border-bottom-color: var(--theme-typography-input-focus-hover-border-color);
-    --theme-typography-input-focus-hover-box-shadow: 0 0 0.3125rem var(--theme-light-gray);
+    --theme-typography-input-focus-hover-border-color: var(--theme-typography-input-border-color);
+    --theme-typography-input-focus-hover-border-bottom-color: #000000;
+    --theme-typography-input-focus-hover-box-shadow: none;
         
     // TYPOGRAPHY RADIO
     --theme-typography-radio-content: initial;
@@ -147,8 +148,8 @@
     --theme-typography-select-font-weight: initial;
     --theme-typography-select-line-height: initial;
     --theme-typography-select-background-color: #f5f5f5;
-    --theme-typography-select-border-width: 0px;
-    --theme-typography-select-border-color: var(--color-black);
+    --theme-typography-select-border-width: 2px;
+    --theme-typography-select-border-color: #f5f5f5;
     --theme-typography-select-border-radius: initial;
     --theme-typography-select-box-shadow: var(--theme-typography-input-box-shadow);
 
@@ -156,7 +157,8 @@
     // TYPOGRAPHY SELECT:HOVER
     --theme-typography-select-focus-hover-color: var(--theme-typography-select-color);
     --theme-typography-select-focus-hover-background-color: var(--theme-typography-select-background-color);
-    --theme-typography-select-focus-hover-border-color: var(--theme-cta-hover);
+    --theme-typography-select-focus-hover-border-color: var(--theme-typography-select-border-color);
+    --theme-typography-select-focus-hover-border-bottom-color: #000000;
     --theme-typography-select-focus-hover-box-shadow: var(--theme-typography-input-focus-hover-box-shadow);
 
     // TYPOGRAPHY TEXTAREA
@@ -181,24 +183,24 @@
 
     // TYPOGRAPHY BUTTON
     --theme-typography-button-font-family: var(--theme-typography-default-font-family);
-    --theme-typography-button-color: var(--color-black);
+    --theme-typography-button-color: #252525;
     --theme-typography-button-font-size: var(--theme-root-font-size);
-    --theme-typography-button-font-weight: initial;
+    --theme-typography-button-font-weight: bold;
     --theme-typography-button-line-height: initial;
     --theme-typography-button-background-color: var(--color-white);
-    --theme-typography-button-border-width: 1px;
-    --theme-typography-button-border-color: #f5f5f5;
+    --theme-typography-button-border-width: 2px;
+    --theme-typography-button-border-color: #e4e4e4;
     --theme-typography-button-border-radius: initial;
     
     // TYPOGRAPHY BUTTON:FOCUS
     // TYPOGRAPHY BUTTON:HOVER
     --theme-typography-button-focus-hover-color: var(--theme-white);
-    --theme-typography-button-focus-hover-background-color: var(--color-black);
-    --theme-typography-button-focus-hover-border-color: var(--color-black);
+    --theme-typography-button-focus-hover-background-color: #252525;
+    --theme-typography-button-focus-hover-border-color: #252525;
 
     // TYPOGRAPHY PRIMARY BUTTON
     --theme-typography-primary-button-font-family: var(--theme-typography-button-font-family);
-    --theme-typography-primary-button-color: var(--color-black);
+    --theme-typography-primary-button-color: #252525;
     --theme-typography-primary-button-font-size: var(--theme-typography-button-font-size);
     --theme-typography-primary-button-font-weight: var(--theme-typography-button-font-weight);
     --theme-typography-primary-button-line-height: var(--theme-typography-button-line-height);
@@ -214,7 +216,7 @@
     --theme-typography-primary-button-focus-hover-border-color: var(--theme-typography-primary-button-border-color);
     
     // TYPOGRAPHY A
-    --theme-typography-a-font-family: var(--theme-typography-default-font-family);
+    --theme-typography-a-font-family: var(--theme-typography-headline-font-family);
     --theme-typography-a-color: initial;
     --theme-typography-a-font-size: var(--theme-root-font-size);
     --theme-typography-a-font-weight: initial;
@@ -253,12 +255,12 @@
     --theme-content-footerSpacer-background-color: var(--theme-content-background-color);
     --theme-content-preFooter-background-color: var(--theme-content-background-color);
     --theme-content-footer-background-color: var(--theme-content-background-color);
-    --theme-page-backgroundImage-background-color: var(--theme-page-background-color);
+    --theme-page-backgroundImage-background-color: --theme-light-gray;
     --theme-page-backgroundImageOverlay-background-color: var(--color-transparent);
     --theme-page-customCode-background-color: var(--theme-page-background-color);
 
     // LAZY LOADED BANNER IMAGE PLACEHOLDER COLOR
-    --theme-body-banner-image-background-color: var(--color-transparent);
+    --theme-body-banner-image-background-color: --theme-light-gray;
 
     // BODY BORDER RADIUS
     --theme-body-border-radius: 0px;
@@ -295,23 +297,29 @@
     // CLICK TO EXPAND
     --theme-click-to-expand-copy-height-before-fade-starts: 100px;
     --theme-click-to-expand-copy-total-height: 450px;
-    --theme-click-to-expand-cta-image-url: url("https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_open.png");
-    --theme-click-to-expand-cta-image-width: 16px;
-    --theme-click-to-expand-cta-image-height: 16px;
+    --theme-click-to-expand-cta-image-url: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/btn+more.png?v=1614305726000");
+    --theme-click-to-expand-cta-image-width: 56px;
+    --theme-click-to-expand-cta-image-height: 15px;
 
     // LABEL APPENDED TO DONTIONAL GIVING AMOUNTS BASED ON GIVING FREQUENCY
     --give-monthly-donation-amount-appended-label: " Monthly";
-    --give-annually-donation-amount-appended-label: " Annually";
+    --give-annual-donation-amount-appended-label: " Annually";
 
     // IMAGE ATTRIBUTION OVERLAY
-    --theme-image-attribution-overlay-margin-font-family: var(--theme-typography-default-font-family);
-    --theme-image-attribution-overlay-color: rgba(255, 255, 255, 0.9);
+    --theme-image-attribution-overlay-font-family: var(--theme-typography-default-font-family);
+    --theme-image-attribution-overlay-color: #b4b4b4;
     --theme-image-attribution-overlay-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-    --theme-image-attribution-overlay-font-size: 75%; 
+    --theme-image-attribution-overlay-font-size: 95%; 
+    --theme-image-attribution-overlay-font-style: italic; 
+    --theme-image-attribution-overlay-font-weight: 700;
     --theme-image-attribution-overlay-margin: 1.25ch 1.5ch;
-    --theme-image-attribution-overlay-padding: 1.25ch 1.5ch;
-    --theme-image-attribution-overlay-background-color: rgba(0, 0, 0, 0.3);    
+    --theme-image-attribution-overlay-padding: 0.5ch 1.25ch 0.5ch 1ch;
+    --theme-image-attribution-overlay-background-color: rgba(0, 0, 0, 0.95);    
 
     // ADD THEME CUSTOM CSS PROPERTIES HERE
+    // TYPOGRAPHY HEADLINE
+    --theme-font-stack-browser-fonts-cn: "AmnestyTradeGothic", var(--theme-font-stack-browser-fonts);
+    --theme-typography-headline-font-family: var(--theme-font-stack-browser-fonts-cn);
+    --theme-typography-headline-font-weight: 700;
 }
   

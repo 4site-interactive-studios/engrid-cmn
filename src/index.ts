@@ -1,13 +1,19 @@
-import { Options, App } from "@4site/engrid-common";
+// import { Options, App } from "@4site/engrid-common"; // Uses ENGrid via NPM
+import { Options, App } from "../../engrid-scripts/packages/common"; // Uses ENGrid via Visual Studio Workspace
 import "./sass/main.scss";
+import "./scripts/main.js";
 
 const options: Options = {
   ModalDebug: true,
   applePay: false,
-  CapitalizeFields: false,
+  CapitalizeFields: true,
   ClickToExpand: true,
+  CurrencySymbol: '$',
+  CurrencySeparator: '.',
+  MediaAttribution: true,
+  SkipToMainContentLink: true,
+  SrcDefer: true,
   onLoad: () => console.log("Starter Theme Loaded"),
-  onResize: () => console.log("Starter Theme Window Resized"),
-  submitLabel: "Give"
+  onResize: () => console.log("Starter Theme Window Resized")
 };
 new App(options);

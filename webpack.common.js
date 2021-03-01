@@ -13,7 +13,7 @@ module.exports = {
       template: "./src/index.html",
       inject: true,
       minify: {
-        removeComments: true,
+        removeComments: false,
         collapseWhitespace: false,
       },
     }),
@@ -23,7 +23,7 @@ module.exports = {
       template: "./src/templates/page-donation-aiusa.html",
       inject: true,
       minify: {
-        removeComments: true,
+        removeComments: false,
         collapseWhitespace: false,
       },
     }),
@@ -33,7 +33,7 @@ module.exports = {
       template: "./src/templates/page-donation.html",
       inject: true,
       minify: {
-        removeComments: true,
+        removeComments: false,
         collapseWhitespace: false,
       },
     }),
@@ -43,7 +43,7 @@ module.exports = {
       template: "./src/templates/page-donation-oc.html",
       inject: true,
       minify: {
-        removeComments: true,
+        removeComments: false,
         collapseWhitespace: false,
       },
     }),
@@ -53,7 +53,7 @@ module.exports = {
       template: "./src/templates/page-advocacy-rfkhr.html",
       inject: true,
       minify: {
-        removeComments: true,
+        removeComments: false,
         collapseWhitespace: false,
       },
     }),
@@ -63,7 +63,7 @@ module.exports = {
       template: "./src/templates/page-donation-rfkhr.html",
       inject: true,
       minify: {
-        removeComments: true,
+        removeComments: false,
         collapseWhitespace: false,
       },
     }),
@@ -73,7 +73,7 @@ module.exports = {
       template: "./src/templates/page-donation-applepay.html",
       inject: true,
       minify: {
-        removeComments: true,
+        removeComments: false,
         collapseWhitespace: false,
       },
     }),
@@ -83,7 +83,7 @@ module.exports = {
       template: "./src/templates/page-sign-up.html",
       inject: true,
       minify: {
-        removeComments: true,
+        removeComments: false,
         collapseWhitespace: false,
       },
     }),
@@ -93,7 +93,7 @@ module.exports = {
       template: "./src/templates/email-ecard.html",
       inject: true,
       minify: {
-        removeComments: true,
+        removeComments: false,
         collapseWhitespace: false,
       },
     }),

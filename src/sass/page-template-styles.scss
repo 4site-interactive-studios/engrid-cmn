@@ -23,19 +23,7 @@
   }
 
   .en__component--advcolumn[class*="content"] > * {
-    background-color: lightyellow;
-  }
-
-  .en__component--advcolumn[class*="body"] {
-    background-color: #fff;
-  }
-
-  /* hiding labels until label class */
-  .en__field--recurrfreq > label {
-    display: none;
-  }
-  .en__field--othamt2 {
-    display: none;
+    background-color: var(--color-white);
   }
 
   header,
@@ -50,20 +38,25 @@
     #designed-by-4site-wrapper {
       flex-basis: 100%;
       text-align: center;
+      display: none;
     }
   }
 
   nav > ul li:hover ul {
     position: absolute;
-    background-color: white;
+    background-color: var(--color-white);
     right: 0;
-    padding: 0 20px 40px 50px !important;
+    text-align: left;
+    padding: 80px 0px 40px 70px !important;
+    width: 220px;
+    top: -30px;
+    // z-index: 1;
     a {
       display: inline-block;
       padding-bottom: 20px;
       &:hover {
         text-decoration: underline;
-        background-color: yellow;
+        background-color: var(--theme-cta);
       }
     }
   }
@@ -76,8 +69,6 @@
     padding-left: 0;
     padding-right: 0;
   }
-
-  
 
   /* Sum of all MIN values of the Body Columns */
   &[data-engrid-layout="centerleft1col"] {
@@ -92,18 +83,17 @@
                 cc-start lcc-start]  minmax(0px, 128px)      [lcc-end
                 bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
                 rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
-                rcc-start]           minmax(0px, 792px)      [rcc-end cc-end
-                rpc-start]           minmax(0px, 1fr)        [rpc-end pc-end               
+                rcc-start]           minmax(0px, 1fr)      [rcc-end cc-end
+                rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
                 ];
             }
 
-      .content-header {
-        margin-bottom: 80px;
-        background-color: #fff;
+      .body-header {
+        margin-top: 80px;
       }
 
-      .content-footer {
-        margin-top: 80px;
+      .body-footer {
+        margin-bottom: 80px;
       }
     }
   }
@@ -125,30 +115,92 @@
                     rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
                 ];
             }
-    }
-  }
+      footer {
+        background-color: #e4e4e4;
+        flex-direction: column;
+        padding-top: 20px;
+        #footer-menu-wrapper {
+          order: 2;
+          ul#footer-menu {
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto !important;
+            li {
+              margin: 5px 10px;
+              &:nth-child(2) {
+                border-right: 0px;
+              }
+              &:nth-child(3) {
+                width: 100%;
+                text-align: center;
+              }
+            }
+          }
+        }
+        #footer-social-wrapper {
+          order: 1;
+          ul {
+            justify-content: center;
+          }
+        }
+        #designed-by-4site-wrapper {
+          order: 3;
+        }
+      }
+      #social-proof-wrapper,
+      #footer-logo-wrapper {
+        display: none;
+      }
+      .content-header #menu-wrapper li.has-submenu {
+        position: unset;
+      }
+      .menu-btn {
+        left: unset;
+        right: 160px;
+        top: 32px;
+      }
+      .menu-btn.close {
+        top: 27px;
+      }
+      div#header-logo-wrapper {
+        // z-index: 9;
+      }
 
-  .page-backgroundImage {
-    background-color: #ccc;
-    background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2110/default-bg-8.jpg?v\=1578587000000");
-    background-repeat: no-repeat;
-    background-size: contain;
+      nav > ul li:hover ul {
+        left: 0;
+        padding: 140px 30px 40px 15% !important;
+        width: 100%;
+        text-align: right;
+      }
+      .content-header #menu-wrapper li.has-submenu ul li a {
+        font-size: 20px;
+      }
+      .en__field--recurrfreq .en__field__item,
+      .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
+        flex-basis: 40%;
+      }
+      .en__field {
+        flex-basis: 100% !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+    }
   }
 
   .menu-btn {
     position: absolute;
     z-index: 3;
-    left: 0px;
+    left: -25px;
     top: 5px;
     cursor: pointer;
-    transition: all 0.5s ease-out;
+    transition: all 0.35s ease-out;
   }
   .menu-btn .btn-line {
     width: 20px;
-    height: 1.5px;
+    height: 2px;
     margin: 0 0 5px 0;
-    background: black;
-    transition: all 0.5s ease-out;
+    background: var(--color-black);
+    transition: all 0.35s ease-out;
   }
 
   .menu-btn.close {
@@ -169,9 +221,6 @@
   }
 
   .content-header {
-    .en__component--codeblock {
-      background-color: #fff;
-    }
     header {
       display: flex;
       align-items: center;
@@ -189,7 +238,6 @@
           margin-bottom: 5px;
         }
         strong {
-          font-size: 14px;
           font-weight: 700;
         }
       }
@@ -198,17 +246,24 @@
       flex: 1;
       align-content: flex-end;
       text-transform: uppercase;
+      text-align: right;   
+      font-weight: 700; 
+      nav a {
+        display: block;
+      }
+
       ul {
         margin: 0;
       }
       li.has-submenu {
         position: relative;
+        display: inline-block;
+        padding-right: 20px;
         a {
           text-align: right;
-          font-size: 16px;
-          font-weight: 700;
           padding: 0 10px;
-          font-family: "AmnestyTradeGothicCn";
+          position: relative;
+          z-index: 3;
         }
         ul {
           padding: 10px;
@@ -218,6 +273,26 @@
           }
         }
       }
+
+      nav > ul li:hover ul {
+        position: absolute;
+        background-color: var(--color-white);
+        right: 0;
+        text-align: left;
+        padding: 80px 20px 40px 89px;
+        width: 220px;
+        top: -30px;
+        // z-index: 1;
+        a {
+          display: inline-block;
+          padding-bottom: 20px;
+          &:hover {
+            text-decoration: underline;
+            background-color: var(--theme-cta);
+          }
+        }
+      }
+
     }
   }
 
@@ -225,9 +300,7 @@
     h1 {
       font-size: 47px;
       line-height: 56.68px;
-      font-weight: 700;
       margin-bottom: 0;
-      font-family: 'AmnestyTradeGothicCn';
     }
   }
 
@@ -235,65 +308,185 @@
     padding-top: 40px;
   }
 
-  input.en__field__input {
-    background: rgba(228, 228, 228, 0.36);
-    box-shadow: none !important;
-    &:hover {
-      box-shadow: 0 2px 0 0 #b3b3b3 !important;
-    }
-    &:focus {
-      box-shadow: 0 2px 0 0 #000 !important;
+  .en__field__item {
+    label {
+      font-size: 20px;
     }
   }
 
-  .en__component--copyblock > p, .en__component--copyblock > p > a {
+  input.en__field__input {
+    &:focus {
+      // box-shadow: 0 2px 0 0 #000;
+    }
+  }
+
+  .en__component--copyblock > p,
+  .en__component--copyblock > p > a {
     font-style: italic;
     font-size: 12px;
     line-height: 18px;
+    font-family: var(--theme-font-stack-browser-fonts);
   }
 
-  .en__component--formblock .en__field.en__field--checkbox > label {
+  .en__component--formblock .en__field.en__field--checkbox > label,
+  #en__field_transaction_recurrpay {
     display: none;
   }
 
+  .en__field__input--checkbox:checked + .en__field__label:before {
+    box-shadow: none;
+  }
+
+  .en__field__input--checkbox + .en__field__label:before {
+    height: 2rem;
+    width: 2rem;
+  }
+  .en__field__input--checkbox:checked + .en__field__label::after {
+    left: -1.5rem;
+    top: 0.75rem;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
   label.en__field__label.en__field__label--item {
-    padding: 12px 25px;
-    border-radius: 2px !important;
-    border: 2px solid #E4E4E4 !important;
+    padding: 12px 5px;
     width: 100%;
     text-transform: uppercase !important;
-    font-family: 'AmnestyTradeGothicCn';
+    font-family: "AmnestyTradeGothic";
+    justify-content: center;
+    display: inline-block;
+    text-align: center;
   }
-  
+
   label.en__field__label.en__field__label--item:hover {
-    background-color: white !important;
-    border-color: #000 !important;
+    // background-color: white !important;
+    // border-color: #000 !important;
   }
-  input:checked+label.en__field__label.en__field__label--item {
-    background-color: yellow;
-    border-color: yellow !important;
-    color: black;
-    box-shadow: none !important;
+
+  input:checked + label.en__field__label.en__field__label--item {
+    // background-color: var(--theme-cta);
+    // border-color: var(--theme-cta) !important;
+    // color: black;
+    // box-shadow: none !important;
+
     &:hover {
-      background-color: yellow !important;
-      border-color: #000 !important;
+      // background-color: var(--theme-cta) !important;
+      // border-color: #000 !important;
     }
   }
-  input.en__field__input--checkbox:checked+label.en__field__label.en__field__label--item,
-  input.en__field__input--checkbox+label.en__field__label.en__field__label--item {
-    background-color: #fff !important;
+
+  .has-value input:checked + label.en__field__label.en__field__label--item {
+    outline: none !important;
+    &:hover {
+      background-color: #fff !important;
+    }
+  }
+
+  .card,
+  .check,
+  .paypal {
+    input:checked + label.en__field__label.en__field__label--item {
+      background-color: var(--theme-typography-button-color);
+      color: var(--theme-typography-button-background-color);
+      border-color: var(--theme-typography-button-color) !important;
+      &:hover {
+        color: var(--theme-typography-button-color);
+      }
+    }
+  }
+
+  .en__field--donationAmt .en__field__element--radio {
+    width: 100%;
+  }
+
+  .en__component.en__component--copyblock.recurring-frequency-y-hide.inline-monthly-upsell {
+    position: relative;
+    background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/Giving+monthly+is+the+most+effective+way+to+...+Lorem+ipsum+dolor+setet.png?v=1614309067000");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    color: transparent;
+    min-height: 60px;
+    p {
+      margin: 20px 0 0;
+    }
+    &::before {
+      content:'';
+      background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/upsell_arrow.png?v=1614603925000');
+      width: 26px;
+      height: 15.5px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: calc(50% - 13px);
+      top: -23px;
+    }
+  }
+
+  .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
+    // flex-grow: 1;
+    flex-basis: calc((100% / 3) - 1rem);
+    max-width: calc(100% / 3);
+    // flex-shrink: 1;
+    // justify-content: center;
+    // margin: 10px 1.5% !important;
+    .en__field__label--item {
+      width: 100%;
+      &::after {
+        text-transform: uppercase;
+        font-size: 100%;
+        opacity: 1;
+        line-height: inherit;
+      }
+    }
+  }
+
+  .en__field--donationAmt div.en__field__item.en__field__item--other {
+    // flex-grow: 2;
+    // flex-shrink: 0;
+    flex-basis: calc((100% * ( 2 / 3)) - 1rem);
+    max-width: calc(100% * (2 / 3));
+    // margin: 10px 1.5% !important;
+    input {
+      // text-align: center;
+      padding-left: 1.75rem;
+      border-color: var(--theme-typography-button-border-color);
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }   
+
+  .en__field--donationAmt .en__field__item--other::before {
+    display: block;
+    content: "$";
+    position: absolute;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 0;
+    height: 0;
+    left: 1rem;
+    top: 50%;
+}
+
+  input.en__field__input--checkbox:checked
+    + label.en__field__label.en__field__label--item,
+  input.en__field__input--checkbox
+    + label.en__field__label.en__field__label--item {
+    background-color: var(--color-white);
     font-weight: 500;
-    font-family: 'AmnestyTradeGothic';
+    font-family: var(--theme-typography-default-font-family);
     text-transform: none !important;
     border: 0px !important;
-    padding: 0 70px 0 0;
+    padding: 3px 10px 0;
     font-size: 12px;
     line-height: 18px;
+    text-align: left;
   }
-  
 
   .en__field--donationAmt {
-    input:checked+label.en__field__label.en__field__label--item {
+    input:checked + label.en__field__label.en__field__label--item {
       background-color: black;
       border-color: black !important;
       color: white;
@@ -304,107 +497,213 @@
   }
 
   .en__field__element--radio {
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 
   .en__field--recurrfreq {
     padding-right: 0;
     .en__field__item {
-      max-width: 30%;
+      max-width: calc(100% / 3);
       margin-right: 0px !important;
     }
   }
 
-  .en__component--copyblock {
-    > h2.section-header {
-       width: 100%;
-      text-align: center;
-      font-family: 'AmnestyTradeGothicCn';
-      color: #000;
-      position: relative;
-      z-index: 1;
-      font-size: 16px;
+  h2.section-header {
+    width: 100%;
+    text-align: center;
+    font-family: "AmnestyTradeGothic";
+    font-weight: 700;
+    position: relative;
+    // z-index: 1;
+    font-size: 16px;
+    overflow: hidden;
+    margin: 10px 0 20px;
+    &:before,
+    &:after {
+      position: absolute;
+      top: 51%;
+      width: 45%;
       overflow: hidden;
-      margin: 10px 0 20px;
-      &:before, &:after {
-        position: absolute;
-        top: 51%;
-        width: 45%;
-        overflow: hidden;
-        height: 1px;
-        content: '\a0';
-        background-color: #e4e4e4;
+      height: 1px;
+      content: "\a0";
+      background-color: #e4e4e4;
+    }
+    &:before {
+      margin-left: -50%;
+      text-align: right;
+    }
+    &:after {
+      width: 40%;
+      margin-left: 5%;
+    }
+    &.gift-amount {
+      margin: 40px 0 -10px;
+    }
+  }
+
+  
+
+  .en__field--donationAmt {
+    > label {
+      // width: 100%;
+      // text-align: center;
+      // font-family: "AmnestyTradeGothic";
+      // font-weight: 400;
+      // color: #000;
+      // position: relative;
+      // z-index: 1;
+      // overflow: hidden;
+      // margin: 10px 0 20px;
+      &:before,
+      &:after {
+      //   position: absolute;
+      //   top: 51%;
+      //   width: 45%;
+      //   overflow: hidden;
+      //   height: 1px;
+      //   content: "\a0";
+      //   background-color: #e4e4e4;
       }
       &:before {
-        margin-left: -50%;
-        text-align: right;
+        // margin-left: -50%;
+        // text-align: right;
       }
       &:after {
-        width: 40%;
-        margin-left: 5%;
+        // width: 40%;
+        // margin-left: 5%;
+      }
+    }
+    .en__field__item {
+      // min-width: 22%;
+      label {
+        // text-align: center;
+      }
+    }
+    .en__field__item.en__field__item--other {
+      // flex-grow: 2;
+      input.en__field__input.en__field__input--other {
+        // background-color: #e4e4e4 !important;
+        // position: relative;
+        // background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/dollar.png?v=1614605096000');
+        // background-position: 25% center;
+        // background-repeat: no-repeat;
+        // background-size: 10px 18px;
+        // text-align: left;
+        // text-indent: 30%;
+        // color: black;
       }
     }
   }
 
-  .en__field--donationAmt {
-    > label {
-      width: 100%;
-      text-align: center;
-      font-family: 'AmnestyTradeGothicCn';
-      color: #000;
+  .en__component .en__field.en__field--radio .en__field__item:not(.en__field__item--other) {
+    // margin: 0 1.5% 0.5rem;
+    // flex-grow: 1;
+    // flex-basis: 30%;
+    // flex-shrink: 1;
+  }
+
+  .en__field__item.paypal label {
+    position: relative;
+    padding-left: 30%;
+    span {
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/Vector.png?v=1614598390000");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
       position: relative;
-      z-index: 1;
-      overflow: hidden;
-      margin: 10px 0 20px;
-      &:before, &:after {
-        position: absolute;
-        top: 51%;
-        width: 45%;
-        overflow: hidden;
-        height: 1px;
-        content: '\a0';
-        background-color: #e4e4e4;
-      }
-      &:before {
-        margin-left: -50%;
-        text-align: right;
-      }
-      &:after {
-        width: 40%;
-        margin-left: 5%;
-      }
+      left: -81px;
+      top: 1px;
     }
-    .en__field__item {
-      min-width: 22%;
-      label {
-        text-align: center;
-      }
-    }
-    .en__field__item.en__field__item--other {
-      flex-grow: 2;
-      input.en__field__input.en__field__input--other {
-        background-color: #e4e4e4 !important;
-      }
-    }
-    
+  }
+
+  select {
+    background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/caret.png?v=1614604340000');
+    background-size: 10px 7px;
+  }
+
+  .en__field__input--splitselect {
+    min-height: 41.78px;
   }
 
   .en__component--formblock {
     label {
-      font-family: "AmnestyTradeGothicCn";
-      color: #525252;
-      font-size: 12px;
       letter-spacing: 0.06em;
     }
   }
 
   .en__submit button {
-    font-family: "AmnestyTradeGothicCn";
+    font-family: "AmnestyTradeGothic";
     font-weight: 700;
   }
 
   .en__component.en__component--codeblock > div > img {
     display: inline-block;
+    &:nth-child(1){
+      margin-right: 10px;
+      filter: grayscale(1) opacity(0.6);
+    }
   }
-  
+
+  input::placeholder, select {
+    color: var(--theme-typography-input-placeholder-color);
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+    #footer-menu {
+      margin: 0 0 0 50px;
+      li {
+        padding-right: 15px;
+        margin-right: 15px;
+        border-right: 1px solid black;
+        font-size: 14px;
+        &:nth-child(3) {
+          border-right: 0px;
+        }
+        a {
+          font-weight: 400;
+          font-family: var(--theme-typography-default-font-family);
+          font-size: 14px;
+        }
+      }
+    }
+    #footer-social-wrapper {
+      flex: 1;
+      ul {
+        justify-content: flex-end;
+        margin: 0px;
+        li {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+
+  .body-bottom > div > div {
+    display: flex;
+    justify-content: flex-start;
+    img {
+      margin: 0;
+    }
+    *:nth-child(3) {
+      margin-left: auto;
+    }
+  }
+}
+
+body:not(#en__pagebuilder)[data-engrid-layout="centerleft1col"]
+  .page-backgroundImage {
+  // background-color: var(--theme-light-gray);
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  grid-row: content-header-end / content-footer-start;
 }
