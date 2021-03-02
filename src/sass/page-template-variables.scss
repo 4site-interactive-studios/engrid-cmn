@@ -307,14 +307,15 @@
 
     // IMAGE ATTRIBUTION OVERLAY
     --theme-image-attribution-overlay-font-family: var(--theme-typography-default-font-family);
-    --theme-image-attribution-overlay-color: #b4b4b4;
+    --theme-image-attribution-overlay-color: #ffffff;
     --theme-image-attribution-overlay-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-    --theme-image-attribution-overlay-font-size: 95%; 
-    --theme-image-attribution-overlay-font-style: italic; 
+    --theme-image-attribution-overlay-font-size: 12px; 
+    --theme-image-attribution-overlay-font-style: normal; 
     --theme-image-attribution-overlay-font-weight: 700;
-    --theme-image-attribution-overlay-margin: 1.25ch 1.5ch;
-    --theme-image-attribution-overlay-padding: 0.5ch 1.25ch 0.5ch 1ch;
-    --theme-image-attribution-overlay-background-color: rgba(0, 0, 0, 0.95);    
+    --theme-image-attribution-overlay-text-transform: uppercase;
+    --theme-image-attribution-overlay-margin: 1.25ch 0 0 1.5ch;
+    --theme-image-attribution-overlay-padding: 1ch 1.25ch 0.5ch 1.25ch;
+    --theme-image-attribution-overlay-background-color: rgba(0, 0, 0, 0.25);    
 
     // ADD THEME CUSTOM CSS PROPERTIES HERE
     // TYPOGRAPHY HEADLINE
