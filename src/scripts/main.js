@@ -1,4 +1,6 @@
 // import { createPopper } from "popper.js";
+import tippy from "tippy.js";
+//import "tippy.js/dist/tippy.css";
 
 document.onreadystatechange = () => {    
     if(document.readyState === "complete"){
@@ -23,19 +25,16 @@ document.onreadystatechange = () => {
         if(ccvvLabel){
             let el = document.createElement('span');
             let childEl = document.createElement('a');
+            childEl.href='#';
             childEl.id = 'ccv-popcorn';
             childEl.className="whats-this";
             childEl.innerText="What's this?";
-            let div = document.createElement('div');
-            div.id = 'ccv-tooltip';
-            div.innerText = 'CCVs are needed and cool';
-            div.style.display = 'none';
+            childEl.addEventListener('click',e=>e.preventDefault());
             el.appendChild(childEl);
             ccvvLabel.appendChild(el);
-            ccvvLabel.appendChild(div);
-            // createPopper(childEl,div, {
-            //     placement: 'top'
-            // })
+            tippy('#ccv-popcorn',{
+                content: "CCVs are needed and cool"
+            });
         }
     }
 

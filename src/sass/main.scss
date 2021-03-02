@@ -1,6 +1,7 @@
 /* ENGRID */
 @import "@4site/engrid-styles"; // Uses ENGrid via NPM
 // @import "../../../engrid-scripts/packages/styles"; // Uses ENGrid via Visual Studio Workspace
+@import "../../node_modules/tippy.js/dist/tippy.css";
 
 /* THEME STYLING AND LAYOUTS */
 @import "./page-template-variables";
