@@ -128,9 +128,11 @@
       footer {
         background-color: #e4e4e4;
         flex-direction: column;
-        padding-top: 20px;
+        padding-top: 32px;
         #footer-menu-wrapper {
           order: 2;
+          letter-spacing: 0.1ch;
+          margin-bottom: 26px;
           ul#footer-menu {
             justify-content: center;
             flex-wrap: wrap;
@@ -149,6 +151,7 @@
         }
         #footer-social-wrapper {
           order: 1;
+          margin-bottom: 24px;
           ul {
             justify-content: center;
           }
