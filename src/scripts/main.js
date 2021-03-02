@@ -9,6 +9,7 @@ document.onreadystatechange = () => {
         let recurrF = document.querySelectorAll('.en__field--recurrfreq')[0];
         let inlineMonthly = document.querySelectorAll('.inline-monthly-upsell')[0];
         let ccvvLabel = document.querySelectorAll('.en__field--ccvv > label')[0];
+        let menuBtn = document.querySelectorAll('.menu-btn + a')[0];
 
         [].forEach.call(paypal, e=>{
             e.innerHTML = e.innerHTML + '<span></span>';
@@ -34,6 +35,12 @@ document.onreadystatechange = () => {
             ccvvLabel.appendChild(el);
             tippy('#ccv-popcorn',{
                 content: "CCVs are needed and cool"
+            });
+        }
+
+        if(menuBtn){
+            menuBtn.addEventListener('click',e=>{
+                e.preventDefault();
             });
         }
     }
