@@ -31,8 +31,9 @@ document.onreadystatechange = () => {
             childEl.addEventListener('click',e=>e.preventDefault());
             el.appendChild(childEl);
             ccvvLabel.appendChild(el);
-            tippy('#ccv-popcorn',{
-                content: "CCVs are needed and cool"
+            tippy("#ccv-popcorn", {
+              content:
+                "The three or four digit security code on your debit or credit card",
             });
         }
 
