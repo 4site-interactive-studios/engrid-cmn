@@ -82,9 +82,14 @@
 
   /* Thermometer */
 
+  .enWidget {
+    padding: 20px 0;
+  }
+
   .enWidget__progress {
     border: 0px !important;
-    background-color: rgba(228,228,228,0.36);
+    background-color: rgba(228,228,228,0.36) !important;
+    height: 24px !important;
     .enWidget__fill {
       background-color: var(--theme-cta) !important;
       border-right: 3px solid black;
