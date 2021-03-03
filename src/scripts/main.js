@@ -1,6 +1,4 @@
-// import { createPopper } from "popper.js";
 import tippy from "tippy.js";
-//import "tippy.js/dist/tippy.css";
 
 document.onreadystatechange = () => {    
     if(document.readyState === "complete"){
