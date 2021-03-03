@@ -133,8 +133,11 @@
     <script src="https://donate.amnestyusa.org/page/74408/productvariants.js"></script>
     <script src="https://donate.amnestyusa.org/ea-demo/frontend/pbAssets/build/js/enPage.js?v=3.60.1"></script>
   </head>
-  <body data-engrid-layout="centerleft1col" data-engrid-theme="aiusa" data-engrid-add-input-placeholders>
-
+  <body
+    data-engrid-layout="centerleft1col"
+    data-engrid-theme="aiusa"
+    data-engrid-add-input-placeholders
+  >
     <script>
       if (window.self !== window.top) {
         document
@@ -173,11 +176,9 @@
         <div class="en__component en__component--row en__component--advrow">
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-alert"
-           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-header pseudo-subgrid"
-           
           >
             <div class="en__component en__component--codeblock">
               <header>
@@ -243,8 +244,29 @@
                   <script>
                     let timer;
                     var menuItems = document.querySelectorAll("li.has-submenu");
+                    var menu = document.querySelectorAll("li.has-submenu ul")[0];
                     var menuBtn = document.querySelector(".menu-btn");
+
                     Array.prototype.forEach.call(menuItems, function (el, i) {
+                      el.addEventListener("touchstart", function (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        if (menuBtn.classList.value.includes('close')) {
+                          menuBtn.classList.remove("close");
+                          timer = setTimeout(function (event) {
+                            document.querySelector(
+                              ".has-submenu.open"
+                            ).className = "has-submenu";
+                          }, 1000);
+                          menu.style.display='none';
+                        } else {
+                          this.className = "has-submenu open";
+                          menuBtn.classList.add("close");
+                          clearTimeout(timer);
+                          menu.style.display='block';
+                        }
+                      });
+
                       el.addEventListener("mouseover", function (event) {
                         this.className = "has-submenu open";
                         menuBtn.classList.add("close");
@@ -257,6 +279,7 @@
                             ".has-submenu.open"
                           ).className = "has-submenu";
                         }, 1000);
+                        console.log("mouseout");
                       });
                     });
                   </script>
@@ -266,11 +289,9 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-headerOutside"
-           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-header"
-           
           >
             <div class="en__component en__component--codeblock">
               <img
@@ -283,7 +304,6 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-banner"
-           
           >
             <div class="en__component en__component--codeblock">
               <img
@@ -296,16 +316,11 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-bannerOverlay"
-           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-top"
-           
           >
-            <div
-              class="en__component en__component--copyblock click-to-expand"
-             
-            >
+            <div class="en__component en__component--copyblock click-to-expand">
               <h1>Lorem ipsum dolor</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -357,16 +372,31 @@
               </p>
             </div>
             <div class="en__component en__component--widgetblock">
-              <script data-id="896518" src="https://donate.amnestyusa.org/ea-demo/frontend/pbAssets/build/js/enWidget.loader.js">
-              </script> 
-              <script src="https://donate.amnestyusa.org/ea-demo/frontend/pbAssets/build/js/enWidget.js">
-              </script>
+              <script
+                data-id="896518"
+                src="https://donate.amnestyusa.org/ea-demo/frontend/pbAssets/build/js/enWidget.loader.js"
+              ></script>
+              <script src="https://donate.amnestyusa.org/ea-demo/frontend/pbAssets/build/js/enWidget.js"></script>
               <div class="enWidget enWidget--progressBar">
                 <div class="enWidget__display">
                   <div class="enWidget__bar">
-                    <div class="enWidget__progress" style="border: 1px solid rgb(240, 240, 240); background: rgb(255, 255, 255); height: 50px;">
-                      <div class="enWidget__fill" style="background-color: rgb(253, 162, 47); width: 63%;">
-                        <span class="enWidget__fill__count" style="color: rgb(255, 255, 255);">$126,016.96</span>
+                    <div
+                      class="enWidget__progress"
+                      style="
+                        border: 1px solid rgb(240, 240, 240);
+                        background: rgb(255, 255, 255);
+                        height: 50px;
+                      "
+                    >
+                      <div
+                        class="enWidget__fill"
+                        style="background-color: rgb(253, 162, 47); width: 63%"
+                      >
+                        <span
+                          class="enWidget__fill__count"
+                          style="color: rgb(255, 255, 255)"
+                          >$126,016.96</span
+                        >
                       </div>
                     </div>
                   </div>
@@ -380,18 +410,15 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-side"
-           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-main"
-           
           >
             <div class="en__component en__component--copyblock">
               <h2 class="section-header gift-amount">Gift Amount</h2>
             </div>
             <div
               class="en__component en__component--formblock primary i1-hide-label i2-hide-label i3-hide-label"
-             
             >
               <div
                 class="en__field en__field--radio en__field--871587 en__field--recurrfreq"
@@ -399,7 +426,6 @@
                 <label
                   for="en__field_transaction_recurrfreq"
                   class="en__field__label"
-                 
                   >Gift Frequency</label
                 >
                 <div class="en__field__element en__field__element--radio">
@@ -454,7 +480,6 @@
                 <label
                   for="en__field_transaction_recurrpay"
                   class="en__field__label"
-                 
                   >Recurring Payment</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -557,23 +582,24 @@
                 </div>
               </div>
             </div>
-            <div class="en__component en__component--copyblock recurring-frequency-y-hide inline-monthly-upsell">
-<p>This copy will only show up if the One Time Giving Frequency is selected and the corresponding Recurring field has a value of N</p>
-</div>
+            <div
+              class="en__component en__component--copyblock recurring-frequency-y-hide inline-monthly-upsell"
+            >
+              <p>
+                This copy will only show up if the One Time Giving Frequency is
+                selected and the corresponding Recurring field has a value of N
+              </p>
+            </div>
             <div class="en__component en__component--copyblock">
               <h2 class="section-header">Your Info</h2>
             </div>
             <div
               class="en__component en__component--formblock i1-20 i1-start i2-40 i3-40 i3-end i4-100 i5-66 i5-start i6-33 i6-end i7-50 i7-start i8-50 i8-end i9-33 i9-start i10-66 i10-end i11-100"
-             
             >
               <div
                 class="en__field en__field--select en__field--879079 en__field--title en__mandatory"
               >
-                <label
-                  for="en__field_supporter_title"
-                  class="en__field__label"
-                 
+                <label for="en__field_supporter_title" class="en__field__label"
                   >Title</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -594,7 +620,6 @@
                 <label
                   for="en__field_supporter_firstName"
                   class="en__field__label"
-                 
                   >First Name</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -614,7 +639,6 @@
                 <label
                   for="en__field_supporter_lastName"
                   class="en__field__label"
-                 
                   >Last Name</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -633,7 +657,6 @@
                 <label
                   for="en__field_supporter_emailAddress"
                   class="en__field__label"
-                 
                   >Email Address</label
                 >
                 <div class="en__field__element en__field__element--email">
@@ -653,7 +676,6 @@
                 <label
                   for="en__field_supporter_address1"
                   class="en__field__label"
-                 
                   >Address</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -672,7 +694,6 @@
                 <label
                   for="en__field_supporter_address2"
                   class="en__field__label"
-                 
                   >Apt., Ste., Bldg.</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -688,10 +709,7 @@
               <div
                 class="en__field en__field--text en__field--871595 en__field--city en__mandatory"
               >
-                <label
-                  for="en__field_supporter_city"
-                  class="en__field__label"
-                 
+                <label for="en__field_supporter_city" class="en__field__label"
                   >City</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -707,10 +725,7 @@
               <div
                 class="en__field en__field--select en__field--871597 en__field--region en__mandatory"
               >
-                <label
-                  for="en__field_supporter_region"
-                  class="en__field__label"
-                 
+                <label for="en__field_supporter_region" class="en__field__label"
                   >State</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -780,7 +795,6 @@
                 <label
                   for="en__field_supporter_postcode"
                   class="en__field__label"
-                 
                   >Postcode</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -799,7 +813,6 @@
                 <label
                   for="en__field_supporter_country"
                   class="en__field__label"
-                 
                   >Country</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1086,7 +1099,6 @@
                 <label
                   for="en__field_supporter_NOT_TAGGED_13"
                   class="en__field__label"
-                 
                   >Mobile Phone</label
                 >
                 <div class="en__field__element en__field__element--telephone">
@@ -1123,9 +1135,7 @@
               <div
                 class="en__field en__field--checkbox en__field--871601 en__field--NOT_TAGGED_81"
               >
-                <label class="en__field__label"
-                  >Postal Address Sharing</label
-                >
+                <label class="en__field__label">Postal Address Sharing</label>
                 <div class="en__field__element en__field__element--checkbox">
                   <div class="en__field__item">
                     <input
@@ -1204,7 +1214,6 @@
             </div>
             <div
               class="en__component en__component--formblock giveBySelect-Card i3-50 i3-start i4-50"
-             
             >
               <div
                 class="en__field en__field--select en__field--871606 en__field--paymenttype en__mandatory"
@@ -1212,7 +1221,6 @@
                 <label
                   for="en__field_transaction_paymenttype"
                   class="en__field__label"
-                 
                   >Payment Type</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1236,7 +1244,6 @@
                 <label
                   for="en__field_transaction_ccnumber"
                   class="en__field__label"
-                 
                   >Credit Card Number</label
                 >
                 <div class="en__field__element en__field__element--number">
@@ -1255,7 +1262,6 @@
                 <label
                   for="en__field_transaction_ccexpire"
                   class="en__field__label"
-                 
                   >Credit Card Expiration</label
                 >
                 <div class="en__field__element en__field__element--splitselect">
@@ -1308,10 +1314,7 @@
               <div
                 class="en__field en__field--number en__field--871605 en__field--ccvv"
               >
-                <label
-                  for="en__field_transaction_ccvv"
-                  class="en__field__label"
-                 
+                <label for="en__field_transaction_ccvv" class="en__field__label"
                   >Credit Card CVV</label
                 >
                 <div class="en__field__element en__field__element--number">
@@ -1327,7 +1330,6 @@
             </div>
             <div
               class="en__component en__component--formblock giveBySelect-Paypal"
-             
             >
               <div
                 class="en__field en__field--text en__field--871613 en__field--NOT_TAGGED_181"
@@ -1335,7 +1337,6 @@
                 <label
                   for="en__field_supporter_NOT_TAGGED_181"
                   class="en__field__label"
-                 
                   >PayPal Billing Agreement</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1352,7 +1353,6 @@
             </div>
             <div
               class="en__component en__component--formblock giveBySelect-Check i2-50 i2-start i3-50 i3-end"
-             
             >
               <div
                 class="en__field en__field--select en__field--871611 en__field--bankAccountType"
@@ -1360,7 +1360,6 @@
                 <label
                   for="en__field_supporter_bankAccountType"
                   class="en__field__label"
-                 
                   >Bank Account Type</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1382,7 +1381,6 @@
                 <label
                   for="en__field_supporter_bankAccountNumber"
                   class="en__field__label"
-                 
                   >Account Number</label
                 >
                 <div class="en__field__element en__field__element--number">
@@ -1401,7 +1399,6 @@
                 <label
                   for="en__field_supporter_bankRoutingNumber"
                   class="en__field__label"
-                 
                   >Routing Number</label
                 >
                 <div class="en__field__element en__field__element--number">
@@ -1442,14 +1439,12 @@
             </div>
             <div
               class="en__component en__component--formblock dynamic-giving-button"
-             
             >
               <div class="en__submit"><button>Donate Now</button></div>
             </div>
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-bottom"
-           
           >
             <div class="en__component en__component--codeblock">
               <div style="text-align: center">
@@ -1479,23 +1474,18 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-footer"
-           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-footerOutside"
-           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-footerSpacer"
-           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-preFooter pseudo-subgrid"
-           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-footer pseudo-subgrid"
-           
           >
             <div class="en__component en__component--codeblock">
               <footer>
@@ -1530,33 +1520,39 @@
                   <ul id="footer-social">
                     <li>
                       <a href="#" class="icon-facebook grayscale"
-                        ><img src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/facebook.png?v=1614702308000"/></a
-                      >
+                        ><img
+                          src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/facebook.png?v=1614702308000"
+                      /></a>
                     </li>
                     <li>
                       <a href="#" class="icon-twitter grayscale"
-                        ><img src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/twitter.png?v=1614702311000"/></a
-                      >
+                        ><img
+                          src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/twitter.png?v=1614702311000"
+                      /></a>
                     </li>
                     <li>
                       <a href="#" class="icon-instagram grayscale"
-                        ><img src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/instagram.png?v=1614702309000"/></a
-                      >
+                        ><img
+                          src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/instagram.png?v=1614702309000"
+                      /></a>
                     </li>
                     <li>
                       <a href="#" class="icon-youtube grayscale"
-                        ><img src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/youtube.png?v=1614702312000"/></a
-                      >
+                        ><img
+                          src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/youtube.png?v=1614702312000"
+                      /></a>
                     </li>
                     <li>
                       <a href="#" class="icon-tumblr grayscale"
-                        ><img src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/tumblr.png?v=1614702310000"/></a
-                      >
+                        ><img
+                          src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/tumblr.png?v=1614702310000"
+                      /></a>
                     </li>
                     <li>
                       <a href="#" class="icon-medium grayscale"
-                        ><img src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/medium.png?v=1614702309000"/></a
-                      >
+                        ><img
+                          src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/medium.png?v=1614702309000"
+                      /></a>
                     </li>
                   </ul>
                 </div>
@@ -1577,7 +1573,6 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-backgroundImage pseudo-subgrid"
-           
           >
             <div class="en__component en__component--codeblock">
               <img
@@ -1593,16 +1588,13 @@
                 <source 
                   data-src="https://player.vimeo.com/external/435826731.hd.mp4?s=877cdb0c8dfa0f453a8c8c824c66ee6fc8364379&amp;profile_id=174" type="video/mp4">
               </video> -->
-
             </div>
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-backgroundImageOverlay pseudo-subgrid"
-           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-customCode"
-           
           ></div>
         </div>
       </form>

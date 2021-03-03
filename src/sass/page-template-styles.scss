@@ -50,6 +50,7 @@
     padding: 80px 0px 40px 70px !important;
     width: 220px;
     top: -30px;
+    display: block !important;
     // z-index: 1;
     a {
       display: inline-block;
@@ -179,7 +180,7 @@
         z-index: 9;
       }
 
-      nav > ul li:hover ul {
+      nav > ul li ul {
         left: 0;
         padding: 140px 30px 40px 15% !important;
         width: 100% !important;
@@ -187,6 +188,7 @@
       }
       .content-header #menu-wrapper li.has-submenu ul li a {
         font-size: 20px;
+        text-align: right;
       }
       .en__field--recurrfreq .en__field__item,
       .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
@@ -287,7 +289,7 @@
         }
       }
 
-      nav > ul li:hover ul {
+      nav > ul li > ul {
         position: absolute;
         background-color: var(--color-white);
         right: 0;
@@ -295,6 +297,11 @@
         padding: 80px 20px 40px 89px;
         width: 220px;
         top: -30px;
+        display: none;
+      }
+
+      nav > ul li:hover ul {
+        display: block !important;
         // z-index: 1;
         a {
           display: inline-block;
