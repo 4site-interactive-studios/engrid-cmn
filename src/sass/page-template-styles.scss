@@ -80,6 +80,34 @@
     padding-right: 0;
   }
 
+  /* Thermometer */
+
+  .enWidget__progress {
+    border: 0px !important;
+    background-color: rgba(228,228,228,0.36);
+    .enWidget__fill {
+      background-color: var(--theme-cta) !important;
+      border-right: 3px solid black;
+      box-shadow: inset -10px 0px 0px 0px rgba(255, 255, 255, 1);
+      span {
+        color: transparent !important;
+      }
+    }
+  }
+
+  .enWidget__copy {
+    text-align: center;
+    font-weight: 700;
+    p{
+      margin: 0;
+      text-transform: uppercase;
+      &:nth-child(1){
+        font-size: 32px;
+        line-height: 32px;
+      }
+    }
+  }
+
   /* Sum of all MIN values of the Body Columns */
   &[data-engrid-layout="centerleft1col"] {
     @media screen and (min-width: 776px) {
@@ -185,7 +213,7 @@
         padding: 140px 30px 40px 15% !important;
         width: 100% !important;
         text-align: right !important;
-        box-shadow: -3px 3px 8px rgba(0,0,0,0.04);
+        box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.04);
       }
       .content-header #menu-wrapper li.has-submenu ul li a {
         font-size: 20px;
