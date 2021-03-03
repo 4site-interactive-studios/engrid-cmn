@@ -103,6 +103,7 @@
 
       .body-footer {
         margin-bottom: 80px;
+        padding-top: 30px;
       }
     }
   }
@@ -127,9 +128,11 @@
       footer {
         background-color: #e4e4e4;
         flex-direction: column;
-        padding-top: 20px;
+        padding-top: 32px;
         #footer-menu-wrapper {
           order: 2;
+          letter-spacing: 0.1ch;
+          margin-bottom: 26px;
           ul#footer-menu {
             justify-content: center;
             flex-wrap: wrap;
@@ -148,6 +151,7 @@
         }
         #footer-social-wrapper {
           order: 1;
+          margin-bottom: 24px;
           ul {
             justify-content: center;
           }
@@ -532,7 +536,7 @@
       top: 51%;
       width: 45%;
       overflow: hidden;
-      height: 1px;
+      height: 2px;
       content: "\a0";
       background-color: #e4e4e4;
     }
@@ -617,7 +621,7 @@
       display: inline-block;
       height: 16px;
       width: 16px;
-      background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/Vector.png?v=1614598390000");
+      background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/paypal.png?v=1614704461000");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -639,6 +643,7 @@
   .en__component--formblock {
     label {
       letter-spacing: 0.06em;
+      font-weight: 700;
     }
   }
 
@@ -675,6 +680,7 @@
         margin-right: 15px;
         border-right: 1px solid black;
         font-size: 14px;
+        letter-spacing: 0.1ch;
         &:nth-child(3) {
           border-right: 0px;
         }
@@ -691,8 +697,12 @@
         justify-content: flex-end;
         margin: 0px;
         li {
-          margin: 0 5px;
+          margin: 0 9px;
         }
+      }
+      img {
+        max-width: auto;
+        height: 20px;
       }
     }
   }
