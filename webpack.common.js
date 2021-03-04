@@ -110,6 +110,9 @@ module.exports = {
           },
         },
       },
+      { test: /\.css$/,
+        loader: "style-loader!css-loader"
+      },
       {
         test: /\.(ts|js)x?$/,
         exclude: /(node_modules|bower_components)/,
@@ -134,6 +137,6 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".ts", ".js", '.css'],
   },
 };
