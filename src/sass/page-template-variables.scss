@@ -194,9 +194,9 @@
     
     // TYPOGRAPHY BUTTON:FOCUS
     // TYPOGRAPHY BUTTON:HOVER
-    --theme-typography-button-focus-hover-color: var(--theme-white);
-    --theme-typography-button-focus-hover-background-color: #252525;
-    --theme-typography-button-focus-hover-border-color: #252525;
+    --theme-typography-button-focus-hover-color: var(--theme-typography-button-color);
+    --theme-typography-button-focus-hover-background-color: var(--theme-typography-button-background-color);
+    --theme-typography-button-focus-hover-border-color: var(--theme-typography-button-focus-hover-color);
 
     // TYPOGRAPHY PRIMARY BUTTON
     --theme-typography-primary-button-font-family: var(--theme-typography-button-font-family);
@@ -346,8 +346,7 @@
     --theme-highlight-font-color: #FFFFFF;
 
     // CLICK TO EXPAND
-    --theme-click-to-expand-copy-height-before-fade-starts: 100px;
-    --theme-click-to-expand-copy-total-height: 450px;
+    --theme-click-to-expand-copy-total-height: 400px;
     --theme-click-to-expand-cta-image-url: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/more-btn.png?v=1614773932000");
     --theme-click-to-expand-cta-image-width: 56px;
     --theme-click-to-expand-cta-image-height: 15px;

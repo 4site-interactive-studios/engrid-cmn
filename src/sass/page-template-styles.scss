@@ -73,6 +73,7 @@
     right: 0;
     text-decoration: underline;
     color: #767676;
+    font-weight: 400;
   }
 
   .body-header {
@@ -86,6 +87,9 @@
     padding: 20px 0;
     .enWidget__copy--below{
       margin-top: 10px;
+    }
+    &:empty{
+      display: none;
     }
   }
 
@@ -138,6 +142,10 @@
 
   /* Sum of all MIN values of the Body Columns */
   &[data-engrid-layout="centerleft1col"] {
+    .body-footer {
+      padding-top: 60px;
+    }
+    
     @media screen and (min-width: 776px) {
       /* prettier-ignore */
       .en__component--advrow,
@@ -160,7 +168,6 @@
 
       .body-footer {
         margin-bottom: 80px;
-        padding-top: 62px;
       }
     }
   }
@@ -182,6 +189,7 @@
                     rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
                 ];
             }
+      --theme-body-padding: 0px 24px;      
       footer {
         background-color: #e4e4e4;
         flex-direction: column;
@@ -248,9 +256,11 @@
         font-size: 20px;
         text-align: right;
       }
-      .en__field--recurrfreq .en__field__item,
+      // .en__field--recurrfreq .en__field__item,
       .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
-        flex-basis: 40%;
+        // flex-basis: 40%;
+        	flex-basis: calc((100% * ( 1 / 2)) - 1rem);
+          max-width: calc(100% * (1 / 2));
       }
       .en__field {
         flex-basis: 100% !important;
@@ -453,9 +463,9 @@
   }
 
   .has-value input:checked + label.en__field__label.en__field__label--item {
-    outline: none !important;
+    // outline: none !important;
     &:hover {
-      background-color: #fff !important;
+      // background-color: #fff !important;
     }
   }
 
@@ -463,12 +473,20 @@
   .check,
   .paypal {
     flex-basis: calc(100% / 3);
-    input:checked + label.en__field__label.en__field__label--item {
-      background-color: var(--theme-typography-button-color);
-      color: var(--theme-typography-button-background-color);
-      border-color: var(--theme-typography-button-color) !important;
+  }
+
+  // Makes the paypal logo white and selection
+  .give-by-select .en__field--radio .paypal.en__field__item input[type="radio"]:checked+label span{
+    filter: invert(100%);
+  }
+
+  .en__field--recurrfreq{
+    .en__field__item  input:checked + label.en__field__label.en__field__label--item {
+      background-color: var(--theme-typography-primary-button-background-color);
+      color: var(--theme-typography-primary-button-color);
+      border-color: var(--theme-typography-primary-button-background-color);
       &:hover {
-        color: var(--theme-typography-button-color);
+        color: var(--theme-typography-primary-button-color);
       }
     }
   }
@@ -489,7 +507,7 @@
       margin: 20px 0 0;
       font-size: 16px;
       line-height: 24px;
-      font-weight: 900;
+      font-weight: 700;
     }
     &::before {
       content: "";
@@ -554,7 +572,7 @@
     + label.en__field__label.en__field__label--item,
   input.en__field__input--checkbox
     + label.en__field__label.en__field__label--item {
-    background-color: var(--color-white);
+    // background-color: var(--color-white);
     font-weight: 500;
     font-family: var(--theme-typography-default-font-family);
     text-transform: none !important;
@@ -567,11 +585,11 @@
 
   .en__field--donationAmt {
     input:checked + label.en__field__label.en__field__label--item {
-      background-color: black;
-      border-color: black !important;
-      color: white;
+      // background-color: black;
+      // border-color: black !important;
+      // color: white;
       &:hover {
-        background-color: #000 !important;
+        // background-color: #000 !important;
       }
     }
   }
@@ -594,6 +612,7 @@
     font-family: "AmnestyTradeGothic";
     font-weight: 700;
     position: relative;
+    letter-spacing: 1.25px;
     // z-index: 1;
     font-size: 16px;
     overflow: hidden;
@@ -683,8 +702,8 @@
   }
 
   .en__field__item.paypal label {
-    position: relative;
-    padding-left: 30%;
+    // position: relative;
+    // padding-left: 30%;
     span {
       display: inline-block;
       height: 16px;
@@ -694,7 +713,7 @@
       background-size: cover;
       background-position: center;
       position: relative;
-      left: -81px;
+      margin-right: 7px;
       top: 1px;
     }
   }

@@ -2,7 +2,7 @@ const tippy = require('tippy.js').default;
 
 document.onreadystatechange = () => {    
     if(document.readyState === "complete"){
-        let paypal = document.querySelectorAll('.en__field__item.paypal label');
+        // let paypal = document.querySelectorAll('.en__field__item.paypal label');
         let donationAmountField = document.querySelectorAll('.en__field--donationAmt')[0];
         let giftAmountHeader = document.querySelectorAll('.section-header.gift-amount')[0];
         let recurrFrequencyField = document.querySelectorAll('.en__field--recurrfreq')[0];
@@ -10,9 +10,9 @@ document.onreadystatechange = () => {
         let ccvvLabel = document.querySelectorAll('.en__field--ccvv > label')[0];
         let menuBtn = document.querySelectorAll('.menu-btn + a')[0];
 
-        [].forEach.call(paypal, e=>{
-            e.innerHTML = e.innerHTML + '<span></span>';
-        });
+        // [].forEach.call(paypal, e=>{
+        //     e.innerHTML = e.innerHTML + '<span></span>';
+        // });
 
         if(giftAmountHeader && donationAmountField){
             // donationAmountField.insertAdjacentElement("beforebegin", giftAmountHeader);
