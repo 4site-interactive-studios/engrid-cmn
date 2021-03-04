@@ -96,16 +96,26 @@
     overflow: inherit;
     .enWidget__fill {
       background-color: var(--theme-cta) !important;
-      box-shadow: inset -10px 0px 0px 0px rgba(255, 255, 255, 1);
+      box-shadow: inset -13px 0px 0px 0px rgba(255, 255, 255, 1);
       &::before{
         content: " ";
         display: block;
         width: 3px;
-        height: calc(100% + 4px);
+        height: calc(100% + 6px);
         position: absolute;
         right: 0;
-        top: -2px;
+        top: -3px;
         background-color: #000000;
+      }
+      &::after{
+        content: " ";
+        display: block;
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        right: -10px;
+        top: 0px;
+        background-color: #ffffff;
       }
       span {
         color: transparent !important;
