@@ -84,16 +84,29 @@
 
   .enWidget {
     padding: 20px 0;
+    .enWidget__copy--below{
+      margin-top: 10px;
+    }
   }
 
   .enWidget__progress {
     border: 0px !important;
     background-color: rgba(228,228,228,0.36) !important;
     height: 24px !important;
+    overflow: inherit;
     .enWidget__fill {
       background-color: var(--theme-cta) !important;
-      border-right: 3px solid black;
       box-shadow: inset -10px 0px 0px 0px rgba(255, 255, 255, 1);
+      &::before{
+        content: " ";
+        display: block;
+        width: 3px;
+        height: calc(100% + 4px);
+        position: absolute;
+        right: 0;
+        top: -2px;
+        background-color: #000000;
+      }
       span {
         color: transparent !important;
       }
