@@ -118,7 +118,7 @@
         background-color: #ffffff;
       }
       span {
-        color: transparent !important;
+        display: none !important;
       }
     }
   }
@@ -483,11 +483,13 @@
     background-size: 90%;
     background-position: center;
     padding: 0 10px;
-    min-height: 60px;
+    margin-bottom: 1rem;
+    // min-height: 60px;
     p {
       margin: 20px 0 0;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 24px;
+      font-weight: 900;
     }
     &::before {
       content: "";
@@ -499,7 +501,6 @@
       background-repeat: no-repeat;
       position: absolute;
       left: calc(50% - 13px);
-      top: -23px;
     }
   }
 
@@ -616,8 +617,7 @@
       margin-left: 5%;
     }
     &.gift-amount {
-      margin: 40px 0 -10px;
-      display: none;
+      // visibility: hidden;
     }
   }
 

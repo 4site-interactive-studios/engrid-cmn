@@ -3,8 +3,9 @@ const tippy = require('tippy.js').default;
 document.onreadystatechange = () => {    
     if(document.readyState === "complete"){
         let paypal = document.querySelectorAll('.en__field__item.paypal label');
-        let ga = document.querySelectorAll('.section-header.gift-amount')[0];
-        let recurrF = document.querySelectorAll('.en__field--recurrfreq')[0];
+        let donationAmountField = document.querySelectorAll('.en__field--donationAmt')[0];
+        let giftAmountHeader = document.querySelectorAll('.section-header.gift-amount')[0];
+        let recurrFrequencyField = document.querySelectorAll('.en__field--recurrfreq')[0];
         let inlineMonthly = document.querySelectorAll('.inline-monthly-upsell')[0];
         let ccvvLabel = document.querySelectorAll('.en__field--ccvv > label')[0];
         let menuBtn = document.querySelectorAll('.menu-btn + a')[0];
@@ -13,13 +14,13 @@ document.onreadystatechange = () => {
             e.innerHTML = e.innerHTML + '<span></span>';
         });
 
-        if(ga && recurrF){
-            recurrF.appendChild(ga.parentNode);
+        if(giftAmountHeader && donationAmountField){
+            // donationAmountField.insertAdjacentElement("beforebegin", giftAmountHeader);
         }
 
-        if (inlineMonthly && recurrF) {
-          ga.insertAdjacentElement("beforebegin", inlineMonthly);
-          ga.style.display='block';
+        if (inlineMonthly && recurrFrequencyField) {
+          recurrFrequencyField.insertAdjacentElement("beforeend", inlineMonthly);
+        //   giftAmountHeader.style.visibility='visible';
         }
 
         if(ccvvLabel){
