@@ -1,4 +1,4 @@
-import tippy from "tippy.js";
+const tippy = require('tippy.js').default;
 
 document.onreadystatechange = () => {    
     if(document.readyState === "complete"){
