@@ -19,6 +19,7 @@ document.onreadystatechange = () => {
 
         if (inlineMonthly && recurrF) {
           ga.insertAdjacentElement("beforebegin", inlineMonthly);
+          ga.style.display='block';
         }
 
         if(ccvvLabel){
