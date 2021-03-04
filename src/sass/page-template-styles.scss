@@ -50,6 +50,7 @@
     padding: 80px 0px 40px 70px !important;
     width: 220px;
     top: -30px;
+    display: block !important;
     // z-index: 1;
     a {
       display: inline-block;
@@ -77,6 +78,39 @@
   .body-header {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  /* Thermometer */
+
+  .enWidget {
+    padding: 20px 0;
+  }
+
+  .enWidget__progress {
+    border: 0px !important;
+    background-color: rgba(228,228,228,0.36) !important;
+    height: 24px !important;
+    .enWidget__fill {
+      background-color: var(--theme-cta) !important;
+      border-right: 3px solid black;
+      box-shadow: inset -10px 0px 0px 0px rgba(255, 255, 255, 1);
+      span {
+        color: transparent !important;
+      }
+    }
+  }
+
+  .enWidget__copy {
+    text-align: center;
+    font-weight: 700;
+    p{
+      margin: 0;
+      text-transform: uppercase;
+      &:nth-child(1){
+        font-size: 32px;
+        line-height: 32px;
+      }
+    }
   }
 
   /* Sum of all MIN values of the Body Columns */
@@ -166,10 +200,11 @@
       }
       .content-header #menu-wrapper li.has-submenu {
         position: unset;
+        padding-right: 50px;
       }
       .menu-btn {
         left: unset;
-        right: 160px;
+        right: 20px;
         top: 32px;
       }
       .menu-btn.close {
@@ -179,14 +214,16 @@
         z-index: 9;
       }
 
-      nav > ul li:hover ul {
+      nav > ul li ul {
         left: 0;
         padding: 140px 30px 40px 15% !important;
         width: 100% !important;
         text-align: right !important;
+        box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.04);
       }
       .content-header #menu-wrapper li.has-submenu ul li a {
         font-size: 20px;
+        text-align: right;
       }
       .en__field--recurrfreq .en__field__item,
       .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
@@ -287,7 +324,7 @@
         }
       }
 
-      nav > ul li:hover ul {
+      nav > ul li > ul {
         position: absolute;
         background-color: var(--color-white);
         right: 0;
@@ -295,6 +332,11 @@
         padding: 80px 20px 40px 89px;
         width: 220px;
         top: -30px;
+        display: none;
+      }
+
+      nav > ul li:hover ul {
+        display: block !important;
         // z-index: 1;
         a {
           display: inline-block;
@@ -397,6 +439,7 @@
   .card,
   .check,
   .paypal {
+    flex-basis: calc(100% / 3);
     input:checked + label.en__field__label.en__field__label--item {
       background-color: var(--theme-typography-button-color);
       color: var(--theme-typography-button-background-color);
@@ -413,14 +456,15 @@
 
   .en__component.en__component--copyblock.recurring-frequency-y-hide.inline-monthly-upsell {
     position: relative;
-    background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/Giving+monthly+is+the+most+effective+way+to+...+Lorem+ipsum+dolor+setet.png?v=1614309067000");
     background-repeat: no-repeat;
     background-size: 90%;
     background-position: center;
-    color: transparent;
+    padding: 0 10px;
     min-height: 60px;
     p {
       margin: 20px 0 0;
+      font-size: 20px;
+      line-height: 24px;
     }
     &::before {
       content: "";
@@ -475,7 +519,7 @@
     position: absolute;
     font-family: inherit;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 0;
     height: 0;
     left: 1rem;
@@ -550,6 +594,7 @@
     }
     &.gift-amount {
       margin: 40px 0 -10px;
+      display: none;
     }
   }
 
