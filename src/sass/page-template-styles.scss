@@ -42,13 +42,6 @@
     }
   }
 
-  nav > ul li ul {
-    display: none;
-  }
-  nav > ul li:hover ul {
-    display: block;
-  }  
-
   nav > ul li:hover ul {
     position: absolute;
     background-color: var(--color-white);
