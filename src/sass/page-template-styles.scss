@@ -141,55 +141,9 @@
   }
 
   /* Sum of all MIN values of the Body Columns */
-  &[data-engrid-layout="centerleft1col"] {
-    .body-footer {
-      padding-top: 60px;
-    }
-    
-    @media screen and (min-width: 776px) {
-      /* prettier-ignore */
-      .en__component--advrow,
-            .en__component--advrow .pseudo-subgrid {
-                /* autoprefixer grid: off */
-                grid-template-columns:
-                [
-                pc-start lpc-start]  minmax(0px, 0px)        [lpc-end
-                cc-start lcc-start]  minmax(0px, 128px)      [lcc-end
-                bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
-                rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
-                rcc-start]           minmax(0px, 1fr)        [rcc-end cc-end
-                rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
-                ];
-            }
-
-      .body-header {
-        margin-top: 80px;
-      }
-
-      .body-footer {
-        margin-bottom: 80px;
-      }
-    }
-  }
-
-  /* Sum of all MIN values of the Body Columns */
-  &[data-engrid-layout="centerleft1col"] {
-    @media screen and (max-width: 775px) {
-      /* prettier-ignore */
-      .en__component--advrow,
-            .en__component--advrow .pseudo-subgrid {
-                /* autoprefixer grid: off */
-                grid-template-columns:
-                [
-                    pc-start lpc-start]  minmax(0px, 0px)    [lpc-end
-                    cc-start lcc-start]  minmax(0px, 0px)    [lcc-end
-                    bc-start lbc-start]  minmax(0px, 50vw)   [lbc-end
-                    rbc-start]           minmax(0px, 50vw)   [rbc-end bc-end
-                    rcc-start]           minmax(0px, 0px)    [rcc-end cc-end
-                    rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
-                ];
-            }
-      --theme-body-padding: 0px 24px;      
+  &[data-engrid-layout="centerleft1col"],
+  &[data-engrid-layout="centercenter2col"] {
+    @media screen and (max-width: 775px) {   
       footer {
         background-color: #e4e4e4;
         flex-direction: column;
@@ -820,4 +774,161 @@ body:not(#en__pagebuilder)[data-engrid-layout="centerleft1col"]
   // background-repeat: no-repeat;
   // background-size: contain;
   grid-row: content-header-end / content-footer-start;
+}
+
+[data-engrid-layout="centercenter2col"]{
+  .body-header:before, .body-title:before, .body-banner:before, .body-top:before, .body-side:before, .body-main:before, .body-bottom:before, .body-footer:before{
+    display: none;
+  }
+}
+
+
+[data-engrid-layout="centerleft1col"]{   
+  --theme-body-padding: 0px 60px;
+  .body-bottom {
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 775px) {
+    /* prettier-ignore */
+    .en__component--advrow,
+          .en__component--advrow .pseudo-subgrid {
+              /* autoprefixer grid: off */
+              grid-template-columns:
+              [
+              pc-start lpc-start]  minmax(0px, 0px)        [lpc-end
+              cc-start lcc-start]  minmax(0px, 128px)      [lcc-end
+              bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
+              rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
+              rcc-start]           minmax(0px, 1fr)        [rcc-end cc-end
+              rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
+              ];
+          }
+
+    .body-header {
+      margin-top: 80px;
+    }
+    
+    .body-footer {
+      margin-bottom: 80px;
+    }          
+
+  }
+
+
+  @media screen and (max-width: 774px) {
+    --theme-body-padding: 0px 24px;
+    /* prettier-ignore */
+    .en__component--advrow,
+    .en__component--advrow .pseudo-subgrid {
+        /* autoprefixer grid: off */
+        grid-template-columns:
+        [
+            pc-start lpc-start]  minmax(0px, 0px)    [lpc-end
+            cc-start lcc-start]  minmax(0px, 0px)    [lcc-end
+            bc-start lbc-start]  minmax(0px, 50vw)   [lbc-end
+            rbc-start]           minmax(0px, 50vw)   [rbc-end bc-end
+            rcc-start]           minmax(0px, 0px)    [rcc-end cc-end
+            rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
+        ];
+      }
+    }
+}
+
+[data-engrid-layout="centercenter2col"]{
+  --theme-body-padding: 0px 50px;
+  .body-bottom {
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 970px) {
+    /* prettier-ignore */
+    .en__component--advrow,
+          .en__component--advrow .pseudo-subgrid {
+              /* autoprefixer grid: off */
+              grid-template-columns:
+              [
+                  pc-start lpc-start]  minmax(0px, 0px)    [lpc-end
+                  cc-start lcc-start]  minmax(0px, 1fr)    [lcc-end
+                  bc-start lbc-start]  minmax(0px, 485px)  [lbc-end
+                  rbc-start]           minmax(0px, 485px)  [rbc-end bc-end
+                  rcc-start]           minmax(0px, 1fr)    [rcc-end cc-end
+                  rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
+              ];
+
+              grid-template-rows:
+              [
+                page-start page-alert-start]        min-content        [page-alert-end
+                content-header-start]               min-content        [content-header-end
+                body-headerOutside-start]           min-content        [body-headerOutside-end
+                body-header-start]                  min-content        [body-header-end
+                body-title-start]                   min-content        [body-title-end
+                body-banner-start]                  min-content        [body-banner-end
+                body-bannerOverlay-start]           min-content        [body-bannerOverlay-end
+                body-top-start]                     minmax(0px, 1fr)   [body-top-end
+                body-side-start]                    min-content        [body-side-end  
+                body-main-start]                    min-content        [body-main-end  
+                body-bottom-start]                  min-content        [body-bottom-end  
+                body-footer-start]                  min-content        [body-footer-end
+                body-footerOutside-start]           min-content        [body-footerOutside-end  
+                content-footerSpacer-start]         min-content        [content-footerSpacer-end
+                content-preFooter-start]            min-content        [content-preFooter-end
+                content-footer-start]               min-content        [content-footer-end
+                page-backgroundImage-start]         min-content        [page-backgroundImage-end
+                page-backgroundImageOverlay-start]  min-content        [page-backgroundImageOverlay-end page-end
+                page-customCode-start]              min-content        [page-customCode-end        
+              ];  
+          }
+
+    .body-header {
+      margin-top: 80px;
+    }
+    
+    .body-footer {
+      margin-bottom: 80px;
+    }
+
+    .body-title,
+    .body-banner,
+    .body-top{
+      grid-column: lbc;
+      --theme-body-title-background-color: #f5f5f5;
+      --theme-body-banner-background-color: #f5f5f5;
+      --theme-body-top-background-color: #f5f5f5;
+    }
+
+    .body-main,
+    .body-bottom{
+      grid-column: rbc;
+    }
+
+    .body-top{
+      grid-row: body-banner-end / body-footer-start;
+    }
+
+    .body-main{
+      grid-row: body-header-end / body-footer-start;
+    }
+
+  }
+  
+  @media screen and (max-width: 969px) {
+    --theme-body-padding: 0px 24px;  
+    /* prettier-ignore */
+    .en__component--advrow,
+    .en__component--advrow .pseudo-subgrid {
+        /* autoprefixer grid: off */
+        grid-template-columns:
+        [
+            pc-start lpc-start]  minmax(0px, 0px)    [lpc-end
+            cc-start lcc-start]  minmax(0px, 0px)    [lcc-end
+            bc-start lbc-start]  minmax(0px, 50vw)   [lbc-end
+            rbc-start]           minmax(0px, 50vw)   [rbc-end bc-end
+            rcc-start]           minmax(0px, 0px)    [rcc-end cc-end
+            rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
+        ];
+    } 
+
+    .en__component--advrow > div{
+      grid-column: pc;
+    }
+  }
 }
