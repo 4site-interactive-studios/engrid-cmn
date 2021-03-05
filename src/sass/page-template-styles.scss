@@ -42,6 +42,13 @@
     }
   }
 
+  nav > ul li ul {
+    display: none;
+  }
+  nav > ul li:hover ul {
+    display: block;
+  }  
+
   nav > ul li:hover ul {
     position: absolute;
     background-color: var(--color-white);
@@ -73,6 +80,7 @@
     right: 0;
     text-decoration: underline;
     color: #767676;
+    font-weight: 400;
   }
 
   .body-header {
@@ -84,18 +92,44 @@
 
   .enWidget {
     padding: 20px 0;
+    .enWidget__copy--below{
+      margin-top: 10px;
+    }
+    &:empty{
+      display: none;
+    }
   }
 
   .enWidget__progress {
     border: 0px !important;
     background-color: rgba(228,228,228,0.36) !important;
     height: 24px !important;
+    overflow: inherit;
     .enWidget__fill {
       background-color: var(--theme-cta) !important;
-      border-right: 3px solid black;
-      box-shadow: inset -10px 0px 0px 0px rgba(255, 255, 255, 1);
+      box-shadow: inset -13px 0px 0px 0px rgba(255, 255, 255, 1);
+      &::before{
+        content: " ";
+        display: block;
+        width: 3px;
+        height: calc(100% + 6px);
+        position: absolute;
+        right: 0;
+        top: -3px;
+        background-color: #000000;
+      }
+      &::after{
+        content: " ";
+        display: block;
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        right: -10px;
+        top: 0px;
+        background-color: #ffffff;
+      }
       span {
-        color: transparent !important;
+        display: none !important;
       }
     }
   }
@@ -115,6 +149,10 @@
 
   /* Sum of all MIN values of the Body Columns */
   &[data-engrid-layout="centerleft1col"] {
+    .body-footer {
+      padding-top: 60px;
+    }
+    
     @media screen and (min-width: 776px) {
       /* prettier-ignore */
       .en__component--advrow,
@@ -126,7 +164,7 @@
                 cc-start lcc-start]  minmax(0px, 128px)      [lcc-end
                 bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
                 rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
-                rcc-start]           minmax(0px, 1fr)      [rcc-end cc-end
+                rcc-start]           minmax(0px, 1fr)        [rcc-end cc-end
                 rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
                 ];
             }
@@ -137,7 +175,6 @@
 
       .body-footer {
         margin-bottom: 80px;
-        padding-top: 60px;
       }
     }
   }
@@ -159,6 +196,7 @@
                     rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
                 ];
             }
+      --theme-body-padding: 0px 24px;      
       footer {
         background-color: #e4e4e4;
         flex-direction: column;
@@ -225,9 +263,11 @@
         font-size: 20px;
         text-align: right;
       }
-      .en__field--recurrfreq .en__field__item,
+      // .en__field--recurrfreq .en__field__item,
       .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
-        flex-basis: 40%;
+        // flex-basis: 40%;
+        	flex-basis: calc((100% * ( 1 / 2)) - 1rem);
+          max-width: calc(100% * (1 / 2));
       }
       .en__field {
         flex-basis: 100% !important;
@@ -351,6 +391,13 @@
   }
 
   .body-top {
+
+    // If the first child is a paragraph or click-to-expand block, add top margin like it was a H1
+    & > p:first-child,
+    & > .click-to-expand:first-child {
+      margin-top: 0.67em;
+    }
+
     h1 {
       font-size: 47px;
       line-height: 56.68px;
@@ -430,9 +477,9 @@
   }
 
   .has-value input:checked + label.en__field__label.en__field__label--item {
-    outline: none !important;
+    // outline: none !important;
     &:hover {
-      background-color: #fff !important;
+      // background-color: #fff !important;
     }
   }
 
@@ -440,12 +487,20 @@
   .check,
   .paypal {
     flex-basis: calc(100% / 3);
-    input:checked + label.en__field__label.en__field__label--item {
-      background-color: var(--theme-typography-button-color);
-      color: var(--theme-typography-button-background-color);
-      border-color: var(--theme-typography-button-color) !important;
+  }
+
+  // Makes the paypal logo white and selection
+  .give-by-select .en__field--radio .paypal.en__field__item input[type="radio"]:checked+label span{
+    filter: invert(100%);
+  }
+
+  .en__field--recurrfreq{
+    .en__field__item  input:checked + label.en__field__label.en__field__label--item {
+      background-color: var(--theme-typography-primary-button-background-color);
+      color: var(--theme-typography-primary-button-color);
+      border-color: var(--theme-typography-primary-button-background-color);
       &:hover {
-        color: var(--theme-typography-button-color);
+        color: var(--theme-typography-primary-button-color);
       }
     }
   }
@@ -460,11 +515,13 @@
     background-size: 90%;
     background-position: center;
     padding: 0 10px;
-    min-height: 60px;
+    margin-bottom: 1rem;
+    // min-height: 60px;
     p {
       margin: 20px 0 0;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 24px;
+      font-weight: 700;
     }
     &::before {
       content: "";
@@ -476,7 +533,6 @@
       background-repeat: no-repeat;
       position: absolute;
       left: calc(50% - 13px);
-      top: -23px;
     }
   }
 
@@ -530,7 +586,7 @@
     + label.en__field__label.en__field__label--item,
   input.en__field__input--checkbox
     + label.en__field__label.en__field__label--item {
-    background-color: var(--color-white);
+    // background-color: var(--color-white);
     font-weight: 500;
     font-family: var(--theme-typography-default-font-family);
     text-transform: none !important;
@@ -543,11 +599,11 @@
 
   .en__field--donationAmt {
     input:checked + label.en__field__label.en__field__label--item {
-      background-color: black;
-      border-color: black !important;
-      color: white;
+      // background-color: black;
+      // border-color: black !important;
+      // color: white;
       &:hover {
-        background-color: #000 !important;
+        // background-color: #000 !important;
       }
     }
   }
@@ -570,6 +626,7 @@
     font-family: "AmnestyTradeGothic";
     font-weight: 700;
     position: relative;
+    letter-spacing: 1.25px;
     // z-index: 1;
     font-size: 16px;
     overflow: hidden;
@@ -593,8 +650,7 @@
       margin-left: 5%;
     }
     &.gift-amount {
-      margin: 40px 0 -10px;
-      display: none;
+      // visibility: hidden;
     }
   }
 
@@ -660,8 +716,8 @@
   }
 
   .en__field__item.paypal label {
-    position: relative;
-    padding-left: 30%;
+    // position: relative;
+    // padding-left: 30%;
     span {
       display: inline-block;
       height: 16px;
@@ -671,7 +727,7 @@
       background-size: cover;
       background-position: center;
       position: relative;
-      left: -81px;
+      margin-right: 7px;
       top: 1px;
     }
   }
@@ -697,12 +753,24 @@
     font-weight: 700;
   }
 
-  .en__component.en__component--codeblock > div > img {
-    display: inline-block;
-    &:nth-child(1) {
+  .trust-logos div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img.bbb-logo {
       margin-right: 10px;
       filter: grayscale(1) opacity(0.6);
     }
+
+    .gs.bbb-logo {
+      margin-right: 10px;
+    }
+    
+    img.verisign-logo{
+      margin-right: 0px;
+    }
+
   }
 
   input::placeholder,
@@ -749,17 +817,6 @@
         max-width: auto;
         height: 20px;
       }
-    }
-  }
-
-  .body-bottom > div > div {
-    display: flex;
-    justify-content: flex-start;
-    img {
-      margin: 0;
-    }
-    *:nth-child(3) {
-      margin-left: auto;
     }
   }
 }
