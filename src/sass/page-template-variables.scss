@@ -342,8 +342,8 @@
     --theme-error-input-border-width: var(--theme-typography-input-border-width);
 
     // HIGHLIGHTS
-    --theme-highlight-background-color: #227F9E;
-    --theme-highlight-font-color: #FFFFFF;
+    --theme-highlight-background-color: var(--theme-cta);
+    --theme-highlight-font-color: #000000;
 
     // CLICK TO EXPAND
     --theme-click-to-expand-copy-total-height: 400px;

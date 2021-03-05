@@ -10,6 +10,11 @@ document.onreadystatechange = () => {
         let ccvvLabel = document.querySelectorAll('.en__field--ccvv > label')[0];
         let menuBtn = document.querySelectorAll('.menu-btn + a')[0];
 
+        // Add placeholde to the Mobile Phone Field
+        let enFieldMobilePhone = document.querySelectorAll('input#en__field_supporter_NOT_TAGGED_13')[0];
+        if(enFieldMobilePhone){
+            enFieldMobilePhone.placeholder = "Phone Number (Optional)";
+        }
         // [].forEach.call(paypal, e=>{
         //     e.innerHTML = e.innerHTML + '<span></span>';
         // });
@@ -29,6 +34,7 @@ document.onreadystatechange = () => {
             childEl.href='#';
             childEl.id = 'ccv-popcorn';
             childEl.className="whats-this";
+            childEl.tabIndex="-1";
             childEl.innerText="What's this?";
             childEl.addEventListener('click',e=>e.preventDefault());
             el.appendChild(childEl);

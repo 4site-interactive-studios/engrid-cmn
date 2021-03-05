@@ -42,6 +42,13 @@
     }
   }
 
+  nav > ul li ul {
+    display: none;
+  }
+  nav > ul li:hover ul {
+    display: block;
+  }  
+
   nav > ul li:hover ul {
     position: absolute;
     background-color: var(--color-white);
@@ -384,6 +391,13 @@
   }
 
   .body-top {
+
+    // If the first child is a paragraph or click-to-expand block, add top margin like it was a H1
+    & > p:first-child,
+    & > .click-to-expand:first-child {
+      margin-top: 0.67em;
+    }
+
     h1 {
       font-size: 47px;
       line-height: 56.68px;
@@ -739,12 +753,24 @@
     font-weight: 700;
   }
 
-  .en__component.en__component--codeblock > div > img {
-    display: inline-block;
-    &:nth-child(1) {
+  .trust-logos div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img.bbb-logo {
       margin-right: 10px;
       filter: grayscale(1) opacity(0.6);
     }
+
+    .gs.bbb-logo {
+      margin-right: 10px;
+    }
+    
+    img.verisign-logo{
+      margin-right: 0px;
+    }
+
   }
 
   input::placeholder,
@@ -791,17 +817,6 @@
         max-width: auto;
         height: 20px;
       }
-    }
-  }
-
-  .body-bottom > div > div {
-    display: flex;
-    justify-content: flex-start;
-    img {
-      margin: 0;
-    }
-    *:nth-child(3) {
-      margin-left: auto;
     }
   }
 }
