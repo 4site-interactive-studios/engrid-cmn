@@ -93,7 +93,7 @@ select {
 
 .en__component--formblock {
   label {
-    letter-spacing: 0.06em;
+    letter-spacing: 0.06rem;
     font-weight: 700;
   }
 }
@@ -239,6 +239,11 @@ h2.section-header {
       cursor: pointer;
       transition: all 0.35s ease-out;
 
+      // Add some padding around the button and make it round as far as hover intent is considered. This way when it rotates the cursor can't clip outside the bounds of the menu and lose hover. https://d.pr/v/5n9Z36
+      padding: 1rem;
+      margin: -1rem;
+      border-radius: 1000px;
+
       .btn-line {
         width: 20px;
         height: 2px;
@@ -266,7 +271,7 @@ h2.section-header {
 
     }
 
-    @media screen and (max-width: 970px) {   
+    @media screen and (max-width: 1000px) {   
       // On mobile move the mobile menu to the right of its text
       .menu-btn {
         left: unset;
@@ -348,7 +353,7 @@ h2.section-header {
   // If the first child is a paragraph or click-to-expand block, add top margin like it was a H1
   & > p:first-child,
   & > .click-to-expand-text-wrapper:first-child {
-    margin-top: 0.67em;
+    margin-top: 0.67rem;
   }
 
   h1 {
@@ -630,7 +635,6 @@ footer {
 * ##########################################################
 */
 
-
   .trust-logos div{
     display: flex;
     justify-content: flex-start;
@@ -651,21 +655,28 @@ footer {
 
   } 
 
-
 /*
 * ##########################################################
 * # MOBILE STYLINGS
 * ##########################################################
 */
 
+  // Footer Styles
+  @mixin mobile-footer {
+    #social-proof-wrapper{
+      display: none;
+    }
 
-  /* Sum of all MIN values of the Body Columns */
-  &[data-engrid-layout="centerleft1col"],
-  &[data-engrid-layout="centercenter2col"],
-  &[data-engrid-layout="centerright1col"] {
-    @media screen and (max-width: 775px) {   
+    // Adjust donation amount fields to display two to a Row
+    .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
+      flex-basis: calc((100% * ( 1 / 2)) - 1rem);
+      max-width: calc(100% * (1 / 2));
+    }
+
+    .content-footer{
+      --theme-content-footer-background-color: #e4e4e4;
+      
       footer {
-        background-color: #e4e4e4;
         flex-direction: column;
         padding-top: 32px;
         #footer-menu-wrapper {
@@ -688,6 +699,7 @@ footer {
             }
           }
         }
+
         #footer-social-wrapper {
           order: 1;
           margin-bottom: 24px;
@@ -695,30 +707,30 @@ footer {
             justify-content: center;
           }
         }
-        #designed-by-4site-wrapper {
-          order: 3;
-        }
-      }
-      #social-proof-wrapper,
-      #footer-logo-wrapper {
-        display: none;
-      }
 
-      div#header-logo-wrapper {
-        z-index: 9;
-      }
-      
-      .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
-        	flex-basis: calc((100% * ( 1 / 2)) - 1rem);
-          max-width: calc(100% * (1 / 2));
-      }
-      .en__field {
-        flex-basis: 100%;
-        padding-left: 0px;
-        padding-right: 0px;
+        #footer-logo-wrapper {
+          display: none;
+        }
       }
     }
   }
+
+  // Applying footer styles at the correct breakpoints
+  &[data-engrid-layout="leftleft1col"],
+  &[data-engrid-layout="centerleft1col"],
+  &[data-engrid-layout="centercenter1col"],
+  &[data-engrid-layout="centerright1col"],
+  &[data-engrid-layout="rightright1col"]{
+    @media screen and (max-width: 774px) { 
+      @include mobile-footer;
+    }
+  }
+
+  &[data-engrid-layout="centercenter2col"]{
+    @media screen and (max-width: 999px) { 
+      @include mobile-footer;
+    }
+  }  
 
 } // END AIUSA ENGRID CUSTOM THEME
 
@@ -888,19 +900,19 @@ footer {
 }
 
 [data-engrid-theme="aiusa"][data-engrid-layout="centercenter2col"]{
-  @media screen and (min-width: 970px) {
+  @media screen and (min-width: 1000px) {
     /* prettier-ignore */
     .en__component--advrow,
           .en__component--advrow .pseudo-subgrid {
               /* autoprefixer grid: off */
               grid-template-columns:
               [
-                  pc-start lpc-start]  minmax(0px, 0px)    [lpc-end
-                  cc-start lcc-start]  minmax(0px, 1fr)    [lcc-end
-                  bc-start lbc-start]  minmax(0px, 485px)  [lbc-end
-                  rbc-start]           minmax(0px, 485px)  [rbc-end bc-end
-                  rcc-start]           minmax(0px, 1fr)    [rcc-end cc-end
-                  rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
+                  pc-start lpc-start]  minmax(0px, 0px)     [lpc-end
+                  cc-start lcc-start]  minmax(0px, 1fr)     [lcc-end
+                  bc-start lbc-start]  minmax(0px, 485px)   [lbc-end
+                  rbc-start]           minmax(0px, 485px)   [rbc-end bc-end
+                  rcc-start]           minmax(0px, 1fr)     [rcc-end cc-end
+                  rpc-start]           minmax(0px, 0px)     [rpc-end pc-end             
               ];
 
               grid-template-rows:
@@ -950,7 +962,7 @@ footer {
 
   }
 
-  @media screen and (max-width: 969px) {
+  @media screen and (max-width: 999px) {
     --theme-body-padding: 0px 24px;  
     /* prettier-ignore */
     .en__component--advrow,
@@ -1031,7 +1043,7 @@ footer {
     padding-bottom: 60px;
   }
 
-  @media screen and (min-width: 970px) {
+  @media screen and (min-width: 1000px) {
     .body-header {
       margin-top: 80px;
     }
@@ -1039,6 +1051,10 @@ footer {
     .body-footer {
       margin-bottom: 80px;
     }
+  }
+
+  @media screen and (max-width: 999px) {
+    --theme-body-padding: 0px 24px;
   }
 
 }
@@ -1051,7 +1067,7 @@ footer {
 */
 
 [data-engrid-theme="aiusa"][data-engrid-layout="centercenter2col"]{
-  @media screen and (min-width: 970px) {
+  @media screen and (min-width: 1000px) {
     .body-title,
     .body-banner,
     .body-banner-overlay,
