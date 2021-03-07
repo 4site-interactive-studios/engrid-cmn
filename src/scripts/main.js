@@ -52,5 +52,49 @@ document.onreadystatechange = () => {
         }
     }
 
+    // Responsibe Menu
+    let timer;
+    var menuItems = document.querySelectorAll("li.has-submenu");
+    var menu = document.querySelectorAll("li.has-submenu ul")[0];
+    var menuBtn = document.querySelector(".menu-btn");
+
+    Array.prototype.forEach.call(menuItems, function (el, i) {
+      el.addEventListener("touchstart", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        if (menuBtn.classList.value.includes('close')) {
+          menuBtn.classList.remove("close");
+          timer = setTimeout(function (event) {
+            document.querySelector(
+              ".has-submenu.open"
+            ).className = "has-submenu";
+          }, 100);
+          menu.style.display='none';
+        } else {
+          this.className = "has-submenu open";
+          menuBtn.classList.add("close");
+          clearTimeout(timer);
+          menu.style.display='block';
+        }
+      });
+
+      el.addEventListener("mouseover", function (event) {
+        this.className = "has-submenu open";
+        menuBtn.classList.add("close");
+        clearTimeout(timer);
+      });
+      el.addEventListener("mouseout", function (event) {
+        menuBtn.classList.remove("close");
+        timer = setTimeout(function (event) {
+          document.querySelector(
+            ".has-submenu.open"
+          ).className = "has-submenu";
+        }, 100);
+        console.log("mouseout");
+      });
+    });
+
+
+
 };
 

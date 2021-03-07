@@ -239,9 +239,9 @@
     --theme-body-background-color: var(--color-white);
     // DETAIL SETTINGS
     --theme-page-alert-background-color: var(--theme-page-background-color);
-    --theme-content-header-background-color: var(--theme-content-background-color);
+    --theme-content-header-background-color: var(--color-white);
     --theme-body-headerOutside-background-color: var(--color-transparent);
-    --theme-body-header-background-color: var(--theme-body-background-color);
+    --theme-body-header-background-color: var(--theme-cta);
     --theme-body-title-background-color: var(--theme-body-background-color);
     --theme-body-banner-background-color: var(--theme-body-background-color);
     --theme-body-bannerOverlay-background-color: var(--color-transparent);
@@ -253,7 +253,7 @@
     --theme-body-footerOutside-background-color: var(--color-transparent);
     --theme-content-footerSpacer-background-color: var(--theme-content-background-color);
     --theme-content-preFooter-background-color: var(--theme-content-background-color);
-    --theme-content-footer-background-color: var(--theme-content-background-color);
+    --theme-content-footer-background-color: var(--color-white);
     --theme-page-backgroundImage-background-color: --theme-light-gray;
     --theme-page-backgroundImageOverlay-background-color: var(--color-transparent);
     --theme-page-customCode-background-color: var(--theme-page-background-color);
