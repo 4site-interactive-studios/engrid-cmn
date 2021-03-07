@@ -275,13 +275,19 @@ h2.section-header {
         // top: 31px;
       }
 
-      li.has-submenu ul{
-        padding-top: 1rem;
-
-        li {
-          text-align: right;
+      li.has-submenu{
+        a{
+          padding-right: 0.5rem;
         }
-      }
+
+        ul{
+          padding-top: 1rem;
+        }
+          li {
+            text-align: right;
+          }
+        }
+
 
     }
 
@@ -298,6 +304,7 @@ h2.section-header {
   header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   #social-proof-wrapper {
     flex: 4;
