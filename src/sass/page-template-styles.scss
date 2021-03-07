@@ -75,7 +75,7 @@
 label.en__field__label.en__field__label--item {
   padding: 12px 5px;
   width: 100%;
-  text-transform: uppercase !important;
+  text-transform: uppercase;
   font-family: "AmnestyTradeGothic";
   justify-content: center;
   display: inline-block;
@@ -114,8 +114,8 @@ input.en__field__input--checkbox
 + label.en__field__label.en__field__label--item {
   font-weight: 500;
   font-family: var(--theme-typography-default-font-family);
-  text-transform: none !important;
-  border: 0px !important;
+  text-transform: none;
+  border: 0px;
   padding: 3px 10px 0;
   font-size: 12px;
   line-height: 18px;
@@ -422,60 +422,64 @@ footer {
 * ##########################################################
 */
 
-.enWidget {
+// Needed for local development where the thermometer markup has to be hard coded and creates a vestigial empty div
+.enWidget:empty{
+  display: none;
+}
+
+.enWidget--progressBar {
   padding: 20px 0;
+
+  .enWidget__progress{
+    border: 0px !important; // !important required
+    background: rgba(228,228,228,0.36) !important; // !important required
+    height: 24px !important; // !important required
+    overflow: inherit;
+
+    .enWidget__fill {
+      background-color: var(--theme-cta) !important; // !important required
+      box-shadow: inset -13px 0px 0px 0px rgba(255, 255, 255, 1);
+      &::before{
+        content: " ";
+        display: block;
+        width: 3px;
+        height: calc(100% + 6px);
+        position: absolute;
+        right: 0;
+        top: -3px;
+        background-color: #000000;
+      }
+      &::after{
+        content: " ";
+        display: block;
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        right: -10px;
+        top: 0px;
+        background-color: #ffffff;
+      }
+      span {
+        display: none;
+      }
+    }
+
+  }
+
   .enWidget__copy--below{
     margin-top: 10px;
-  }
-  &:empty{
-    display: none;
-  }
-}
+    text-align: center;
+    font-weight: 700;
 
-.enWidget__progress {
-  border: 0px !important;
-  background-color: rgba(228,228,228,0.36) !important;
-  height: 24px !important;
-  overflow: inherit;
-  .enWidget__fill {
-    background-color: var(--theme-cta) !important;
-    box-shadow: inset -13px 0px 0px 0px rgba(255, 255, 255, 1);
-    &::before{
-      content: " ";
-      display: block;
-      width: 3px;
-      height: calc(100% + 6px);
-      position: absolute;
-      right: 0;
-      top: -3px;
-      background-color: #000000;
+    p{
+      margin: 0;
+      text-transform: uppercase;
+      &:nth-child(1){
+        font-size: 32px;
+        line-height: 32px;
+      }
     }
-    &::after{
-      content: " ";
-      display: block;
-      width: 10px;
-      height: 100%;
-      position: absolute;
-      right: -10px;
-      top: 0px;
-      background-color: #ffffff;
-    }
-    span {
-      display: none !important;
-    }
-  }
-}
 
-.enWidget__copy {
-  text-align: center;
-  font-weight: 700;
-  p{
-    margin: 0;
-    text-transform: uppercase;
-    &:nth-child(1){
-      font-size: 32px;
-      line-height: 32px;
-    }
   }
 }
 
@@ -568,7 +572,7 @@ footer {
   padding-right: 0;
   .en__field__item {
     max-width: calc(100% / 3);
-    margin-right: 0px !important;
+    // margin-right: 0px;
   }
 }
 
@@ -671,7 +675,7 @@ footer {
           ul#footer-menu {
             justify-content: center;
             flex-wrap: wrap;
-            margin: 0 auto !important;
+            margin: 0 auto;
             li {
               margin: 5px 10px;
               &:nth-child(2) {
@@ -709,9 +713,9 @@ footer {
           max-width: calc(100% * (1 / 2));
       }
       .en__field {
-        flex-basis: 100% !important;
-        padding-left: 0px !important;
-        padding-right: 0px !important;
+        flex-basis: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
       }
     }
   }
