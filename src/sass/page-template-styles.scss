@@ -14,7 +14,6 @@
 * ##########################################################
 */
 
-
 /* All headlines, labels, abd button text within the body are capitalized */
 [class*="body-"] {
   h1,
@@ -738,9 +737,19 @@ footer {
               cc-start lcc-start]  minmax(0px, 0px)        [lcc-end
               bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
               rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
-              rcc-start]           minmax(0px, 1fr)        [rcc-end cc-end
-              rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
+              rcc-start]           minmax(0px, 0px)        [rcc-end cc-end
+              rpc-start]           minmax(0px, 1fr)        [rpc-end pc-end               
               ];
+          }
+
+          .content-header,
+          .content-footer{
+            grid-column: bc;
+          }
+
+          .body-backgroundImage,
+          .body-backgroundImageOverlay{
+            grid-row: page;
           }
 
   }
@@ -813,6 +822,37 @@ footer {
 
 }
 
+[data-engrid-theme="aiusa"][data-engrid-layout="rightright1col"]{   
+
+  @media screen and (min-width: 775px) {
+    /* prettier-ignore */
+    .en__component--advrow,
+          .en__component--advrow .pseudo-subgrid {
+              /* autoprefixer grid: off */
+              grid-template-columns:
+              [
+              pc-start lpc-start]  minmax(0px, 1fr)        [lpc-end
+              cc-start lcc-start]  minmax(0px, 0px)        [lcc-end
+              bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
+              rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
+              rcc-start]           minmax(0px, 0px)        [rcc-end cc-end
+              rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
+              ];
+          }
+          
+          .content-header,
+          .content-footer{
+            grid-column: bc;
+          }
+
+          .body-backgroundImage,
+          .body-backgroundImageOverlay{
+            grid-row: page;
+          }
+  }
+
+}
+
 [data-engrid-theme="aiusa"][data-engrid-layout="leftleft1col"],
 [data-engrid-theme="aiusa"][data-engrid-layout="centerleft1col"],
 [data-engrid-theme="aiusa"][data-engrid-layout="centercenter1col"],
@@ -834,12 +874,6 @@ footer {
         ];
       }
     }
-}
-
-body:not(#en__pagebuilder)[data-engrid-theme="aiusa"][data-engrid-layout="centerleft1col"],
-body:not(#en__pagebuilder)[data-engrid-theme="aiusa"][data-engrid-layout="centercenter1col"],
-body:not(#en__pagebuilder)[data-engrid-theme="aiusa"][data-engrid-layout="centerright1col"]{
-  grid-row: content-header-end / content-footer-start;
 }
 
 [data-engrid-theme="aiusa"][data-engrid-layout="centercenter2col"]{
@@ -936,15 +970,25 @@ body:not(#en__pagebuilder)[data-engrid-theme="aiusa"][data-engrid-layout="center
 * ##########################################################
 */
 
+[data-engrid-theme="aiusa"][data-engrid-layout="leftleft1col"],
 [data-engrid-theme="aiusa"][data-engrid-layout="centerleft1col"],
 [data-engrid-theme="aiusa"][data-engrid-layout="centercenter1col"],
-[data-engrid-theme="aiusa"][data-engrid-layout="centerright1col"]{   
+[data-engrid-theme="aiusa"][data-engrid-layout="centerright1col"],  
+[data-engrid-theme="aiusa"][data-engrid-layout="rightright1col"]{
   --theme-body-padding: 0px 60px;
 
   .body-bottom {
     padding-bottom: 60px;
   }
 
+  @media screen and (max-width: 774px) {
+    --theme-body-padding: 0px 24px;
+  }
+}
+
+[data-engrid-theme="aiusa"][data-engrid-layout="centerleft1col"],
+[data-engrid-theme="aiusa"][data-engrid-layout="centercenter1col"],
+[data-engrid-theme="aiusa"][data-engrid-layout="centerright1col"]{
   @media screen and (min-width: 775px) {
     .body-header {
       margin-top: 80px;
@@ -955,9 +999,6 @@ body:not(#en__pagebuilder)[data-engrid-theme="aiusa"][data-engrid-layout="center
     } 
   }
 
-  @media screen and (max-width: 774px) {
-    --theme-body-padding: 0px 24px;
-  }
 }
 
 [data-engrid-theme="aiusa"][data-engrid-layout="centercenter2col"]{
