@@ -41,9 +41,12 @@
   }
 }
 
+.sms-disclaimer > p:first-child{
+  margin-top: 0;
+}
 
-.en__component--copyblock > p,
-.en__component--copyblock > p > a {
+.sms-disclaimer > p,
+.sms-disclaimer > p > a {
   font-style: italic;
   font-size: 12px;
   line-height: 18px;
