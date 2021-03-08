@@ -1,7 +1,7 @@
 const tippy = require('tippy.js').default;
 
 document.onreadystatechange = () => {    
-    if(document.readyState === "interactive"){
+    if(document.readyState === "complete"){
         // Add placeholder to the Mobile Phone Field
         let enFieldMobilePhone = document.querySelectorAll('input#en__field_supporter_NOT_TAGGED_13')[0];
         if(enFieldMobilePhone){
