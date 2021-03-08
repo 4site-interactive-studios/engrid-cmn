@@ -824,7 +824,7 @@ footer {
 
     img.bbb-logo {
       margin-right: 10px;
-      filter: grayscale(1) opacity(0.6);
+      filter: grayscale(1) opacity(0.5);
     }
 
     .gs.bbb-logo {
@@ -843,11 +843,15 @@ footer {
 * ##########################################################
 */
 
-  // Footer Styles
-  @mixin mobile-footer {
+  @mixin mobile-content-header {
     #social-proof-wrapper{
       display: none;
     }
+  }
+
+  // Footer Styles
+  @mixin mobile-content-footer {
+
 
     // Adjust donation amount fields to display two to a Row
     .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
@@ -897,20 +901,27 @@ footer {
     }
   }
 
-  // Applying footer styles at the correct breakpoints
-  &[data-engrid-layout="leftleft1col"],
+  // Applying header footer styles at the correct breakpoints
   &[data-engrid-layout="centerleft1col"],
   &[data-engrid-layout="centercenter1col"],
-  &[data-engrid-layout="centerright1col"],
-  &[data-engrid-layout="rightright1col"]{
+  &[data-engrid-layout="centerright1col"]{
     @media screen and (max-width: 774px) { 
-      @include mobile-footer;
+      @include mobile-content-header;
+      @include mobile-content-footer;
     }
+  }
+
+  // Always use the mobile header and footer
+  &[data-engrid-layout="leftleft1col"],
+  &[data-engrid-layout="rightright1col"]{
+    @include mobile-content-header;
+    @include mobile-content-footer;
   }
 
   &[data-engrid-layout="centercenter2col"]{
     @media screen and (max-width: 999px) { 
-      @include mobile-footer;
+      @include mobile-content-header;
+      @include mobile-content-footer;
     }
   }  
 
