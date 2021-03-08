@@ -210,19 +210,19 @@
                   </p>
                 </div>
                 <div id="menu-wrapper">
-                  <nav aria-label="Main Navigation">
+                  <!-- <nav aria-label="Main Navigation">
                     <ul>
-                      <li class="has-submenu">
+                      <li class="has-submenu" data-expanded="false">
                         <div class="menu-btn">
                           <div class="btn-line"></div>
                           <div class="btn-line"></div>
                           <div class="btn-line"></div>
                         </div>
-                        <a href="#" aria-haspopup="true" aria-expanded="false"
+                        <a href="#menu-wrapper" aria-haspopup="true" aria-expanded="false"
                           >Other Ways to Give</a
                         >
                         <ul>
-                          <li><a href="#">Renew</a></li>
+                          <li><a href="https://www.google.com" target="_blank">Renew</a></li>
                           <li><a href="#">Honorary</a></li>
                           <li><a href="#">Workplace</a></li>
                           <li><a href="#">Give Stock</a></li>
@@ -232,7 +232,69 @@
                         </ul>
                       </li>
                     </ul>
-                  </nav>
+                  </nav> -->
+                  <nav aria-label="Navigation">
+                    <ul id="main-menu"
+                        role="menubar"
+                        aria-label="Main Menu">
+                      <li role="none">
+                        <a role="menuitem"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                           href="#"
+                           tabindex="0">
+                           <div class="hamburger-wrapper">
+                            <div class="hamburger"></div>
+                          </div>
+                           Other Ways to Give
+                        </a>
+                        <ul role="menu" aria-label="Other Ways to Give">
+                          <li role="none">
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Honorary
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Workplace
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Give Stock
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Donor Advised Fund
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Planned Giving
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               FAQ
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>  
                 </div>
               </header>
             </div>
@@ -1026,12 +1088,14 @@
                 <a
                   href="https://www.amnestyusa.org/privacy-policy/"
                   target="_blank"
+                  tabindex="-1"
                   >Privacy</a
                 >
                 &amp;
                 <a
                   href="https://www.amnestyusa.org/terms-conditions/"
                   target="_blank"
+                  tabindex="-1"
                   >Terms</a
                 >.
               </p>
@@ -1356,6 +1420,7 @@
                 <a 
                   href="https://give.org/charity-reviews/national/Human-Services/Amnesty-International-of-the-USA-in-New-York-ny-143"
                   target="_blank"
+                  tabindex="-1"
                 ><img
                   alt=""
                   class="bbb-logo grayscale"
@@ -1365,6 +1430,7 @@
                 <a
                   href="https://www.guidestar.org/profile/52-0851555"
                   target="_blank"
+                  tabindex="-1"
                   ><img
                     alt=""
                     class="gs-logo grayscale"
