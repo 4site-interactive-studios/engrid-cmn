@@ -87,9 +87,9 @@
     --theme-typography-input-font-size: var(--theme-root-font-size);
     --theme-typography-input-font-weight: initial;
     --theme-typography-input-line-height: initial;
-    --theme-typography-input-background-color: rgba(228, 228, 228, 0.36);
+    --theme-typography-input-background-color: #f5f5f5;
     --theme-typography-input-border-width: 2px;
-    --theme-typography-input-border-color: transparent;
+    --theme-typography-input-border-color: var(--theme-typography-input-background-color);
     --theme-typography-input-border-radius: initial;
     --theme-typography-input-placeholder-color: #767676;
     --theme-typography-input-box-shadow: none;
