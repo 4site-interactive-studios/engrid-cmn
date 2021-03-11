@@ -3,7 +3,6 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="/cdn-cgi/apps/head/-fjQYMdX8zJxO-XvoaaR6q3x1Qk.js"></script>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -87,7 +86,7 @@
 
     <style>
       body {
-        background-color: #BFBFBF;
+        background-color: #bfbfbf;
         opacity: 0;
       }
       body[data-engrid-embedded] {
@@ -163,14 +162,14 @@
     <div id="engrid">
       <form
         method="post"
-        action="https://donate.amnestyusa.org/page/74408/donate/2"
+        action="https://donate.amnestyusa.org/page/74406/donate/2"
         class="en__component en__component--page"
       >
         <input type="hidden" name="hidden" class="en__hiddenFields" value="" />
         <input
           type="hidden"
           name="sessionId"
-          value="dc1c8e717ec24376bbeffdd507fd8ab6-server10150"
+          value="05943676f26f424d881d6e4d73ab5b3e-server10228"
         />
         <ul class="en__errorList"></ul>
         <div class="en__component en__component--row en__component--advrow">
@@ -187,13 +186,16 @@
                     id="header-logo"
                     href="https://www.amnestyusa.org/"
                     target="_blank"
+                    tabindex="-1"
                   >
                     <img
                       alt="Amnesty International USA"
-                      data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/aiusa-logo-2021.png?v=1613335346000"
-                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI4AAAA8CAYAAACw/4J2AAAAg0lEQVR42u3SQQ0AAAgDMeZf9HBAwr+VcLm004GnGAfjYByMg3HAOBgH42AcjAPGwTgYB+NgHDAOxsE4GAfjgHEwDsbBOBgHjINxMA7GwThgHIyDcTAOxpEB42AcjINxwDgYB+NgHIwDxsE4GAfjYBwwDsbBOBgH44BxMA7GwTgYB24LR0iziad+UkQAAAAASUVORK5CYII="
+                      src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/aiusa-logo-2021.png?v=1613335346000"
                       height="78px"
                       width="184px"
+                      decoding="async"
+                      loading="lazy"
+                      data-engrid-data-src-processed="true"
                     />
                   </a>
                 </div>
@@ -236,37 +238,39 @@
                   <script>
                     let timer;
                     var menuItems = document.querySelectorAll("li.has-submenu");
-                    var menu = document.querySelectorAll("li.has-submenu ul")[0];
+                    var menu = document.querySelectorAll(
+                      "li.has-submenu ul"
+                    )[0];
                     var menuBtn = document.querySelector(".menu-btn");
 
-                    Array.prototype.forEach.call(menuItems, function (el, i) {
-                      el.addEventListener("touchstart", function (event) {
+                    Array.prototype.forEach.call(menuItems, function(el, i) {
+                      el.addEventListener("touchstart", function(event) {
                         event.preventDefault();
                         event.stopPropagation();
-                        if (menuBtn.classList.value.includes('close')) {
+                        if (menuBtn.classList.value.includes("close")) {
                           menuBtn.classList.remove("close");
-                          timer = setTimeout(function (event) {
+                          timer = setTimeout(function(event) {
                             document.querySelector(
                               ".has-submenu.open"
                             ).className = "has-submenu";
                           }, 1000);
-                          menu.style.display='none';
+                          menu.style.display = "none";
                         } else {
                           this.className = "has-submenu open";
                           menuBtn.classList.add("close");
                           clearTimeout(timer);
-                          menu.style.display='block';
+                          menu.style.display = "block";
                         }
                       });
 
-                      el.addEventListener("mouseover", function (event) {
+                      el.addEventListener("mouseover", function(event) {
                         this.className = "has-submenu open";
                         menuBtn.classList.add("close");
                         clearTimeout(timer);
                       });
-                      el.addEventListener("mouseout", function (event) {
+                      el.addEventListener("mouseout", function(event) {
                         menuBtn.classList.remove("close");
-                        timer = setTimeout(function (event) {
+                        timer = setTimeout(function(event) {
                           document.querySelector(
                             ".has-submenu.open"
                           ).className = "has-submenu";
@@ -287,30 +291,44 @@
           >
             <div class="en__component en__component--codeblock">
               <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAggAAAAfCAQAAAAouf3iAAAAXklEQVR42u3UQQ0AAAgEIK9/SKPo5ssQEIL0FMCJEAAhAEIAhAAIARACIARACIAQACEAQgCEAAgBEAIgBEAIgBAAIQBCAIQACAEQAiAEQAiAEAAhAEIAhAAIAUAIwLPjfjoCfGGIqwAAAABJRU5ErkJggg=="
-                data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/body-topper-emergency.png?v=1613335346000"
+                src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/body-topper-emergency.png?v=1613335346000"
                 width="100%"
                 height="31px"
+                decoding="async"
+                loading="lazy"
+                data-engrid-data-src-processed="true"
               />
             </div>
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-title"
           >
-            <h1>Lorem ipsum dolor</h1>
+            <div class="en__component en__component--copyblock">
+              <span id="skip-link"></span>
+              <h1>Lorem ipsum dolor</h1>
+            </div>
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-banner"
           >
             <div class="en__component en__component--codeblock">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2UAAAA2CAQAAADtjfkcAAAAs0lEQVR42u3VMQ0AAAgDMOZf9BDBRdKaaNoBgMeiMgBUBgAqAwCVAaAyAFAZAKgMAFQGgMoAQGUAoDIAUBkAKgMAlQGAygBAZQCoDABUBgAqAwCVAaAyAFAZAKgMAFQGgMoAQGUAoDIAVAYAKgMAlQGAygBQGQCoDABUBgAqA0BlAKAyAFAZAKgMAJUBgMoAQGUAoDIAVAYAKgMAlQGAygBQGQCoDABUBgAqA0BlAKAyALhYIAhryzl0+awAAAAASUVORK5CYII="
-                data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/example-banner-image.png?v=1613413009000"
-                data-attribution-source="© Credit Placeholder"
-                data-attribution-source-link="https%3A%2F%2Fwww.google.com%2F"
-                height="262px"
-                width="520px"
-              />
+              <figure class="media-with-attribution">
+                <img
+                  src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/example-banner-image.png?v=1613413009000"
+                  data-attribution-source="Credit Placeholder"
+                  data-attribution-source-link="https://www.google.com"
+                  decoding="async"
+                  loading="lazy"
+                  data-engrid-data-src-processed="true"
+                /><figattribution
+                  ><a
+                    href="https://www.google.com"
+                    target="_blank"
+                    tabindex="-1"
+                    >Credit Placeholder</a
+                  ></figattribution
+                >
+              </figure>
             </div>
           </div>
           <div
@@ -320,70 +338,69 @@
             class="en__component en__component en__component--column en__component--advcolumn body-top"
           >
             <div class="en__component en__component--copyblock click-to-expand">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                et dolor vitae ligula ornare commodo non in libero. Aenean est
-                orci, viverra at est nec, congue ultricies nunc. Cras feugiat
-                erat nec libero posuere iaculis. Duis ullamcorper nisl mauris,
-                ut vulputate ante lacinia ac. Donec id dolor sem. Nullam eu leo
-                nisi.
-              </p>
-              <p>
-                Duis eget congue dui, quis elementum purus. Duis consequat augue
-                id ipsum laoreet, ac facilisis elit scelerisque. Morbi ut
-                efficitur lorem, at ultricies ipsum. Donec commodo metus dolor.
-                Integer et enim fermentum, viverra est eget, pulvinar mi.
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Pellentesque dignissim
-                maximus neque. Aenean arcu nunc, mattis vel quam sed, semper
-                lacinia lorem. Pellentesque luctus sollicitudin molestie.
-              </p>
-              <div class="en__component en__component--widgetblock">
-                <script
-                  data-id="896518"
-                  src="https://donate.amnestyusa.org/ea-demo/frontend/pbAssets/build/js/enWidget.loader.js"
-                ></script>
-                <script src="https://donate.amnestyusa.org/ea-demo/frontend/pbAssets/build/js/enWidget.js"></script>
-                <div class="enWidget enWidget--progressBar">
-                  <div class="enWidget__display">
-                    <div class="enWidget__bar">
-                      <div
-                        class="enWidget__progress"
-                        style="
-                          border: 1px solid rgb(240, 240, 240);
-                          background: rgb(255, 255, 255);
-                          height: 50px;
-                        "
-                      >
-                        <div
-                          class="enWidget__fill"
-                          style="background-color: rgb(253, 162, 47); width: 63%"
-                        >
-                          <span
-                            class="enWidget__fill__count"
-                            style="color: rgb(255, 255, 255)"
-                            >$126,016.96</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="enWidget__copy enWidget__copy--below">
-                    <p>$126,016.96</p>
-                    <p>Raised of $200,000 goal</p>
-                  </div>
-                </div>
+              <div class="click-to-expand-cta"></div>
+              <div class="click-to-expand-text-wrapper" tabindex="0">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam et dolor vitae ligula ornare commodo non in libero.
+                  Aenean est orci, viverra at est nec, congue ultricies nunc.
+                  Cras feugiat erat nec libero posuere iaculis. Duis ullamcorper
+                  nisl mauris, ut vulputate ante lacinia ac. Donec id dolor sem.
+                  Nullam eu leo nisi.
+                </p>
+                <p>
+                  Nunc ac urna viverra, fringilla justo finibus, laoreet tortor.
+                  Quisque blandit nulla quis ullamcorper porttitor. Duis urna
+                  enim, tincidunt vel ante vitae, egestas cursus diam. Class
+                  aptent taciti sociosqu ad litora torquent per conubia nostra,
+                  per inceptos himenaeos. Maecenas ipsum mi, tincidunt auctor
+                  libero ut, mollis posuere ipsum. Praesent velit libero,
+                  tincidunt vel mollis eget, placerat eu lacus. Nullam at tortor
+                  vitae metus vulputate iaculis vitae ac libero. Praesent
+                  tempor, nunc ut posuere blandit, magna nulla laoreet ex, id
+                  scelerisque erat nisl a tellus. Nam ullamcorper molestie
+                  tortor et porta
+                </p>
+                <p>
+                  Aliquam et imperdiet sapien. Aliquam erat volutpat.
+                  Suspendisse vel lacinia nisi. Donec ut laoreet nunc. Praesent
+                  sit amet quam dapibus, porta nisl eget, mollis nisi. Nunc
+                  interdum porta ligula, vel viverra eros suscipit a. Mauris
+                  malesuada id magna commodo viverra. Quisque dictum nisi vel
+                  orci sodales commodo. Nunc tincidunt arcu ut tincidunt
+                  volutpat. Duis augue elit, sodales in ipsum nec, porta congue
+                  turpis.
+                </p>
+                <p>
+                  Ut porta iaculis felis, id pulvinar lacus tristique nec.
+                  Integer quis semper neque. Aliquam dictum, tellus eu rhoncus
+                  finibus, tellus quam convallis purus, luctus varius libero
+                  ligula ac purus. Fusce vulputate ipsum vitae gravida volutpat.
+                  Praesent ultrices enim sit amet sem finibus fermentum id eget
+                  lectus. Maecenas lacinia lacus ac fermentum convallis. Mauris
+                  elementum nulla lacinia pulvinar maximus.
+                </p>
+                <p>
+                  Duis eget congue dui, quis elementum purus. Duis consequat
+                  augue id ipsum laoreet, ac facilisis elit scelerisque. Morbi
+                  ut efficitur lorem, at ultricies ipsum. Donec commodo metus
+                  dolor. Integer et enim fermentum, viverra est eget, pulvinar
+                  mi. Pellentesque habitant morbi tristique senectus et netus et
+                  malesuada fames ac turpis egestas. Pellentesque dignissim
+                  maximus neque. Aenean arcu nunc, mattis vel quam sed, semper
+                  lacinia lorem. Pellentesque luctus sollicitudin molestie.
+                </p>
               </div>
             </div>
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-main"
           >
-          <div class="en__component en__component--copyblock">
-            <h2 class="section-header gift-amount">Gift Amount</h2>
-          </div>
+            <div class="en__component en__component--copyblock">
+              <h2 class="section-header">Gift Amount</h2>
+            </div>
             <div
-              class="en__component en__component--formblock i1-hide-label i2-hide i3-hide-label"
+              class="en__component en__component--formblock radio-to-buttons i1-hide-label i2-hide i3-hide-label"
             >
               <div
                 class="en__field en__field--radio en__field--871587 en__field--recurrfreq"
@@ -397,6 +414,7 @@
                   <div class="en__field__item">
                     <input
                       id="en__field_transaction_recurrfreq0"
+                      checked=""
                       type="radio"
                       class="en__field__input en__field__input--radio"
                       value=""
@@ -411,7 +429,6 @@
                   <div class="en__field__item">
                     <input
                       id="en__field_transaction_recurrfreq1"
-                      checked
                       type="radio"
                       class="en__field__input en__field__input--radio"
                       value="MONTHLY"
@@ -438,9 +455,18 @@
                     >
                   </div>
                 </div>
+                <div
+                  class="en__component en__component--copyblock recurring-frequency-y-hide inline-monthly-upsell"
+                >
+                  <p>
+                    This copy will only show up if the One Time Giving Frequency
+                    is selected and the corresponding Recurring field has a
+                    value of N
+                  </p>
+                </div>
               </div>
               <div
-                class="en__field en__field--text en__field--883900 en__field--recurrpay en__mandatory"
+                class="en__field en__field--text en__field--883900 en__field--recurrpay en__mandatory has-value"
               >
                 <label
                   for="en__field_transaction_recurrpay"
@@ -458,108 +484,101 @@
                 </div>
               </div>
               <div
-                class="en__field en__field--radio en__field--withOther en__field--871588 en__field--donationAmt en__mandatory"
+                class="en__field en__field--radio en__field--withOther en__field--871588 en__field--donationAmt en__mandatory en__field--withOther--active"
               >
                 <label class="en__field__label">Donation Amount</label>
-                <div class="en__field__element en__field__element--radio">
+                <div class="en__field__element en__field__element--radio	">
                   <div class="en__field__item">
                     <input
-                      checked
-                      type="radio"
+                      id="transaction_donationAmt0"
                       class="en__field__input en__field__input--radio"
-                      value="15"
+                      type="radio"
                       name="transaction.donationAmt"
-                      id="en__field_transaction_donationAmt0"
+                      value="250"
                     />
                     <label
+                      for="transaction_donationAmt0"
                       class="en__field__label en__field__label--item"
-                      for="en__field_transaction_donationAmt0"
-                      >$15</label
+                      >$250</label
                     >
                   </div>
                   <div class="en__field__item">
                     <input
-                      type="radio"
+                      id="transaction_donationAmt1"
                       class="en__field__input en__field__input--radio"
-                      value="25"
+                      type="radio"
                       name="transaction.donationAmt"
-                      id="en__field_transaction_donationAmt1"
+                      value="100"
                     />
                     <label
+                      for="transaction_donationAmt1"
                       class="en__field__label en__field__label--item"
-                      for="en__field_transaction_donationAmt1"
-                      >$25</label
+                      >$100</label
                     >
                   </div>
                   <div class="en__field__item">
                     <input
-                      type="radio"
+                      id="transaction_donationAmt2"
                       class="en__field__input en__field__input--radio"
-                      value="30"
+                      type="radio"
                       name="transaction.donationAmt"
-                      id="en__field_transaction_donationAmt2"
-                    />
-                    <label
-                      class="en__field__label en__field__label--item"
-                      for="en__field_transaction_donationAmt2"
-                      >$30</label
-                    >
-                  </div>
-                  <div class="en__field__item">
-                    <input
-                      type="radio"
-                      class="en__field__input en__field__input--radio"
                       value="50"
-                      name="transaction.donationAmt"
-                      id="en__field_transaction_donationAmt3"
                     />
                     <label
+                      for="transaction_donationAmt2"
                       class="en__field__label en__field__label--item"
-                      for="en__field_transaction_donationAmt3"
                       >$50</label
                     >
                   </div>
                   <div class="en__field__item">
                     <input
-                      type="radio"
+                      id="transaction_donationAmt3"
                       class="en__field__input en__field__input--radio"
-                      value="other"
+                      type="radio"
                       name="transaction.donationAmt"
-                      id="en__field_transaction_donationAmt4"
+                      value="35"
                     />
                     <label
+                      for="transaction_donationAmt3"
                       class="en__field__label en__field__label--item"
-                      for="en__field_transaction_donationAmt4"
+                      >$35</label
+                    >
+                  </div>
+                  <div class="en__field__item">
+                    <input
+                      id="transaction_donationAmt4"
+                      class="en__field__input en__field__input--radio"
+                      type="radio"
+                      name="transaction.donationAmt"
+                      value="Other"
+                    />
+                    <label
+                      for="transaction_donationAmt4"
+                      class="en__field__label en__field__label--item"
                       >Other</label
                     >
                   </div>
-                  <div
-                    class="en__field__item en__field__item--other en__field__item--hidden"
-                  >
+
+                  <div class="en__field__item en__field__item--other">
                     <input
                       class="en__field__input en__field__input--other"
-                      type="text"
+                      type="number"
                       name="transaction.donationAmt.other"
-                      placeholder="Enter Other Amount"
                       value=""
+                      inputmode="numeric"
+                      placeholder="Other Amount"
+                      step="1"
                     />
                   </div>
                 </div>
               </div>
             </div>
-            <div
-              class="en__component en__component--copyblock recurring-frequency-y-hide inline-monthly-upsell"
-            >
-              <p>
-                This copy will only show up if the One Time Giving Frequency is
-                selected and the corresponding Recurring field has a value of N
-              </p>
-            </div>
+
             <div class="en__component en__component--copyblock">
               <h2 class="section-header">Your Info</h2>
             </div>
             <div
-              class="en__component en__component--formblock i1-50 i1-start i2-50 i2-end i3-100 i4-66 i4-start i5-33 i6-end i6-50 i6-start i7-50 i7-end i8-33 i8-start i9-66 i9-end i10-100"
+              class="en__component en__component--formblock i4-66 i4-start i5-33 i5-end i6-50 i6-start i7-50 i7-end i8-33 i8-start i9-66 i9-end i10-100"
             >
               <div
                 class="en__field en__field--text en__field--871592 en__field--firstName en__mandatory"
@@ -575,8 +594,9 @@
                     type="text"
                     class="en__field__input en__field__input--text"
                     name="supporter.firstName"
-                    placeholder="First Name"
                     value=""
+                    placeholder="First Name"
+                    style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg=="); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;'
                   />
                 </div>
               </div>
@@ -595,6 +615,7 @@
                     class="en__field__input en__field__input--text"
                     name="supporter.lastName"
                     value=""
+                    placeholder="Last Name"
                   />
                 </div>
               </div>
@@ -614,6 +635,7 @@
                     class="en__field__input en__field__input--email"
                     name="supporter.emailAddress"
                     value=""
+                    placeholder="Email Address"
                   />
                 </div>
               </div>
@@ -632,6 +654,7 @@
                     class="en__field__input en__field__input--text"
                     name="supporter.address1"
                     value=""
+                    placeholder="Street Address"
                   />
                 </div>
               </div>
@@ -650,6 +673,7 @@
                     class="en__field__input en__field__input--text"
                     name="supporter.address2"
                     value=""
+                    placeholder="Apt., ste., bldg."
                   />
                 </div>
               </div>
@@ -666,6 +690,7 @@
                     class="en__field__input en__field__input--text"
                     name="supporter.city"
                     value=""
+                    placeholder="City"
                   />
                 </div>
               </div>
@@ -742,7 +767,7 @@
                 <label
                   for="en__field_supporter_postcode"
                   class="en__field__label"
-                  >Postal Code</label
+                  >Postcode</label
                 >
                 <div class="en__field__element en__field__element--text">
                   <input
@@ -751,11 +776,12 @@
                     class="en__field__input en__field__input--text"
                     name="supporter.postcode"
                     value=""
+                    placeholder="Postal Code"
                   />
                 </div>
               </div>
               <div
-                class="en__field en__field--select en__field--871598 en__field--country en__mandatory"
+                class="en__field en__field--select en__field--871598 en__field--country en__mandatory has-value"
               >
                 <label
                   for="en__field_supporter_country"
@@ -768,9 +794,9 @@
                     class="en__field__input en__field__input--select"
                     name="supporter.country"
                   >
-                    <option selected="selected" value="US">
-                      United States
-                    </option>
+                    <option selected="selected" value="US"
+                      >United States</option
+                    >
                     <option value="GB">United Kingdom</option>
                     <option value="CA">Canada</option>
                     <option value="AF">Afghanistan</option>
@@ -823,12 +849,12 @@
                     <option value="CO">Colombia</option>
                     <option value="KM">Comoros</option>
                     <option value="CG">Congo</option>
-                    <option value="CD">
-                      Congo, the Democratic Republic of the
-                    </option>
+                    <option value="CD"
+                      >Congo, the Democratic Republic of the</option
+                    >
                     <option value="CK">Cook Islands</option>
                     <option value="CR">Costa Rica</option>
-                    <option value="CI">Côte d&#39;Ivoire</option>
+                    <option value="CI">Côte d'Ivoire</option>
                     <option value="HR">Croatia</option>
                     <option value="CU">Cuba</option>
                     <option value="CW">Curaçao</option>
@@ -870,9 +896,9 @@
                     <option value="GW">Guinea-Bissau</option>
                     <option value="GY">Guyana</option>
                     <option value="HT">Haiti</option>
-                    <option value="HM">
-                      Heard Island and McDonald Islands
-                    </option>
+                    <option value="HM"
+                      >Heard Island and McDonald Islands</option
+                    >
                     <option value="VA">Holy See (Vatican City State)</option>
                     <option value="HN">Honduras</option>
                     <option value="HK">Hong Kong</option>
@@ -893,15 +919,13 @@
                     <option value="KZ">Kazakhstan</option>
                     <option value="KE">Kenya</option>
                     <option value="KI">Kiribati</option>
-                    <option value="KP">
-                      Korea, Democratic People&#39;s Republic of
-                    </option>
+                    <option value="KP"
+                      >Korea, Democratic People's Republic of</option
+                    >
                     <option value="KR">Korea, Republic of</option>
                     <option value="KW">Kuwait</option>
                     <option value="KG">Kyrgyzstan</option>
-                    <option value="LA">
-                      Lao People&#39;s Democratic Republic
-                    </option>
+                    <option value="LA">Lao People's Democratic Republic</option>
                     <option value="LV">Latvia</option>
                     <option value="LB">Lebanon</option>
                     <option value="LS">Lesotho</option>
@@ -911,9 +935,9 @@
                     <option value="LT">Lithuania</option>
                     <option value="LU">Luxembourg</option>
                     <option value="MO">Macao</option>
-                    <option value="MK">
-                      Macedonia, the former Yugoslav Republic of
-                    </option>
+                    <option value="MK"
+                      >Macedonia, the former Yugoslav Republic of</option
+                    >
                     <option value="MG">Madagascar</option>
                     <option value="MW">Malawi</option>
                     <option value="MY">Malaysia</option>
@@ -967,9 +991,9 @@
                     <option value="RU">Russian Federation</option>
                     <option value="RW">Rwanda</option>
                     <option value="BL">Saint Barthélemy</option>
-                    <option value="SH">
-                      Saint Helena, Ascension and Tristan da Cunha
-                    </option>
+                    <option value="SH"
+                      >Saint Helena, Ascension and Tristan da Cunha</option
+                    >
                     <option value="KN">Saint Kitts and Nevis</option>
                     <option value="LC">Saint Lucia</option>
                     <option value="MF">Saint Martin (French part)</option>
@@ -990,9 +1014,9 @@
                     <option value="SB">Solomon Islands</option>
                     <option value="SO">Somalia</option>
                     <option value="ZA">South Africa</option>
-                    <option value="GS">
-                      South Georgia and the South Sandwich Islands
-                    </option>
+                    <option value="GS"
+                      >South Georgia and the South Sandwich Islands</option
+                    >
                     <option value="SS">South Sudan</option>
                     <option value="ES">Spain</option>
                     <option value="LK">Sri Lanka</option>
@@ -1020,15 +1044,15 @@
                     <option value="UG">Uganda</option>
                     <option value="UA">Ukraine</option>
                     <option value="AE">United Arab Emirates</option>
-                    <option value="UM">
-                      United States Minor Outlying Islands
-                    </option>
+                    <option value="UM"
+                      >United States Minor Outlying Islands</option
+                    >
                     <option value="UY">Uruguay</option>
                     <option value="UZ">Uzbekistan</option>
                     <option value="VU">Vanuatu</option>
-                    <option value="VE">
-                      Venezuela, Bolivarian Republic of
-                    </option>
+                    <option value="VE"
+                      >Venezuela, Bolivarian Republic of</option
+                    >
                     <option value="VN">Viet Nam</option>
                     <option value="VG">Virgin Islands, British</option>
                     <option value="VI">Virgin Islands, U.S.</option>
@@ -1056,23 +1080,26 @@
                     class="en__field__input en__field__input--telephone"
                     name="supporter.NOT_TAGGED_13"
                     value=""
+                    placeholder="Phone Number (Optional)"
                   />
                 </div>
               </div>
             </div>
-            <div class="en__component en__component--copyblock">
+            <div class="en__component en__component--copyblock sms-disclaimer">
               <p>
                 By providing your mobile number, you are signing up to recieve
                 recurring messages from Amnesty International USA at 213-33.
                 Repy STOP to quit. Msg and data rates may apply.
                 <a
                   href="https://www.amnestyusa.org/privacy-policy/"
+                  tabindex="-1"
                   target="_blank"
                   >Privacy</a
                 >
                 &amp;
                 <a
                   href="https://www.amnestyusa.org/terms-conditions/"
+                  tabindex="-1"
                   target="_blank"
                   >Terms</a
                 >.
@@ -1080,14 +1107,17 @@
             </div>
             <div class="en__component en__component--formblock">
               <div
-                class="en__field en__field--checkbox en__field--871601 en__field--NOT_TAGGED_81"
+                class="en__field en__field--checkbox en__field--871601 en__field--NOT_TAGGED_81 has-value"
               >
                 <label class="en__field__label">Postal Address Sharing</label>
-                <div class="en__field__element en__field__element--checkbox">
+                <div
+                  class="en__field__element en__field__element--checkbox
+	"
+                >
                   <div class="en__field__item">
                     <input
                       id="en__field_supporter_NOT_TAGGED_81"
-                      checked
+                      checked=""
                       type="checkbox"
                       class="en__field__input en__field__input--checkbox"
                       value="Y"
@@ -1104,15 +1134,41 @@
                 </div>
               </div>
             </div>
+            <div class="en__component en__component--formblock i1-hide">
+              <div
+                class="en__field en__field--checkbox en__field--question en__field--28051 en__field--global-opt-in has-value"
+              >
+                <div
+                  class="en__field__element en__field__element--checkbox
+	"
+                >
+                  <div class="en__field__item">
+                    <input
+                      id="en__field_supporter_questions_28051"
+                      checked=""
+                      type="checkbox"
+                      class="en__field__input en__field__input--checkbox"
+                      value="Y"
+                      name="supporter.questions.28051"
+                    />
+                    <label
+                      for="en__field_supporter_questions_28051"
+                      class="en__field__label en__field__label--item"
+                      >Amnesty Action Alerts &amp; Updates — I would like to
+                      receive emails about urgent human rights campaigns and
+                      victories.
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="en__component en__component--copyblock">
               <h2 class="section-header">Payment Info</h2>
             </div>
             <div class="en__component en__component--codeblock">
-              <div
-                class="en__component en__component--formblock give-by-select"
-              >
+              <div class="en__component en__component--formblock">
                 <div
-                  class="en__field en__field--radio en__field--000000 en__field--giveBySelect en__mandatory pseudo-en-field"
+                  class="en__field en__field--radio en__field--000000 en__field--giveBySelect en__mandatory give-by-select pseudo-en-field"
                 >
                   <div class="en__field__element en__field__element--radio">
                     <div class="en__field__item card">
@@ -1135,7 +1191,7 @@
                         id="en__field_transaction_giveBySelect2"
                         name="transaction.giveBySelect"
                         type="radio"
-                        value="Check"
+                        value="ACH"
                       /><label
                         class="en__field__label en__field__label--item"
                         for="en__field_transaction_giveBySelect2"
@@ -1159,11 +1215,9 @@
                 </div>
               </div>
             </div>
-            <div
-              class="en__component en__component--formblock giveBySelect-Card i1-hide i3-50 i3-start i4-50"
-            >
+            <div class="en__component en__component--formblock i1-hide">
               <div
-                class="en__field en__field--select en__field--871606 en__field--paymenttype en__mandatory"
+                class="en__field en__field--select en__field--904407 en__field--paymenttype en__mandatory has-value"
               >
                 <label
                   for="en__field_transaction_paymenttype"
@@ -1181,10 +1235,14 @@
                     <option value="DI">Discover</option>
                     <option value="AX">American Express</option>
                     <option value="paypal">Paypal</option>
-                    <option value="check">Check</option>
+                    <option value="ACH">Check</option>
                   </select>
                 </div>
               </div>
+            </div>
+            <div
+              class="en__component en__component--formblock giveBySelect-Card i2-66 i2-start i3-33 i3-end"
+            >
               <div
                 class="en__field en__field--number en__field--871603 en__field--ccnumber"
               >
@@ -1197,9 +1255,10 @@
                   <input
                     id="en__field_transaction_ccnumber"
                     type="number"
-                    class="en__field__input en__field__input--number"
+                    class="en__field__input en__field__input--number live-card-type-na"
                     name="transaction.ccnumber"
                     value=""
+                    placeholder="•••• •••• •••• ••••"
                   />
                 </div>
               </div>
@@ -1209,7 +1268,7 @@
                 <label
                   for="en__field_transaction_ccexpire"
                   class="en__field__label"
-                  >Credit Card Expiration</label
+                  >Expiration Date</label
                 >
                 <div class="en__field__element en__field__element--splitselect">
                   <input
@@ -1262,7 +1321,15 @@
                 class="en__field en__field--number en__field--871605 en__field--ccvv"
               >
                 <label for="en__field_transaction_ccvv" class="en__field__label"
-                  >Credit Card CVV</label
+                  >CVV<span
+                    ><a
+                      href="#"
+                      id="ccv-popcorn"
+                      class="whats-this"
+                      tabindex="-1"
+                      >What's this?</a
+                    ></span
+                  ></label
                 >
                 <div class="en__field__element en__field__element--number">
                   <input
@@ -1271,15 +1338,17 @@
                     class="en__field__input en__field__input--number"
                     name="transaction.ccvv"
                     value=""
+                    placeholder="CVV"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="en__component en__component--formblock giveBySelect-Paypal"
+              class="en__component en__component--formblock giveBySelect-Paypal i1-hide"
+              style="display: none;"
             >
               <div
-                class="en__field en__field--text en__field--871613 en__field--NOT_TAGGED_181"
+                class="en__field en__field--text en__field--871613 en__field--NOT_TAGGED_181 has-value"
               >
                 <label
                   for="en__field_supporter_NOT_TAGGED_181"
@@ -1292,17 +1361,18 @@
                     type="text"
                     class="en__field__input en__field__input--text"
                     name="supporter.NOT_TAGGED_181"
-                    value=""
-                    readonly
+                    value="By submitting this form, you agree to allow Amnesty International USA to take funds from your account on a recurring basis."
+                    readonly=""
                   />
                 </div>
               </div>
             </div>
             <div
-              class="en__component en__component--formblock giveBySelect-Check i2-50 i2-start i3-50 i3-end"
+              class="en__component en__component--formblock giveBySelect-ACH i2-50 i2-start i3-50 i3-end"
+              style="display: none;"
             >
               <div
-                class="en__field en__field--select en__field--871611 en__field--bankAccountType"
+                class="en__field en__field--select en__field--871611 en__field--bankAccountType has-value"
               >
                 <label
                   for="en__field_supporter_bankAccountType"
@@ -1337,6 +1407,7 @@
                     class="en__field__input en__field__input--number"
                     name="supporter.bankAccountNumber"
                     value=""
+                    placeholder="Bank Account Number"
                   />
                 </div>
               </div>
@@ -1355,13 +1426,14 @@
                     class="en__field__input en__field__input--number"
                     name="supporter.bankRoutingNumber"
                     value=""
+                    placeholder="Bank Routing Number"
                   />
                 </div>
               </div>
             </div>
             <div class="en__component en__component--codeblock">
               <div
-                class="en__field en__field--checkbox en__field--000000 en__field--processing_fees pseudo-en-field"
+                class="en__field en__field--checkbox en__field--000000 en__field--processing_fees pseudo-en-field has-value"
               >
                 <div class="en__field__element en__field__element--checkbox">
                   <div class="en__field__item">
@@ -1387,37 +1459,70 @@
             <div
               class="en__component en__component--formblock dynamic-giving-button"
             >
-              <div class="en__submit"><button>Give $FREQUENCY</button></div>
+              <div class="en__submit">
+                <button>Give $AMOUNT $FREQUENCY</button>
+              </div>
+            </div>
+            <div class="en__component en__component--formblock i1-hide">
+              <div
+                class="en__field en__field--text en__field--905389 en__field--appealCode en__mandatory has-value"
+              >
+                <label
+                  for="en__field_supporter_appealCode"
+                  class="en__field__label"
+                  >Appeal Code</label
+                >
+                <div class="en__field__element en__field__element--text">
+                  <input
+                    id="en__field_supporter_appealCode"
+                    type="text"
+                    class="en__field__input en__field__input--text"
+                    name="supporter.appealCode"
+                    value="default"
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-bottom"
           >
-            <div class="en__component en__component--codeblock trust-logos">
-              <div style="text-align: center">
-                <a 
+            <div class="en__component en__component--codeblock">
+              <div style="text-align: center" class="trust-logos">
+                <a
                   href="https://give.org/charity-reviews/national/Human-Services/Amnesty-International-of-the-USA-in-New-York-ny-143"
                   target="_blank"
-                ><img
-                  alt=""
-                  class="bbb-logo grayscale"
-                  data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/bbb-logo.png?v=1613334590000"
-                  style="height: 38px; width: 100px"
+                  tabindex="-1"
+                  ><img
+                    alt=""
+                    class="bbb-logo grayscale"
+                    style="height: 38px; width: 100px"
+                    decoding="async"
+                    loading="lazy"
+                    src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/bbb-logo.png?v=1613334590000"
+                    data-engrid-data-src-processed="true"
                 /></a>
                 <a
                   href="https://www.guidestar.org/profile/52-0851555"
                   target="_blank"
+                  tabindex="-1"
                   ><img
                     alt=""
                     class="gs-logo grayscale"
-                    data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/guidestar-gold-2021.svg?v=1613333768000"
                     style="height: 38px; width: 38px"
+                    decoding="async"
+                    loading="lazy"
+                    src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/guidestar-gold-2021.svg?v=1613333768000"
+                    data-engrid-data-src-processed="true"
                 /></a>
                 <img
                   alt=""
                   class="verisign-logo"
-                  data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/verisign-2021.png?v=1613334465000"
                   style="height: 32px; width: 174px"
+                  decoding="async"
+                  loading="lazy"
+                  src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/verisign-2021.png?v=1613334465000"
+                  data-engrid-data-src-processed="true"
                 />
               </div>
             </div>
@@ -1447,17 +1552,19 @@
                   >
                     <img
                       alt="Amnesty International USA"
-                      data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/aiusa-logo-small-2021.svg?v=1613335626000"
-                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAA+CAYAAABzwahEAAAAVklEQVR42u3PAQEAAAgCoPw/2n4UPCDtdB6KuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4+HULzMu5hdokalsAAAAASUVORK5CYII="
+                      src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/aiusa-logo-small-2021.svg?v=1613335626000"
                       height="62px"
                       width="62px"
+                      decoding="async"
+                      loading="lazy"
+                      data-engrid-data-src-processed="true"
                     />
                   </a>
                 </div>
                 <div id="footer-menu-wrapper">
                   <ul id="footer-menu">
                     <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
                     <li>
                       <span class="copyright"
                         >©<span class="copyright-year">2021</span> AMNESTY
@@ -1523,21 +1630,26 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-backgroundImage pseudo-subgrid"
+            style='--theme-page-backgroundImage-url:url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/example-background.jpg?v=1614659831000");'
           >
             <div class="en__component en__component--codeblock">
-              <img
-                data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/example-background.jpg?v=1614659831000"
-                data-attribution-source="© Credit Placeholder"
-                data-attribution-source-link="https://www.google.com/"
-              />
-              <!-- <video
-                poster=""
-                data-attribution-source="© Credit Placeholder"
-                data-attribution-source-link="https://www.google.com/">
-
-                <source 
-                  data-src="https://player.vimeo.com/external/435826731.hd.mp4?s=877cdb0c8dfa0f453a8c8c824c66ee6fc8364379&amp;profile_id=174" type="video/mp4">
-              </video> -->
+              <figure class="media-with-attribution">
+                <img
+                  data-attribution-source="Credit Placeholder"
+                  data-attribution-source-link="https://www.google.com/"
+                  decoding="async"
+                  loading="lazy"
+                  src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/example-background.jpg?v=1614659831000"
+                  data-engrid-data-src-processed="true"
+                /><figattribution
+                  ><a
+                    href="https://www.google.com/"
+                    target="_blank"
+                    tabindex="-1"
+                    >Credit Placeholder</a
+                  ></figattribution
+                >
+              </figure>
             </div>
           </div>
           <div
@@ -1579,29 +1691,5 @@
         }
       });
     </script> -->
-
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-597KDT");
-    </script>
-
-    <iframe
-      style="
-        width: 100px;
-        height: 100px;
-        border: 0;
-        position: absolute;
-        top: -5000px;
-      "
-      src="https://h.online-metrix.net/fp/tags.js?org_id=e0j3u9ji&session_id=e1839-dc1c8e717ec24376bbeffdd507fd8ab6-server10150&page_id=1"
-    ></iframe>
   </body>
 </html>
