@@ -772,6 +772,21 @@ button:focus{
   }
 }
 
+/*
+* ##########################################################
+* # E-Card
+* ##########################################################
+*/
+
+.en__component--ecardblock {
+  h2 {
+    font-weight: 700;
+  }
+  .en__ecardrecipients__email input, .en__ecardrecipients__name input {
+    width: 100%;
+  }
+}
+
 
 
 /*
