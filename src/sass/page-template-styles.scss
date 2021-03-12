@@ -45,26 +45,28 @@
   nav > ul li ul {
     display: none;
   }
-  nav > ul li:hover ul {
-    display: block;
-  }  
+  @media (hover: hover) {
+    nav > ul li:hover ul {
+      display: block;
+    }
 
-  nav > ul li:hover ul {
-    position: absolute;
-    background-color: var(--color-white);
-    right: 0;
-    text-align: left;
-    padding: 80px 0px 40px 70px !important;
-    width: 220px;
-    top: -30px;
-    display: block !important;
-    // z-index: 1;
-    a {
-      display: inline-block;
-      padding-bottom: 20px;
-      &:hover {
-        text-decoration: underline;
-        background-color: var(--theme-cta);
+    nav > ul li:hover ul {
+      position: absolute;
+      background-color: var(--color-white);
+      right: 0;
+      text-align: left;
+      padding: 80px 0px 40px 70px !important;
+      width: 220px;
+      top: -30px;
+      display: block !important;
+      // z-index: 1;
+      a {
+        display: inline-block;
+        padding-bottom: 20px;
+        &:hover {
+          text-decoration: underline;
+          background-color: var(--theme-cta);
+        }
       }
     }
   }
@@ -92,23 +94,23 @@
 
   .enWidget {
     padding: 20px 0;
-    .enWidget__copy--below{
+    .enWidget__copy--below {
       margin-top: 10px;
     }
-    &:empty{
+    &:empty {
       display: none;
     }
   }
 
   .enWidget__progress {
     border: 0px !important;
-    background-color: rgba(228,228,228,0.36) !important;
+    background-color: rgba(228, 228, 228, 0.36) !important;
     height: 24px !important;
     overflow: inherit;
     .enWidget__fill {
       background-color: var(--theme-cta) !important;
       box-shadow: inset -13px 0px 0px 0px rgba(255, 255, 255, 1);
-      &::before{
+      &::before {
         content: " ";
         display: block;
         width: 3px;
@@ -118,7 +120,7 @@
         top: -3px;
         background-color: #000000;
       }
-      &::after{
+      &::after {
         content: " ";
         display: block;
         width: 10px;
@@ -137,10 +139,10 @@
   .enWidget__copy {
     text-align: center;
     font-weight: 700;
-    p{
+    p {
       margin: 0;
       text-transform: uppercase;
-      &:nth-child(1){
+      &:nth-child(1) {
         font-size: 32px;
         line-height: 32px;
       }
@@ -152,7 +154,7 @@
     .body-footer {
       padding-top: 60px;
     }
-    
+
     @media screen and (min-width: 776px) {
       /* prettier-ignore */
       .en__component--advrow,
@@ -196,7 +198,7 @@
                     rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
                 ];
             }
-      --theme-body-padding: 0px 24px;      
+      --theme-body-padding: 0px 24px;
       footer {
         background-color: #e4e4e4;
         flex-direction: column;
@@ -266,8 +268,8 @@
       // .en__field--recurrfreq .en__field__item,
       .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
         // flex-basis: 40%;
-        	flex-basis: calc((100% * ( 1 / 2)) - 1rem);
-          max-width: calc(100% * (1 / 2));
+        flex-basis: calc((100% * (1 / 2)) - 1rem);
+        max-width: calc(100% * (1 / 2));
       }
       .en__field {
         flex-basis: 100% !important;
@@ -374,16 +376,17 @@
         top: -30px;
         display: none;
       }
-
-      nav > ul li:hover ul {
-        display: block !important;
-        // z-index: 1;
-        a {
-          display: inline-block;
-          padding-bottom: 20px;
-          &:hover {
-            text-decoration: underline;
-            background-color: var(--theme-cta);
+      @media (hover: hover) {
+        nav > ul li:hover ul {
+          display: block !important;
+          // z-index: 1;
+          a {
+            display: inline-block;
+            padding-bottom: 20px;
+            &:hover {
+              text-decoration: underline;
+              background-color: var(--theme-cta);
+            }
           }
         }
       }
@@ -391,7 +394,6 @@
   }
 
   .body-top {
-
     // If the first child is a paragraph or click-to-expand block, add top margin like it was a H1
     & > p:first-child,
     & > .click-to-expand:first-child {
@@ -458,7 +460,7 @@
   }
 
   .en__contactDetails__row--1 {
-    font-weight: 500; 
+    font-weight: 500;
     font-size: 1em !important;
     margin-right: 10px;
   }
@@ -504,12 +506,19 @@
   }
 
   // Makes the paypal logo white and selection
-  .give-by-select .en__field--radio .paypal.en__field__item input[type="radio"]:checked+label span{
+  .give-by-select
+    .en__field--radio
+    .paypal.en__field__item
+    input[type="radio"]:checked
+    + label
+    span {
     filter: invert(100%);
   }
 
-  .en__field--recurrfreq{
-    .en__field__item  input:checked + label.en__field__label.en__field__label--item {
+  .en__field--recurrfreq {
+    .en__field__item
+      input:checked
+      + label.en__field__label.en__field__label--item {
       background-color: var(--theme-typography-primary-button-background-color);
       color: var(--theme-typography-primary-button-color);
       border-color: var(--theme-typography-primary-button-background-color);
@@ -767,7 +776,7 @@
     font-weight: 700;
   }
 
-  .trust-logos div{
+  .trust-logos div {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -780,11 +789,10 @@
     .gs.bbb-logo {
       margin-right: 10px;
     }
-    
-    img.verisign-logo{
+
+    img.verisign-logo {
       margin-right: 0px;
     }
-
   }
 
   input::placeholder,
