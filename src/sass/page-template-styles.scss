@@ -1,114 +1,516 @@
 /* Add your custom theme styles here */
 
+/*
+* ##########################################################
+* # START AIUSA ENGRID CUSTOM THEME
+* ##########################################################
+*/
 [data-engrid-theme="aiusa"] {
-  /* All headlines in the body are always capitalized */
-  /* All label text in the body are capitalized */
-  /* All button text in the body are always capitalized */
-  [class*="body-"] {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    label,
-    button,
-    .button {
-      text-transform: uppercase;
-    }
+
+
+/*
+* ##########################################################
+* # GENERAL STYLES
+* ##########################################################
+*/
+
+/* All headlines, labels, abd button text within the body are capitalized */
+[class*="body-"] {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label,
+  button,
+  .button {
+    text-transform: uppercase;
+  }
+}
+
+#designed-by-4site-wrapper {
+  flex-basis: 100%;
+  text-align: center;
+  display: none;
+}
+
+.en__field__item {
+  label {
+    font-size: 20px;
+  }
+}
+
+.sms-disclaimer > p:first-child{
+  margin-top: 0;
+}
+
+.sms-disclaimer > p,
+.sms-disclaimer > p > a {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: var(--theme-font-stack-browser-fonts);
+}
+
+.en__component--formblock .en__field.en__field--checkbox > label,
+#en__field_transaction_recurrpay {
+  display: none;
+}
+
+.en__field__input--checkbox:checked + .en__field__label:before {
+  box-shadow: none;
+}
+
+.en__field__input--checkbox + .en__field__label:before {
+  height: 2rem;
+  width: 2rem;
+  top: 0;
+  left: 0;
+}
+.en__field__input--checkbox:checked + .en__field__label::after {
+  left: 7px;
+  top: 7px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+label.en__field__label.en__field__label--item {
+  padding: 12px 5px;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: "AmnestyTradeGothic";
+  justify-content: center;
+  display: inline-block;
+  text-align: center;
+}
+
+select {
+  background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/caret.png?v=1614604340000");
+  background-size: 10px 7px;
+}
+
+.en__field__input--splitselect {
+  min-height: 41.78px;
+}
+
+.en__component--formblock {
+  label {
+    letter-spacing: 0.06rem;
+    font-weight: 700;
+  }
+}
+
+.en__submit button {
+  font-family: "AmnestyTradeGothic";
+  font-weight: 700;
+}
+
+input::placeholder,
+select {
+  color: var(--theme-typography-input-placeholder-color);
+}
+
+input.en__field__input--checkbox:checked
++ label.en__field__label.en__field__label--item,
+input.en__field__input--checkbox
++ label.en__field__label.en__field__label--item {
+  font-weight: 500;
+  font-family: var(--theme-typography-default-font-family);
+  text-transform: none;
+  border: 0px;
+  // padding: 3px 10px 0;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+
+  justify-content: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0 0 0 42px;
+  margin-left: 0px;
+}
+
+h2.section-header {
+  width: 100%;
+  text-align: center;
+  font-family: "AmnestyTradeGothic";
+  font-weight: 700;
+  position: relative;
+  letter-spacing: 1.25px;
+  font-size: 16px;
+  overflow: hidden;
+  margin: 10px 0 20px;
+  &:before,
+  &:after {
+    position: absolute;
+    top: 51%;
+    width: 45%;
+    overflow: hidden;
+    height: 2px;
+    content: "\a0";
+    background-color: #e4e4e4;
+  }
+  &:before {
+    margin-left: -50%;
+    text-align: right;
+  }
+  &:after {
+    width: 40%;
+    margin-left: 5%;
+  }
+}
+
+/*
+* ##########################################################
+* # MAIN MENU WITH FLYOUT
+* ##########################################################
+*/
+  #menu-wrapper {
+
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+
+  /* Menu copied from: https://www.w3.org/TR/wai-aria-practices-1.2/examples/menubar/menubar-1/menubar-1.html# */
+  ul[role="menubar"] {
+    text-transform: uppercase;
+    font-weight: 700;
+    // margin: 10px;
+    // padding: 1rem;
+    padding-right: 2rem;
+    // font-size: 110%;
+    list-style: none;
+    // background-color: #eee;
+    display: inline-block;
   }
 
-  .en__component--advcolumn[class*="content"] {
-    background-color: lightblue;
+  ul[role="menubar"] [role="menuitem"],
+  ul[role="menubar"] [role="separator"] {
+    // padding: 0.25em;
+    // background-color: #eee;
+    // border: 2px solid #eee;
   }
 
-  .en__component--advcolumn[class*="content"] > * {
-    background-color: var(--color-white);
+  // ul[role="menubar"] [role="separator"] {
+  //   padding-top: 0.15em;
+  //   background-image: url('https://www.w3.org/TR/wai-aria-practices-1.2/examples/menubar/menubar-1/images/separator.png');
+  //   background-position: center;
+  //   background-repeat: repeat-x;
+  // }
+
+
+  //       &:hover {
+  //         text-decoration: underline solid black 2px;
+  //         background-color: var(--theme-cta);
+
+  ul[role="menubar"] [role="menu"] [role="menuitem"]:focus,
+  ul[role="menubar"] [role="menu"] [role="menuitem"]:hover,
+  ul[role="menubar"] [role="menu"] [role="separator"]:focus,
+  ul[role="menubar"] [role="menu"] [role="separator"]:hover {
+    // background-color: black;
+    // color: white;
+    text-decoration: underline solid black 2px;
+    background-color: var(--theme-cta);
+    display: inline-block;
   }
 
-  header,
-  footer {
-    display: inline-flex;
-    width: 100%;
+  ul[role="menubar"] a[role="menuitem"] {
+    text-decoration: none;
+    color: black;
   }
 
-  footer {
-    flex-wrap: wrap;
-
-    #designed-by-4site-wrapper {
-      flex-basis: 100%;
-      text-align: center;
-      display: none;
-    }
+  ul[role="menubar"] li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  nav > ul li ul {
+  ul[role="menubar"] > li {
+    display: inline;
+    position: relative;
+  }
+
+  ul[role="menubar"] > li > a{
+    
+  }
+
+  // ul[role="menubar"] > li > a::before {
+  //   content: url('https://www.w3.org/TR/wai-aria-practices-1.2/examples/menubar/menubar-1/images/down-arrow-brown.png');
+  // }
+
+  ul[role="menubar"] > li > [role="menuitem"]{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 8px;
+  }
+
+  ul[role="menubar"] ul[role="menu"] {
     display: none;
+    position: absolute;
+    top: -2px;
+    left: -36px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-white);
+    box-shadow: -3px 8px 8px rgba(0, 0, 0, 0.04%);
+    padding-right: 33px;
+    padding-bottom: 56px;
+    padding-left: 71px;
   }
-  @media (hover: hover) {
-    nav > ul li:hover ul {
-      display: block;
-    }
 
-    nav > ul li:hover ul {
-      position: absolute;
-      background-color: var(--color-white);
-      right: 0;
-      text-align: left;
-      padding: 80px 0px 40px 70px !important;
-      width: 220px;
-      top: -30px;
-      display: block !important;
-      // z-index: 1;
-      a {
-        display: inline-block;
-        padding-bottom: 20px;
-        &:hover {
-          text-decoration: underline;
-          background-color: var(--theme-cta);
-        }
+  ul[role="menubar"] ul[role="menu"] [role="menuitem"]{
+    padding-top: 8px;
+    padding-bottom: 2px;
+    margin-bottom: 8px;
+  }
+
+  ul[role="menubar"] ul[role="menu"] li a {
+    display: block;
+    word-break: normal;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+
+
+
+  .hamburger-wrapper {
+    position: relative;
+    left: -0.5rem;
+    top: 1px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.hamburger {
+  top: 50%;
+  left: 10%;
+  width: 16px;
+  height: 2px;
+  background: #000000;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background: #000000;
+  transition: 0.3s;
+}
+
+.hamburger:before {
+  top: -5px;
+}
+
+.hamburger:after {
+  top: 5px;
+}
+
+[aria-expanded="true"] .hamburger-wrapper .hamburger {
+  background:rgba(0,0,0,0);
+}
+
+[aria-expanded="true"] .hamburger-wrapper .hamburger:before {
+  top: 0;
+  transform:rotate(45deg);
+}
+
+[aria-expanded="true"] .hamburger-wrapper .hamburger:after {
+  top: 0;
+  transform:rotate(135deg);
+}
+
+
+
+
+// ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]::after {
+//   content: url('https://www.w3.org/TR/wai-aria-practices-1.2/examples/menubar/menubar-1/images/right-arrow-brown.png');
+//   padding-right: 2em;
+// }
+
+}
+
+
+/*
+* ##########################################################
+* # CONTENT HEADER
+* ##########################################################
+*/
+
+.content-header {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #social-proof-wrapper {
+    flex: 4;
+    padding: 0 24px;
+
+    p {
+      margin: 0px;
+      line-height: 14px;
+      font-size: 12px;
+      font-weight: 400;
+      &:first-child {
+        margin-bottom: 5px;
+      }
+      strong {
+        font-weight: 700;
       }
     }
   }
+  
+}
 
-  nav a {
-    display: block;
+
+/*
+* ##########################################################
+* # BODY HEADER
+* ##########################################################
+*/
+
+.body-header {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*
+* ##########################################################
+* # BODY TOP
+* ##########################################################
+*/
+.body-top {
+
+  // If the first child is a paragraph or click-to-expand block, add top margin like it was a H1
+  & > p:first-child,
+  & > .click-to-expand-text-wrapper:first-child {
+    margin-top: 0.67rem;
   }
 
-  a.whats-this {
-    font-size: 12px;
-    text-transform: none;
-    position: absolute;
-    right: 0;
-    text-decoration: underline;
-    color: #767676;
-    font-weight: 400;
+  h1 {
+    font-size: 47px;
+    line-height: 56.68px;
+    margin-bottom: 0;
   }
+}
 
-  .body-header {
-    padding-left: 0;
-    padding-right: 0;
+/*
+* ##########################################################
+* # BODY MAIN
+* ##########################################################
+*/
+.body-main {
+  padding-top: 40px;
+}
+
+
+/*
+* ##########################################################
+* # FOOTER
+* ##########################################################
+*/
+footer {
+  display: flex;
+  align-items: center;
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
   }
-
-  /* Thermometer */
-
-  .enWidget {
-    padding: 20px 0;
-    .enWidget__copy--below {
-      margin-top: 10px;
+  #footer-menu {
+    margin: 0 0 0 50px;
+    li {
+      padding-right: 15px;
+      margin-right: 15px;
+      border-right: 1px solid black;
+      font-size: 14px;
+      letter-spacing: 0.1ch;
+      &:nth-child(3) {
+        border-right: 0px;
+      }
+      a {
+        font-weight: 400;
+        font-family: var(--theme-typography-default-font-family);
+        font-size: 14px;
+      }
     }
-    &:empty {
-      display: none;
+  }
+  #footer-social-wrapper {
+    flex: 1;
+    ul {
+      justify-content: flex-end;
+      margin: 0px;
+      li {
+        margin: 0 9px;
+      }
+    }
+    img {
+      width: auto;
+      height: 20px;
     }
   }
+}
 
-  .enWidget__progress {
-    border: 0px !important;
-    background-color: rgba(228, 228, 228, 0.36) !important;
-    height: 24px !important;
+/*
+* ##########################################################
+* # OUTLINE COLOR FOR FOCUS STATE
+* ##########################################################
+*/
+
+*:focus{
+  outline-color: initial;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  outline-width: 0px;
+}
+
+.en__field__element--checkbox input:focus + label{
+  outline-color: black;
+}
+
+
+.en__field__element--radio input:focus + label,
+button:focus{
+  outline-color: black;
+}
+
+
+/*
+* ##########################################################
+* # EN WIDGET: PROGRESS BAR (AKA THERMOMETER)
+* ##########################################################
+*/
+
+// Needed for local development where the thermometer markup has to be hard coded and creates a vestigial empty div
+.enWidget:empty{
+  display: none;
+}
+
+.enWidget--progressBar {
+  padding: 20px 0;
+
+  .enWidget__progress{
+    border: 0px !important; // !important required
+    background: rgba(228,228,228,0.36) !important; // !important required
+    height: 24px !important; // !important required
     overflow: inherit;
+
     .enWidget__fill {
-      background-color: var(--theme-cta) !important;
+      background-color: var(--theme-cta) !important; // !important required
       box-shadow: inset -13px 0px 0px 0px rgba(255, 255, 255, 1);
       &::before {
         content: " ";
@@ -131,15 +533,18 @@
         background-color: #ffffff;
       }
       span {
-        display: none !important;
+        display: none;
       }
     }
+
   }
 
-  .enWidget__copy {
+  .enWidget__copy--below{
+    margin-top: 10px;
     text-align: center;
     font-weight: 700;
-    p {
+
+    p{
       margin: 0;
       text-transform: uppercase;
       &:nth-child(1) {
@@ -147,357 +552,129 @@
         line-height: 32px;
       }
     }
+
   }
+}
 
-  /* Sum of all MIN values of the Body Columns */
-  &[data-engrid-layout="centerleft1col"] {
-    .body-footer {
-      padding-top: 60px;
-    }
+/*
+* ##########################################################
+* # DONATION: AMOUNT AND FREQUENCY FIELDS
+* ##########################################################
+*/
 
-    @media screen and (min-width: 776px) {
-      /* prettier-ignore */
-      .en__component--advrow,
-            .en__component--advrow .pseudo-subgrid {
-                /* autoprefixer grid: off */
-                grid-template-columns:
-                [
-                pc-start lpc-start]  minmax(0px, 0px)        [lpc-end
-                cc-start lcc-start]  minmax(0px, 128px)      [lcc-end
-                bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
-                rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
-                rcc-start]           minmax(0px, 1fr)        [rcc-end cc-end
-                rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
-                ];
-            }
-
-      .body-header {
-        margin-top: 80px;
-      }
-
-      .body-footer {
-        margin-bottom: 80px;
-      }
+.en__field--recurrfreq{
+  .en__field__item  input:checked + label.en__field__label.en__field__label--item {
+    background-color: var(--theme-typography-primary-button-background-color);
+    color: var(--theme-typography-primary-button-color);
+    border-color: var(--theme-typography-primary-button-background-color);
+    &:hover {
+      color: var(--theme-typography-primary-button-color);
     }
   }
+}
 
-  /* Sum of all MIN values of the Body Columns */
-  &[data-engrid-layout="centerleft1col"] {
-    @media screen and (max-width: 775px) {
-      /* prettier-ignore */
-      .en__component--advrow,
-            .en__component--advrow .pseudo-subgrid {
-                /* autoprefixer grid: off */
-                grid-template-columns:
-                [
-                    pc-start lpc-start]  minmax(0px, 0px)    [lpc-end
-                    cc-start lcc-start]  minmax(0px, 0px)    [lcc-end
-                    bc-start lbc-start]  minmax(0px, 50vw)   [lbc-end
-                    rbc-start]           minmax(0px, 50vw)   [rbc-end bc-end
-                    rcc-start]           minmax(0px, 0px)    [rcc-end cc-end
-                    rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
-                ];
-            }
-      --theme-body-padding: 0px 24px;
-      footer {
-        background-color: #e4e4e4;
-        flex-direction: column;
-        padding-top: 32px;
-        #footer-menu-wrapper {
-          order: 2;
-          letter-spacing: 0.1ch;
-          margin-bottom: 26px;
-          ul#footer-menu {
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 0 auto !important;
-            li {
-              margin: 5px 10px;
-              &:nth-child(2) {
-                border-right: 0px;
-              }
-              &:nth-child(3) {
-                width: 100%;
-                text-align: center;
-              }
-            }
-          }
-        }
-        #footer-social-wrapper {
-          order: 1;
-          margin-bottom: 24px;
-          ul {
-            justify-content: center;
-          }
-        }
-        #designed-by-4site-wrapper {
-          order: 3;
-        }
-      }
-      #social-proof-wrapper,
-      #footer-logo-wrapper {
-        display: none;
-      }
-      .content-header #menu-wrapper li.has-submenu {
-        position: unset;
-        padding-right: 50px;
-      }
-      .menu-btn {
-        left: unset;
-        right: 20px;
-        top: 32px;
-      }
-      .menu-btn.close {
-        top: 27px;
-      }
-      div#header-logo-wrapper {
-        z-index: 9;
-      }
+.en__field--donationAmt .en__field__element--radio {
+  width: 100%;
+}
 
-      nav > ul li ul {
-        left: 0;
-        padding: 140px 30px 40px 15% !important;
-        width: 100% !important;
-        text-align: right !important;
-        box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.04);
-      }
-      .content-header #menu-wrapper li.has-submenu ul li a {
-        font-size: 20px;
-        text-align: right;
-      }
-      // .en__field--recurrfreq .en__field__item,
-      .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
-        // flex-basis: 40%;
-        flex-basis: calc((100% * (1 / 2)) - 1rem);
-        max-width: calc(100% * (1 / 2));
-      }
-      .en__field {
-        flex-basis: 100% !important;
-        padding-left: 0px !important;
-        padding-right: 0px !important;
-      }
-    }
+.en__component.en__component--copyblock.recurring-frequency-y-hide.inline-monthly-upsell {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+  padding: 0 10px;
+  margin-bottom: 1rem;
+  p {
+    margin: 20px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
   }
-
-  .menu-btn {
+  &::before {
+    content: "";
+    background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/upsell_arrow.png?v=1614603925000");
+    width: 26px;
+    height: 15.5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
-    z-index: 3;
-    left: -25px;
-    top: 5px;
-    cursor: pointer;
-    transition: all 0.35s ease-out;
+    left: calc(50% - 13px);
   }
-  .menu-btn .btn-line {
-    width: 20px;
-    height: 2px;
-    margin: 0 0 5px 0;
-    background: var(--color-black);
-    transition: all 0.35s ease-out;
-  }
+}
 
-  .menu-btn.close {
-    transform: rotate(180deg);
-    top: 0px;
-  }
-
-  .menu-btn.close .btn-line:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 3px);
-  }
-
-  .menu-btn.close .btn-line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-btn.close .btn-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -3px);
-  }
-
-  .content-header {
-    header {
-      display: flex;
-      align-items: center;
-    }
-    #social-proof-wrapper {
-      flex: 4;
-      padding: 0 24px;
-
-      p {
-        margin: 0px;
-        line-height: 14px;
-        font-size: 12px;
-        font-weight: 400;
-        &:first-child {
-          margin-bottom: 5px;
-        }
-        strong {
-          font-weight: 700;
-        }
-      }
-    }
-    #menu-wrapper {
-      flex: 1;
-      align-content: flex-end;
-      text-transform: uppercase;
-      text-align: right;
-      font-weight: 700;
-      nav a {
-        display: block;
-      }
-
-      ul {
-        margin: 0;
-      }
-      li.has-submenu {
-        position: relative;
-        display: inline-block;
-        padding-right: 20px;
-        a {
-          text-align: right;
-          padding: 0 10px;
-          position: relative;
-          z-index: 3;
-        }
-        ul {
-          padding: 10px;
-          li a {
-            text-align: left;
-            padding: 10px 0;
-          }
-        }
-      }
-
-      nav > ul li > ul {
-        position: absolute;
-        background-color: var(--color-white);
-        right: 0;
-        text-align: left;
-        padding: 80px 20px 40px 89px;
-        width: 220px;
-        top: -30px;
-        display: none;
-      }
-      @media (hover: hover) {
-        nav > ul li:hover ul {
-          display: block !important;
-          // z-index: 1;
-          a {
-            display: inline-block;
-            padding-bottom: 20px;
-            &:hover {
-              text-decoration: underline;
-              background-color: var(--theme-cta);
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .body-top {
-    // If the first child is a paragraph or click-to-expand block, add top margin like it was a H1
-    & > p:first-child,
-    & > .click-to-expand:first-child {
-      margin-top: 0.67em;
-    }
-
-    h1 {
-      font-size: 47px;
-      line-height: 56.68px;
-      margin-bottom: 0;
-    }
-  }
-
-  .body-main {
-    padding-top: 40px;
-  }
-
-  .en__field__item {
-    label {
-      font-size: 20px;
-    }
-  }
-
-  input.en__field__input {
-    &:focus {
-      // box-shadow: 0 2px 0 0 #000;
-    }
-  }
-
-  .en__component--copyblock > p,
-  .en__component--copyblock > p > a {
-    font-style: italic;
-    font-size: 12px;
-    line-height: 18px;
-    font-family: var(--theme-font-stack-browser-fonts);
-  }
-
-  .en__component--formblock .en__field.en__field--checkbox > label,
-  #en__field_transaction_recurrpay {
-    display: none;
-  }
-
-  .en__field__input--checkbox:checked + .en__field__label:before,
-  .en__contactDetails__rows {
-    box-shadow: none !important;
-  }
-
-  .en__field__input--checkbox + .en__field__label:before,
-  .en__contactDetails__rows:before {
-    height: 2rem;
-    width: 2rem;
-  }
-  .en__field__input--checkbox:checked + .en__field__label:after,
-  .en__contactDetails__rows:after {
-    left: -1.5rem !important;
-    top: 0.75rem !important;
-    font-size: 20px !important;
-    font-weight: 700 !important;
-  }
-
-  .en__contactDetails__rows {
-    margin-bottom: 5px;
-    padding-top: 12px !important;
-  }
-
-  .en__contactDetails__row--1 {
-    font-weight: 500;
-    font-size: 1em !important;
-    margin-right: 10px;
-  }
-
-  label.en__field__label.en__field__label--item {
-    padding: 12px 5px;
+.en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
+  flex-basis: calc((100% / 3) - 1rem);
+  max-width: calc(100% / 3);
+  .en__field__label--item {
     width: 100%;
-    text-transform: uppercase !important;
-    font-family: "AmnestyTradeGothic";
-    justify-content: center;
-    display: inline-block;
-    text-align: center;
-  }
-
-  label.en__field__label.en__field__label--item:hover {
-    // background-color: white !important;
-    // border-color: #000 !important;
-  }
-
-  input:checked + label.en__field__label.en__field__label--item {
-    // background-color: var(--theme-cta);
-    // border-color: var(--theme-cta) !important;
-    // color: black;
-    // box-shadow: none !important;
-
-    &:hover {
-      // background-color: var(--theme-cta) !important;
-      // border-color: #000 !important;
+    &::after {
+      text-transform: uppercase;
+      font-size: 100%;
+      opacity: 1;
+      line-height: inherit;
     }
   }
+}
 
-  .has-value input:checked + label.en__field__label.en__field__label--item {
-    // outline: none !important;
-    &:hover {
-      // background-color: #fff !important;
+.en__field--donationAmt div.en__field__item.en__field__item--other {
+  flex-basis: calc((100% * (2 / 3)) - 1rem);
+  max-width: calc(100% * (2 / 3));
+  input {
+    padding-left: 1.75rem;
+    border-color: var(--theme-typography-input-background-color);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    outline-width: 0;
+
+    &:hover,
+    &:focus::after{
+      border-bottom-color: var(--theme-typography-input-focus-hover-border-bottom-color);
+
     }
   }
+}
+
+.en__field--donationAmt .en__field__item--other::before {
+  display: block;
+  content: "$";
+  position: absolute;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 0;
+  height: 0;
+  left: 1rem;
+  top: 50%;
+}
+
+.en__field--recurrfreq {
+  padding-right: 0;
+  .en__field__item {
+    max-width: calc(100% / 3);
+    // margin-right: 0px;
+  }
+}
+
+
+
+/*
+* ##########################################################
+* # DONATION: PAYMENT FIELDS
+* ##########################################################
+*/
+
+  a.whats-this {
+    font-size: 12px;
+    text-transform: none;
+    position: absolute;
+    right: 0;
+    text-decoration: underline;
+    color: #767676;
+    font-weight: 400;
+  }
+
+ 
 
   .card,
   .check,
@@ -506,241 +683,12 @@
   }
 
   // Makes the paypal logo white and selection
-  .give-by-select
-    .en__field--radio
-    .paypal.en__field__item
-    input[type="radio"]:checked
-    + label
-    span {
+  .give-by-select.en__field--radio .paypal.en__field__item input[type="radio"]:checked+label span{
     filter: invert(100%);
   }
 
-  .en__field--recurrfreq {
-    .en__field__item
-      input:checked
-      + label.en__field__label.en__field__label--item {
-      background-color: var(--theme-typography-primary-button-background-color);
-      color: var(--theme-typography-primary-button-color);
-      border-color: var(--theme-typography-primary-button-background-color);
-      &:hover {
-        color: var(--theme-typography-primary-button-color);
-      }
-    }
-  }
-
-  .en__field--donationAmt .en__field__element--radio {
-    width: 100%;
-  }
-
-  .en__component.en__component--copyblock.recurring-frequency-y-hide.inline-monthly-upsell {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: center;
-    padding: 0 10px;
-    margin-bottom: 1rem;
-    // min-height: 60px;
-    p {
-      margin: 20px 0 0;
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: 700;
-    }
-    &::before {
-      content: "";
-      background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/upsell_arrow.png?v=1614603925000");
-      width: 26px;
-      height: 15.5px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: absolute;
-      left: calc(50% - 13px);
-    }
-  }
-
-  .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
-    // flex-grow: 1;
-    flex-basis: calc((100% / 3) - 1rem);
-    max-width: calc(100% / 3);
-    // flex-shrink: 1;
-    // justify-content: center;
-    // margin: 10px 1.5% !important;
-    .en__field__label--item {
-      width: 100%;
-      &::after {
-        text-transform: uppercase;
-        font-size: 100%;
-        opacity: 1;
-        line-height: inherit;
-      }
-    }
-  }
-
-  .en__field--donationAmt div.en__field__item.en__field__item--other {
-    // flex-grow: 2;
-    // flex-shrink: 0;
-    flex-basis: calc((100% * (2 / 3)) - 1rem);
-    max-width: calc(100% * (2 / 3));
-    // margin: 10px 1.5% !important;
-    input {
-      // text-align: center;
-      padding-left: 1.75rem;
-      border-color: var(--theme-typography-button-border-color);
-      padding-top: 12px;
-      padding-bottom: 12px;
-    }
-  }
-
-  .en__field--donationAmt .en__field__item--other::before {
-    display: block;
-    content: "$";
-    position: absolute;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 0;
-    height: 0;
-    left: 1rem;
-    top: 50%;
-  }
-
-  input.en__field__input--checkbox:checked
-    + label.en__field__label.en__field__label--item,
-  input.en__field__input--checkbox
-    + label.en__field__label.en__field__label--item {
-    // background-color: var(--color-white);
-    font-weight: 500;
-    font-family: var(--theme-typography-default-font-family);
-    text-transform: none !important;
-    border: 0px !important;
-    padding: 3px 10px 0;
-    font-size: 12px;
-    line-height: 18px;
-    text-align: left;
-  }
-
-  .en__field--donationAmt {
-    input:checked + label.en__field__label.en__field__label--item {
-      // background-color: black;
-      // border-color: black !important;
-      // color: white;
-      &:hover {
-        // background-color: #000 !important;
-      }
-    }
-  }
-
-  .en__field__element--radio {
-    // justify-content: space-between;
-  }
-
-  .en__field--recurrfreq {
-    padding-right: 0;
-    .en__field__item {
-      max-width: calc(100% / 3);
-      margin-right: 0px !important;
-    }
-  }
-
-  h2.section-header {
-    width: 100%;
-    text-align: center;
-    font-family: "AmnestyTradeGothic";
-    font-weight: 700;
-    position: relative;
-    letter-spacing: 1.25px;
-    // z-index: 1;
-    font-size: 16px;
-    overflow: hidden;
-    margin: 10px 0 20px;
-    &:before,
-    &:after {
-      position: absolute;
-      top: 51%;
-      width: 45%;
-      overflow: hidden;
-      height: 2px;
-      content: "\a0";
-      background-color: #e4e4e4;
-    }
-    &:before {
-      margin-left: -50%;
-      text-align: right;
-    }
-    &:after {
-      width: 40%;
-      margin-left: 5%;
-    }
-    &.gift-amount {
-      // visibility: hidden;
-    }
-  }
-
-  .en__field--donationAmt {
-    > label {
-      // width: 100%;
-      // text-align: center;
-      // font-family: "AmnestyTradeGothic";
-      // font-weight: 400;
-      // color: #000;
-      // position: relative;
-      // z-index: 1;
-      // overflow: hidden;
-      // margin: 10px 0 20px;
-      &:before,
-      &:after {
-        //   position: absolute;
-        //   top: 51%;
-        //   width: 45%;
-        //   overflow: hidden;
-        //   height: 1px;
-        //   content: "\a0";
-        //   background-color: #e4e4e4;
-      }
-      &:before {
-        // margin-left: -50%;
-        // text-align: right;
-      }
-      &:after {
-        // width: 40%;
-        // margin-left: 5%;
-      }
-    }
-    .en__field__item {
-      // min-width: 22%;
-      label {
-        // text-align: center;
-      }
-    }
-    .en__field__item.en__field__item--other {
-      // flex-grow: 2;
-      input.en__field__input.en__field__input--other {
-        // background-color: #e4e4e4 !important;
-        // position: relative;
-        // background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/dollar.png?v=1614605096000');
-        // background-position: 25% center;
-        // background-repeat: no-repeat;
-        // background-size: 10px 18px;
-        // text-align: left;
-        // text-indent: 30%;
-        // color: black;
-      }
-    }
-  }
-
-  .en__component
-    .en__field.en__field--radio
-    .en__field__item:not(.en__field__item--other) {
-    // margin: 0 1.5% 0.5rem;
-    // flex-grow: 1;
-    // flex-basis: 30%;
-    // flex-shrink: 1;
-  }
 
   .en__field__item.paypal label {
-    // position: relative;
-    // padding-left: 30%;
     span {
       display: inline-block;
       height: 16px;
@@ -755,98 +703,492 @@
     }
   }
 
-  select {
-    background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/caret.png?v=1614604340000");
-    background-size: 10px 7px;
-  }
 
-  .en__field__input--splitselect {
-    min-height: 41.78px;
-  }
+/*
+* ##########################################################
+* # DONATION: TRUSTED LOGOS
+* ##########################################################
+*/
 
-  .en__component--formblock {
-    label {
-      letter-spacing: 0.06em;
-      font-weight: 700;
-    }
-  }
-
-  .en__submit button {
-    font-family: "AmnestyTradeGothic";
-    font-weight: 700;
-  }
-
-  .trust-logos div {
+  .trust-logos{
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
     img.bbb-logo {
       margin-right: 10px;
-      filter: grayscale(1) opacity(0.6);
+      filter: grayscale(1) opacity(0.5);
     }
 
     .gs.bbb-logo {
       margin-right: 10px;
     }
-
-    img.verisign-logo {
+    
+    img.verisign-logo{
       margin-right: 0px;
     }
+
+  } 
+
+/*
+* ##########################################################
+* # MOBILE STYLINGS
+* ##########################################################
+*/
+
+  @mixin mobile-content-header {
+    #social-proof-wrapper{
+      display: none;
+    }
   }
 
-  input::placeholder,
-  select {
-    color: var(--theme-typography-input-placeholder-color);
+  // Footer Styles
+  @mixin mobile-content-footer {
+    // Adjust donation amount fields to display two to a Row
+    .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
+      flex-basis: calc((100% * ( 1 / 2)) - 1rem);
+      max-width: calc(100% * (1 / 2));
+    }
+
+    .content-footer{
+      --theme-content-footer-background-color: #e4e4e4;
+      
+      footer {
+        flex-direction: column;
+        padding-top: 32px;
+        #footer-menu-wrapper {
+          order: 2;
+          letter-spacing: 0.1ch;
+          margin-bottom: 26px;
+          ul#footer-menu {
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            li {
+              margin: 5px 10px;
+              &:nth-child(2) {
+                border-right: 0px;
+              }
+              &:nth-child(3) {
+                width: 100%;
+                text-align: center;
+              }
+            }
+          }
+        }
+
+        #footer-social-wrapper {
+          order: 1;
+          margin-bottom: 24px;
+          ul {
+            justify-content: center;
+          }
+        }
+
+        #footer-logo-wrapper {
+          display: none;
+        }
+      }
+    }
   }
 
-  footer {
-    display: flex;
-    align-items: center;
-    ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
+  @mixin mobile-page-backgroundImage {
+    .page-backgroundImage{
+      display: none;
     }
-    #footer-menu {
-      margin: 0 0 0 50px;
-      li {
-        padding-right: 15px;
-        margin-right: 15px;
-        border-right: 1px solid black;
-        font-size: 14px;
-        letter-spacing: 0.1ch;
-        &:nth-child(3) {
-          border-right: 0px;
-        }
-        a {
-          font-weight: 400;
-          font-family: var(--theme-typography-default-font-family);
-          font-size: 14px;
-        }
+  }
+
+  // Applying header footer styles at the correct breakpoints
+  &[data-engrid-layout="centerleft1col"],
+  &[data-engrid-layout="centercenter1col"],
+  &[data-engrid-layout="centerright1col"]{
+    @media screen and (max-width: 774px) { 
+      @include mobile-content-header;
+      @include mobile-content-footer;
+      @include mobile-page-backgroundImage;
+    }
+  }
+
+  // Always use the mobile header and footer
+  &[data-engrid-layout="leftleft1col"],
+  &[data-engrid-layout="rightright1col"]{
+    @include mobile-content-header;
+    @include mobile-content-footer;
+    @include mobile-page-backgroundImage;
+  }
+
+  &[data-engrid-layout="centercenter2col"]{
+    @media screen and (max-width: 999px) { 
+      @include mobile-content-header;
+      @include mobile-content-footer;
+      @include mobile-page-backgroundImage;
+    }
+  }  
+
+} // END AIUSA ENGRID CUSTOM THEME
+
+/*
+* ##########################################################
+* # START AIUSA ENGRID CUSTOM LAYOUTS
+* ##########################################################
+*/
+
+/*
+* ##########################################################
+* # ENGRID LAYOUTS
+* # GRID COLUMN AND GRID ROW POSITIONING
+* ##########################################################
+*/
+
+[data-engrid-theme="aiusa"][data-engrid-layout="leftleft1col"]{   
+
+  @media screen and (min-width: 775px) {
+    /* prettier-ignore */
+    .en__component--advrow,
+          .en__component--advrow .pseudo-subgrid {
+              /* autoprefixer grid: off */
+              grid-template-columns:
+              [
+              pc-start lpc-start]  minmax(0px, 0px)        [lpc-end
+              cc-start lcc-start]  minmax(0px, 0px)        [lcc-end
+              bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
+              rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
+              rcc-start]           minmax(0px, 0px)        [rcc-end cc-end
+              rpc-start]           minmax(0px, 1fr)        [rpc-end pc-end               
+              ];
+          }
+
+          .content-header,
+          .content-footer{
+            grid-column: bc;
+          }
+
+          .body-backgroundImage,
+          .body-backgroundImageOverlay{
+            grid-row: page;
+          }
+
+  }
+
+}
+
+[data-engrid-theme="aiusa"][data-engrid-layout="centerleft1col"]{   
+
+  @media screen and (min-width: 775px) {
+    /* prettier-ignore */
+    .en__component--advrow,
+          .en__component--advrow .pseudo-subgrid {
+              /* autoprefixer grid: off */
+              grid-template-columns:
+              [
+              pc-start lpc-start]  minmax(0px, 0px)        [lpc-end
+              cc-start lcc-start]  minmax(0px, 128px)      [lcc-end
+              bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
+              rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
+              rcc-start]           minmax(0px, 1fr)        [rcc-end cc-end
+              rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
+              ];
+          }
+
+  }
+
+}
+
+[data-engrid-theme="aiusa"][data-engrid-layout="centercenter1col"]{   
+
+  @media screen and (min-width: 775px) {
+    /* prettier-ignore */
+    .en__component--advrow,
+          .en__component--advrow .pseudo-subgrid {
+              /* autoprefixer grid: off */
+              grid-template-columns:
+              [
+              pc-start lpc-start]  minmax(0px, 0px)        [lpc-end
+              cc-start lcc-start]  minmax(0px, 1fr)        [lcc-end
+              bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
+              rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
+              rcc-start]           minmax(0px, 1fr)        [rcc-end cc-end
+              rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
+              ];
+          }
+
+  }
+
+}
+
+[data-engrid-theme="aiusa"][data-engrid-layout="centerright1col"]{   
+
+  @media screen and (min-width: 775px) {
+    /* prettier-ignore */
+    .en__component--advrow,
+          .en__component--advrow .pseudo-subgrid {
+              /* autoprefixer grid: off */
+              grid-template-columns:
+              [
+              pc-start lpc-start]  minmax(0px, 0px)        [lpc-end
+              cc-start lcc-start]  minmax(0px, 1fr)        [lcc-end
+              bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
+              rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
+              rcc-start]           minmax(0px, 128px)      [rcc-end cc-end
+              rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
+              ];
+          }
+
+  }
+
+}
+
+[data-engrid-theme="aiusa"][data-engrid-layout="rightright1col"]{   
+
+  @media screen and (min-width: 775px) {
+    /* prettier-ignore */
+    .en__component--advrow,
+          .en__component--advrow .pseudo-subgrid {
+              /* autoprefixer grid: off */
+              grid-template-columns:
+              [
+              pc-start lpc-start]  minmax(0px, 1fr)        [lpc-end
+              cc-start lcc-start]  minmax(0px, 0px)        [lcc-end
+              bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
+              rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
+              rcc-start]           minmax(0px, 0px)        [rcc-end cc-end
+              rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
+              ];
+          }
+          
+          .content-header,
+          .content-footer{
+            grid-column: bc;
+          }
+
+          .body-backgroundImage,
+          .body-backgroundImageOverlay{
+            grid-row: page;
+          }
+  }
+
+}
+
+[data-engrid-theme="aiusa"][data-engrid-layout="leftleft1col"],
+[data-engrid-theme="aiusa"][data-engrid-layout="centerleft1col"],
+[data-engrid-theme="aiusa"][data-engrid-layout="centercenter1col"],
+[data-engrid-theme="aiusa"][data-engrid-layout="centerright1col"]{   
+  @media screen and (max-width: 774px) {
+
+    /* prettier-ignore */
+    .en__component--advrow,
+    .en__component--advrow .pseudo-subgrid {
+        /* autoprefixer grid: off */
+        grid-template-columns:
+        [
+            pc-start lpc-start]  minmax(0px, 0px)    [lpc-end
+            cc-start lcc-start]  minmax(0px, 0px)    [lcc-end
+            bc-start lbc-start]  minmax(0px, 50vw)   [lbc-end
+            rbc-start]           minmax(0px, 50vw)   [rbc-end bc-end
+            rcc-start]           minmax(0px, 0px)    [rcc-end cc-end
+            rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
+        ];
       }
     }
-    #footer-social-wrapper {
-      flex: 1;
-      ul {
-        justify-content: flex-end;
-        margin: 0px;
-        li {
-          margin: 0 9px;
-        }
-      }
-      img {
-        max-width: auto;
-        height: 20px;
-      }
+}
+
+[data-engrid-theme="aiusa"][data-engrid-layout="centercenter2col"]{
+  @media screen and (min-width: 1000px) {
+    /* prettier-ignore */
+    .en__component--advrow,
+          .en__component--advrow .pseudo-subgrid {
+              /* autoprefixer grid: off */
+              grid-template-columns:
+              [
+                  pc-start lpc-start]  minmax(0px, 0px)     [lpc-end
+                  cc-start lcc-start]  minmax(0px, 1fr)     [lcc-end
+                  bc-start lbc-start]  minmax(0px, 485px)   [lbc-end
+                  rbc-start]           minmax(0px, 485px)   [rbc-end bc-end
+                  rcc-start]           minmax(0px, 1fr)     [rcc-end cc-end
+                  rpc-start]           minmax(0px, 0px)     [rpc-end pc-end             
+              ];
+
+              grid-template-rows:
+              [
+                page-start page-alert-start]        min-content        [page-alert-end
+                content-header-start]               min-content        [content-header-end
+                body-headerOutside-start]           min-content        [body-headerOutside-end
+                body-header-start]                  min-content        [body-header-end
+                body-title-start]                   min-content        [body-title-end
+                body-banner-start]                  min-content        [body-banner-end
+                body-bannerOverlay-start]           min-content        [body-bannerOverlay-end
+                body-top-start]                     minmax(0px, 1fr)   [body-top-end
+                body-side-start]                    min-content        [body-side-end  
+                body-main-start]                    min-content        [body-main-end  
+                body-bottom-start]                  min-content        [body-bottom-end  
+                body-footer-start]                  min-content        [body-footer-end
+                body-footerOutside-start]           min-content        [body-footerOutside-end  
+                content-footerSpacer-start]         max-content        [content-footerSpacer-end
+                content-preFooter-start]            min-content        [content-preFooter-end
+                content-footer-start]               min-content        [content-footer-end
+                page-backgroundImage-start]         min-content        [page-backgroundImage-end
+                page-backgroundImageOverlay-start]  min-content        [page-backgroundImageOverlay-end page-end
+                page-customCode-start]              min-content        [page-customCode-end        
+              ];  
+          }
+
+          .body-title{
+            grid-row: body-header-end / body-title-end;
+          }
+      
+          .body-banner,
+          .body-bannerOverlay{
+            grid-row: body-title-end / body-banner-end;
+          }
+      
+          .body-top{
+            grid-row: body-banner-end / body-bottom-end;
+          }
+      
+          .body-main{
+            grid-row: body-header-end / body-bottom-start;
+          }
+      
+          .body-bottom{
+            grid-row: body-main-end / body-bottom-end;
+          }
+
+  }
+
+  @media screen and (max-width: 999px) {
+    --theme-body-padding: 0px 24px;  
+    /* prettier-ignore */
+    .en__component--advrow,
+    .en__component--advrow .pseudo-subgrid {
+        /* autoprefixer grid: off */
+        grid-template-columns:
+        [
+            pc-start lpc-start]  minmax(0px, 0px)    [lpc-end
+            cc-start lcc-start]  minmax(0px, 0px)    [lcc-end
+            bc-start lbc-start]  minmax(0px, 50vw)   [lbc-end
+            rbc-start]           minmax(0px, 50vw)   [rbc-end bc-end
+            rcc-start]           minmax(0px, 0px)    [rcc-end cc-end
+            rpc-start]           minmax(0px, 0px)    [rpc-end pc-end             
+        ];
+    } 
+
+    .en__component--advrow > div{
+      grid-column: pc;
+    }
+
+  }
+}
+
+/*
+* ##########################################################
+* # ENGRID LAYOUTS
+* # SECTION SPACING AND SECTION REMOVAL
+* ##########################################################
+*/
+
+/*
+* ##########################################################
+* # HIDE UNUSED SECTIONS
+* ##########################################################
+*/
+
+.page-alert,
+.body-headerOutside,
+.body-bannerOverlay,
+.body-footerOutside,
+.content-preFooter,
+.page-backgroundImageOverlay{
+  display: none;
+}
+
+body#en__pagebuilder .content-footerSpacer{
+  display: none;
+}
+
+[data-engrid-theme="aiusa"][data-engrid-layout="leftleft1col"],
+[data-engrid-theme="aiusa"][data-engrid-layout="centerleft1col"],
+[data-engrid-theme="aiusa"][data-engrid-layout="centercenter1col"],
+[data-engrid-theme="aiusa"][data-engrid-layout="centerright1col"],  
+[data-engrid-theme="aiusa"][data-engrid-layout="rightright1col"]{
+  --theme-body-padding: 0px 60px;
+
+  .body-bottom {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (max-width: 774px) {
+    --theme-body-padding: 0px 24px;
+  }
+}
+
+[data-engrid-theme="aiusa"][data-engrid-layout="centerleft1col"],
+[data-engrid-theme="aiusa"][data-engrid-layout="centercenter1col"],
+[data-engrid-theme="aiusa"][data-engrid-layout="centerright1col"]{
+  @media screen and (min-width: 775px) {
+    .body-header {
+      margin-top: 80px;
+    }
+    
+    .body-footer {
+      margin-bottom: 80px;
+    } 
+  }
+
+}
+
+[data-engrid-theme="aiusa"][data-engrid-layout="centercenter2col"]{
+  --theme-body-padding: 0px 50px;
+
+  // Remove the box body based shadow, otherwise it will overlap with the side-by-side content
+  .body-header:before,
+  .body-title:before,
+  .body-banner:before,
+  .body-top:before, 
+  .body-side:before,
+  .body-main:before,
+  .body-bottom:before,
+  .body-footer:before{
+    display: none;
+  }
+
+  .body-bottom {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .body-header {
+      margin-top: 80px;
+    }
+    
+    .body-footer {
+      margin-bottom: 80px;
+    }
+  }
+
+  @media screen and (max-width: 999px) {
+    --theme-body-padding: 0px 24px;
+  }
+
+}
+
+/*
+* ##########################################################
+* # ENGRID LAYOUTS
+* # SECTION SPECIFIC STYLING
+* ##########################################################
+*/
+
+[data-engrid-theme="aiusa"][data-engrid-layout="centercenter2col"]{
+  @media screen and (min-width: 1000px) {
+    .body-title,
+    .body-banner,
+    .body-bannerOverlay,
+    .body-top{
+      --theme-body-title-background-color: #f5f5f5;
+      --theme-body-banner-background-color: #f5f5f5;
+      --theme-body-top-background-color: #f5f5f5;
     }
   }
 }
 
-body:not(#en__pagebuilder)[data-engrid-layout="centerleft1col"]
-  .page-backgroundImage {
-  // background-color: var(--theme-light-gray);
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  grid-row: content-header-end / content-footer-start;
-}
+// END AIUSA ENGRID CUSTOM LAYOUTS
