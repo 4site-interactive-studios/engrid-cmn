@@ -737,6 +737,45 @@ button:focus{
 
 /*
 * ##########################################################
+* # PREMIUM GIFT
+* ##########################################################
+*/
+
+.en__component.en__component--premiumgiftblock {
+  background-color: #f6f4f5;
+  border: 0px;
+  .en__pgHeader {
+    display: none;
+  }
+  .en__pgList {
+    .en__pg:nth-child(2){
+      display: none;
+    }
+    .en__pg_select {
+      input {
+        display: none;
+      }
+    }
+    .en__pg--selected {
+      border-bottom: 0px;
+      margin-bottom: 40px;
+      .en__pg__image--selected {
+        outline-color: transparent;
+      }
+      .en__pg__detail {
+        .en__pg__name {
+          font-weight: 700;
+          text-transform: none;
+        }
+      }
+    }
+  }
+}
+
+
+
+/*
+* ##########################################################
 * # MOBILE STYLINGS
 * ##########################################################
 */
