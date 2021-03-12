@@ -434,19 +434,33 @@
     display: none;
   }
 
-  .en__field__input--checkbox:checked + .en__field__label:before {
-    box-shadow: none;
+  .en__field__input--checkbox:checked + .en__field__label:before,
+  .en__contactDetails__rows {
+    box-shadow: none !important;
   }
 
-  .en__field__input--checkbox + .en__field__label:before {
+  .en__field__input--checkbox + .en__field__label:before,
+  .en__contactDetails__rows:before {
     height: 2rem;
     width: 2rem;
   }
-  .en__field__input--checkbox:checked + .en__field__label::after {
-    left: -1.5rem;
-    top: 0.75rem;
-    font-size: 20px;
-    font-weight: 700;
+  .en__field__input--checkbox:checked + .en__field__label:after,
+  .en__contactDetails__rows:after {
+    left: -1.5rem !important;
+    top: 0.75rem !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+  }
+
+  .en__contactDetails__rows {
+    margin-bottom: 5px;
+    padding-top: 12px !important;
+  }
+
+  .en__contactDetails__row--1 {
+    font-weight: 500; 
+    font-size: 1em !important;
+    margin-right: 10px;
   }
 
   label.en__field__label.en__field__label--item {
