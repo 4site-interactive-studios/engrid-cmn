@@ -273,55 +273,7 @@
                         </ul>
                       </li>
                     </ul>
-<<<<<<< HEAD
-                  </nav>
-                  <script>
-                    let timer;
-                    var menuItems = document.querySelectorAll("li.has-submenu");
-                    var menu = document.querySelectorAll(
-                      "li.has-submenu ul"
-                    )[0];
-                    var menuBtn = document.querySelector(".menu-btn");
-
-                    Array.prototype.forEach.call(menuItems, function(el, i) {
-                      el.addEventListener("touchstart", function(event) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                        if (menuBtn.classList.value.includes("close")) {
-                          menuBtn.classList.remove("close");
-                          timer = setTimeout(function(event) {
-                            document.querySelector(
-                              ".has-submenu.open"
-                            ).className = "has-submenu";
-                          }, 1000);
-                          menu.style.display = "none";
-                        } else {
-                          this.className = "has-submenu open";
-                          menuBtn.classList.add("close");
-                          clearTimeout(timer);
-                          menu.style.display = "block";
-                        }
-                      });
-
-                      el.addEventListener("mouseover", function(event) {
-                        this.className = "has-submenu open";
-                        menuBtn.classList.add("close");
-                        clearTimeout(timer);
-                      });
-                      el.addEventListener("mouseout", function(event) {
-                        menuBtn.classList.remove("close");
-                        timer = setTimeout(function(event) {
-                          document.querySelector(
-                            ".has-submenu.open"
-                          ).className = "has-submenu";
-                        }, 1000);
-                        console.log("mouseout");
-                      });
-                    });
-                  </script>
-=======
                   </nav>  
->>>>>>> bryan
                 </div>
               </header>
             </div>
@@ -1211,13 +1163,9 @@
               <h2 class="section-header">Payment Info</h2>
             </div>
             <div class="en__component en__component--codeblock">
-<<<<<<< HEAD
-              <div class="en__component en__component--formblock">
-=======
               <div
                 class="en__component en__component--formblock"
               >
->>>>>>> bryan
                 <div
                   class="en__field en__field--radio en__field--000000 en__field--giveBySelect en__mandatory give-by-select pseudo-en-field"
                 >
@@ -1266,13 +1214,9 @@
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            <div class="en__component en__component--formblock i1-hide">
-=======
             <div
               class="en__component en__component--formblock giveBySelect-Card i1-hide i3-66 i3-start i4-33 i4-end"
             >
->>>>>>> bryan
               <div
                 class="en__field en__field--select en__field--904407 en__field--paymenttype en__mandatory has-value"
               >
@@ -1378,19 +1322,7 @@
                 class="en__field en__field--number en__field--871605 en__field--ccvv"
               >
                 <label for="en__field_transaction_ccvv" class="en__field__label"
-<<<<<<< HEAD
-                  >CVV<span
-                    ><a
-                      href="#"
-                      id="ccv-popcorn"
-                      class="whats-this"
-                      tabindex="-1"
-                      >What's this?</a
-                    ></span
-                  ></label
-=======
                   >CVV</label
->>>>>>> bryan
                 >
                 <div class="en__field__element en__field__element--number">
                   <input
@@ -1520,33 +1452,7 @@
             <div
               class="en__component en__component--formblock dynamic-giving-button"
             >
-<<<<<<< HEAD
-              <div class="en__submit">
-                <button>Give $AMOUNT $FREQUENCY</button>
-              </div>
-            </div>
-            <div class="en__component en__component--formblock i1-hide">
-              <div
-                class="en__field en__field--text en__field--905389 en__field--appealCode en__mandatory has-value"
-              >
-                <label
-                  for="en__field_supporter_appealCode"
-                  class="en__field__label"
-                  >Appeal Code</label
-                >
-                <div class="en__field__element en__field__element--text">
-                  <input
-                    id="en__field_supporter_appealCode"
-                    type="text"
-                    class="en__field__input en__field__input--text"
-                    name="supporter.appealCode"
-                    value="default"
-                  />
-                </div>
-              </div>
-=======
               <div class="en__submit"><button>Give $AMOUNT $FREQUENCY</button></div>
->>>>>>> bryan
             </div>
           </div>
           <div
@@ -1554,20 +1460,6 @@
           >
             <div class="en__component en__component--codeblock">
               <div style="text-align: center" class="trust-logos">
-<<<<<<< HEAD
-                <a
-                  href="https://give.org/charity-reviews/national/Human-Services/Amnesty-International-of-the-USA-in-New-York-ny-143"
-                  target="_blank"
-                  tabindex="-1"
-                  ><img
-                    alt=""
-                    class="bbb-logo grayscale"
-                    style="height: 38px; width: 100px"
-                    decoding="async"
-                    loading="lazy"
-                    src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/bbb-logo.png?v=1613334590000"
-                    data-engrid-data-src-processed="true"
-=======
                 <a 
                   href="https://give.org/charity-reviews/national/Human-Services/Amnesty-International-of-the-USA-in-New-York-ny-143"
                   target="_blank"
@@ -1577,7 +1469,6 @@
                   class="bbb-logo grayscale"
                   data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/bbb-logo.png?v=1613334590000"
                   style="height: 38px; width: 100px"
->>>>>>> bryan
                 /></a>
                 <a
                   href="https://www.guidestar.org/profile/52-0851555"
