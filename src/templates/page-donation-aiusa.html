@@ -133,7 +133,7 @@
     <script src="https://donate.amnestyusa.org/ea-demo/frontend/pbAssets/build/js/enPage.js?v=3.60.1"></script>
   </head>
   <body
-    data-engrid-layout="centerleft1col"
+    data-engrid-layout="centercenter2col"
     data-engrid-theme="aiusa"
     data-engrid-add-input-placeholders
   >
@@ -212,28 +212,68 @@
                   </p>
                 </div>
                 <div id="menu-wrapper">
-                  <nav aria-label="Main Navigation">
-                    <ul>
-                      <li class="has-submenu">
-                        <div class="menu-btn">
-                          <div class="btn-line"></div>
-                          <div class="btn-line"></div>
-                          <div class="btn-line"></div>
-                        </div>
-                        <a href="#" aria-haspopup="true" aria-expanded="false"
-                          >Other Ways to Give</a
-                        >
-                        <ul>
-                          <li><a href="#">Renew</a></li>
-                          <li><a href="#">Honorary</a></li>
-                          <li><a href="#">Workplace</a></li>
-                          <li><a href="#">Give Stock</a></li>
-                          <li><a href="#">Donor Advices Fund</a></li>
-                          <li><a href="#">Planned Giving</a></li>
-                          <li><a href="#">FAQ</a></li>
+                  <nav aria-label="Navigation">
+                    <ul id="main-menu"
+                        role="menubar"
+                        aria-label="Main Menu">
+                      <li role="none">
+                        <a role="menuitem"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                           href="#"
+                           tabindex="0">
+                           <div class="hamburger-wrapper">
+                            <div class="hamburger"></div>
+                          </div>
+                           Other Ways to Give
+                        </a>
+                        <ul role="menu" aria-label="Other Ways to Give">
+                          <li role="none">
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Honorary
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Workplace
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Give Stock
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Donor Advised Fund
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Planned Giving
+                            </a>
+                          </li>
+                          <li role="none">
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               FAQ
+                            </a>
+                          </li>
                         </ul>
                       </li>
                     </ul>
+<<<<<<< HEAD
                   </nav>
                   <script>
                     let timer;
@@ -279,6 +319,9 @@
                       });
                     });
                   </script>
+=======
+                  </nav>  
+>>>>>>> bryan
                 </div>
               </header>
             </div>
@@ -1094,6 +1137,7 @@
                   href="https://www.amnestyusa.org/privacy-policy/"
                   tabindex="-1"
                   target="_blank"
+                  tabindex="-1"
                   >Privacy</a
                 >
                 &amp;
@@ -1101,6 +1145,7 @@
                   href="https://www.amnestyusa.org/terms-conditions/"
                   tabindex="-1"
                   target="_blank"
+                  tabindex="-1"
                   >Terms</a
                 >.
               </p>
@@ -1166,7 +1211,13 @@
               <h2 class="section-header">Payment Info</h2>
             </div>
             <div class="en__component en__component--codeblock">
+<<<<<<< HEAD
               <div class="en__component en__component--formblock">
+=======
+              <div
+                class="en__component en__component--formblock"
+              >
+>>>>>>> bryan
                 <div
                   class="en__field en__field--radio en__field--000000 en__field--giveBySelect en__mandatory give-by-select pseudo-en-field"
                 >
@@ -1215,7 +1266,13 @@
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             <div class="en__component en__component--formblock i1-hide">
+=======
+            <div
+              class="en__component en__component--formblock giveBySelect-Card i1-hide i3-66 i3-start i4-33 i4-end"
+            >
+>>>>>>> bryan
               <div
                 class="en__field en__field--select en__field--904407 en__field--paymenttype en__mandatory has-value"
               >
@@ -1321,6 +1378,7 @@
                 class="en__field en__field--number en__field--871605 en__field--ccvv"
               >
                 <label for="en__field_transaction_ccvv" class="en__field__label"
+<<<<<<< HEAD
                   >CVV<span
                     ><a
                       href="#"
@@ -1330,6 +1388,9 @@
                       >What's this?</a
                     ></span
                   ></label
+=======
+                  >CVV</label
+>>>>>>> bryan
                 >
                 <div class="en__field__element en__field__element--number">
                   <input
@@ -1459,6 +1520,7 @@
             <div
               class="en__component en__component--formblock dynamic-giving-button"
             >
+<<<<<<< HEAD
               <div class="en__submit">
                 <button>Give $AMOUNT $FREQUENCY</button>
               </div>
@@ -1482,6 +1544,9 @@
                   />
                 </div>
               </div>
+=======
+              <div class="en__submit"><button>Give $AMOUNT $FREQUENCY</button></div>
+>>>>>>> bryan
             </div>
           </div>
           <div
@@ -1489,6 +1554,7 @@
           >
             <div class="en__component en__component--codeblock">
               <div style="text-align: center" class="trust-logos">
+<<<<<<< HEAD
                 <a
                   href="https://give.org/charity-reviews/national/Human-Services/Amnesty-International-of-the-USA-in-New-York-ny-143"
                   target="_blank"
@@ -1501,6 +1567,17 @@
                     loading="lazy"
                     src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/bbb-logo.png?v=1613334590000"
                     data-engrid-data-src-processed="true"
+=======
+                <a 
+                  href="https://give.org/charity-reviews/national/Human-Services/Amnesty-International-of-the-USA-in-New-York-ny-143"
+                  target="_blank"
+                  tabindex="-1"
+                ><img
+                  alt=""
+                  class="bbb-logo grayscale"
+                  data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/bbb-logo.png?v=1613334590000"
+                  style="height: 38px; width: 100px"
+>>>>>>> bryan
                 /></a>
                 <a
                   href="https://www.guidestar.org/profile/52-0851555"
