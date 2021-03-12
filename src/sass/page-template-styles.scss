@@ -785,6 +785,9 @@ button:focus{
   .en__ecardrecipients__email input, .en__ecardrecipients__name input {
     width: 100%;
   }
+  textarea:hover {
+    border-color: var(--theme-highlight-font-color);
+  }
 }
 
 
