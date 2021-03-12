@@ -75,6 +75,11 @@
   font-weight: 700;
 }
 
+.en__twitterTarget__image {
+  width: 50px !important;
+  margin-top: -55px;
+}
+
 
 label.en__field__label.en__field__label--item {
   padding: 12px 5px;
@@ -512,7 +517,7 @@ button:focus{
     .enWidget__fill {
       background-color: var(--theme-cta) !important; // !important required
       box-shadow: inset -13px 0px 0px 0px rgba(255, 255, 255, 1);
-      &::before{
+      &::before {
         content: " ";
         display: block;
         width: 3px;
@@ -522,7 +527,7 @@ button:focus{
         top: -3px;
         background-color: #000000;
       }
-      &::after{
+      &::after {
         content: " ";
         display: block;
         width: 10px;
@@ -547,7 +552,7 @@ button:focus{
     p{
       margin: 0;
       text-transform: uppercase;
-      &:nth-child(1){
+      &:nth-child(1) {
         font-size: 32px;
         line-height: 32px;
       }
@@ -729,6 +734,63 @@ button:focus{
     }
 
   } 
+
+/*
+* ##########################################################
+* # PREMIUM GIFT
+* ##########################################################
+*/
+
+.en__component.en__component--premiumgiftblock {
+  background-color: #f6f4f5;
+  border: 0px;
+  .en__pgHeader {
+    display: none;
+  }
+  .en__pgList {
+    .en__pg:nth-child(2){
+      display: none;
+    }
+    .en__pg_select {
+      input {
+        display: none;
+      }
+    }
+    .en__pg--selected {
+      border-bottom: 0px;
+      margin-bottom: 40px;
+      .en__pg__image--selected {
+        outline-color: transparent;
+      }
+      .en__pg__detail {
+        .en__pg__name {
+          font-weight: 700;
+          text-transform: none;
+        }
+      }
+    }
+  }
+}
+
+/*
+* ##########################################################
+* # E-Card
+* ##########################################################
+*/
+
+.en__component--ecardblock {
+  h2 {
+    font-weight: 700;
+  }
+  .en__ecardrecipients__email input, .en__ecardrecipients__name input {
+    width: 100%;
+  }
+  textarea:hover {
+    border-color: var(--theme-highlight-font-color);
+  }
+}
+
+
 
 /*
 * ##########################################################

@@ -47,6 +47,16 @@ document.onreadystatechange = () => {
         // var menu = document.querySelectorAll("li.has-submenu ul")[0];
         // var menuBtn = document.querySelector(".menu-btn");
 
+        const menuBtn = document.querySelector('a[role="menuitem"]')
+        
+        menuBtn.addEventListener('touchstart', function(event){
+          const menu = document.querySelector('ul#main-menu ul[role="menu"]');
+          if(menu.style.display==="block"){
+            menu.style.display="none";
+            menuBtn.setAttribute('aria-expanded','false');
+          }
+        })
+
         // Array.prototype.forEach.call(menuItems, function (el, i) {
         //   el.addEventListener("touchstart", function (event) {
         //     event.preventDefault();
