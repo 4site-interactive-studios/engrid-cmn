@@ -81,7 +81,7 @@
 }
 
 
-label.en__field__label.en__field__label--item {
+.en__field--radio label.en__field__label.en__field__label--item {
   padding: 12px 5px;
   width: 100%;
   text-transform: uppercase;
@@ -118,9 +118,9 @@ select {
 }
 
 input.en__field__input--checkbox:checked
-+ label.en__field__label.en__field__label--item,
++ label,
 input.en__field__input--checkbox
-+ label.en__field__label.en__field__label--item {
++ label{
   font-weight: 500;
   font-family: var(--theme-typography-default-font-family);
   text-transform: none;
@@ -568,12 +568,12 @@ button:focus{
 */
 
 .en__field--recurrfreq{
-  .en__field__item  input:checked + label.en__field__label.en__field__label--item {
-    background-color: var(--theme-typography-primary-button-background-color);
-    color: var(--theme-typography-primary-button-color);
-    border-color: var(--theme-typography-primary-button-background-color);
+  .en__field__item  input:checked + label {
+    background-color: var(--theme-typography-button-background-color);
+    color: var(--theme-typography-button-color);
+    border-color: var(--theme-typography-button-border-color);
     &:hover {
-      color: var(--theme-typography-primary-button-color);
+      color: var(--theme-typography-button-color);
     }
   }
 }
