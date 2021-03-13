@@ -583,12 +583,18 @@ button:focus{
   width: 100%;
 }
 
+.en__field--donationAmt h2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .en__component.en__component--copyblock.recurring-frequency-y-hide.inline-monthly-upsell {
   position: relative;
   background-repeat: no-repeat;
   background-size: 90%;
   background-position: center;
-  padding: 0 10px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   margin-bottom: 1rem;
   p {
     margin: 20px 0 0;
