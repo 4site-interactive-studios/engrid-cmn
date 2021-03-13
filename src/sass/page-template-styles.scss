@@ -634,7 +634,7 @@ button:focus{
 
     &:hover,
     &:focus::after{
-      border-bottom-color: var(--theme-typography-input-focus-hover-border-bottom-color);
+      border-bottom-color: var(--theme-typography-input-checked-border-bottom-color);
 
     }
   }
