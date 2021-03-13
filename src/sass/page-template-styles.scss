@@ -220,6 +220,7 @@ h2.section-header {
     text-decoration: underline solid black 2px;
     background-color: var(--theme-cta);
     display: inline-block;
+    // outline-offset: 3px;
   }
 
   ul[role="menubar"] a[role="menuitem"] {
