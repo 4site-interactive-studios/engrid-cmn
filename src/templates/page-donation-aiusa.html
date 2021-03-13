@@ -213,67 +213,55 @@
                 </div>
                 <div id="menu-wrapper">
                   <nav aria-label="Navigation">
-                    <ul id="main-menu"
-                        role="menubar"
-                        aria-label="Main Menu">
+                    <ul id="main-menu" role="menubar" aria-label="Main Menu">
                       <li role="none">
-                        <a role="menuitem"
-                           aria-haspopup="true"
-                           aria-expanded="false"
-                           href="#"
-                           tabindex="0">
-                           <div class="hamburger-wrapper">
+                        <a
+                          role="menuitem"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                          href="#"
+                          tabindex="0"
+                        >
+                          <div class="hamburger-wrapper">
                             <div class="hamburger"></div>
                           </div>
-                           Other Ways to Give
+                          Other Ways to Give
                         </a>
                         <ul role="menu" aria-label="Other Ways to Give">
                           <li role="none">
-                            <a role="menuitem"
-                               href="#"
-                               tabindex="-1">
-                               Honorary
+                            <a role="menuitem" href="#" tabindex="-1">
+                              Honorary
                             </a>
                           </li>
                           <li role="none">
-                            <a role="menuitem"
-                               href="#"
-                               tabindex="-1">
-                               Workplace
+                            <a role="menuitem" href="#" tabindex="-1">
+                              Workplace
                             </a>
                           </li>
                           <li role="none">
-                            <a role="menuitem"
-                               href="#"
-                               tabindex="-1">
-                               Give Stock
+                            <a role="menuitem" href="#" tabindex="-1">
+                              Give Stock
                             </a>
                           </li>
                           <li role="none">
-                            <a role="menuitem"
-                               href="#"
-                               tabindex="-1">
-                               Donor Advised Fund
+                            <a role="menuitem" href="#" tabindex="-1">
+                              Donor Advised Fund
                             </a>
                           </li>
                           <li role="none">
-                            <a role="menuitem"
-                               href="#"
-                               tabindex="-1">
-                               Planned Giving
+                            <a role="menuitem" href="#" tabindex="-1">
+                              Planned Giving
                             </a>
                           </li>
                           <li role="none">
-                            <a role="menuitem"
-                               href="#"
-                               tabindex="-1">
-                               FAQ
+                            <a role="menuitem" href="#" tabindex="-1">
+                              FAQ
                             </a>
                           </li>
                         </ul>
                       </li>
                     </ul>
-                  </nav>  
+                  </nav>
                 </div>
               </header>
             </div>
@@ -412,7 +400,7 @@
                       checked=""
                       type="radio"
                       class="en__field__input en__field__input--radio"
-                      value=""
+                      value="ONETIME"
                       name="transaction.recurrfreq"
                     />
                     <label
@@ -457,6 +445,29 @@
                     This copy will only show up if the One Time Giving Frequency
                     is selected and the corresponding Recurring field has a
                     value of N
+                  </p>
+                </div>
+                <div class="en__component en__component--copyblock">
+                  <p>
+                    <a
+                      class="setRecurrFreq-MONTHLY recurring-frequency-monthly-hide"
+                      href="#"
+                      >Click here to upgrade your gift to monthly</a
+                    >
+                  </p>
+                  <p>
+                    <a
+                      class="setRecurrFreq-ANNUAL recurring-frequency-annual-hide"
+                      href="#"
+                      >Click here to upgrade your gift to annual</a
+                    >
+                  </p>
+                  <p>
+                    <a
+                      class="setRecurrFreq-ONETIME recurring-frequency-onetime-hide"
+                      href="#"
+                      >Click here to upgrade your gift to one time</a
+                    >
                   </p>
                 </div>
               </div>
@@ -564,6 +575,76 @@
                       placeholder="Other Amount"
                       step="1"
                     />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="en__component en__component--formblock recurring-frequency-monthly-hide"
+            >
+              <div class="en__field en__field--checkbox">
+                <label class="en__field__label">Change to Monthly</label>
+                <div class="en__field__element en__field__element--checkbox">
+                  <div class="en__field__item">
+                    <input
+                      id="dont-care"
+                      type="checkbox"
+                      class="en__field__input en__field__input--checkbox"
+                      value="MONTHLY"
+                      name="engrid.recurrfreq"
+                    />
+                    <label
+                      for="dont-care"
+                      class="en__field__label en__field__label--item"
+                      >Change the Frequency to Monthly!
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="en__component en__component--formblock recurring-frequency-annual-hide"
+            >
+              <div class="en__field en__field--checkbox">
+                <label class="en__field__label">Change to Annual</label>
+                <div class="en__field__element en__field__element--checkbox">
+                  <div class="en__field__item">
+                    <input
+                      id="still-dont-care"
+                      type="checkbox"
+                      class="en__field__input en__field__input--checkbox"
+                      value="ANNUAL"
+                      name="engrid.recurrfreq"
+                    />
+                    <label
+                      for="still-dont-care"
+                      class="en__field__label en__field__label--item"
+                      >Change the Frequency to Annual!
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="en__component en__component--formblock recurring-frequency-onetime-hide"
+            >
+              <div class="en__field en__field--checkbox">
+                <label class="en__field__label">Change to One Time</label>
+                <div class="en__field__element en__field__element--checkbox">
+                  <div class="en__field__item">
+                    <input
+                      id="i-dont-care"
+                      type="checkbox"
+                      class="en__field__input en__field__input--checkbox"
+                      value="ONETIME"
+                      name="engrid.recurrfreq"
+                    />
+                    <label
+                      for="i-dont-care"
+                      class="en__field__label en__field__label--item"
+                      >Change the Frequency to One Time!
+                    </label>
                   </div>
                 </div>
               </div>
@@ -1163,9 +1244,7 @@
               <h2 class="section-header">Payment Info</h2>
             </div>
             <div class="en__component en__component--codeblock">
-              <div
-                class="en__component en__component--formblock"
-              >
+              <div class="en__component en__component--formblock">
                 <div
                   class="en__field en__field--radio en__field--000000 en__field--giveBySelect en__mandatory give-by-select pseudo-en-field"
                 >
@@ -1452,7 +1531,9 @@
             <div
               class="en__component en__component--formblock dynamic-giving-button"
             >
-              <div class="en__submit"><button>Give $AMOUNT $FREQUENCY</button></div>
+              <div class="en__submit">
+                <button>Give $AMOUNT $FREQUENCY</button>
+              </div>
             </div>
           </div>
           <div
@@ -1460,15 +1541,15 @@
           >
             <div class="en__component en__component--codeblock">
               <div style="text-align: center" class="trust-logos">
-                <a 
+                <a
                   href="https://give.org/charity-reviews/national/Human-Services/Amnesty-International-of-the-USA-in-New-York-ny-143"
                   target="_blank"
                   tabindex="-1"
-                ><img
-                  alt=""
-                  class="bbb-logo grayscale"
-                  data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/bbb-logo.png?v=1613334590000"
-                  style="height: 38px; width: 100px"
+                  ><img
+                    alt=""
+                    class="bbb-logo grayscale"
+                    data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/bbb-logo.png?v=1613334590000"
+                    style="height: 38px; width: 100px"
                 /></a>
                 <a
                   href="https://www.guidestar.org/profile/52-0851555"
