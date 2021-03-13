@@ -70,9 +70,6 @@
     // TYPOGRAPHY STRONG
     --theme-typography-strong-font-family: var(--theme-typography-default-font-family);
     --theme-typography-strong-color: initial;
-    --theme-typography-strong-font-size: 14px;
-    --theme-typography-strong-font-weight: bold;
-    --theme-typography-strong-line-height: initial;
         
     // TYPOGRAPHY LABEL
     --theme-typography-label-font-family: var(--theme-font-stack-browser-fonts-cn);
@@ -268,9 +265,6 @@
     // TYPOGRAPHY A
     --theme-typography-a-font-family: var(--theme-typography-headline-font-family);
     --theme-typography-a-color: initial;
-    --theme-typography-a-font-size: var(--theme-root-font-size);
-    --theme-typography-a-font-weight: initial;
-    --theme-typography-a-line-height: initial;
     --theme-typography-a-text-decoration: initial;
 
     // TYPOGRAPHY A:FOCUS
