@@ -733,6 +733,17 @@ button:focus{
       margin-right: 0px;
     }
 
+    @media screen and (max-width: 774px) {
+      a {
+        flex: 1 1 20%;
+        max-width: 20%;
+        margin-right: 10px;
+      }
+      img.verisign-logo {
+          max-width: 50%;
+      }
+    }
+
   } 
 
 /*
