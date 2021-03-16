@@ -53,33 +53,90 @@
   font-family: var(--theme-font-stack-browser-fonts);
 }
 
-.en__component--formblock .en__field.en__field--checkbox > label,
+.en__field.en__field--checkbox > label,
 #en__field_transaction_recurrpay {
   display: none;
 }
 
-.en__field__input--checkbox:checked + .en__field__label:before {
-  box-shadow: none;
+.en__field.en__field--checkbox label{
+  color: var(--theme-typography-p-color);
+}
+
+.en__contactDetails__rows{
+  margin-left: 41px;
+  width: 100%;
 }
 
 .en__field__input--checkbox + .en__field__label:before {
   height: 2rem;
   width: 2rem;
-  top: 0;
+  top: 3px;
   left: 0;
 }
+
+.en__component--contactblock .en__contactDetails__rows:before{
+  height: 2rem;
+  width: 2rem;
+  top: 5px;
+  left: 0px;
+}
+
+.en__field__input--checkbox:checked + .en__field__label:before,
+.en__component--contactblock .en__contactDetails__rows:before{
+  box-shadow: none;
+}
+
 .en__field__input--checkbox:checked + .en__field__label::after {
   left: 7px;
-  top: 7px;
+  top: 10px;
   font-size: 20px;
   font-weight: 700;
 }
 
-.en__twitterTarget__image {
-  width: 50px !important;
-  margin-top: -55px;
+.en__component--contactblock .en__contactDetails__rows:after{
+  left: 7px;
+  top: 6px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
+input.en__field__input--checkbox:checked + label,
+input.en__field__input--checkbox + label{
+  font-weight: 500;
+  font-family: var(--theme-typography-default-font-family);
+  text-transform: none;
+  border: 0px;
+  // padding: 3px 10px 0;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  justify-content: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0 0 0 42px;
+  margin-left: 0px;
+}
+
+.en__twitterTarget__image {
+  width: 50px;
+}
+
+.en__tweetButton__send a{
+  background-color: #ffff00;
+  padding: 12px 15px;
+  color: #000000;
+  min-width: 100px;
+  text-transform: uppercase;
+}
+
+.en__tweetButton__sent a{
+  background-color: rgb(37, 37, 37);
+  padding: 12px 15px;
+  color: #ffffff;
+  min-width: 100px;
+  text-transform: uppercase;
+}
 
 .en__field--radio label.en__field__label.en__field__label--item {
   padding: 12px 5px;
@@ -112,30 +169,17 @@ select {
   font-weight: 700;
 }
 
+// @TODO These button styles should be handled more holistically upstream in ENGRID-SCRIPTS with Custom CSS Properties
+.en__submit button,
+.en__submit button:hover{
+  background-color: var(--theme-cta);
+  border-color: var(--theme-cta);
+  color: #000000;
+}
+
 input::placeholder,
 select {
   color: var(--theme-typography-input-placeholder-color);
-}
-
-input.en__field__input--checkbox:checked
-+ label,
-input.en__field__input--checkbox
-+ label{
-  font-weight: 500;
-  font-family: var(--theme-typography-default-font-family);
-  text-transform: none;
-  border: 0px;
-  // padding: 3px 10px 0;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: left;
-
-  justify-content: flex-start;
-  display: inline-flex;
-  align-items: center;
-  min-height: 2rem;
-  padding: 0 0 0 42px;
-  margin-left: 0px;
 }
 
 h2.section-header {
@@ -166,6 +210,35 @@ h2.section-header {
     width: 40%;
     margin-left: 5%;
   }
+}
+
+.en__ecarditems__button{
+  background: var(--theme-cta);
+  color: var(--color-black);
+}
+
+.en__ecardrecipients__email input.invalid,
+.en__ecardrecipients__name input.invalid{
+  border-color: var(--theme-error-red);
+  background-color: var(--theme-error-red-faded);
+  font-family: var(--theme-typography-input-font-family);
+  color: var(--theme-typography-input-color);
+  font-size: var(--theme-typography-input-font-size);
+  font-weight: var(--theme-typography-input-font-weight);
+  line-height: var(--theme-typography-input-line-height);
+  background-color: var(--theme-typography-input-background-color);
+  border-radius: var(--theme-typography-input-border-radius);
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+  min-width: 0;
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1ch;
+  box-shadow: var(--theme-typography-input-box-shadow);
+  transition: box-shadow .25s,border-color .25s ease-in-out;
+  border: var(--theme-typography-input-border-width) solid var(--theme-typography-input-border-color);
 }
 
 /*
@@ -281,9 +354,6 @@ h2.section-header {
     margin: 0;
   }
 
-
-
-
   .hamburger-wrapper {
     position: relative;
     left: -0.5rem;
@@ -336,9 +406,6 @@ h2.section-header {
   transform:rotate(135deg);
 }
 
-
-
-
 // ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]::after {
 //   content: url('https://www.w3.org/TR/wai-aria-practices-1.2/examples/menubar/menubar-1/images/right-arrow-brown.png');
 //   padding-right: 2em;
@@ -379,6 +446,31 @@ h2.section-header {
   
 }
 
+// On small screens we need to stack the header and menu
+@media screen and (max-width: 400px) { 
+
+  .content-header{
+    header{
+      flex-direction: column;
+    }
+
+    #header-logo{
+      width: 100vw;
+      display: block;
+      background: #ffff00;
+    }
+
+    #main-menu{
+      padding-right: 0;
+    }
+
+    #menu-wrapper ul[role=menubar] ul[role=menu]{
+      left: 0;
+      padding: 0 33px 35px 35px;
+    }
+  }
+}
+
 
 /*
 * ##########################################################
@@ -416,7 +508,9 @@ h2.section-header {
 * # BODY MAIN
 * ##########################################################
 */
-.body-main {
+
+// Sometimes there is not form on the page and this section is empty (e.g Thank You Page).
+.body-main:not(:empty) {
   padding-top: 40px;
 }
 
@@ -596,6 +690,7 @@ button:focus{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   margin-bottom: 1rem;
+  text-align: center;
   p {
     margin: 20px 0 0;
     font-size: 16px;
@@ -742,6 +837,22 @@ button:focus{
 
   } 
 
+  @media screen and (max-width: 400px) { 
+    .trust-logos{
+      flex-direction: column;
+
+      > * {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      > :not(:last-child){
+        padding-bottom: 0.5rem;
+      }
+    }
+
+}
+
 /*
 * ##########################################################
 * # PREMIUM GIFT
@@ -801,7 +912,7 @@ button:focus{
 
 /*
 * ##########################################################
-* # MOBILE STYLINGS
+* # LAYOUT MOBILE STYLINGS
 * ##########################################################
 */
 
@@ -1181,7 +1292,7 @@ body#en__pagebuilder .content-footerSpacer{
 [data-engrid-theme="aiusa"][data-engrid-layout="rightright1col"]{
   --theme-body-padding: 0px 60px;
 
-  .body-bottom {
+  .body-bottom:not(:empty) {
     padding-bottom: 60px;
   }
 
@@ -1220,7 +1331,7 @@ body#en__pagebuilder .content-footerSpacer{
     display: none;
   }
 
-  .body-bottom {
+  .body-bottom:not(:empty) {
     padding-bottom: 60px;
   }
 
