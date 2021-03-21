@@ -90,6 +90,7 @@
   top: 10px;
   font-size: 1.2rem;
   font-weight: 700;
+  letter-spacing: 0.1rem;
 }
 
 .en__component--contactblock .en__contactDetails__rows:after{
@@ -97,6 +98,7 @@
   top: 6px;
   font-size: 1.2rem;
   font-weight: 700;
+  letter-spacing: 0.1rem;
 }
 
 input.en__field__input--checkbox:checked + label,
@@ -160,12 +162,14 @@ select {
   label {
     letter-spacing: 0.06rem;
     font-weight: 700;
+    letter-spacing: 0.1rem;
   }
 }
 
 .en__submit button {
   font-family: "AmnestyTradeGothic";
   font-weight: 700;
+  letter-spacing: 0.1rem;
 }
 
 // @TODO These button styles should be handled more holistically upstream in ENGRID-SCRIPTS with Custom CSS Properties
@@ -255,6 +259,7 @@ h2.section-header {
   ul[role="menubar"] {
     text-transform: uppercase;
     font-weight: 700;
+    letter-spacing: 0.1rem;
     // margin: 10px;
     // padding: 1rem;
     padding-right: 20px;
@@ -440,6 +445,7 @@ h2.section-header {
       strong {
         font-weight: 700;
         font-size: 19px;
+        letter-spacing: 0.1rem;
       }
     }
   }
@@ -642,6 +648,7 @@ button:focus{
     margin-top: 10px;
     text-align: center;
     font-weight: 700;
+    letter-spacing: 0.1rem;
 
     p{
       margin: 0;
@@ -695,6 +702,7 @@ button:focus{
     font-size: 1rem;
     line-height: 1.25rem;
     font-weight: 700;
+    letter-spacing: 0.1rem;
   }
   &::before {
     content: "";
@@ -748,6 +756,7 @@ button:focus{
   font-family: inherit;
   font-size: 1rem;
   font-weight: 700;
+  letter-spacing: 0.1rem;
   line-height: 0;
   height: 0;
   left: 1rem;
@@ -893,6 +902,7 @@ button:focus{
       .en__pg__detail {
         .en__pg__name {
           font-weight: 700;
+          letter-spacing: 0.1rem;
           text-transform: none;
         }
       }
@@ -909,6 +919,7 @@ button:focus{
 .en__component--ecardblock {
   h2 {
     font-weight: 700;
+    letter-spacing: 0.1rem;
   }
   .en__ecardrecipients__email input, .en__ecardrecipients__name input {
     width: 100%;
