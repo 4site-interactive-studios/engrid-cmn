@@ -145,6 +145,30 @@
       }
     </script>
 
+    <script>
+      document.addEventListener('readystatechange', event => {
+        if (event.target.readyState === 'interactive' || event.target.readyState === 'complete') {
+          moveDomElements();
+        }
+      });
+
+      function moveDomElements(){
+        let inlineMonthlyUpsell = document.querySelectorAll('.move-before-transaction-recurrfreq')[0];
+        let recurrFrequencyField = document.querySelectorAll('.en__field--recurrfreq')[0];
+        if (inlineMonthlyUpsell && recurrFrequencyField) {
+          recurrFrequencyField.insertAdjacentElement("beforeend", inlineMonthlyUpsell);
+          // giftAmountHeader.style.visibility='visible';
+        }
+
+        let inlineGiftAmountHeader = document.querySelectorAll('.move-before-transaction-recurrpay')[0];
+        let recurrPayField = document.querySelectorAll('.en__field--recurrpay')[0];
+        if (inlineGiftAmountHeader && recurrPayField) {
+          recurrPayField.insertAdjacentElement("beforebegin", inlineGiftAmountHeader);
+          // inlineGiftAmountHeader.style.visibility='visible';
+        }
+      }
+    </script>
+
     <link
       rel="preload"
       href="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/AmnestyTradeGothic-BdCn20.woff"
@@ -213,55 +237,67 @@
                 </div>
                 <div id="menu-wrapper">
                   <nav aria-label="Navigation">
-                    <ul id="main-menu" role="menubar" aria-label="Main Menu">
+                    <ul id="main-menu"
+                        role="menubar"
+                        aria-label="Main Menu">
                       <li role="none">
-                        <a
-                          role="menuitem"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                          href="#"
-                          tabindex="0"
-                        >
-                          <div class="hamburger-wrapper">
+                        <a role="menuitem"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                           href="#"
+                           tabindex="0">
+                           <div class="hamburger-wrapper">
                             <div class="hamburger"></div>
                           </div>
-                          Other Ways to Give
+                           Other Ways to Give
                         </a>
                         <ul role="menu" aria-label="Other Ways to Give">
                           <li role="none">
-                            <a role="menuitem" href="#" tabindex="-1">
-                              Honorary
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Honorary
                             </a>
                           </li>
                           <li role="none">
-                            <a role="menuitem" href="#" tabindex="-1">
-                              Workplace
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Workplace
                             </a>
                           </li>
                           <li role="none">
-                            <a role="menuitem" href="#" tabindex="-1">
-                              Give Stock
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Give Stock
                             </a>
                           </li>
                           <li role="none">
-                            <a role="menuitem" href="#" tabindex="-1">
-                              Donor Advised Fund
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Donor Advised Fund
                             </a>
                           </li>
                           <li role="none">
-                            <a role="menuitem" href="#" tabindex="-1">
-                              Planned Giving
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               Planned Giving
                             </a>
                           </li>
                           <li role="none">
-                            <a role="menuitem" href="#" tabindex="-1">
-                              FAQ
+                            <a role="menuitem"
+                               href="#"
+                               tabindex="-1">
+                               FAQ
                             </a>
                           </li>
                         </ul>
                       </li>
                     </ul>
-                  </nav>
+                  </nav>  
                 </div>
               </header>
             </div>
@@ -303,6 +339,7 @@
                   decoding="async"
                   loading="lazy"
                   data-engrid-data-src-processed="true"
+                  height="245"
                 /><figattribution
                   ><a
                     href="https://www.google.com"
@@ -380,10 +417,10 @@
             class="en__component en__component en__component--column en__component--advcolumn body-main"
           >
             <div class="en__component en__component--copyblock">
-              <h2 class="section-header">Gift Amount</h2>
+              <h2 class="section-header move-before-transaction-recurrpay">Gift Amount</h2>
             </div>
             <div
-              class="en__component en__component--formblock radio-to-buttons i1-hide-label i2-hide i3-hide-label"
+              class="en__component en__component--formblock i1-hide-label i2-hide i3-hide-label"
             >
               <div
                 class="en__field en__field--radio en__field--871587 en__field--recurrfreq"
@@ -400,7 +437,7 @@
                       checked=""
                       type="radio"
                       class="en__field__input en__field__input--radio"
-                      value="ONETIME"
+                      value=""
                       name="transaction.recurrfreq"
                     />
                     <label
@@ -439,35 +476,12 @@
                   </div>
                 </div>
                 <div
-                  class="en__component en__component--copyblock recurring-frequency-y-hide inline-monthly-upsell"
+                  class="en__component en__component--copyblock recurring-frequency-y-hide move-before-transaction-recurrfreq inline-monthly-upsell"
                 >
                   <p>
                     This copy will only show up if the One Time Giving Frequency
                     is selected and the corresponding Recurring field has a
                     value of N
-                  </p>
-                </div>
-                <div class="en__component en__component--copyblock">
-                  <p>
-                    <a
-                      class="setRecurrFreq-MONTHLY recurring-frequency-monthly-hide"
-                      href="#"
-                      >Click here to upgrade your gift to monthly</a
-                    >
-                  </p>
-                  <p>
-                    <a
-                      class="setRecurrFreq-ANNUAL recurring-frequency-annual-hide"
-                      href="#"
-                      >Click here to upgrade your gift to annual</a
-                    >
-                  </p>
-                  <p>
-                    <a
-                      class="setRecurrFreq-ONETIME recurring-frequency-onetime-hide"
-                      href="#"
-                      >Click here to upgrade your gift to one time</a
-                    >
                   </p>
                 </div>
               </div>
@@ -575,76 +589,6 @@
                       placeholder="Other Amount"
                       step="1"
                     />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="en__component en__component--formblock recurring-frequency-monthly-hide"
-            >
-              <div class="en__field en__field--checkbox">
-                <label class="en__field__label">Change to Monthly</label>
-                <div class="en__field__element en__field__element--checkbox">
-                  <div class="en__field__item">
-                    <input
-                      id="dont-care"
-                      type="checkbox"
-                      class="en__field__input en__field__input--checkbox"
-                      value="MONTHLY"
-                      name="engrid.recurrfreq"
-                    />
-                    <label
-                      for="dont-care"
-                      class="en__field__label en__field__label--item"
-                      >Change the Frequency to Monthly!
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="en__component en__component--formblock recurring-frequency-annual-hide"
-            >
-              <div class="en__field en__field--checkbox">
-                <label class="en__field__label">Change to Annual</label>
-                <div class="en__field__element en__field__element--checkbox">
-                  <div class="en__field__item">
-                    <input
-                      id="still-dont-care"
-                      type="checkbox"
-                      class="en__field__input en__field__input--checkbox"
-                      value="ANNUAL"
-                      name="engrid.recurrfreq"
-                    />
-                    <label
-                      for="still-dont-care"
-                      class="en__field__label en__field__label--item"
-                      >Change the Frequency to Annual!
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="en__component en__component--formblock recurring-frequency-onetime-hide"
-            >
-              <div class="en__field en__field--checkbox">
-                <label class="en__field__label">Change to One Time</label>
-                <div class="en__field__element en__field__element--checkbox">
-                  <div class="en__field__item">
-                    <input
-                      id="i-dont-care"
-                      type="checkbox"
-                      class="en__field__input en__field__input--checkbox"
-                      value="ONETIME"
-                      name="engrid.recurrfreq"
-                    />
-                    <label
-                      for="i-dont-care"
-                      class="en__field__label en__field__label--item"
-                      >Change the Frequency to One Time!
-                    </label>
                   </div>
                 </div>
               </div>
@@ -1244,7 +1188,9 @@
               <h2 class="section-header">Payment Info</h2>
             </div>
             <div class="en__component en__component--codeblock">
-              <div class="en__component en__component--formblock">
+              <div
+                class="en__component en__component--formblock"
+              >
                 <div
                   class="en__field en__field--radio en__field--000000 en__field--giveBySelect en__mandatory give-by-select pseudo-en-field"
                 >
@@ -1531,9 +1477,7 @@
             <div
               class="en__component en__component--formblock dynamic-giving-button"
             >
-              <div class="en__submit">
-                <button>Give $AMOUNT $FREQUENCY</button>
-              </div>
+              <div class="en__submit"><button>Give $AMOUNT $FREQUENCY</button></div>
             </div>
           </div>
           <div
@@ -1541,15 +1485,17 @@
           >
             <div class="en__component en__component--codeblock">
               <div style="text-align: center" class="trust-logos">
-                <a
+                <a 
                   href="https://give.org/charity-reviews/national/Human-Services/Amnesty-International-of-the-USA-in-New-York-ny-143"
                   target="_blank"
                   tabindex="-1"
-                  ><img
-                    alt=""
-                    class="bbb-logo grayscale"
-                    data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/bbb-logo.png?v=1613334590000"
-                    style="height: 38px; width: 100px"
+                ><img
+                  alt=""
+                  class="bbb-logo grayscale"
+                  data-src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/bbb-logo.png?v=1613334590000"
+                  width="100"
+                  height="38"
+                  style="min-height: 38px"
                 /></a>
                 <a
                   href="https://www.guidestar.org/profile/52-0851555"
@@ -1563,6 +1509,9 @@
                     loading="lazy"
                     src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/guidestar-gold-2021.svg?v=1613333768000"
                     data-engrid-data-src-processed="true"
+                    width="38"
+                    height="38"
+                    style="min-height: 38px"
                 /></a>
                 <img
                   alt=""
@@ -1572,13 +1521,64 @@
                   loading="lazy"
                   src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/verisign-2021.png?v=1613334465000"
                   data-engrid-data-src-processed="true"
+                  width="174"
+                  height="32"
+                  style="min-height: 38px"
                 />
               </div>
             </div>
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-footer"
-          ></div>
+          >
+          <div class="en__component en__component--contactblock" style="">
+            <div class="en__contacts en__contacts--hideCheck" style="">
+            <div data-contact="21391" class="en__contact en__contact--21391 en__contact--open" data-node-uid="1">
+            <div class="en__contact__detail" style="">
+            <div class="en__contactDetails" style="">
+            <input class="en__contactDetails__select" type="checkbox" checked="" value="Y" name="contact.21391.send">
+            <div class="en__contactDetails__rows">
+            <div class="en__contactDetails__row en__contactDetails__row--1">
+            <div class="en__contactDetail en__contactDetail--title">
+            Mr
+            </div>
+            <div class="en__contactDetail en__contactDetail--firstName">
+            John
+            </div>
+            <div class="en__contactDetail en__contactDetail--lastName">
+            Doe
+            </div>
+            </div>
+            <div class="en__contactDetails__row en__contactDetails__row--2">
+            <div class="en__contactDetail en__contactDetail--organization">
+            Human Fund
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="en__contactSubject">
+            <input autocomplete="off" class="en__field__input en__field__input--text en__contactSubject__field" type="text" value="My subject" name="contact.21391.subject">
+            </div>
+            <div class="en__contactMessage en__contactMessage--typePlainText">
+            <textarea name="contact.21391.message" class="en__field en__field--textarea en__contactMessage__plainText">Dear
+            
+            My message to John Doe
+            
+            Kind regards,
+            {user_data~First Name} {user_data~Last Name}</textarea>
+            <input name="contact.21391.origmessage" class="en__contactMessage__plainTextOriginal" value="Dear
+            
+            My message to John Doe
+            
+            Kind regards,
+            {user_data~First Name} {user_data~Last Name}" type="hidden">
+            </div>
+            </div>
+            <div class="en__contact__toggle" style=""></div>
+            </div>
+            </div>
+            </div>
+        </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-footerOutside"
           ></div>
@@ -1604,6 +1604,7 @@
                       src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/aiusa-logo-small-2021.svg?v=1613335626000"
                       height="62px"
                       width="62px"
+                      style="min-height: 62px"
                       decoding="async"
                       loading="lazy"
                       data-engrid-data-src-processed="true"
@@ -1628,24 +1629,36 @@
                       <a href="#" class="icon-facebook grayscale"
                         ><img
                           src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/facebook.png?v=1614702308000"
+                          width="10"
+                          height="20"
+                          style="min-height: 20px"
                       /></a>
                     </li>
                     <li>
                       <a href="#" class="icon-twitter grayscale"
                         ><img
                           src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/twitter.png?v=1614702311000"
+                          width="24"
+                          height="20"
+                          style="min-height: 20px"
                       /></a>
                     </li>
                     <li>
                       <a href="#" class="icon-instagram grayscale"
                         ><img
                           src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/instagram.png?v=1614702309000"
+                          width="20"
+                          height="20"
+                          style="min-height: 20px"
                       /></a>
                     </li>
                     <li>
                       <a href="#" class="icon-youtube grayscale"
                         ><img
                           src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/youtube.png?v=1614702312000"
+                          width="29"
+                          height="20"
+                          style="min-height: 20px"
                       /></a>
                     </li>
                     <li>
@@ -1658,6 +1671,9 @@
                       <a href="#" class="icon-medium grayscale"
                         ><img
                           src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/medium.png?v=1614702309000"
+                          width="25"
+                          height="20"
+                          style="min-height: 20px"
                       /></a>
                     </li>
                   </ul>

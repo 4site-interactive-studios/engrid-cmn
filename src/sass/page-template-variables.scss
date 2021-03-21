@@ -70,9 +70,6 @@
     // TYPOGRAPHY STRONG
     --theme-typography-strong-font-family: var(--theme-typography-default-font-family);
     --theme-typography-strong-color: initial;
-    --theme-typography-strong-font-size: 14px;
-    --theme-typography-strong-font-weight: bold;
-    --theme-typography-strong-line-height: initial;
         
     // TYPOGRAPHY LABEL
     --theme-typography-label-font-family: var(--theme-font-stack-browser-fonts-cn);
@@ -97,11 +94,11 @@
         
     // TYPOGRAPHY INPUT:FOCUS
     // TYPOGRAPHY INPUT:HOVER
-    --theme-typography-input-focus-hover-color: var(--theme-typography-input-color);
-    --theme-typography-input-focus-hover-background-color: var(--theme-typography-input-background-color);
-    --theme-typography-input-focus-hover-border-color: var(--theme-typography-input-border-color);
-    --theme-typography-input-focus-hover-border-bottom-color: #000000;
-    --theme-typography-input-focus-hover-box-shadow: none;
+    --theme-typography-input-checked-color: var(--theme-typography-input-color);
+    --theme-typography-input-checked-background-color: var(--theme-typography-input-background-color);
+    --theme-typography-input-checked-border-color: var(--theme-typography-input-border-color);
+    --theme-typography-input-checked-border-bottom-color: #000000;
+    --theme-typography-input-checked-box-shadow: none;
         
     // TYPOGRAPHY RADIO
     --theme-typography-radio-content: initial;
@@ -113,9 +110,9 @@
 
     // TYPOGRAPHY RADIO INPUT:FOCUS
     // TYPOGRAPHY RADIO INPUT:HOVER
-    --theme-typography-radio-focus-hover-color: var(--theme-typography-radio-color);
-    --theme-typography-radio-focus-hover-background-color: var(--theme-typography-radio-background-color);
-    --theme-typography-radio-focus-hover-border-color: var(--theme-typography-radio-border-color);
+    --theme-typography-radio-checked-color: var(--theme-typography-radio-color);
+    --theme-typography-radio-checked-background-color: var(--theme-typography-radio-background-color);
+    --theme-typography-radio-checked-border-color: var(--theme-typography-radio-border-color);
 
     // TYPOGRAPHY RADIO INPUT:CHECKED
     --theme-typography-radio-selected-color: var(--theme-typography-radio-background-color);
@@ -131,9 +128,9 @@
 
     // TYPOGRAPHY CHECKBOX INPUT:FOCUS
     // TYPOGRAPHY CHECKBOX INPUT:HOVER
-    --theme-typography-checkbox-focus-hover-color: var(--theme-typography-checkbox-color);
-    --theme-typography-checkbox-focus-hover-background-color: var(--theme-typography-checkbox-background-color);
-    --theme-typography-checkbox-focus-hover-border-color: var(--theme-typography-checkbox-border-color);
+    --theme-typography-checkbox-checked-color: var(--theme-typography-checkbox-color);
+    --theme-typography-checkbox-checked-background-color: var(--theme-typography-checkbox-background-color);
+    --theme-typography-checkbox-checked-border-color: var(--theme-typography-checkbox-border-color);
 
     // TYPOGRAPHY CHECKBOX INPUT:CHECKED
     --theme-typography-checkbox-checked-content:"✓";
@@ -155,11 +152,11 @@
 
     // TYPOGRAPHY SELECT:FOCUS
     // TYPOGRAPHY SELECT:HOVER
-    --theme-typography-select-focus-hover-color: var(--theme-typography-select-color);
-    --theme-typography-select-focus-hover-background-color: var(--theme-typography-select-background-color);
-    --theme-typography-select-focus-hover-border-color: var(--theme-typography-select-border-color);
-    --theme-typography-select-focus-hover-border-bottom-color: #000000;
-    --theme-typography-select-focus-hover-box-shadow: var(--theme-typography-input-focus-hover-box-shadow);
+    --theme-typography-select-checked-color: var(--theme-typography-select-color);
+    --theme-typography-select-checked-background-color: var(--theme-typography-select-background-color);
+    --theme-typography-select-checked-border-color: var(--theme-typography-select-border-color);
+    --theme-typography-select-checked-border-bottom-color: #000000;
+    --theme-typography-select-checked-box-shadow: var(--theme-typography-input-checked-box-shadow);
 
     // TYPOGRAPHY TEXTAREA
     --theme-typography-textarea-font-family: var(--theme-typography-default-font-family);
@@ -176,10 +173,10 @@
         
     // TYPOGRAPHY TEXTAREA:FOCUS
     // TYPOGRAPHY TEXTAREA:HOVER
-    --theme-typography-textarea-focus-hover-color: var(--theme-typography-textarea-color);
-    --theme-typography-textarea-focus-hover-background-color: var(--theme-typography-textarea-background-color);
-    --theme-typography-textarea-focus-hover-border-color: var(--theme-cta);
-    --theme-typography-textarea-focus-hover-box-shadow: var(--theme-typography-input-focus-hover-box-shadow);
+    --theme-typography-textarea-checked-color: var(--theme-typography-textarea-color);
+    --theme-typography-textarea-checked-background-color: var(--theme-typography-textarea-background-color);
+    --theme-typography-textarea-checked-border-color: var(--theme-cta);
+    --theme-typography-textarea-checked-box-shadow: var(--theme-typography-input-checked-box-shadow);
 
     // TYPOGRAPHY BUTTON
     --theme-typography-button-font-family: var(--theme-typography-default-font-family);
@@ -191,42 +188,89 @@
     --theme-typography-button-border-width: 2px;
     --theme-typography-button-border-color: #e4e4e4;
     --theme-typography-button-border-radius: initial;
-    
-    // TYPOGRAPHY BUTTON:FOCUS
+
     // TYPOGRAPHY BUTTON:HOVER
-    --theme-typography-button-focus-hover-color: var(--theme-typography-button-color);
-    --theme-typography-button-focus-hover-background-color: var(--theme-typography-button-background-color);
-    --theme-typography-button-focus-hover-border-color: var(--theme-typography-button-focus-hover-color);
+    --theme-typography-button-hover-color: var(--theme-typography-button-color);
+    --theme-typography-button-hover-background-color: var(--theme-typography-button-background-color);
+    --theme-typography-button-hover-border-color: var(--theme-typography-button-color);
 
-    // TYPOGRAPHY PRIMARY BUTTON
-    --theme-typography-primary-button-font-family: var(--theme-typography-button-font-family);
-    --theme-typography-primary-button-color: #252525;
-    --theme-typography-primary-button-font-size: var(--theme-typography-button-font-size);
-    --theme-typography-primary-button-font-weight: var(--theme-typography-button-font-weight);
-    --theme-typography-primary-button-line-height: var(--theme-typography-button-line-height);
-    --theme-typography-primary-button-background-color: var(--theme-cta);
-    --theme-typography-primary-button-border-width: var(--theme-typography-button-border-width);
-    --theme-typography-primary-button-border-color: var(--theme-cta);
-    --theme-typography-primary-button-border-radius: var(--theme-typography-button-border-radius);
+    // TYPOGRAPHY BUTTON:CHECKED
+    --theme-typography-button-checked-color: var(--color-white);
+    --theme-typography-button-checked-background-color: #252525;
+    --theme-typography-button-checked-border-color: #252525;
 
-    // TYPOGRAPHY PRIMARY BUTTON:FOCUS
-    // TYPOGRAPHY PRIMARY BUTTON:HOVER  
-    --theme-typography-primary-button-focus-hover-color: var(--theme-typography-primary-button-color);
-    --theme-typography-primary-button-focus-hover-background-color: var(--theme-typography-primary-button-background-color);
-    --theme-typography-primary-button-focus-hover-border-color: var(--theme-typography-primary-button-border-color);
+    // TYPOGRAPHY GIVING FREQUENCY BUTTON
+    --theme-typography-recurring-frequency-button-font-family: var(--theme-typography-button-font-family);
+    --theme-typography-recurring-frequency-button-color: var(--theme-typography-button-color);
+    --theme-typography-recurring-frequency-button-font-size: var(--theme-typography-button-font-size);
+    --theme-typography-recurring-frequency-button-font-weight: var(--theme-typography-button-font-weight);
+    --theme-typography-recurring-frequency-button-line-height: var(--theme-typography-button-line-height);
+    --theme-typography-recurring-frequency-button-background-color: var(--theme-typography-button-background-color);
+    --theme-typography-recurring-frequency-button-border-width: var(--theme-typography-button-border-width);
+    --theme-typography-recurring-frequency-button-border-color: var(--theme-typography-button-border-color);
+    --theme-typography-recurring-frequency-button-border-radius: var(--theme-typography-button-border-radius);
+
+    // TYPOGRAPHY GIVING FREQUENCY BUTTON:HOVER  
+    --theme-typography-recurring-frequency-button-hover-color: var(--theme-typography-button-hover-color);
+    --theme-typography-recurring-frequency-button-hover-background-color: var(--theme-typography-button-hover-background-color);
+    --theme-typography-recurring-frequency-button-hover-border-color: var(--theme-typography-button-hover-border-color);    
+
+    // TYPOGRAPHY GIVING FREQUENCY BUTTON:CHECKED
+    --theme-typography-recurring-frequency-button-checked-color: var(--theme-typography-button-hover-color);
+    --theme-typography-recurring-frequency-button-checked-background-color: var(--theme-cta);
+    --theme-typography-recurring-frequency-button-checked-border-color: var(--theme-cta);
+
+    // TYPOGRAPHY GIVING AMOUNT BUTTON
+    --theme-typography-donation-amount-button-font-family: var(--theme-typography-button-font-family);
+    --theme-typography-donation-amount-button-color: var(--theme-typography-button-color);
+    --theme-typography-donation-amount-button-font-size: var(--theme-typography-button-font-size);
+    --theme-typography-donation-amount-button-font-weight: var(--theme-typography-button-font-weight);
+    --theme-typography-donation-amount-button-line-height: var(--theme-typography-button-line-height);
+    --theme-typography-donation-amount-button-background-color: var(--theme-typography-button-background-color);
+    --theme-typography-donation-amount-button-border-width: var(--theme-typography-button-border-width);
+    --theme-typography-donation-amount-button-border-color: var(--theme-typography-button-border-color);
+    --theme-typography-donation-amount-button-border-radius: var(--theme-typography-button-border-radius);
+
+    // TYPOGRAPHY GIVING AMOUNT BUTTON:HOVER  
+    --theme-typography-donation-amount-button-hover-color: var(--theme-typography-button-hover-color);
+    --theme-typography-donation-amount-button-hover-background-color: var(--theme-typography-button-hover-background-color);
+    --theme-typography-donation-amount-button-hover-border-color: var(--theme-typography-button-hover-border-color);  
+
+    // TYPOGRAPHY GIVING AMOUNT BUTTON:CHECKED
+    --theme-typography-donation-amount-button-checked-color: var(--color-white);
+    --theme-typography-donation-amount-button-checked-background-color: var(--theme-typography-button-color);
+    --theme-typography-donation-amount-button-checked-border-color: var(--theme-typography-button-color);  
+
+    // TYPOGRAPHY GIVE BY SELECT BUTTON
+    --theme-typography-give-by-select-button-font-family: var(--theme-typography-button-font-family);
+    --theme-typography-give-by-select-button-color: var(--theme-typography-button-color);
+    --theme-typography-give-by-select-button-font-size: var(--theme-typography-button-font-size);
+    --theme-typography-give-by-select-button-font-weight: var(--theme-typography-button-font-weight);
+    --theme-typography-give-by-select-button-line-height: var(--theme-typography-button-line-height);
+    --theme-typography-give-by-select-button-background-color: var(--theme-typography-button-background-color);
+    --theme-typography-give-by-select-button-border-width: var(--theme-typography-button-border-width);
+    --theme-typography-give-by-select-button-border-color: var(--theme-typography-button-border-color);
+    --theme-typography-give-by-select-button-border-radius: var(--theme-typography-button-border-radius);
+
+    // TYPOGRAPHY GIVE BY SELECT BUTTON:HOVER  
+    --theme-typography-give-by-select-button-hover-color: var(--theme-typography-button-hover-color);
+    --theme-typography-give-by-select-button-hover-background-color: var(--theme-typography-button-hover-background-color);
+    --theme-typography-give-by-select-button-hover-border-color: var(--theme-typography-button-hover-border-color);
+
+    // TYPOGRAPHY GIVE BY SELECT BUTTON:CHECKED
+    --theme-typography-give-by-select-button-checked-color: var(--color-white);
+    --theme-typography-give-by-select-button-checked-background-color: var(--theme-typography-button-color);
+    --theme-typography-give-by-select-button-checked-border-color: var(--theme-typography-button-color);
     
     // TYPOGRAPHY A
     --theme-typography-a-font-family: var(--theme-typography-headline-font-family);
     --theme-typography-a-color: initial;
-    --theme-typography-a-font-size: var(--theme-root-font-size);
-    --theme-typography-a-font-weight: initial;
-    --theme-typography-a-line-height: initial;
     --theme-typography-a-text-decoration: initial;
 
     // TYPOGRAPHY A:FOCUS
     // TYPOGRAPHY A:HOVER
-    --theme-typography-a-focus-hover-color: var(--theme-typography-a-color);
-    --theme-typography-a-focus-hover-text-decoration: initial;
+    --theme-typography-a-checked-color: var(--theme-typography-a-color);
+    --theme-typography-a-checked-text-decoration: initial;
 
     // CTA COLORS
     --theme-cta: #ffff00;
@@ -357,16 +401,16 @@
     --give-annual-donation-amount-appended-label: " Annually";
 
     // IMAGE ATTRIBUTION OVERLAY
-    --theme-image-attribution-overlay-font-family: var(--theme-typography-default-font-family);
-    --theme-image-attribution-overlay-color: #ffffff;
-    --theme-image-attribution-overlay-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-    --theme-image-attribution-overlay-font-size: 12px; 
-    --theme-image-attribution-overlay-font-style: normal; 
-    --theme-image-attribution-overlay-font-weight: 700;
-    --theme-image-attribution-overlay-text-transform: uppercase;
-    --theme-image-attribution-overlay-margin: 1.25ch 0 0 1.5ch;
-    --theme-image-attribution-overlay-padding: 1ch 1.25ch 0.5ch 1.25ch;
-    --theme-image-attribution-overlay-background-color: rgba(0, 0, 0, 0.25);    
+    --theme-media-attribution-overlay-font-family: var(--theme-typography-default-font-family);
+    --theme-media-attribution-overlay-color: #ffffff;
+    --theme-media-attribution-overlay-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    --theme-media-attribution-overlay-font-size: 12px; 
+    --theme-media-attribution-overlay-font-style: normal; 
+    --theme-media-attribution-overlay-font-weight: 700;
+    --theme-media-attribution-overlay-text-transform: uppercase;
+    --theme-media-attribution-overlay-margin: 1.25ch 0 0 1.5ch;
+    --theme-media-attribution-overlay-padding: 1ch 1.25ch 0.5ch 1.25ch;
+    --theme-media-attribution-overlay-background-color: rgba(0, 0, 0, 0.25);    
 
     // ADD THEME CUSTOM CSS PROPERTIES HERE
     // TYPOGRAPHY HEADLINE
