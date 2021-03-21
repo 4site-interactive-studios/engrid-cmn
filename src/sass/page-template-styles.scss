@@ -1070,12 +1070,12 @@ button:focus{
               /* autoprefixer grid: off */
               grid-template-columns:
               [
-              pc-start lpc-start]  minmax(0px, 0px)        [lpc-end
-              cc-start lcc-start]  minmax(0px, 128px)      [lcc-end
-              bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
-              rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
-              rcc-start]           minmax(0px, 1fr)        [rcc-end cc-end
-              rpc-start]           minmax(0px, 0px)        [rpc-end pc-end               
+                pc-start lpc-start]  minmax(0px, 1fr)        [lpc-end
+                cc-start lcc-start]  minmax(0px, 128px)      [lcc-end
+                bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
+                rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
+                rcc-start]           minmax(0px, 800px)      [rcc-end cc-end
+                rpc-start]           minmax(0px, 1fr)        [rpc-end pc-end               
               ];
           }
 
