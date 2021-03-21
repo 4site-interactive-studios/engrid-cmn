@@ -32,6 +32,14 @@ h1 {
   margin-bottom: 0px;
 }
 
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: inline-block;
+}
+
 #designed-by-4site-wrapper {
   flex-basis: 100%;
   text-align: center;
@@ -449,7 +457,7 @@ h2.section-header {
       strong {
         font-weight: 700;
         font-size: 19px;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.01rem;
       }
     }
   }
@@ -477,6 +485,12 @@ h2.section-header {
     #menu-wrapper ul[role=menubar] ul[role=menu]{
       left: 0;
       padding: 0 33px 35px 35px;
+    }
+    .desktop-only {
+      display: none;
+    }
+    .mobile-only {
+      // display: inline-block; - iff approved uncomment this line
     }
   }
 }
