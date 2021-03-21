@@ -28,6 +28,10 @@
   }
 }
 
+h1 {
+  margin-bottom: 0px;
+}
+
 #designed-by-4site-wrapper {
   flex-basis: 100%;
   text-align: center;
@@ -506,6 +510,11 @@ h2.section-header {
     font-size: 2.5rem;
     line-height: 3.1rem;
     margin-bottom: 0;
+  }
+  .en__component--copyblock {
+    p {
+      margin: 0 0 10px 0;
+    }
   }
 }
 
