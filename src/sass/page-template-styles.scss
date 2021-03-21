@@ -126,7 +126,7 @@ input.en__field__input--checkbox + label{
 .en__tweetButton__send a{
   background-color: #ffff00;
   padding: 12px 15px;
-  color: #000000;
+  color: #252525;
   min-width: 100px;
   text-transform: uppercase;
 }
@@ -177,7 +177,7 @@ select {
 .en__submit button:hover{
   background-color: var(--theme-cta);
   border-color: var(--theme-cta);
-  color: #000000;
+  color: #252525;
 }
 
 input::placeholder,
@@ -373,7 +373,7 @@ h2.section-header {
   left: 10%;
   width: 16px;
   height: 2px;
-  background: #000000;
+  background: #252525;
   position: absolute;
   transition: 0.3s;
 }
@@ -384,7 +384,7 @@ h2.section-header {
   position: absolute;
   width: 16px;
   height: 2px;
-  background: #000000;
+  background: #252525;
   transition: 0.3s;
 }
 
@@ -625,7 +625,7 @@ button:focus{
         position: absolute;
         right: 0;
         top: -3px;
-        background-color: #000000;
+        background-color: #252525;
       }
       &::after {
         content: " ";
