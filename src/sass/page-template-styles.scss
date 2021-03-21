@@ -790,7 +790,7 @@ button:focus{
   }
 
   // Makes the paypal logo white and selection
-  .give-by-select.en__field--radio .paypal.en__field__item input[type="radio"]:checked+label span{
+  .give-by-select.en__field--radio .paypal.en__field__item input[type=radio]:checked+label span{
     filter: invert(100%);
   }
 
