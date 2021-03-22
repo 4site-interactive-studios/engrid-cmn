@@ -783,7 +783,8 @@ button:focus{
 .en__field--recurrfreq {
   padding-right: 0;
   .en__field__item {
-    max-width: calc(100% / 3);
+    flex-basis: calc(100% / 3);
+    min-width: 12ch;
     // margin-right: 0px;
   }
 }
@@ -806,12 +807,11 @@ button:focus{
     font-weight: 400;
   }
 
- 
-
   .card,
   .check,
   .paypal {
     flex-basis: calc(100% / 3);
+    min-width: 12ch;
   }
 
   // Makes the paypal logo white and selection
@@ -953,36 +953,48 @@ button:focus{
 * # LAYOUT MOBILE STYLINGS
 * ##########################################################
 */
+  @mixin on-mobile {
+    
+    // Let the radio buttons expand to take up their full row
+    .en__field--recurrfreq .en__field__element--radio,
+    .give-by-select .en__field__element--radio{
+      flex-direction: column;
+    }
 
-
-  @mixin desktop-only {
     .desktop-only{
       display: none;
     }
+
+    // Hide the arrow on mobile
+    .inline-monthly-upsell:before{
+      display: none;
+    }
+
+    .en__field {
+      flex-basis: 100%;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    textarea.en__field{
+        padding-left: 1ch;
+        padding-right: 1ch;
+    }
   }
 
-  @mixin mobile-only {
+  @mixin on-desktop {
     .mobile-only{
       display: none;
     }
   }  
 
-  @mixin mobile-content-header {
+  @mixin simplified-content-header {
     #social-proof-wrapper{
       display: none;
     }
   }
 
-  @mixin mobile-form-fields{
-    .en__field {
-        flex-basis: 100%;
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-  }
-
   // Footer Styles
-  @mixin mobile-content-footer {
+  @mixin simplified-content-footer {
     // Adjust donation amount fields to display two to a Row
     .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
       flex-basis: calc((100% * ( 1 / 2)) - 1rem);
@@ -1031,53 +1043,47 @@ button:focus{
     }
   }
 
-  @mixin mobile-page-backgroundImage {
+  @mixin simplified-page-backgroundImage {
     .page-backgroundImage{
       display: none;
     }
   }
 
-  // Applying header footer styles at the correct breakpoints
+  // Universal stylings
+  &[data-engrid-layout]{
+    @media screen and (max-width: 439px){
+      @include on-mobile;
+    }
+
+    @media screen and (min-width: 440px){
+      @include on-desktop;
+    }
+  }
+
   &[data-engrid-layout="centerleft1col"],
   &[data-engrid-layout="centercenter1col"],
   &[data-engrid-layout="centerright1col"]{
     @media screen and (max-width: 774px) { 
-      @include mobile-content-header;
-      @include mobile-form-fields;
-      @include mobile-content-footer;
-      @include mobile-page-backgroundImage;
-      @include desktop-only;
-    }
-    @media screen and (min-width: 775px) { 
-      @include mobile-only;
+      @include simplified-content-header;
+      @include simplified-content-footer;
+      @include simplified-page-backgroundImage;
     }
   }
 
-  // Always use the mobile header and footer
   &[data-engrid-layout="leftleft1col"],
   &[data-engrid-layout="rightright1col"]{
     @media screen and (max-width: 774px) { 
-      @include mobile-content-header;
-      @include mobile-form-fields;
-      @include mobile-content-footer;
-      @include mobile-page-backgroundImage;
-      @include desktop-only;
-    }
-    @media screen and (min-width: 775px) { 
-      @include mobile-only;
+      @include simplified-content-header;
+      @include simplified-content-footer;
+      @include simplified-page-backgroundImage;
     }
   }
 
   &[data-engrid-layout="centercenter2col"]{
     @media screen and (max-width: 999px) { 
-      @include mobile-content-header;
-      @include mobile-form-fields;
-      @include mobile-content-footer;
-      @include mobile-page-backgroundImage;
-      @include desktop-only;
-    }
-    @media screen and (min-width: 1000px) { 
-      @include mobile-only;
+      @include simplified-content-header;
+      @include simplified-content-footer;
+      @include simplified-page-backgroundImage;
     }
   }    
 
