@@ -979,6 +979,12 @@ button:focus{
         padding-left: 1ch;
         padding-right: 1ch;
     }
+
+    #menu-wrapper ul[role="menubar"] ul[role="menu"]{
+      left: -162px;
+      padding-right: 28px;
+      text-align: right;
+    }
   }
 
   @mixin on-desktop {
