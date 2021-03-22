@@ -94,7 +94,7 @@ h1 {
   top: 10px;
   font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: 0.1rem;
+  // letter-spacing: 0.1rem;
 }
 
 .en__component--contactblock .en__contactDetails__rows:after{
@@ -102,7 +102,7 @@ h1 {
   top: 6px;
   font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: 0.1rem;
+  // letter-spacing: 0.1rem;
 }
 
 input.en__field__input--checkbox:checked + label,
@@ -147,7 +147,7 @@ input.en__field__input--checkbox + label{
   padding: 12px 5px;
   width: 100%;
   text-transform: uppercase;
-  font-family: "AmnestyTradeGothic";
+  font-family: var(--theme-font-stack-aiusa-bold-condensed);
   justify-content: center;
   display: inline-block;
   text-align: center;
@@ -166,14 +166,14 @@ select {
   label {
     letter-spacing: 0.06rem;
     font-weight: 700;
-    letter-spacing: 0.1rem;
+    // letter-spacing: 0.1rem;
   }
 }
 
 .en__submit button {
-  font-family: "AmnestyTradeGothic";
+  font-family: var(--theme-font-stack-aiusa-bold-condensed);
   font-weight: 700;
-  letter-spacing: 0.1rem;
+  // letter-spacing: 0.1rem;
 }
 
 // @TODO These button styles should be handled more holistically upstream in ENGRID-SCRIPTS with Custom CSS Properties
@@ -192,7 +192,7 @@ select {
 h2.section-header {
   width: 100%;
   text-align: center;
-  font-family: "AmnestyTradeGothic";
+  font-family: var(--theme-font-stack-aiusa-bold-condensed);
   font-weight: 700;
   position: relative;
   letter-spacing: 1.25px;
@@ -248,6 +248,10 @@ h2.section-header {
   border: var(--theme-typography-input-border-width) solid var(--theme-typography-input-border-color);
 }
 
+figure.media-with-attribution figattribution a{
+  font-family: var(--theme-font-stack-aiusa-bold-condensed);
+}
+
 /*
 * ##########################################################
 * # MAIN MENU WITH FLYOUT
@@ -258,12 +262,13 @@ h2.section-header {
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
+  
 
   /* Menu copied from: https://www.w3.org/TR/wai-aria-practices-1.2/examples/menubar/menubar-1/menubar-1.html# */
   ul[role="menubar"] {
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 0.1rem;
+    // letter-spacing: 0.1rem;
     // margin: 10px;
     // padding: 1rem;
     padding-right: 20px;
@@ -307,6 +312,7 @@ h2.section-header {
   ul[role="menubar"] a[role="menuitem"] {
     text-decoration: none;
     color: black;
+    font-family: var(--theme-font-stack-aiusa-bold-condensed);
   }
 
   ul[role="menubar"] li {
@@ -449,7 +455,7 @@ h2.section-header {
       strong {
         font-weight: 700;
         font-size: 1rem;
-        letter-spacing: 0.01rem;
+        // letter-spacing: 0.01rem;
       }
     }
   }
@@ -665,7 +671,7 @@ button:focus{
     margin-top: 10px;
     text-align: center;
     font-weight: 700;
-    letter-spacing: 0.1rem;
+    // letter-spacing: 0.1rem;
 
     p{
       margin: 0;
@@ -719,7 +725,8 @@ button:focus{
     font-size: 1rem;
     line-height: 1.25rem;
     font-weight: 700;
-    letter-spacing: 0.1rem;
+    // letter-spacing: 0.1rem;
+    font-family: var(--theme-font-stack-aiusa-bold-condensed);
   }
   &::before {
     content: "";
@@ -773,7 +780,7 @@ button:focus{
   font-family: inherit;
   font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.1rem;
+  // letter-spacing: 0.1rem;
   line-height: 0;
   height: 0;
   left: 1rem;
@@ -919,7 +926,7 @@ button:focus{
       .en__pg__detail {
         .en__pg__name {
           font-weight: 700;
-          letter-spacing: 0.1rem;
+          // letter-spacing: 0.1rem;
           text-transform: none;
         }
       }
@@ -936,7 +943,7 @@ button:focus{
 .en__component--ecardblock {
   h2 {
     font-weight: 700;
-    letter-spacing: 0.1rem;
+    // letter-spacing: 0.1rem;
   }
   .en__ecardrecipients__email input, .en__ecardrecipients__name input {
     width: 100%;
@@ -1015,7 +1022,7 @@ button:focus{
         padding-top: 32px;
         #footer-menu-wrapper {
           order: 2;
-          letter-spacing: 0.1ch;
+          // letter-spacing: 0.1ch;
           margin-bottom: 26px;
           ul#footer-menu {
             justify-content: center;
