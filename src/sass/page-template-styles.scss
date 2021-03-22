@@ -32,14 +32,6 @@ h1 {
   margin-bottom: 0px;
 }
 
-.mobile-only {
-  display: none;
-}
-
-.desktop-only {
-  display: inline-block;
-}
-
 #designed-by-4site-wrapper {
   flex-basis: 100%;
   text-align: center;
@@ -347,12 +339,12 @@ h2.section-header {
     display: none;
     position: absolute;
     top: -2px;
-    left: -36px;
+    left: -33px;
     margin: 0;
     padding: 0;
     background-color: var(--color-white);
     box-shadow: -3px 8px 8px rgba(0, 0, 0, 0.04%);
-    padding-right: 33px;
+    padding-right: 21px;
     padding-bottom: 56px;
     padding-left: 71px;
   }
@@ -456,7 +448,7 @@ h2.section-header {
       }
       strong {
         font-weight: 700;
-        font-size: 19px;
+        font-size: 1rem;
         letter-spacing: 0.01rem;
       }
     }
@@ -465,7 +457,7 @@ h2.section-header {
 }
 
 // On small screens we need to stack the header and menu
-@media screen and (max-width: 400px) { 
+@media screen and (max-width: 319px) { 
 
   .content-header{
     header{
@@ -486,12 +478,6 @@ h2.section-header {
       left: 0;
       padding: 0 33px 35px 35px;
     }
-    .desktop-only {
-      display: none;
-    }
-    .mobile-only {
-      // display: inline-block; - iff approved uncomment this line
-    }
   }
 }
 
@@ -505,6 +491,19 @@ h2.section-header {
 .body-header {
   padding-left: 0;
   padding-right: 0;
+}
+
+/*
+* ##########################################################
+* # BODY TITLE
+* ##########################################################
+*/
+
+.body-title {
+  :last-child{
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 /*
@@ -524,11 +523,6 @@ h2.section-header {
     font-size: 2.5rem;
     line-height: 3.1rem;
     margin-bottom: 0;
-  }
-  .en__component--copyblock {
-    p {
-      margin: 0 0 10px 0;
-    }
   }
 }
 
@@ -866,34 +860,34 @@ button:focus{
       margin-right: 0px;
     }
 
-    @media screen and (max-width: 774px) {
-      a {
-        flex: 1 1 20%;
-        max-width: 20%;
-        margin-right: 10px;
-      }
-      img.verisign-logo {
-          max-width: 50%;
-      }
-    }
+    // @media screen and (max-width: 774px) {
+    //   a {
+    //     flex: 1 1 20%;
+    //     max-width: 20%;
+    //     margin-right: 10px;
+    //   }
+    //   img.verisign-logo {
+    //       max-width: 50%;
+    //   }
+    // }
 
   } 
 
-  @media screen and (max-width: 400px) { 
-    .trust-logos{
-      flex-direction: column;
+//   @media screen and (max-width: 400px) { 
+//     .trust-logos{
+//       flex-direction: column;
 
-      > * {
-        margin-left: 0;
-        margin-right: 0;
-      }
+//       > * {
+//         margin-left: 0;
+//         margin-right: 0;
+//       }
 
-      > :not(:last-child){
-        padding-bottom: 0.5rem;
-      }
-    }
+//       > :not(:last-child){
+//         padding-bottom: 0.5rem;
+//       }
+//     }
 
-}
+// }
 
 /*
 * ##########################################################
@@ -960,9 +954,30 @@ button:focus{
 * ##########################################################
 */
 
+
+  @mixin desktop-only {
+    .desktop-only{
+      display: none;
+    }
+  }
+
+  @mixin mobile-only {
+    .mobile-only{
+      display: none;
+    }
+  }  
+
   @mixin mobile-content-header {
     #social-proof-wrapper{
       display: none;
+    }
+  }
+
+  @mixin mobile-form-fields{
+    .en__field {
+        flex-basis: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
     }
   }
 
@@ -1028,26 +1043,43 @@ button:focus{
   &[data-engrid-layout="centerright1col"]{
     @media screen and (max-width: 774px) { 
       @include mobile-content-header;
+      @include mobile-form-fields;
       @include mobile-content-footer;
       @include mobile-page-backgroundImage;
+      @include desktop-only;
+    }
+    @media screen and (min-width: 775px) { 
+      @include mobile-only;
     }
   }
 
   // Always use the mobile header and footer
   &[data-engrid-layout="leftleft1col"],
   &[data-engrid-layout="rightright1col"]{
-    @include mobile-content-header;
-    @include mobile-content-footer;
-    @include mobile-page-backgroundImage;
+    @media screen and (max-width: 774px) { 
+      @include mobile-content-header;
+      @include mobile-form-fields;
+      @include mobile-content-footer;
+      @include mobile-page-backgroundImage;
+      @include desktop-only;
+    }
+    @media screen and (min-width: 775px) { 
+      @include mobile-only;
+    }
   }
 
   &[data-engrid-layout="centercenter2col"]{
     @media screen and (max-width: 999px) { 
       @include mobile-content-header;
+      @include mobile-form-fields;
       @include mobile-content-footer;
       @include mobile-page-backgroundImage;
+      @include desktop-only;
     }
-  }  
+    @media screen and (min-width: 1000px) { 
+      @include mobile-only;
+    }
+  }    
 
 } // END AIUSA ENGRID CUSTOM THEME
 
@@ -1214,12 +1246,6 @@ button:focus{
         ];
       }
     }
-
-    .en__field {
-      flex-basis: 100% !important;
-      padding-left: 0px !important;
-      padding-right: 0px !important;
-  }
 }
 
 [data-engrid-theme="aiusa"][data-engrid-layout="centercenter2col"]{
