@@ -18,9 +18,9 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
-      title: "AIUSA - Engaging Networks Page - Donation",
-      filename: "page-donation-aiusa.html",
-      template: "./src/templates/page-donation-aiusa.html",
+      title: "CMN - Engaging Networks Page - Donation",
+      filename: "page-donation-cmn.html",
+      template: "./src/templates/page-donation-cmn.html",
       inject: true,
       minify: {
         removeComments: false,

@@ -1,7 +1,7 @@
 /* All SCSS variables in engrid-variables.scss can be used as CSS Custom Properties on the theme */
 
 /* All CSS Custom Properties should be scoped to the theme using CSS Data Attributes. */
-[data-engrid-theme="aiusa"]{
+[data-engrid-theme="cmn"]{
     // FIXED COLOR PALETTE
     --color-transparent: transparent;
     --color-white: rgba(255, 255, 255, 1);
@@ -218,7 +218,7 @@
     --theme-typography-recurring-frequency-button-hover-border-color: var(--theme-typography-button-hover-border-color);    
 
     // TYPOGRAPHY GIVING FREQUENCY BUTTON:CHECKED
-    --theme-typography-recurring-frequency-button-checked-color: var(--theme-typography-button-hover-color);
+    --theme-typography-recurring-frequency-button-checked-color: var(--color-white);
     --theme-typography-recurring-frequency-button-checked-background-color: var(--theme-cta);
     --theme-typography-recurring-frequency-button-checked-border-color: var(--theme-cta);
 
@@ -275,7 +275,7 @@
     --theme-typography-a-checked-text-decoration: initial;
 
     // CTA COLORS
-    --theme-cta: #ffff00;
+    --theme-cta: #012169;
     --theme-cta-hover: #ffff00;
 
     // ENGRID SECTIONS BACKGROUND COLOR
@@ -372,7 +372,7 @@
     // REF: http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/
     --theme-root-font-size: 18px; // Sets a baseline font size for all other REM based font-sizes to relatively build off of
 
-    --theme-page-backgroundImage-url: "url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)"; // Invisible GIF
+    --theme-page-backgroundImage-url: "url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10049/1b+resized+2.jpg?v=1604523738000)"; // Invisible GIF
 
     // @TODO Revisit these spacing values and calculations
     // @BODY Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
@@ -409,15 +409,15 @@
     --theme-media-attribution-overlay-font-size: 12px; 
     --theme-media-attribution-overlay-font-style: normal; 
     --theme-media-attribution-overlay-font-weight: 700;
-    --theme-media-attribution-overlay-text-transform: uppercase;
+    --theme-media-attribution-overlay-text-transform: none;
     --theme-media-attribution-overlay-margin: 1.25ch 0 0 1.5ch;
     --theme-media-attribution-overlay-padding: 1ch 1.25ch 0.5ch 1.25ch;
     --theme-media-attribution-overlay-background-color: rgba(0, 0, 0, 0.25);    
 
     // ADD THEME CUSTOM CSS PROPERTIES HERE
     // TYPOGRAPHY HEADLINE
-    --theme-font-stack-aiusa: "AmnestyTradeGothic", var(--theme-font-stack-browser-fonts);
-    --theme-font-stack-aiusa-bold-condensed: "AmnestyTradeGothicBdCn", var(--theme-font-stack-browser-fonts);
+    --theme-font-stack-aiusa: "Oswald", var(--theme-font-stack-browser-fonts);
+    --theme-font-stack-aiusa-bold-condensed: "Oswald", var(--theme-font-stack-browser-fonts);
     --theme-typography-headline-font-family: var(--theme-font-stack-aiusa);
     --theme-typography-headline-font-weight: 700;
 }
