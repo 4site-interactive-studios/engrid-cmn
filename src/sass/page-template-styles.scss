@@ -13,7 +13,6 @@
 * ##########################################################
 */
 
-/* All headlines, labels, abd button text within the body are capitalized */
 [class*="body-"] {
   h1,
   h2,
@@ -24,12 +23,16 @@
   label,
   button,
   .button {
-    text-transform: uppercase;
+    text-transform: none;
   }
 }
 
 h1 {
   margin-bottom: 0px;
+}
+
+p, h1, h2, h3, h4, h5 {
+  color: var(--theme-cta);
 }
 
 #designed-by-4site-wrapper {
@@ -147,7 +150,7 @@ input.en__field__input--checkbox + label{
   padding: 12px 5px;
   width: 100%;
   text-transform: uppercase;
-  font-family: var(--theme-font-stack-aiusa-bold-condensed);
+  font-family: var(--theme-font-stack-cmn-bold-condensed);
   justify-content: center;
   display: inline-block;
   text-align: center;
@@ -171,17 +174,22 @@ select {
 }
 
 .en__submit button {
-  font-family: var(--theme-font-stack-aiusa-bold-condensed);
+  font-family: var(--theme-font-stack-cmn-bold-condensed);
   font-weight: 700;
+  // color:#ffffff !important;
   // letter-spacing: 0.1rem;
 }
 
 // @TODO These button styles should be handled more holistically upstream in ENGRID-SCRIPTS with Custom CSS Properties
-.en__submit button,
+.en__submit button, 
 .en__submit button:hover{
   background-color: var(--theme-cta);
   border-color: var(--theme-cta);
-  color: #252525;
+  color: #ffffff;
+}
+
+.en__submit button:hover{
+  background-color:rgba(223,70,97,1);
 }
 
 input::placeholder,
@@ -192,7 +200,7 @@ select {
 h2.section-header {
   width: 100%;
   text-align: center;
-  font-family: var(--theme-font-stack-aiusa-bold-condensed);
+  font-family: var(--theme-font-stack-cmn-bold-condensed);
   font-weight: 700;
   position: relative;
   letter-spacing: 1.25px;
@@ -221,7 +229,21 @@ h2.section-header {
 
 .en__ecarditems__button{
   background: var(--theme-cta);
-  color: var(--color-black);
+  color: var(--color-white);
+}
+
+.en__ecarditems__addrecipient {
+  position:absolute;
+}
+
+.en__ecarditems__showprev {
+  width:100%;
+}
+
+.en__ecarditems__thumb {
+  display: inline-block;
+  width:45% !important;
+  aspect-ratio: auto !important;
 }
 
 .en__ecardrecipients__email input.invalid,
@@ -249,183 +271,52 @@ h2.section-header {
 }
 
 figure.media-with-attribution figattribution a{
-  font-family: var(--theme-font-stack-aiusa-bold-condensed);
+  font-family: var(--theme-font-stack-cmn-bold-condensed);
 }
 
 /*
 * ##########################################################
-* # MAIN MENU WITH FLYOUT
+* # PAGE HEADER
 * ##########################################################
 */
-  #menu-wrapper {
 
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
+.masthead {
+  background-color:#012169;
+
+}
+
+.text-left {
+  text-align:center;
+  max-width:900px;
+  display:flex;
+  justify-content: center;
+}
+
+.masthead h1 {margin:0;}
+
+h1.tag a {
+  color:#fff !important;
+  margin:0 0 0 20px;
+  border-left:1px solid #fff;
+  font-size:28px;
+  padding-left:20px;
+  font-weight: 500;
+  text-transform: uppercase !important;
+  line-height:50px;
+}
+
+@media screen and (max-width:800px) {
+
   
+  .mobilehide {display:none !important;}
 
-  /* Menu copied from: https://www.w3.org/TR/wai-aria-practices-1.2/examples/menubar/menubar-1/menubar-1.html# */
-  ul[role="menubar"] {
-    text-transform: uppercase;
-    font-weight: 700;
-    // letter-spacing: 0.1rem;
-    // margin: 10px;
-    // padding: 1rem;
-    padding-right: 20px;
-    // font-size: 110%;
-    list-style: none;
-    // background-color: #eee;
-    display: inline-block;
+  .text-left {
+    text-align:center;
+    padding-left:0;
   }
 
-  ul[role="menubar"] [role="menuitem"],
-  ul[role="menubar"] [role="separator"] {
-    // padding: 0.25em;
-    // background-color: #eee;
-    // border: 2px solid #eee;
-  }
-
-  // ul[role="menubar"] [role="separator"] {
-  //   padding-top: 0.15em;
-  //   background-image: url('https://www.w3.org/TR/wai-aria-practices-1.2/examples/menubar/menubar-1/images/separator.png');
-  //   background-position: center;
-  //   background-repeat: repeat-x;
-  // }
-
-
-  //       &:hover {
-  //         text-decoration: underline solid black 2px;
-  //         background-color: var(--theme-cta);
-
-  ul[role="menubar"] [role="menu"] [role="menuitem"]:focus,
-  ul[role="menubar"] [role="menu"] [role="menuitem"]:hover,
-  ul[role="menubar"] [role="menu"] [role="separator"]:focus,
-  ul[role="menubar"] [role="menu"] [role="separator"]:hover {
-    // background-color: black;
-    // color: white;
-    text-decoration: underline solid black 2px;
-    background-color: var(--theme-cta);
-    display: inline-block;
-    // outline-offset: 3px;
-  }
-
-  ul[role="menubar"] a[role="menuitem"] {
-    text-decoration: none;
-    color: black;
-    font-family: var(--theme-font-stack-aiusa-bold-condensed);
-  }
-
-  ul[role="menubar"] li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  ul[role="menubar"] > li {
-    display: inline;
-    position: relative;
-  }
-
-  ul[role="menubar"] > li > a{
-    
-  }
-
-  // ul[role="menubar"] > li > a::before {
-  //   content: url('https://www.w3.org/TR/wai-aria-practices-1.2/examples/menubar/menubar-1/images/down-arrow-brown.png');
-  // }
-
-  ul[role="menubar"] > li > [role="menuitem"]{
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 16px;
-    padding-right: 8px;
-  }
-
-  ul[role="menubar"] ul[role="menu"] {
-    display: none;
-    position: absolute;
-    top: -2px;
-    left: -33px;
-    margin: 0;
-    padding: 0;
-    background-color: var(--color-white);
-    box-shadow: -3px 8px 8px rgba(0, 0, 0, 0.04%);
-    padding-right: 21px;
-    padding-bottom: 56px;
-    padding-left: 71px;
-  }
-
-  ul[role="menubar"] ul[role="menu"] [role="menuitem"]{
-    padding-top: 8px;
-    padding-bottom: 2px;
-    margin-bottom: 8px;
-  }
-
-  ul[role="menubar"] ul[role="menu"] li a {
-    display: block;
-    word-break: normal;
-    white-space: nowrap;
-    margin: 0;
-  }
-
-  .hamburger-wrapper {
-    position: relative;
-    left: -0.5rem;
-    top: 1px;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    display: inline-block;
 }
 
-.hamburger {
-  top: 50%;
-  left: 10%;
-  width: 16px;
-  height: 2px;
-  background: #252525;
-  position: absolute;
-  transition: 0.3s;
-}
-
-.hamburger:before,
-.hamburger:after {
-  content: '';
-  position: absolute;
-  width: 16px;
-  height: 2px;
-  background: #252525;
-  transition: 0.3s;
-}
-
-.hamburger:before {
-  top: -5px;
-}
-
-.hamburger:after {
-  top: 5px;
-}
-
-[aria-expanded="true"] .hamburger-wrapper .hamburger {
-  background:rgba(0,0,0,0);
-}
-
-[aria-expanded="true"] .hamburger-wrapper .hamburger:before {
-  top: 0;
-  transform:rotate(45deg);
-}
-
-[aria-expanded="true"] .hamburger-wrapper .hamburger:after {
-  top: 0;
-  transform:rotate(135deg);
-}
-
-// ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]::after {
-//   content: url('https://www.w3.org/TR/wai-aria-practices-1.2/examples/menubar/menubar-1/images/right-arrow-brown.png');
-//   padding-right: 2em;
-// }
-
-}
 
 
 /*
@@ -438,7 +329,7 @@ figure.media-with-attribution figattribution a{
   header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
   #social-proof-wrapper {
     flex: 4;
@@ -460,6 +351,14 @@ figure.media-with-attribution figattribution a{
     }
   }
   
+}
+
+img.heart {
+  width:18px !important;
+  height:20px !important;
+  float:left;
+  margin-right:5px;
+  padding-top:5px;
 }
 
 // On small screens we need to stack the header and menu
@@ -520,10 +419,10 @@ figure.media-with-attribution figattribution a{
 .body-top {
 
   // If the first child is a paragraph or click-to-expand block, add top margin like it was a H1
-  & > p:first-child,
-  & > .click-to-expand-text-wrapper:first-child {
-    margin-top: 0.67rem;
-  }
+  // & > p:first-child,
+  // & > .click-to-expand-text-wrapper:first-child {
+  //   margin-top: 0.67rem;
+  // }
 
   h1 {
     font-size: 2.5rem;
@@ -549,9 +448,32 @@ figure.media-with-attribution figattribution a{
 * # FOOTER
 * ##########################################################
 */
+
+.content-footer {
+  background-color:var(--theme-cta);
+}
+
 footer {
   display: flex;
+  flex-direction:column;
   align-items: center;
+  background-color:var(--theme-cta) !important;
+  color:#ffffff !important;
+  padding:30px 0;
+  p {
+    color:#ffffff;
+    text-align:center;
+    margin:6px 0;
+    font-weight:200;
+  }
+  a {
+    color:#ffffff !important;
+    text-transform:uppercase;
+    margin:0 10px;
+  }
+  a:hover {
+    text-decoration:underline;
+  }
   ul {
     list-style: none;
     padding: 0;
@@ -613,7 +535,7 @@ textarea:focus{
 
 .en__field__element--radio input:focus + label,
 button:focus{
-  outline-color: black;
+  outline-color:var(--theme-cta);
 }
 
 
@@ -726,7 +648,7 @@ button:focus{
     line-height: 1.25rem;
     font-weight: 700;
     // letter-spacing: 0.1rem;
-    font-family: var(--theme-font-stack-aiusa-bold-condensed);
+    font-family: var(--theme-font-stack-cmn-bold-condensed);
   }
   &::before {
     content: "";
@@ -1100,11 +1022,11 @@ button:focus{
     }
   }    
 
-} // END AIUSA ENGRID CUSTOM THEME
+} // END cmn ENGRID CUSTOM THEME
 
 /*
 * ##########################################################
-* # START AIUSA ENGRID CUSTOM LAYOUTS
+* # START cmn ENGRID CUSTOM LAYOUTS
 * ##########################################################
 */
 
@@ -1126,7 +1048,7 @@ button:focus{
               [
               pc-start lpc-start]  minmax(0px, 0px)        [lpc-end
               cc-start lcc-start]  minmax(0px, 0px)        [lcc-end
-              bc-start lbc-start]  minmax(260px, 260px)    [lbc-end
+              bc-start lbc-start]  minmax(260px, 480px)    [lbc-end
               rbc-start]           minmax(260px, 260px)    [rbc-end bc-end
               rcc-start]           minmax(0px, 0px)        [rcc-end cc-end
               rpc-start]           minmax(0px, 1fr)        [rpc-end pc-end               
@@ -1466,4 +1388,4 @@ body#en__pagebuilder .content-footerSpacer{
   }
 }
 
-// END AIUSA ENGRID CUSTOM LAYOUTS
+// END cmn ENGRID CUSTOM LAYOUTS
