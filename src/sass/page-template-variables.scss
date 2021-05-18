@@ -240,8 +240,8 @@
 
     // TYPOGRAPHY GIVING AMOUNT BUTTON:CHECKED
     --theme-typography-donation-amount-button-checked-color: var(--color-white);
-    --theme-typography-donation-amount-button-checked-background-color: var(--theme-typography-button-color);
-    --theme-typography-donation-amount-button-checked-border-color: var(--theme-typography-button-color);  
+    --theme-typography-donation-amount-button-checked-background-color: rgb(0,156,222);
+    --theme-typography-donation-amount-button-checked-border-color: rgb(0,156,222);  
 
     // TYPOGRAPHY GIVE BY SELECT BUTTON
     --theme-typography-give-by-select-button-font-family: var(--theme-typography-button-font-family);
@@ -276,7 +276,7 @@
 
     // CTA COLORS
     --theme-cta: #012169;
-    --theme-cta-hover: #ffff00;
+    --theme-cta-hover: rgb(0,156,222);
 
     // ENGRID SECTIONS BACKGROUND COLOR
     // QUICK SETTINGS

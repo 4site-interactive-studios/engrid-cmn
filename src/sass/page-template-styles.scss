@@ -135,7 +135,7 @@ input.en__field__input--checkbox + label{
   padding: 12px 15px;
   color: #252525;
   min-width: 100px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .en__tweetButton__sent a{
@@ -143,13 +143,13 @@ input.en__field__input--checkbox + label{
   padding: 12px 15px;
   color: #ffffff;
   min-width: 100px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .en__field--radio label.en__field__label.en__field__label--item {
   padding: 12px 5px;
   width: 100%;
-  text-transform: uppercase;
+  text-transform: none;
   font-family: var(--theme-font-stack-cmn-bold-condensed);
   justify-content: center;
   display: inline-block;
