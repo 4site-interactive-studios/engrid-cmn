@@ -97,7 +97,7 @@
     --theme-typography-input-checked-color: var(--theme-typography-input-color);
     --theme-typography-input-checked-background-color: var(--theme-typography-input-background-color);
     --theme-typography-input-checked-border-color: var(--theme-typography-input-border-color);
-    --theme-typography-input-checked-border-bottom-color: #252525;
+    --theme-typography-input-checked-border-bottom-color: var(--theme-cta-hover);
     --theme-typography-input-checked-box-shadow: none;
         
     // TYPOGRAPHY RADIO
@@ -399,8 +399,8 @@
     --theme-click-to-expand-cta-image-height: 15px;
 
     // LABEL APPENDED TO DONTIONAL GIVING AMOUNTS BASED ON GIVING FREQUENCY
-    --give-monthly-donation-amount-appended-label: " Monthly";
-    --give-annual-donation-amount-appended-label: " Annually";
+    --give-monthly-donation-amount-appended-label: " /mo";
+    --give-annual-donation-amount-appended-label: " /yr";
 
     // IMAGE ATTRIBUTION OVERLAY
     --theme-media-attribution-overlay-font-family: var(--theme-typography-default-font-family);

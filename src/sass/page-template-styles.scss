@@ -76,7 +76,7 @@ p, h1, h2, h3, h4, h5 {
 .en__field__input--checkbox + .en__field__label:before {
   height: 2rem;
   width: 2rem;
-  top: 3px;
+  top: 0;
   left: 0;
 }
 
@@ -1389,3 +1389,20 @@ body#en__pagebuilder .content-footerSpacer{
 }
 
 // END cmn ENGRID CUSTOM LAYOUTS
+
+[data-engrid-embedded] {
+.page-alert,
+.content-header,
+.content-footerSpacer,
+.content-preFooter,
+.content-footer,
+.page-backgroundImage,
+.page-backgroundImageOverlay,
+.page-customCode {display:none;}
+
+}
+
+
+body:not(#en__pagebuilder) .page-backgroundImage img {
+  display: none;
+}
