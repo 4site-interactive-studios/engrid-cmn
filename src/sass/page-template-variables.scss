@@ -112,7 +112,7 @@
     // TYPOGRAPHY RADIO INPUT:HOVER
     --theme-typography-radio-checked-color: var(--theme-typography-radio-color);
     --theme-typography-radio-checked-background-color: var(--theme-typography-radio-background-color);
-    --theme-typography-radio-checked-border-color: var(--theme-typography-radio-border-color);
+    --theme-typography-radio-checked-border-color: var(--theme-cta-hover);
 
     // TYPOGRAPHY RADIO INPUT:CHECKED
     --theme-typography-radio-selected-color: var(--theme-typography-radio-background-color);
@@ -130,7 +130,7 @@
     // TYPOGRAPHY CHECKBOX INPUT:HOVER
     --theme-typography-checkbox-checked-color: var(--theme-typography-checkbox-color);
     --theme-typography-checkbox-checked-background-color: var(--theme-typography-checkbox-background-color);
-    --theme-typography-checkbox-checked-border-color: var(--theme-typography-checkbox-border-color);
+    --theme-typography-checkbox-checked-border-color: var(--theme-cta-hover);
 
     // TYPOGRAPHY CHECKBOX INPUT:CHECKED
     --theme-typography-checkbox-checked-content:"✓";
@@ -154,8 +154,8 @@
     // TYPOGRAPHY SELECT:HOVER
     --theme-typography-select-checked-color: var(--theme-typography-select-color);
     --theme-typography-select-checked-background-color: var(--theme-typography-select-background-color);
-    --theme-typography-select-checked-border-color: var(--theme-typography-select-border-color);
-    --theme-typography-select-checked-border-bottom-color: #252525;
+    --theme-typography-select-checked-border-color: var(--theme-cta-hover);
+    --theme-typography-select-checked-border-bottom-color:var(--theme-cta-hover);
     --theme-typography-select-checked-box-shadow: var(--theme-typography-input-checked-box-shadow);
 
     // TYPOGRAPHY TEXTAREA
