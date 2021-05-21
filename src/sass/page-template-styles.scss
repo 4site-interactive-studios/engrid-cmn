@@ -677,11 +677,12 @@ button:focus{
       line-height: inherit;
     }
 
-    .en__field__item--other {
-      flex-basis:calc((100% / 3) - 1rem);
-      max-width:calc(100% / 3);
-    }
   }
+}
+
+[data-engrid-theme=cmn] .en__field--donationAmt div.en__field__item.en__field__item--other {
+  flex-basis:calc((100% / 3) - 1rem) !important;
+  max-width:calc(100% / 3) !important;
 }
 
 .en__field--donationAmt div.en__field__item.en__field__item--other {

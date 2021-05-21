@@ -18,10 +18,16 @@ document.onreadystatechange = () => {
           // inlineGiftAmountHeader.style.visibility='visible';
         }
 
-        // Add placeholder to the Mobile Phone Field
-        let enFieldMobilePhone = document.querySelectorAll('input#en__field_supporter_NOT_TAGGED_13')[0];
-        if(enFieldMobilePhone){
-            enFieldMobilePhone.placeholder = "Phone Number (Optional)";
+        // Add placeholder to Phone Field
+        let enFieldPhone = document.querySelectorAll('#en__field_supporter_phoneNumber')[0];
+        if(enFieldPhone){
+          enFieldPhone.placeholder = "Phone Number";
+        }
+
+        // Add placeholder to Other Amount Field
+        let enOtherAmount = document.querySelectorAll('.en__field--donationAmt input.en__field__input--other')[0];
+        if(enOtherAmount){
+          enOtherAmount.placeholder = "Other";
         }
 
         // Add "what's this" markup to the CVV field
