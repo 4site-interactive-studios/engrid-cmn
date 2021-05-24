@@ -30,6 +30,12 @@ document.onreadystatechange = () => {
           enOtherAmount.placeholder = "Other";
         }
 
+        // Add placeholder to Zip Code Field
+        let enFieldZip = document.querySelectorAll('#en__field_supporter_postcode')[0];
+        if(enFieldZip){
+          enFieldZip.placeholder = "00000";
+        }
+
         // Add "what's this" markup to the CVV field
         let ccvvLabel = document.querySelectorAll('.en__field--ccvv > label')[0];
         if(ccvvLabel){
