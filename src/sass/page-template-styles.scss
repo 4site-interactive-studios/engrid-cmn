@@ -227,6 +227,19 @@ h2.section-header {
   }
 }
 
+.ecard-button {
+  margin-top:40px;
+}
+
+.ecard-button a {
+  background-color:var(--theme-cta-hover);
+  color:#ffffff;
+}
+
+.ecard-button a:hover {
+  background-color:var(--theme-cta);
+}
+
 .en__ecarditems__button{
   background: var(--theme-cta);
   color: var(--color-white);
@@ -240,10 +253,19 @@ h2.section-header {
   width:100%;
 }
 
+.en__ecarditems__list {
+  display:flex;
+  justify-content:space-between;
+}
+
 .en__ecarditems__thumb {
   display: inline-block;
-  width:45% !important;
+  width:50% !important;
   aspect-ratio: auto !important;
+}
+
+.en__ecarditems__addrecipient {
+  bottom:-45px;
 }
 
 .en__ecardrecipients__email input.invalid,
@@ -521,7 +543,7 @@ footer {
 */
 
 *:focus{
-  outline-color: initial;
+  outline-color: var(--theme-cta-hover);
 }
 
 input:focus,
@@ -531,13 +553,13 @@ textarea:focus{
 }
 
 .en__field__element--checkbox input:focus + label{
-  outline-color: black;
+  outline-color: var(--theme-cta-hover);
 }
 
 
 .en__field__element--radio input:focus + label,
 button:focus{
-  outline-color:var(--theme-cta);
+  outline-color:var(--theme-cta-hover);
 }
 
 
@@ -621,7 +643,7 @@ button:focus{
     color: var(--theme-typography-button-color);
     border-color: var(--theme-typography-button-border-color);
     &:hover {
-      color: var(--theme-typography-button-color);
+      color: var(--theme-cta-hover);
     }
   }
 }
@@ -671,10 +693,11 @@ button:focus{
   .en__field__label--item {
     width: 100%;
     &::after {
-      text-transform: uppercase;
+      text-transform: none;
       font-size: 100%;
-      opacity: 1;
+      opacity: .6;
       line-height: inherit;
+      margin-left:0;
     }
 
   }
@@ -686,8 +709,8 @@ button:focus{
 }
 
 .en__field--donationAmt div.en__field__item.en__field__item--other {
-  flex-basis: calc((100% * (2 / 3)) - 1rem);
-  max-width: calc(100% * (2 / 3));
+  flex-basis: calc(33% - 1rem);
+  max-width: 33%;
   input {
     padding-left: 1.75rem;
     border-color: var(--theme-typography-input-background-color);
@@ -940,8 +963,8 @@ button:focus{
   @mixin simplified-content-footer {
     // Adjust donation amount fields to display two to a Row
     .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
-      flex-basis: calc((100% * ( 1 / 2)) - 1rem);
-      max-width: calc(100% * (1 / 2));
+      flex-basis: calc(33% - 1rem);
+      max-width: 33%;
     }
 
     .content-footer{
