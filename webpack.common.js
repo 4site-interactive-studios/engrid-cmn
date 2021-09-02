@@ -1,101 +1,44 @@
-const path = require("path");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-
 module.exports = {
   entry: {
-    main: "./src/index.ts",
+    engrid: "./src/index.ts",
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Engaging Networks - Page Type Selection",
       template: "./src/index.html",
-      inject: true,
-      minify: {
-        removeComments: false,
-        collapseWhitespace: false,
-      },
+      inject: false,
+      minify: false,
     }),
     new HtmlWebpackPlugin({
-      title: "CMN - Engaging Networks Page - Donation",
-      filename: "page-donation-cmn.html",
-      template: "./src/templates/page-donation-cmn.html",
-      inject: true,
-      minify: {
-        removeComments: false,
-        collapseWhitespace: false,
-      },
+      title: "Brand Guide",
+      filename: "pages/brand-guide.html",
+      template: "./src/templates/page-brand-guide.html",
+      inject: false,
+      minify: false,
     }),
     new HtmlWebpackPlugin({
-      title: "Engaging Networks Page - Donation",
-      filename: "page-donation.html",
+      title: "Page - Free and Flexible",
+      filename: "pages/free-and-flexible.html",
+      template: "./src/templates/page-free-and-flexible.html",
+      inject: false,
+      minify: false,
+    }),
+    new HtmlWebpackPlugin({
+      title: "Page - Donation",
+      filename: "pages/donation.html",
       template: "./src/templates/page-donation.html",
-      inject: true,
-      minify: {
-        removeComments: false,
-        collapseWhitespace: false,
-      },
+      inject: false,
+      minify: false,
     }),
     new HtmlWebpackPlugin({
-      title: "Ocean Conservancy - Engaging Networks Page - Donation",
-      filename: "page-donation-oc.html",
-      template: "./src/templates/page-donation-oc.html",
-      inject: true,
-      minify: {
-        removeComments: false,
-        collapseWhitespace: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      title: "RFK HR - Engaging Networks Page - Advocacy",
-      filename: "page-advocacy-rfkhr.html",
-      template: "./src/templates/page-advocacy-rfkhr.html",
-      inject: true,
-      minify: {
-        removeComments: false,
-        collapseWhitespace: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      title: "RFK HR - Engaging Networks Page - Donation",
-      filename: "page-donation-rfkhr.html",
-      template: "./src/templates/page-donation-rfkhr.html",
-      inject: true,
-      minify: {
-        removeComments: false,
-        collapseWhitespace: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      title: "Ocean Conservancy - Engaging Networks Page - Donation",
-      filename: "page-donation-applepay.html",
-      template: "./src/templates/page-donation-applepay.html",
-      inject: true,
-      minify: {
-        removeComments: false,
-        collapseWhitespace: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      title: "Engaging Networks Page - Sign Up",
-      filename: "page-sign-up.html",
-      template: "./src/templates/page-sign-up.html",
-      inject: true,
-      minify: {
-        removeComments: false,
-        collapseWhitespace: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      title: "Engaging Networks Email - eCard",
-      filename: "email-ecard.html",
-      template: "./src/templates/email-ecard.html",
-      inject: true,
-      minify: {
-        removeComments: false,
-        collapseWhitespace: false,
-      },
+      title: "Page - Thank You",
+      filename: "pages/thank-you.html",
+      template: "./src/templates/page-thank-you.html",
+      inject: false,
+      minify: false,
     }),
   ],
   module: {
@@ -109,9 +52,6 @@ module.exports = {
             outputPath: "imgs",
           },
         },
-      },
-      { test: /\.css$/,
-        loader: "style-loader!css-loader"
       },
       {
         test: /\.(ts|js)x?$/,
@@ -130,13 +70,28 @@ module.exports = {
       },
       {
         test: /\.(html)$/,
-        use: {
-          loader: "html-loader",
-        },
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              minimize: false,
+              sources: false,
+            },
+          },
+          {
+            loader: "posthtml-loader",
+            options: {
+              ident: "posthtml",
+              // skipParse: true,
+              // parser: "PostHTML Parser",
+              plugins: [require("posthtml-include")({ encoding: "utf8" })],
+            },
+          },
+        ],
       },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js", '.css'],
+    extensions: [".tsx", ".ts", ".js"],
   },
 };

@@ -1,3 +1,115 @@
+// The most broadly used CSS Custom Properties for quick theming.
+// Uncomment to use and reference engrid-scrips SASS files for more CSS Custom Properties.
+// All CSS Custom Properties should be scoped to the theme using CSS Data Attributes.
+[data-engrid-theme="cmn"]{
+    --cmn-primary-color: #01216a;
+    --cmn-secondary-color: rgb(0,156,222);
+
+    // TYPOGRAPHY DEFAULT
+    // --default_font-family: var(--native-fonts__sans-serif);
+    // --default_color: initial;
+    --default_font-size: 18px;
+    // --default_font-weight: initial;
+    // --default_line-height: initial;
+
+    // TYPOGRAPHY H1
+    --h1_font-family: "Oswald", var(--default_font-family);
+    // --h1_color: initial;
+    // --h1_font-size: calc(var(--root_font-size) * var(--scale-up_160pct));
+    --h1_font-weight: 700;
+    // --h1_line-height: initial;
+        
+    // TYPOGRAPHY P
+    // --p_font-family: var(--default_font-family);
+    // --p_color: initial;
+    // --p_font-size: var(--root_font-size);
+    // --p_font-weight: initial;
+    // --p_line-height: initial;
+
+    // TYPOGRAPHY A
+    // --a_font-family: var(--default_font-family);
+    // --a_color: initial;
+    // --a_text-decoration: underline;
+
+    // TYPOGRAPHY A:FOCUS
+    // TYPOGRAPHY A:HOVER
+    // --a_color_hover: var(--a_color);
+    // --a_text-decoration_hover: initial;
+
+    // TYPOGRAPHY INPUT
+    // --input_font-family: var(--default_font-family);
+    // --input_color: #000000;
+    // --input_font-size: var(--root_font-size);
+    // --input_font-weight: initial;
+    // --input_line-height: initial;
+    --input_background-color: #f5f5f5;
+    --input_border-width: 2px;
+    --input_border-color: var(--input_background-color);
+    --input_border-radius: 0px;
+    --input_placeholder-color: #767676;
+    --input_box-shadow: none;
+        
+    // TYPOGRAPHY INPUT:FOCUS
+    // TYPOGRAPHY INPUT:HOVER
+    // --input_color_hover: var(--input_color);
+    // --input_background-color_hover: var(--input_background-color);
+    --input_border-color_hover: var(--input_border-color);
+    --input_border-bottom-color_hover: var(--cmn-secondary-color);
+    // --input_box-shadow_hover: none;
+
+    // TYPOGRAPHY BUTTON
+    --button_font-family: "Oswald", var(--default_font-family);
+    --button_color: #252525;
+    // --button_font-size: var(--root_font-size);
+    // --button_font-weight: initial;
+    // --button_line-height: initial;
+    --button_background-color: #ffffff;
+    --button_border-width: 2px;
+    --button_border-color: #e4e4e4;
+    --button_border-radius: 0px;
+
+    // TYPOGRAPHY BUTTON:HOVER
+    // --button_color_hover: var(--button_color);
+    --button_background-color_hover: var(--button_background-color);
+    --button_border-color_hover: #000000;
+
+    // TYPOGRAPHY BUTTON:SELECTED
+    --button_color_checked: #ffffff;
+    --button_background-color_checked: var(--cmn-primary-color);
+    --button_border-color_checked: var(--cmn-primary-color);
+
+    --radio_border-width: 1px;
+    --radio_border-color: #000000;
+
+    --checkbox_border-width: 1px;
+    --checkbox_background-color: #ffffff;
+    --checkbox_border-color_hover: var(--checkbox_border-color);
+
+    // --radio_border-color_selected: var(--cmn-secondary-color);
+    // --checkbox_border-color_checked: var(--cmn-secondary-color);
+
+    --label_font-family: "Oswald", var(--default_font-family);
+    --label_font-size: 12px;
+    --label_font-weight: 700;
+    --label_letter-spacing: 0.96px;
+    --label_line-height: 18px;
+    --radio_font-size: 12px;
+
+    // DONATION PAGE
+    // --give-monthly-donation-amount-appended-label: "/mo";
+    // --give-annual-donation-amount-appended-label: "/yr";  
+    --recurring-frequency__button_count: 2;
+    --donation-amount__button_count: 3;
+    --give-by-select__button_count: 3;
+
+    --recurring-frequency__button_background-color_checked: var(--cmn-primary-color);
+    --recurring-frequency__button_border-color_checked: var(--cmn-primary-color);
+    --recurring-frequency__button_color_checked: #ffffff;
+
+    --donation-amount__button_background-color_checked: var(--cmn-secondary-color);
+    --donation-amount__button_border-color_checked: var(--cmn-secondary-color);  
+}
+
 /* Add your custom theme styles here */
 
 /*
@@ -32,7 +144,7 @@ h1 {
 }
 
 p, h1, h2, h3, h4, h5 {
-  color: var(--theme-cta);
+  color: var(--cmn-primary-color);
 }
 
 #designed-by-4site-wrapper {
@@ -41,11 +153,11 @@ p, h1, h2, h3, h4, h5 {
   display: none;
 }
 
-.en__field__item {
-  label {
-    font-size: 1.2rem;
-  }
-}
+// .en__field__item {
+//   label {
+//     font-size: 1.2rem;
+//   }
+// }
 
 .sms-disclaimer > p:first-child{
   margin-top: 0;
@@ -56,7 +168,6 @@ p, h1, h2, h3, h4, h5 {
   font-style: italic;
   font-size: 0.75rem;
   line-height: 1rem;
-  font-family: var(--theme-font-stack-browser-fonts);
 }
 
 .en__field.en__field--checkbox > label,
@@ -65,7 +176,7 @@ p, h1, h2, h3, h4, h5 {
 }
 
 .en__field.en__field--checkbox label{
-  color: var(--theme-typography-p-color);
+//   color: var(--theme-typography-p-color);
 }
 
 .en__contactDetails__rows{
@@ -108,23 +219,23 @@ p, h1, h2, h3, h4, h5 {
   // letter-spacing: 0.1rem;
 }
 
-input.en__field__input--checkbox:checked + label,
-input.en__field__input--checkbox + label{
-  font-weight: 500;
-  font-family: var(--theme-typography-default-font-family);
-  text-transform: none;
-  border: 0px;
-  // padding: 3px 10px 0;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  text-align: left;
-  justify-content: flex-start;
-  display: inline-flex;
-  align-items: center;
-  min-height: 2rem;
-  padding: 0 0 0 42px;
-  margin-left: 0px;
-}
+// input.en__field__input--checkbox:checked + label,
+// input.en__field__input--checkbox + label{
+//   font-weight: 500;
+// //   font-family: var(--theme-typography-default-font-family);
+//   text-transform: none;
+//   border: 0px;
+//   // padding: 3px 10px 0;
+//   font-size: 0.75rem;
+//   line-height: 1rem;
+//   text-align: left;
+//   justify-content: flex-start;
+//   display: inline-flex;
+//   align-items: center;
+//   min-height: 2rem;
+//   padding: 0 0 0 42px;
+//   margin-left: 0px;
+// }
 
 .en__twitterTarget__image {
   width: 50px;
@@ -150,7 +261,7 @@ input.en__field__input--checkbox + label{
   padding: 12px 5px;
   width: 100%;
   text-transform: none;
-  font-family: var(--theme-font-stack-cmn-bold-condensed);
+  font-family: var(--h1_font-family);
   justify-content: center;
   display: inline-block;
   text-align: center;
@@ -165,16 +276,16 @@ select {
   min-height: 41.78px;
 }
 
-.en__component--formblock {
-  label {
-    letter-spacing: 0.06rem;
-    font-weight: 700;
-    // letter-spacing: 0.1rem;
-  }
-}
+// .en__component--formblock {
+//   label {
+//     letter-spacing: 0.06rem;
+//     font-weight: 700;
+//     // letter-spacing: 0.1rem;
+//   }
+// }
 
 .en__submit button {
-  font-family: var(--theme-font-stack-cmn-bold-condensed);
+  font-family: var(--h1_font-family);
   font-weight: 700;
   // color:#ffffff !important;
   // letter-spacing: 0.1rem;
@@ -183,8 +294,8 @@ select {
 // @TODO These button styles should be handled more holistically upstream in ENGRID-SCRIPTS with Custom CSS Properties
 .en__submit button, 
 .en__submit button:hover{
-  background-color: var(--theme-cta);
-  border-color: var(--theme-cta);
+  background-color: var(--cmn-primary-color);
+  border-color: var(--cmn-primary-color);
   color: #ffffff;
 }
 
@@ -194,13 +305,13 @@ select {
 
 input::placeholder,
 select {
-  color: var(--theme-typography-input-placeholder-color);
+//   color: var(--theme-typography-input-placeholder-color);
 }
 
 h2.section-header {
   width: 100%;
   text-align: center;
-  font-family: var(--theme-font-stack-cmn-bold-condensed);
+  font-family: var(--h1_font-family);
   font-weight: 700;
   position: relative;
   letter-spacing: 1.25px;
@@ -236,16 +347,16 @@ h2.section-header {
 }
 
 .ecard-button a {
-  background-color:var(--theme-cta-hover);
+  background-color:var(--cmn-secondary-color);
   color:#ffffff;
 }
 
 .ecard-button a:hover {
-  background-color:var(--theme-cta);
+  background-color:var(--cmn-primary-color);
 }
 
 .en__ecarditems__button{
-  background: var(--theme-cta);
+  background: var(--cmn-primary-color);
   color: var(--color-white);
 }
 
@@ -274,15 +385,15 @@ h2.section-header {
 
 .en__ecardrecipients__email input.invalid,
 .en__ecardrecipients__name input.invalid{
-  border-color: var(--theme-error-red);
-  background-color: var(--theme-error-red-faded);
-  font-family: var(--theme-typography-input-font-family);
-  color: var(--theme-typography-input-color);
-  font-size: var(--theme-typography-input-font-size);
-  font-weight: var(--theme-typography-input-font-weight);
-  line-height: var(--theme-typography-input-line-height);
-  background-color: var(--theme-typography-input-background-color);
-  border-radius: var(--theme-typography-input-border-radius);
+//   border-color: var(--theme-error-red);
+//   background-color: var(--theme-error-red-faded);
+//   font-family: var(--theme-typography-input-font-family);
+//   color: var(--theme-typography-input-color);
+//   font-size: var(--theme-typography-input-font-size);
+//   font-weight: var(--theme-typography-input-font-weight);
+//   line-height: var(--theme-typography-input-line-height);
+//   background-color: var(--theme-typography-input-background-color);
+//   border-radius: var(--theme-typography-input-border-radius);
   height: auto;
   max-width: 100%;
   width: 100%;
@@ -291,13 +402,13 @@ h2.section-header {
   box-sizing: border-box;
   margin: 0;
   padding: 1ch;
-  box-shadow: var(--theme-typography-input-box-shadow);
-  transition: box-shadow .25s,border-color .25s ease-in-out;
-  border: var(--theme-typography-input-border-width) solid var(--theme-typography-input-border-color);
+//   box-shadow: var(--theme-typography-input-box-shadow);
+//   transition: box-shadow .25s,border-color .25s ease-in-out;
+//   border: var(--theme-typography-input-border-width) solid var(--theme-typography-input-border-color);
 }
 
 figure.media-with-attribution figattribution a{
-  font-family: var(--theme-font-stack-cmn-bold-condensed);
+  font-family: var(--h1_font-family);
 }
 
 /*
@@ -351,7 +462,9 @@ h1.tag a {
 * ##########################################################
 */
 
-.content-header {background-color: var(--theme-cta);}
+.content-header {
+    background-color: var(--cmn-primary-color);
+}
 
 .content-header {
   header {
@@ -478,14 +591,14 @@ img.heart {
 */
 
 .content-footer {
-  background-color:var(--theme-cta);
+  background-color:var(--cmn-primary-color);
 }
 
 footer {
   display: flex;
   flex-direction:column;
   align-items: center;
-  background-color:var(--theme-cta) !important;
+  background-color:var(--cmn-primary-color) !important;
   color:#ffffff !important;
   padding:30px 0;
   p {
@@ -520,7 +633,7 @@ footer {
       }
       a {
         font-weight: 400;
-        font-family: var(--theme-typography-default-font-family);
+        // font-family: var(--theme-typography-default-font-family);
       }
     }
   }
@@ -547,7 +660,7 @@ footer {
 */
 
 *:focus{
-  outline-color: var(--theme-cta-hover);
+  outline-color: var(--cmn-secondary-color);
 }
 
 input:focus,
@@ -557,13 +670,13 @@ textarea:focus{
 }
 
 .en__field__element--checkbox input:focus + label{
-  outline-color: var(--theme-cta-hover);
+  outline-color: var(--cmn-secondary-color);
 }
 
 
 .en__field__element--radio input:focus + label,
 button:focus{
-  outline-color:var(--theme-cta-hover);
+  outline-color:var(--cmn-secondary-color);
 }
 
 
@@ -588,7 +701,7 @@ button:focus{
     overflow: inherit;
 
     .enWidget__fill {
-      background-color: var(--theme-cta) !important; // !important required
+      background-color: var(--cmn-primary-color) !important; // !important required
       box-shadow: inset -13px 0px 0px 0px rgba(255, 255, 255, 1);
       &::before {
         content: " ";
@@ -643,11 +756,11 @@ button:focus{
 
 .en__field--recurrfreq{
   .en__field__item  input:checked + label {
-    background-color: var(--theme-typography-button-background-color);
-    color: var(--theme-typography-button-color);
-    border-color: var(--theme-typography-button-border-color);
+    // background-color: var(--theme-typography-button-background-color);
+    // color: var(--theme-typography-button-color);
+    // border-color: var(--theme-typography-button-border-color);
     &:hover {
-      color: var(--theme-cta-hover);
+    //   color: var(--cmn-secondary-color);
     }
   }
 }
@@ -676,7 +789,7 @@ button:focus{
     line-height: 1.25rem;
     font-weight: 700;
     // letter-spacing: 0.1rem;
-    font-family: var(--theme-font-stack-cmn-bold-condensed);
+    font-family: var(--h1_font-family);
   }
   &::before {
     content: "";
@@ -717,14 +830,14 @@ button:focus{
   max-width: 33%;
   input {
     padding-left: 1.75rem;
-    border-color: var(--theme-typography-input-background-color);
+    // border-color: var(--theme-typography-input-background-color);
     padding-top: 12px;
     padding-bottom: 12px;
     outline-width: 0;
 
     &:hover,
     &:focus::after{
-      border-bottom-color: var(--theme-typography-input-checked-border-bottom-color);
+    //   border-bottom-color: var(--theme-typography-input-checked-border-bottom-color);
 
     }
   }
@@ -906,7 +1019,7 @@ button:focus{
     width: 100%;
   }
   textarea:hover {
-    border-color: var(--theme-highlight-font-color);
+    // border-color: var(--theme-highlight-font-color);
   }
 }
 
