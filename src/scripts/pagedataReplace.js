@@ -4,13 +4,19 @@ if (
   pageJson.hasOwnProperty("pageType") &&
   pageJson.pageType === "e-card"
 ) {
-  // Get the form element
-  const formElement = document.querySelector("form.en__component");
+  // Get the form elements
+  const formElements = document.querySelectorAll(
+    "input[type='text'], textarea"
+  );
   // Get Search Parameters
   const searchParams = new URLSearchParams(window.location.search);
   searchParams.forEach(function (value, key) {
     console.log(value, key);
-    formElement.innerHTML = formElement.innerHTML.replace(`{${key}}`, value);
+    formElements.forEach(function (element) {
+      if (element.name === key) {
+        element.value = element.value.replace(`{${key}}`, value);
+      }
+    });
   });
 
   const pageDataUrl =
@@ -25,13 +31,18 @@ if (
         if (json.hasOwnProperty(key) && json[key] !== null) {
           console.log(key, json[key]);
           // Replace the form element with the json data
-          formElement.innerHTML = formElement.innerHTML.replace(
-            `{${key}}`,
-            json[key]
-          );
+          formElements.forEach(function (element) {
+            if (element.name === key) {
+              element.value = element.value.replace(`{${key}}`, json[key]);
+            }
+          });
         } else {
           // Clear the form element key
-          formElement.innerHTML = formElement.innerHTML.replace(`{${key}}`, "");
+          formElements.forEach(function (element) {
+            if (element.name === key) {
+              element.value = element.value.replace(`{${key}}`, "");
+            }
+          });
         }
       }
     })
