@@ -67,6 +67,7 @@
     --button_border-width: 2px;
     --button_border-color: #e4e4e4;
     --button_border-radius: 0px;
+    --button_padding: 12px 5px;
 
     // TYPOGRAPHY BUTTON:HOVER
     // --button_color_hover: var(--button_color);
@@ -77,12 +78,15 @@
     --button_color_checked: #ffffff;
     --button_background-color_checked: var(--cmn-primary-color);
     --button_border-color_checked: var(--cmn-primary-color);
+    --submit__button_font-size: 1.33248rem;
 
     --radio_border-width: 1px;
     --radio_border-color: #000000;
 
     --checkbox_border-width: 1px;
     --checkbox_background-color: #ffffff;
+    --checkbox_background-color_hover: #ffffff;
+    --checkbox_background-color_checked: #ffffff;
     --checkbox_border-color_hover: var(--checkbox_border-color);
 
     // --radio_border-color_selected: var(--cmn-secondary-color);
@@ -108,6 +112,7 @@
 
     --donation-amount__button_background-color_checked: var(--cmn-secondary-color);
     --donation-amount__button_border-color_checked: var(--cmn-secondary-color);  
+    --donation-amount__button_color_checked: #ffffff;
 }
 
 /* Add your custom theme styles here */
@@ -151,6 +156,19 @@ p, h1, h2, h3, h4, h5 {
   flex-basis: 100%;
   text-align: center;
   display: none;
+}
+
+h1.tag a {
+  color: #fff!important;
+  margin: 0 0 0 20px;
+  border-left: 1px solid #fff;
+  font-size: 28px;
+  padding-left: 20px;
+  font-weight: 500;
+  text-transform: uppercase!important;
+  line-height: 50px;
+  font-family: var(--h1_font-family);
+  text-decoration: none;
 }
 
 // .en__field__item {
@@ -614,6 +632,10 @@ footer {
   }
   a:hover {
     text-decoration:underline;
+  }
+  .footer-copyright-links{
+    font-family: "Oswald", var(--default_font-family);
+    font-weight: 700;
   }
   ul {
     list-style: none;
