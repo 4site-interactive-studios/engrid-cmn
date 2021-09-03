@@ -88,6 +88,7 @@
     --checkbox_background-color_hover: #ffffff;
     --checkbox_background-color_checked: #ffffff;
     --checkbox_border-color_hover: var(--checkbox_border-color);
+    --checkbox_check_font-size: 1rem;
 
     // --radio_border-color_selected: var(--cmn-secondary-color);
     // --checkbox_border-color_checked: var(--cmn-secondary-color);
@@ -113,6 +114,8 @@
     --donation-amount__button_background-color_checked: var(--cmn-secondary-color);
     --donation-amount__button_border-color_checked: var(--cmn-secondary-color);  
     --donation-amount__button_color_checked: #ffffff;
+
+    --engrid__body_padding: 0 60px;
 }
 
 /* Add your custom theme styles here */
@@ -623,19 +626,14 @@ footer {
     color:#ffffff;
     text-align:center;
     margin:6px 0;
-    font-weight:200;
   }
-  a {
+  .footer-copyright-links a{
+    font-family: "Oswald", var(--default_font-family);
+    font-weight: 700;
+    text-decoration: none;
     color:#ffffff !important;
     text-transform:uppercase;
     margin:0 10px;
-  }
-  a:hover {
-    text-decoration:underline;
-  }
-  .footer-copyright-links{
-    font-family: "Oswald", var(--default_font-family);
-    font-weight: 700;
   }
   ul {
     list-style: none;
@@ -787,83 +785,91 @@ button:focus{
   }
 }
 
-.en__field--donationAmt .en__field__element--radio {
-  width: 100%;
-}
+// .en__field--donationAmt .en__field__element--radio {
+//   width: 100%;
+// }
 
-.en__field--donationAmt h2{
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
+// .en__field--donationAmt h2{
+//   margin-left: 0.5rem;
+//   margin-right: 0.5rem;
+// }
 
-.en__component.en__component--copyblock.recurring-frequency-y-hide.inline-monthly-upsell {
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: 90%;
-  background-position: center;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  p {
-    margin: 20px 0 0;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    font-weight: 700;
-    // letter-spacing: 0.1rem;
-    font-family: var(--h1_font-family);
-  }
-  &::before {
-    content: "";
-    background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/upsell_arrow.png?v=1614603925000");
-    width: 26px;
-    height: 15.5px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: calc(50% - 13px);
-  }
-}
+// .en__component.en__component--copyblock.recurring-frequency-y-hide.inline-monthly-upsell {
+//   position: relative;
+//   background-repeat: no-repeat;
+//   background-size: 90%;
+//   background-position: center;
+//   margin-left: 0.5rem;
+//   margin-right: 0.5rem;
+//   margin-bottom: 1rem;
+//   text-align: center;
+//   p {
+//     margin: 20px 0 0;
+//     font-size: 1rem;
+//     line-height: 1.25rem;
+//     font-weight: 700;
+//     // letter-spacing: 0.1rem;
+//     font-family: var(--h1_font-family);
+//   }
+//   &::before {
+//     content: "";
+//     background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1839/upsell_arrow.png?v=1614603925000");
+//     width: 26px;
+//     height: 15.5px;
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     position: absolute;
+//     left: calc(50% - 13px);
+//   }
+// }
 
-.en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
-  flex-basis: calc((100% / 3) - 1rem);
-  max-width: calc(100% / 3);
-  .en__field__label--item {
-    width: 100%;
-    &::after {
-      text-transform: none;
-      font-size: 100%;
-      opacity: .6;
-      line-height: inherit;
-      margin-left:0;
-    }
+// .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
+//   flex-basis: calc((100% / 3) - 1rem);
+//   max-width: calc(100% / 3);
+//   .en__field__label--item {
+//     width: 100%;
+//     &::after {
+//       text-transform: none;
+//       font-size: 100%;
+//       opacity: .6;
+//       line-height: inherit;
+//       margin-left:0;
+//     }
 
-  }
-}
+//   }
+// }
 
-[data-engrid-theme=cmn] .en__field--donationAmt div.en__field__item.en__field__item--other {
-  flex-basis:calc((100% / 3) - 1rem) !important;
-  max-width:calc(100% / 3) !important;
-}
+// [data-engrid-theme=cmn] .en__field--donationAmt div.en__field__item.en__field__item--other {
+//   flex-basis:calc((100% / 3) - 1rem) !important;
+//   max-width:calc(100% / 3) !important;
+// }
 
 .en__field--donationAmt div.en__field__item.en__field__item--other {
-  flex-basis: calc(33% - 1rem);
-  max-width: 33%;
-  input {
-    padding-left: 1.75rem;
-    // border-color: var(--theme-typography-input-background-color);
-    padding-top: 12px;
-    padding-bottom: 12px;
-    outline-width: 0;
+  position: relative;
 
-    &:hover,
-    &:focus::after{
-    //   border-bottom-color: var(--theme-typography-input-checked-border-bottom-color);
-
-    }
+  input{
+    padding-left: 2.5ch;
   }
 }
+
+// .en__field--donationAmt div.en__field__item.en__field__item--other {
+//   flex-basis: calc(33% - 1rem);
+//   max-width: 33%;
+//   input {
+//     padding-left: 1.75rem;
+//     // border-color: var(--theme-typography-input-background-color);
+//     padding-top: 12px;
+//     padding-bottom: 12px;
+//     outline-width: 0;
+
+//     &:hover,
+//     &:focus::after{
+//     //   border-bottom-color: var(--theme-typography-input-checked-border-bottom-color);
+
+//     }
+//   }
+// }
 
 .en__field--donationAmt .en__field__item--other::before {
   display: block;
@@ -875,18 +881,18 @@ button:focus{
   // letter-spacing: 0.1rem;
   line-height: 0;
   height: 0;
-  left: 1rem;
-  top: 50%;
+  left: 2.3ch;
+  top: calc(50% - 2px);
 }
 
-.en__field--recurrfreq {
-  padding-right: 0;
-  .en__field__item {
-    flex-basis: calc(100% / 3);
-    min-width: 12ch;
-    // margin-right: 0px;
-  }
-}
+// .en__field--recurrfreq {
+//   padding-right: 0;
+//   .en__field__item {
+//     flex-basis: calc(100% / 3);
+//     min-width: 12ch;
+//     // margin-right: 0px;
+//   }
+// }
 
 
 
@@ -897,21 +903,18 @@ button:focus{
 */
 
   a.whats-this {
-    font-size: 0.75rem;
-    text-transform: none;
-    position: absolute;
-    right: 0;
-    text-decoration: underline;
     color: #767676;
+    font-size: .75rem;
     font-weight: 400;
+    font-family: inherit;
   }
 
-  .card,
-  .check,
-  .paypal {
-    flex-basis: calc(100% / 3);
-    min-width: 12ch;
-  }
+  // .card,
+  // .check,
+  // .paypal {
+  //   flex-basis: calc(100% / 3);
+  //   min-width: 12ch;
+  // }
 
   // Makes the paypal logo white and selection
   .give-by-select.en__field--radio .paypal.en__field__item input[type=radio]:checked+label span{
@@ -1069,15 +1072,15 @@ button:focus{
       display: none;
     }
 
-    .en__field {
-      flex-basis: 100%;
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-    textarea.en__field{
-        padding-left: 1ch;
-        padding-right: 1ch;
-    }
+    // .en__field {
+    //   flex-basis: 100%;
+    //   padding-left: 0px;
+    //   padding-right: 0px;
+    // }
+    // textarea.en__field{
+    //     padding-left: 1ch;
+    //     padding-right: 1ch;
+    // }
 
     #menu-wrapper ul[role="menubar"] ul[role="menu"]{
       left: -162px;
@@ -1101,10 +1104,10 @@ button:focus{
   // Footer Styles
   @mixin simplified-content-footer {
     // Adjust donation amount fields to display two to a Row
-    .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
-      flex-basis: calc(33% - 1rem);
-      max-width: 33%;
-    }
+    // .en__field--donationAmt div.en__field__item:not(.en__field__item--other) {
+    //   flex-basis: calc(33% - 1rem);
+    //   max-width: 33%;
+    // }
 
     .content-footer{
       --theme-content-footer-background-color: #e4e4e4;
@@ -1423,7 +1426,7 @@ button:focus{
   }
 
   @media screen and (max-width: 999px) {
-    --theme-body-padding: 0px 24px;  
+    --engrid__body_padding: 0px 24px;  
     /* prettier-ignore */
     .en__component--advrow,
     .en__component--advrow .pseudo-subgrid {
@@ -1477,14 +1480,14 @@ body#en__pagebuilder .content-footerSpacer{
 [data-engrid-theme="cmn"][data-engrid-layout="centercenter1col"],
 [data-engrid-theme="cmn"][data-engrid-layout="centerright1col"],  
 [data-engrid-theme="cmn"][data-engrid-layout="rightright1col"]{
-  --theme-body-padding: 0px 60px;
+  --engrid__body_padding: 0px 60px;
 
   .body-bottom:not(:empty) {
     padding-bottom: 60px;
   }
 
   @media screen and (max-width: 774px) {
-    --theme-body-padding: 0px 24px;
+    --engrid__body_padding: 0px 24px;
   }
 }
 
@@ -1504,7 +1507,7 @@ body#en__pagebuilder .content-footerSpacer{
 }
 
 [data-engrid-theme="cmn"][data-engrid-layout="centercenter2col"]{
-  --theme-body-padding: 0px 50px;
+  --engrid__body_padding: 0px 50px;
 
   // Remove the box body based shadow, otherwise it will overlap with the side-by-side content
   .body-header:before,
@@ -1533,7 +1536,7 @@ body#en__pagebuilder .content-footerSpacer{
   }
 
   @media screen and (max-width: 999px) {
-    --theme-body-padding: 0px 24px;
+    --engrid__body_padding: 0px 24px;
   }
 
 }
