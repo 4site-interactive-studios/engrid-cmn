@@ -11248,6 +11248,7 @@ var options = {
   ClickToExpand: true,
   CurrencySymbol: "$",
   DecimalSeparator: ".",
+  ThousandsSeparator: ",",
   MediaAttribution: true,
   SkipToMainContentLink: true,
   SrcDefer: true,
