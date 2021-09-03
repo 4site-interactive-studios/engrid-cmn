@@ -13,9 +13,7 @@ if (
   searchParams.forEach(function (value, key) {
     console.log(value, key);
     formElements.forEach(function (element) {
-      if (element.name === key) {
-        element.value = element.value.replace(`{${key}}`, value);
-      }
+      element.value = element.value.replace(`{${key}}`, value);
     });
   });
 
@@ -32,16 +30,12 @@ if (
           console.log(key, json[key]);
           // Replace the form element with the json data
           formElements.forEach(function (element) {
-            if (element.name === key) {
-              element.value = element.value.replace(`{${key}}`, json[key]);
-            }
+            element.value = element.value.replace(`{${key}}`, json[key]);
           });
         } else {
-          // Clear the form element key
+          // Clear the form element
           formElements.forEach(function (element) {
-            if (element.name === key) {
-              element.value = element.value.replace(`{${key}}`, "");
-            }
+            element.value = element.value.replace(`{${key}}`, "");
           });
         }
       }
