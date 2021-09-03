@@ -10,7 +10,7 @@ const options: Options = {
   CapitalizeFields: true,
   ClickToExpand: true,
   CurrencySymbol: "$",
-  CurrencySeparator: ".",
+  DecimalSeparator: ".",
   MediaAttribution: true,
   SkipToMainContentLink: true,
   SrcDefer: true,

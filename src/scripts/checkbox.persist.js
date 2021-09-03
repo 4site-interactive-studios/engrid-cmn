@@ -7,25 +7,23 @@
 
  */
 
-    Storage.prototype.setObj = function (key, obj) {
-        return this.setItem(key, JSON.stringify(obj));
-      };
-      Storage.prototype.getObj = function (key) {
-        return JSON.parse(this.getItem(key));
-      };
-      
-      // If there's any checkbox on the page
-      var checkboxes = document.querySelectorAll("input[type='checkbox']");
-      
-      console.log(checkboxes.length);
-      
-      if (checkboxes.length) {
-        for (var i = 0; i < checkboxes.length; i++) {
-          checkboxes[i].addEventListener("change", (event) => {
-            localStorage.setObj(event.target.name, event.target.checked);
-            console.log(event.target.name);
-            console.log(event.target.checked);
-          });
-          localStorage.setObj(checkboxes[i].name, checkboxes[i].checked);
-        }
-      }
+Storage.prototype.setObj = function (key, obj) {
+  return this.setItem(key, JSON.stringify(obj));
+};
+Storage.prototype.getObj = function (key) {
+  return JSON.parse(this.getItem(key));
+};
+
+// If there's any checkbox on the page
+var checkboxes = document.querySelectorAll("input[type='checkbox']");
+
+if (checkboxes.length) {
+  for (var i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].addEventListener("change", (event) => {
+      localStorage.setObj(event.target.name, event.target.checked);
+      // console.log(event.target.name);
+      // console.log(event.target.checked);
+    });
+    localStorage.setObj(checkboxes[i].name, checkboxes[i].checked);
+  }
+}
