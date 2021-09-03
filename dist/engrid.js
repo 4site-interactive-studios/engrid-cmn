@@ -22,14 +22,12 @@ Storage.prototype.getObj = function (key) {
 
 
 var checkboxes = document.querySelectorAll("input[type='checkbox']");
-console.log(checkboxes.length);
 
 if (checkboxes.length) {
   for (var i = 0; i < checkboxes.length; i++) {
     checkboxes[i].addEventListener("change", function (event) {
-      localStorage.setObj(event.target.name, event.target.checked);
-      console.log(event.target.name);
-      console.log(event.target.checked);
+      localStorage.setObj(event.target.name, event.target.checked); // console.log(event.target.name);
+      // console.log(event.target.checked);
     });
     localStorage.setObj(checkboxes[i].name, checkboxes[i].checked);
   }
@@ -45,38 +43,38 @@ var tippy = __webpack_require__(861)/* ["default"] */ .ZP;
 document.onreadystatechange = function () {
   if (document.readyState === "interactive" || document.readyState === "complete") {
     // Add placeholder to Phone Field
-    var enFieldPhone = document.querySelectorAll('#en__field_supporter_phoneNumber')[0];
+    var enFieldPhone = document.querySelectorAll("#en__field_supporter_phoneNumber")[0];
 
     if (enFieldPhone) {
       enFieldPhone.placeholder = "Phone Number";
     } // Add placeholder to Other Amount Field
 
 
-    var enOtherAmount = document.querySelectorAll('.en__field--donationAmt input.en__field__input--other')[0];
+    var enOtherAmount = document.querySelectorAll(".en__field--donationAmt input.en__field__input--other")[0];
 
     if (enOtherAmount) {
       enOtherAmount.placeholder = "Other";
     } // Add placeholder to Zip Code Field
 
 
-    var enFieldZip = document.querySelectorAll('#en__field_supporter_postcode')[0];
+    var enFieldZip = document.querySelectorAll("#en__field_supporter_postcode")[0];
 
     if (enFieldZip) {
       enFieldZip.placeholder = "00000";
     } // Add "what's this" markup to the CVV field
 
 
-    var ccvvLabel = document.querySelectorAll('.en__field--ccvv > label')[0];
+    var ccvvLabel = document.querySelectorAll(".en__field--ccvv > label")[0];
 
     if (ccvvLabel) {
-      var el = document.createElement('span');
-      var childEl = document.createElement('a');
-      childEl.href = '#';
-      childEl.id = 'ccv-popcorn';
+      var el = document.createElement("span");
+      var childEl = document.createElement("a");
+      childEl.href = "#";
+      childEl.id = "ccv-popcorn";
       childEl.className = "whats-this";
       childEl.tabIndex = "-1";
       childEl.innerText = "What's this?";
-      childEl.addEventListener('click', function (e) {
+      childEl.addEventListener("click", function (e) {
         return e.preventDefault();
       });
       el.appendChild(childEl);
