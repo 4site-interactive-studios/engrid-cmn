@@ -2073,6 +2073,7 @@ a:focus,a:hover{
   --checkbox_padding-top:0px;
   --checkbox_padding-left:0px;
   --checkbox_text-transform:var(--radio_text-transform);
+  --checkbox_check_font-size:var(--radio_font-size);
   --checkbox_content_checked:"\2713";
   --select_font-family:var(--input_font-family);
   --select_font-size:var(--input_font-size);
@@ -2091,7 +2092,7 @@ a:focus,a:hover{
   --textarea_border-radius:var(--input_border-radius);
   --textarea_box-shadow:var(--input_box-shadow);
   --textarea_padding:var(--input_padding);
-  --textarea_min-height:calc(var(--textarea_padding) + var(--textarea_font-size)*10);
+  --textarea_min-height:calc(1ch + var(--textarea_font-size)*10);
   --textarea_box-shadow_hover:var(--input_box-shadow_hover);
 }
 .en__component--formblock,.en__component--svblock{
@@ -2298,10 +2299,12 @@ input[type=checkbox]+label:before{
   background-color:var(--checkbox_background-color);
   border:var(--checkbox_border-width) solid var(--checkbox_border-color);
   border-radius:var(--checkbox_border-radius);
+  color:transparent;
   color:var(--checkbox_color);
-  content:" ";
+  content:var(--checkbox_content_checked);
   display:flex;
   flex:1 0 auto;
+  font-size:var(--checkbox_check_font-size);
   height:var(--checkbox_height);
   justify-content:center;
   margin-right:MAX(var(--fields_spacing-inline), 1ch, .5rem);
@@ -2343,9 +2346,11 @@ input[type=checkbox]:checked+label:before{
   background-color:var(--checkbox_background-color);
   border:var(--checkbox_border-width) solid var(--checkbox_border-color);
   border-radius:var(--checkbox_border-radius);
+  color:transparent;
   color:var(--checkbox_color);
-  content:" ";
+  content:var(--checkbox_content_checked);
   display:flex;
+  font-size:var(--checkbox_check_font-size);
   height:var(--checkbox_height);
   justify-content:center;
   padding-left:var(--checkbox_padding-left);
