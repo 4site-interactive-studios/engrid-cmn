@@ -11,7 +11,6 @@ if (
   // Get Search Parameters
   const searchParams = new URLSearchParams(window.location.search);
   searchParams.forEach(function (value, key) {
-    console.log(value, key);
     formElements.forEach(function (element) {
       element.value = element.value.replace(`{${key}}`, value);
     });

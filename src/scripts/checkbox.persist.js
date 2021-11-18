@@ -15,14 +15,12 @@ Storage.prototype.getObj = function (key) {
 };
 
 // If there's any checkbox on the page
-var checkboxes = document.querySelectorAll("input[type='checkbox']");
+const checkboxes = document.querySelectorAll("input[type='checkbox']");
 
 if (checkboxes.length) {
-  for (var i = 0; i < checkboxes.length; i++) {
+  for (let i = 0; i < checkboxes.length; i++) {
     checkboxes[i].addEventListener("change", (event) => {
       localStorage.setObj(event.target.name, event.target.checked);
-      // console.log(event.target.name);
-      // console.log(event.target.checked);
     });
     localStorage.setObj(checkboxes[i].name, checkboxes[i].checked);
   }
