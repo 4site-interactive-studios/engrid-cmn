@@ -5,11 +5,15 @@ document.onreadystatechange = () => {
     document.readyState === "interactive" ||
     document.readyState === "complete"
   ) {
+    const enAddInputPlaceholder = document.querySelector(
+      "[data-engrid-add-input-placeholders]"
+    );
+
     // Add placeholder to Phone Field
     let enFieldPhone = document.querySelectorAll(
       "#en__field_supporter_phoneNumber"
     )[0];
-    if (enFieldPhone) {
+    if (enAddInputPlaceholder && enFieldPhone) {
       enFieldPhone.placeholder = "Phone Number";
     }
 
@@ -17,7 +21,7 @@ document.onreadystatechange = () => {
     let enOtherAmount = document.querySelectorAll(
       ".en__field--donationAmt input.en__field__input--other"
     )[0];
-    if (enOtherAmount) {
+    if (enAddInputPlaceholder && enOtherAmount) {
       enOtherAmount.placeholder = "Other";
     }
 
@@ -25,7 +29,7 @@ document.onreadystatechange = () => {
     let enFieldZip = document.querySelectorAll(
       "#en__field_supporter_postcode"
     )[0];
-    if (enFieldZip) {
+    if (enAddInputPlaceholder && enFieldZip) {
       enFieldZip.placeholder = "00000";
     }
 
