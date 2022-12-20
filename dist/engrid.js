@@ -17,8 +17,8 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Wednesday, November 2, 2022 @ 12:46:36 ET
- *  By: bryancasler
+ *  Date: Tuesday, December 20, 2022 @ 14:35:53 ET
+ *  By: fernando
  *  ENGrid styles: v0.6.4
  *  ENGrid scripts: v0.6.5
  *
@@ -1531,58 +1531,6 @@ if (checkboxes.length) {
     localStorage.setObj(checkboxes[i].name, checkboxes[i].checked);
   }
 }
-
-/***/ }),
-
-/***/ 4747:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-const tippy = (__webpack_require__(3861)/* ["default"] */ .ZP);
-
-document.onreadystatechange = () => {
-  if (document.readyState === "interactive" || document.readyState === "complete") {
-    const enAddInputPlaceholder = document.querySelector("[data-engrid-add-input-placeholders]"); // Add placeholder to Phone Field
-
-    let enFieldPhone = document.querySelectorAll("#en__field_supporter_phoneNumber")[0];
-
-    if (enAddInputPlaceholder && enFieldPhone) {
-      enFieldPhone.placeholder = "Phone Number";
-    } // Add placeholder to Other Amount Field
-
-
-    let enOtherAmount = document.querySelectorAll(".en__field--donationAmt input.en__field__input--other")[0];
-
-    if (enAddInputPlaceholder && enOtherAmount) {
-      enOtherAmount.placeholder = "Other";
-    } // Add placeholder to Zip Code Field
-
-
-    let enFieldZip = document.querySelectorAll("#en__field_supporter_postcode")[0];
-
-    if (enAddInputPlaceholder && enFieldZip) {
-      enFieldZip.placeholder = "00000";
-    } // Add "what's this" markup to the CVV field
-
-
-    let ccvvLabel = document.querySelectorAll(".en__field--ccvv > label")[0];
-
-    if (ccvvLabel) {
-      let el = document.createElement("span");
-      let childEl = document.createElement("a");
-      childEl.href = "#";
-      childEl.id = "ccv-popcorn";
-      childEl.className = "whats-this";
-      childEl.tabIndex = "-1";
-      childEl.innerText = "What's this?";
-      childEl.addEventListener("click", e => e.preventDefault());
-      el.appendChild(childEl);
-      ccvvLabel.appendChild(el);
-      tippy("#ccv-popcorn", {
-        content: "The three or four digit security code on your debit or credit card"
-      });
-    }
-  }
-};
 
 /***/ }),
 
@@ -13527,8 +13475,58 @@ class RememberMe {
 // Events
 
 
-// EXTERNAL MODULE: ./src/scripts/main.js
-var main = __webpack_require__(4747);
+;// CONCATENATED MODULE: ./src/scripts/main.js
+const main_tippy = (__webpack_require__(3861)/* ["default"] */ .ZP);
+
+const customScript = function () {
+  const enAddInputPlaceholder = document.querySelector("[data-engrid-add-input-placeholders]"); // Add placeholder to Phone Field
+
+  let enFieldPhone = document.querySelectorAll("#en__field_supporter_phoneNumber")[0];
+
+  if (enAddInputPlaceholder && enFieldPhone) {
+    enFieldPhone.placeholder = "Phone Number";
+  } // Add placeholder to Other Amount Field
+
+
+  let enOtherAmount = document.querySelectorAll(".en__field--donationAmt input.en__field__input--other")[0];
+
+  if (enAddInputPlaceholder && enOtherAmount) {
+    enOtherAmount.placeholder = "Other";
+  } // Add placeholder to Zip Code Field
+
+
+  let enFieldZip = document.querySelectorAll("#en__field_supporter_postcode")[0];
+
+  if (enAddInputPlaceholder && enFieldZip) {
+    enFieldZip.placeholder = "00000";
+  } // Add "what's this" markup to the CVV field
+
+
+  let ccvvLabel = document.querySelectorAll(".en__field--ccvv > label")[0];
+
+  if (ccvvLabel) {
+    let el = document.createElement("span");
+    let childEl = document.createElement("a");
+    childEl.href = "#";
+    childEl.id = "ccv-popcorn";
+    childEl.className = "whats-this";
+    childEl.tabIndex = "-1";
+    childEl.innerText = "What's this?";
+    childEl.addEventListener("click", e => e.preventDefault());
+    el.appendChild(childEl);
+    ccvvLabel.appendChild(el);
+    main_tippy("#ccv-popcorn", {
+      content: "The three or four digit security code on your debit or credit card"
+    });
+  } // Set the Other Amount field back to text (this is necessary because the number would not allow for decimals, in a bug that was only fixed in engrid-scripts)
+
+
+  let enOtherAmountInput = document.querySelector('[name="transaction.donationAmt.other"]');
+
+  if (enOtherAmountInput) {
+    enOtherAmountInput.type = "text";
+  }
+};
 // EXTERNAL MODULE: ./src/scripts/checkbox.persist.js
 var checkbox_persist = __webpack_require__(4098);
 // EXTERNAL MODULE: ./src/scripts/pagedataReplace.js
@@ -13554,7 +13552,10 @@ const options = {
   SrcDefer: true,
   // ProgressBar: true,
   Debug: App.getUrlParameter("debug") == "true" ? true : false,
-  onLoad: () => console.log("Starter Theme Loaded"),
+  onLoad: () => {
+    console.log("Starter Theme Loaded");
+    customScript();
+  },
   onResize: () => console.log("Starter Theme Window Resized")
 };
 new App(options);
